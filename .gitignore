@@ -56,3 +56,5 @@ Makefile
 /OldVersions
 /CAD/OldVersions
 /CAD/Servo/OldVersions
+CAD/Servo/lockfile.lck
+CAD/lockfile.lck
