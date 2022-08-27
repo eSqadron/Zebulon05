@@ -1,0 +1,115 @@
+\documentclass[a4paper,13pt]{article}
+\usepackage[MeX]{polski}
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage[OT4]{fontenc}
+\usepackage{listings}
+\usepackage[margin=1in]{geometry}
+
+\frenchspacing
+
+
+
+
+\lstset{
+	language=C++,
+	breaklines=true,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	literate={ą}{{\,a}}1 {ę}{{\,e}}1 {ó}{{\'o}}1 {ż}{{\*z}}1 {ź}{{\'z}}1 {ł}{{\'l}}1 {ś}{{\'s}}1 {ć}{{\'c}}1 {ń}{{\'n}}1
+}
+
+
+\title{Projekt robota trójnożnego}
+\author{Jakub Mazur }
+\date{\today}
+
+
+\begin{document}
+
+%\begin{lstlisting}
+%ą ę ż ł
+%\end{lstlisting}
+% TODO - ogarnąć encoding
+
+
+\maketitle
+
+\hypersetup{
+	linktocpage=true,
+    colorlinks=true,
+    urlcolor=red,
+    linktoc=all,
+    linkcolor=blue,
+}
+\tableofcontents
+
+\section{Noga robota}
+Noga ma 3 stopnie swobody. Wszystkie są typu obrotowego, przy czym dwie obracają się dookoła osi poziomej, a jedna dookoła osi pionowej. Są to te same osi obrotu co w przypadku ramienia robotycznego typu antromorficznego.
+\subsection{Model matematyczny}
+\subsubsection{Forward kinematics}
+
+\begin{equation} \label{eq1}
+\begin{split}
+a_{temp} &= a_2 \cos{\alpha_1} + a_3 \cos{\left(\alpha_2 - \alpha_1\right)} + a_1\\
+Y &= a_{temp} \cdot \sin{\alpha_0}\\
+X &= a_{temp} \cdot \cos{\alpha_0}\\
+Z &= h_0 - h_1 + a_2 \sin{\alpha_1} - a_3 \sin{\left(\alpha_2 - \alpha_1\right)}
+\end{split}
+\end{equation}
+
+\subsubsection{Forward kinematics - denavit hartenberg \cite{DH_AA_article}}
+
+\[
+\begin{array}{c|cccc}
+\textrm{Joint } i & \theta_i & \alpha_i & r_i & d_i \\
+1 
+\end{array}
+\]
+Gdzie: \\
+$\theta_i$ - angle from $x_{n-1}$ to $x_n$ around $z_{n-1}$\\
+$\alpha_i$ - angle from $z_{n-1}$ to $z_n$ around $x_n$\\
+$r_i$ - distance between the origin of the $n-1$ frame and the origin of the $n$ frame along the $x_n$ direction.\\ 
+$d_i$ - distance from $x_{n-1}$ to $x_n$ along the $z_{n-1}$ direction\\
+\subsubsection{Invert kinematics}
+Odwrotną kinematykę można obliczyć poprzez rozwiązanie równań kinematyki prostej.
+
+Najprościej jest wyprowadzić wzór na $\alpha_0$, można to zrobić łącząc wzór na $X$ i $Y$:
+\begin{equation}
+\begin{split}
+\begin{cases}
+Y = a_{temp} \cdot \sin{\alpha_0}\\
+X = a_{temp} \cdot \cos{\alpha_0}
+\end{cases}
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\begin{cases}
+Y = a_{temp} \cdot \sin{\alpha_0}\\
+a_{temp} = \frac{X}{\cos{\alpha_0}}
+\end{cases}
+\end{split}
+\end{equation}
+
+
+\begin{equation}
+Y = \frac{X}{\cos{\alpha_0}} \cdot \sin{\alpha_0}\\
+\end{equation}
+
+\begin{equation}
+\alpha_0 = \arctan{\frac{Y}{X}}
+\end{equation}
+
+
+\begin{thebibliography}{9}
+\bibitem{DH_AA_article}
+\href{https://automaticaddison.com/how-to-find-denavit-hartenberg-parameter-tables/}{How to Find Denavit-Hartenberg Parameter Tables, blogpost by Automatic Addison}
+
+\bibitem{}
+\href{https://www.diva-portal.org/smash/get/diva2:1462059/FULLTEXT01.pdf}{Alexander Wallen Kiessling, Niclas Maatta (2020) Anthropomorphic Robot Arm}
+
+\end{thebibliography}
+\end{document}

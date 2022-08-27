@@ -58,3 +58,10 @@ Makefile
 /CAD/Servo/OldVersions
 CAD/Servo/lockfile.lck
 CAD/lockfile.lck
+src/cmake-build-debug
+src/.idea
+latech/cpp.aux
+latech/cpp.log
+latech/cpp.out
+latech/cpp.synctex.gz
+latech/cpp.toc
