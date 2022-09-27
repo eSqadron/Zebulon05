@@ -68,8 +68,39 @@ void RobotLeg::do_step(const int step_length, const int step_height, const int s
 void RobotLeg::move_to_pos(const std::array<int, 3> endpoint_position) {
     std::array<int, num_of_servos> desired_angles = inverse_kinematics(endpoint_position);
 
-    for(int i =0; i< num_of_servos; i++){
-        servos[i]->move_servo(desired_angles[i]);
+    move_all_servos(desired_angles);
+
+}
+
+void RobotLeg::do_quick_step() const {
+    move_all_servos(std::array<int, num_of_servos>{15, 30, -30});
+
+    while(this->get_servos_angles()[0] != 15 and this->get_servos_angles()[1] != 30 and this->get_servos_angles()[2] != 15){
     }
 
+    move_all_servos(std::array<int, num_of_servos>{30, 0, 0});
+
+    while(this->get_servos_angles()[0] != 30 and this->get_servos_angles()[1] != 0 and this->get_servos_angles()[2] != 0){
+    }
+
+    move_all_servos(std::array<int, num_of_servos>{0, 0, 0});
+
+    while(this->get_servos_angles()[0] != 0 and this->get_servos_angles()[1] != 0 and this->get_servos_angles()[2] != 0){
+    }
+
+}
+
+void RobotLeg::move_all_servos(std::array<int, num_of_servos> angles) const {
+    for(int i =0; i< num_of_servos; i++){
+        servos[i]->move_servo(angles[i]);
+    }
+}
+
+std::array<int, 3> RobotLeg::get_servos_angles() const {
+    std::array<int, num_of_servos> servo_ang{};
+    for(int i =0; i< num_of_servos; i++){
+        servo_ang[i] = servos[i]->get_servo_angle();
+    }
+
+    return servo_ang;
 }

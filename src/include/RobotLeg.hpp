@@ -2,8 +2,8 @@
 
 class ServoJoint{
     public: 
-        virtual void move_servo(double target) = 0;
-        virtual double get_servo_angle() = 0;
+        virtual void move_servo(int target) = 0;
+        virtual int get_servo_angle() = 0;
 
 };
 
@@ -37,6 +37,9 @@ class RobotLeg{
          * @return std::array<int, 3> 
          */
         std::array<int, num_of_servos> inverse_kinematics(std::array<int, 3> endpoint_position) ;
+
+        void move_all_servos(std::array<int, num_of_servos> angles) const;
+        std::array<int, num_of_servos> get_servos_angles() const;
     public:
         // distance between center of the robot and "0" servo
         // distance between "0" servo axis and "1" servo
@@ -53,7 +56,9 @@ class RobotLeg{
          */
         std::array<int, 3> get_current_endpoint_pos() const;
 
-        void do_step(const int step_length, const int step_height, const int step_angle=0, const unsigned int interpolation=0);
-        void move_to_pos(const std::array<int, 3> endpoint_position);
+        void do_step(int step_length, int step_height, int step_angle=0, unsigned int interpolation=0);
+        void move_to_pos(std::array<int, 3> endpoint_position);
+
+        void do_quick_step() const;
 
 };
