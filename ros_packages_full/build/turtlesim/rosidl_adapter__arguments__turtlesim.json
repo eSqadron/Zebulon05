@@ -1,0 +1,13 @@
+{
+  "package_name": "turtlesim",
+  "non_idl_tuples": [
+    "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/ros_tutorials/turtlesim:action/RotateAbsolute.action",
+    "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/ros_tutorials/turtlesim:msg/Color.msg",
+    "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/ros_tutorials/turtlesim:msg/Pose.msg",
+    "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/ros_tutorials/turtlesim:srv/Kill.srv",
+    "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/ros_tutorials/turtlesim:srv/SetPen.srv",
+    "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/ros_tutorials/turtlesim:srv/Spawn.srv",
+    "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/ros_tutorials/turtlesim:srv/TeleportAbsolute.srv",
+    "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/ros_tutorials/turtlesim:srv/TeleportRelative.srv"
+  ]
+}

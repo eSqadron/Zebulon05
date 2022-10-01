@@ -1,0 +1,3 @@
+[console_scripts]
+maestro_wrapper = polulu_maestro.MaestroRosWrapper:main
+

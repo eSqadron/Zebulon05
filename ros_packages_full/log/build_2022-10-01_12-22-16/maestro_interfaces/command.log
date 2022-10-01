@@ -1,0 +1,4 @@
+Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces -- -j4 -l4
+Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces -- -j4 -l4
+Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces
+Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces

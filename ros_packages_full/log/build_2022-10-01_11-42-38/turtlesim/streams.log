@@ -1,0 +1,337 @@
+[0.105s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim -- -j4 -l4
+[0.872s] [  1%] Built target turtlesim__cpp
+[0.979s] [ 11%] Built target turtlesim__rosidl_generator_c
+[1.065s] [ 11%] Built target ament_cmake_python_copy_turtlesim
+[1.147s] [ 21%] Built target turtlesim__rosidl_typesupport_cpp
+[1.159s] [ 31%] Built target turtlesim__rosidl_typesupport_fastrtps_cpp
+[1.199s] [ 41%] Built target turtlesim__rosidl_typesupport_introspection_cpp
+[1.462s] [ 51%] Built target turtlesim__rosidl_typesupport_fastrtps_c
+[1.566s] [ 61%] Built target turtlesim__rosidl_typesupport_introspection_c
+[1.586s] [ 71%] Built target turtlesim__rosidl_typesupport_c
+[1.822s] [ 73%] Built target turtle_teleop_key
+[1.831s] [ 79%] Built target turtlesim_node
+[1.843s] [ 81%] Built target draw_square
+[1.955s] [ 81%] Built target turtlesim
+[1.989s] [ 83%] Built target mimic
+[2.074s] [ 84%] Built target turtlesim__py
+[2.229s] [ 93%] Built target turtlesim__rosidl_generator_py
+[2.391s] [ 95%] Built target turtlesim__rosidl_typesupport_fastrtps_c__pyext
+[2.405s] [ 97%] Built target turtlesim__rosidl_typesupport_c__pyext
+[2.415s] [100%] Built target turtlesim__rosidl_typesupport_introspection_c__pyext
+[2.911s] running egg_info
+[2.915s] writing turtlesim.egg-info/PKG-INFO
+[2.917s] writing dependency_links to turtlesim.egg-info/dependency_links.txt
+[2.918s] writing top-level names to turtlesim.egg-info/top_level.txt
+[2.935s] reading manifest file 'turtlesim.egg-info/SOURCES.txt'
+[2.941s] writing manifest file 'turtlesim.egg-info/SOURCES.txt'
+[3.086s] [100%] Built target ament_cmake_python_build_turtlesim_egg
+[3.144s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim -- -j4 -l4
+[4.672s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim
+[4.712s] -- Install configuration: ""
+[4.717s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/ament_index/resource_index/rosidl_interfaces/turtlesim
+[4.720s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim
+[4.721s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv
+[4.723s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/kill.h
+[4.723s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/teleport_relative.h
+[4.724s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail
+[4.726s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__type_support.h
+[4.730s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__type_support.h
+[4.731s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__struct.h
+[4.731s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__functions.c
+[4.732s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__struct.h
+[4.732s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__functions.c
+[4.733s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__type_support.h
+[4.734s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__functions.c
+[4.735s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__type_support.h
+[4.735s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__functions.h
+[4.736s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__struct.h
+[4.736s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__functions.c
+[4.737s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__struct.h
+[4.737s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__type_support.h
+[4.737s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__functions.c
+[4.738s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__struct.h
+[4.739s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__functions.h
+[4.739s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__functions.h
+[4.740s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__functions.h
+[4.740s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__functions.h
+[4.740s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/set_pen.h
+[4.741s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/spawn.h
+[4.741s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/teleport_absolute.h
+[4.742s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action
+[4.742s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/rotate_absolute.h
+[4.742s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail
+[4.743s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__functions.h
+[4.743s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__struct.h
+[4.744s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__functions.c
+[4.744s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__type_support.h
+[4.745s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg
+[4.745s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/rosidl_generator_c__visibility_control.h
+[4.745s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/color.h
+[4.746s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail
+[4.746s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__type_support.h
+[4.747s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__type_support.h
+[4.747s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__struct.h
+[4.748s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__functions.h
+[4.748s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__functions.c
+[4.749s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__functions.h
+[4.749s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__struct.h
+[4.750s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__functions.c
+[4.750s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/pose.h
+[4.751s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/library_path.sh
+[4.752s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/library_path.dsv
+[4.759s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_generator_c.so
+[4.761s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim
+[4.762s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv
+[4.762s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail
+[4.763s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__rosidl_typesupport_fastrtps_c.h
+[4.763s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_fastrtps_c.h
+[4.764s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__rosidl_typesupport_fastrtps_c.h
+[4.764s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_fastrtps_c.h
+[4.765s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__rosidl_typesupport_fastrtps_c.h
+[4.765s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action
+[4.766s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail
+[4.766s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_fastrtps_c.h
+[4.767s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg
+[4.767s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.768s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail
+[4.768s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__rosidl_typesupport_fastrtps_c.h
+[4.769s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__rosidl_typesupport_fastrtps_c.h
+[4.775s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_fastrtps_c.so
+[4.776s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim
+[4.777s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv
+[4.778s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/kill.hpp
+[4.778s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/spawn.hpp
+[4.779s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/teleport_absolute.hpp
+[4.780s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/set_pen.hpp
+[4.780s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail
+[4.781s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__struct.hpp
+[4.781s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__struct.hpp
+[4.782s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__traits.hpp
+[4.782s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__builder.hpp
+[4.783s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__traits.hpp
+[4.783s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__builder.hpp
+[4.784s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__struct.hpp
+[4.784s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__builder.hpp
+[4.785s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__builder.hpp
+[4.785s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__traits.hpp
+[4.786s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__struct.hpp
+[4.786s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__traits.hpp
+[4.787s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__struct.hpp
+[4.788s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__builder.hpp
+[4.788s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__traits.hpp
+[4.788s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/teleport_relative.hpp
+[4.789s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action
+[4.789s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/rotate_absolute.hpp
+[4.790s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail
+[4.790s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__builder.hpp
+[4.791s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__struct.hpp
+[4.791s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__traits.hpp
+[4.791s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg
+[4.792s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/pose.hpp
+[4.792s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/color.hpp
+[4.793s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail
+[4.793s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__struct.hpp
+[4.794s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__traits.hpp
+[4.794s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__traits.hpp
+[4.794s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__builder.hpp
+[4.795s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__builder.hpp
+[4.795s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__struct.hpp
+[4.796s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim
+[4.796s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv
+[4.797s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail
+[4.797s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_fastrtps_cpp.hpp
+[4.797s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_fastrtps_cpp.hpp
+[4.798s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__rosidl_typesupport_fastrtps_cpp.hpp
+[4.798s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__rosidl_typesupport_fastrtps_cpp.hpp
+[4.799s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__rosidl_typesupport_fastrtps_cpp.hpp
+[4.799s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/dds_fastrtps
+[4.800s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action
+[4.800s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail
+[4.801s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_fastrtps_cpp.hpp
+[4.801s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/dds_fastrtps
+[4.801s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg
+[4.802s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.802s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail
+[4.803s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__rosidl_typesupport_fastrtps_cpp.hpp
+[4.803s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__rosidl_typesupport_fastrtps_cpp.hpp
+[4.804s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/dds_fastrtps
+[4.809s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_fastrtps_cpp.so
+[4.811s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim
+[4.812s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv
+[4.812s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail
+[4.813s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__rosidl_typesupport_introspection_c.h
+[4.814s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__type_support.c
+[4.814s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_introspection_c.h
+[4.815s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_introspection_c.h
+[4.815s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__type_support.c
+[4.816s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__rosidl_typesupport_introspection_c.h
+[4.816s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__type_support.c
+[4.817s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__type_support.c
+[4.817s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__rosidl_typesupport_introspection_c.h
+[4.818s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__type_support.c
+[4.818s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action
+[4.819s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail
+[4.819s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_introspection_c.h
+[4.820s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__type_support.c
+[4.820s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg
+[4.821s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.821s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail
+[4.822s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__type_support.c
+[4.823s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__rosidl_typesupport_introspection_c.h
+[4.823s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__rosidl_typesupport_introspection_c.h
+[4.824s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__type_support.c
+[4.828s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_introspection_c.so
+[4.834s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_c.so
+[4.835s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim
+[4.836s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv
+[4.836s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail
+[4.837s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__type_support.cpp
+[4.838s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__rosidl_typesupport_introspection_cpp.hpp
+[4.838s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_introspection_cpp.hpp
+[4.839s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__rosidl_typesupport_introspection_cpp.hpp
+[4.839s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_introspection_cpp.hpp
+[4.840s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__type_support.cpp
+[4.840s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__type_support.cpp
+[4.841s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__type_support.cpp
+[4.841s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__rosidl_typesupport_introspection_cpp.hpp
+[4.842s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__type_support.cpp
+[4.843s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action
+[4.843s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail
+[4.844s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_introspection_cpp.hpp
+[4.844s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__type_support.cpp
+[4.845s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg
+[4.845s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail
+[4.845s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__rosidl_typesupport_introspection_cpp.hpp
+[4.846s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__type_support.cpp
+[4.847s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__type_support.cpp
+[4.847s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__rosidl_typesupport_introspection_cpp.hpp
+[4.855s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_introspection_cpp.so
+[4.861s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_cpp.so
+[4.863s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/pythonpath.sh
+[4.864s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/pythonpath.dsv
+[4.867s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim-1.4.1-py3.10.egg-info
+[4.869s] -- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim-1.4.1-py3.10.egg-info/PKG-INFO
+[4.871s] -- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim-1.4.1-py3.10.egg-info/top_level.txt
+[4.873s] -- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim-1.4.1-py3.10.egg-info/SOURCES.txt
+[4.875s] -- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim-1.4.1-py3.10.egg-info/dependency_links.txt
+[4.877s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim
+[4.878s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv
+[4.880s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_teleport_absolute.py
+[4.880s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_set_pen_s.c
+[4.881s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_teleport_relative.py
+[4.881s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_kill.py
+[4.882s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/__init__.py
+[4.882s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_spawn.py
+[4.883s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_teleport_relative_s.c
+[4.883s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_teleport_absolute_s.c
+[4.884s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_set_pen.py
+[4.884s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_kill_s.c
+[4.884s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_spawn_s.c
+[4.885s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[4.885s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action
+[4.886s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action/_rotate_absolute.py
+[4.886s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action/__init__.py
+[4.887s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action/_rotate_absolute_s.c
+[4.887s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/_turtlesim_s.ep.rosidl_typesupport_introspection_c.c
+[4.888s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg
+[4.889s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/_color_s.c
+[4.889s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/_color.py
+[4.890s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/__init__.py
+[4.890s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/_pose.py
+[4.891s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/_pose_s.c
+[4.891s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/__init__.py
+[4.892s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/_turtlesim_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.892s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[4.892s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/libturtlesim__rosidl_generator_py.so
+[4.893s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/_turtlesim_s.ep.rosidl_typesupport_c.c
+[4.893s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[5.078s] Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim'...
+[5.079s] Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action'...
+[5.081s] Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg'...
+[5.082s] Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv'...
+[5.109s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[5.115s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[5.124s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[5.131s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_generator_py.so
+[5.134s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/action/RotateAbsolute.idl
+[5.135s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/msg/Color.idl
+[5.136s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/msg/Pose.idl
+[5.138s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Kill.idl
+[5.138s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/SetPen.idl
+[5.139s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Spawn.idl
+[5.140s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportAbsolute.idl
+[5.140s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportRelative.idl
+[5.141s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/action/RotateAbsolute.action
+[5.142s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/msg/Color.msg
+[5.143s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/msg/Pose.msg
+[5.143s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Kill.srv
+[5.144s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Kill_Request.msg
+[5.145s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Kill_Response.msg
+[5.145s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/SetPen.srv
+[5.146s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/SetPen_Request.msg
+[5.146s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/SetPen_Response.msg
+[5.147s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Spawn.srv
+[5.148s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Spawn_Request.msg
+[5.148s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Spawn_Response.msg
+[5.149s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportAbsolute.srv
+[5.150s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportAbsolute_Request.msg
+[5.150s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportAbsolute_Response.msg
+[5.151s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportRelative.srv
+[5.152s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportRelative_Request.msg
+[5.153s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportRelative_Response.msg
+[5.161s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/turtlesim_node
+[5.168s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/turtle_teleop_key
+[5.176s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/draw_square
+[5.184s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/mimic
+[5.186s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images
+[5.189s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/eloquent.png
+[5.189s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/ardent.png
+[5.190s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/dashing.png
+[5.191s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/humble.png
+[5.191s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/foxy.png
+[5.192s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/rolling.png
+[5.192s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/galactic.png
+[5.193s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/bouncy.png
+[5.193s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/crystal.png
+[5.194s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/launch
+[5.195s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/launch/multisim.launch.py
+[5.197s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/ament_index/resource_index/package_run_dependencies/turtlesim
+[5.198s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/ament_index/resource_index/parent_prefix_path/turtlesim
+[5.199s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/ament_prefix_path.sh
+[5.200s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/ament_prefix_path.dsv
+[5.200s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/path.sh
+[5.201s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/path.dsv
+[5.202s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/local_setup.bash
+[5.202s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/local_setup.sh
+[5.203s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/local_setup.zsh
+[5.204s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/local_setup.dsv
+[5.204s] -- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/package.dsv
+[5.209s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/ament_index/resource_index/packages/turtlesim
+[5.216s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_generator_cExport.cmake
+[5.217s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_generator_cExport-noconfig.cmake
+[5.220s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_typesupport_fastrtps_cExport.cmake
+[5.221s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.225s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_generator_cppExport.cmake
+[5.228s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.229s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.232s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cExport.cmake
+[5.233s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.236s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cExport.cmake
+[5.237s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cExport-noconfig.cmake
+[5.240s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cppExport.cmake
+[5.241s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.245s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cppExport.cmake
+[5.245s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cppExport-noconfig.cmake
+[5.249s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_generator_pyExport.cmake
+[5.249s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_generator_pyExport-noconfig.cmake
+[5.250s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/rosidl_cmake-extras.cmake
+[5.251s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.252s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.253s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_libraries-extras.cmake
+[5.254s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_targets-extras.cmake
+[5.255s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.257s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.259s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesimConfig.cmake
+[5.260s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesimConfig-version.cmake
+[5.260s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/package.xml
+[5.273s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim

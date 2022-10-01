@@ -1,0 +1,7 @@
+{
+  "package_name": "maestro_interfaces",
+  "non_idl_tuples": [
+    "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/maestro_interfaces:msg/CurrentPositions.msg",
+    "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/maestro_interfaces:msg/MaestroTarget.msg"
+  ]
+}

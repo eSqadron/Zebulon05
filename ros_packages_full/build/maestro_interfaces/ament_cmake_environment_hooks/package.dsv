@@ -1,0 +1,4 @@
+source;share/maestro_interfaces/local_setup.bash
+source;share/maestro_interfaces/local_setup.dsv
+source;share/maestro_interfaces/local_setup.sh
+source;share/maestro_interfaces/local_setup.zsh

@@ -1,0 +1,1659 @@
+[0.000000] (-) TimerEvent: {}
+[0.001667] (turtlesim) JobQueued: {'identifier': 'turtlesim', 'dependencies': OrderedDict()}
+[0.002259] (turtlesim) JobStarted: {'identifier': 'turtlesim'}
+[0.075921] (turtlesim) JobProgress: {'identifier': 'turtlesim', 'progress': 'cmake'}
+[0.083527] (turtlesim) JobProgress: {'identifier': 'turtlesim', 'progress': 'build'}
+[0.089019] (turtlesim) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim', '--', '-j4', '-l4'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a247:c100:3cc3:c9c1:d82:e979 50543 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a247:c100:3cc3:c9c1:d82:e979 50543 2a02:a31a:a247:c100:8b:b606:bb9a:4ffb 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.104833] (-) TimerEvent: {}
+[0.210167] (-) TimerEvent: {}
+[0.310990] (-) TimerEvent: {}
+[0.412142] (-) TimerEvent: {}
+[0.513127] (-) TimerEvent: {}
+[0.614034] (-) TimerEvent: {}
+[0.715033] (-) TimerEvent: {}
+[0.816273] (-) TimerEvent: {}
+[0.917112] (-) TimerEvent: {}
+[0.962265] (turtlesim) StdoutLine: {'line': b'[  1%] Built target turtlesim__cpp\n'}
+[1.017321] (-) TimerEvent: {}
+[1.118154] (-) TimerEvent: {}
+[1.193229] (turtlesim) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_copy_turtlesim\n'}
+[1.218425] (-) TimerEvent: {}
+[1.319514] (-) TimerEvent: {}
+[1.420289] (-) TimerEvent: {}
+[1.456212] (turtlesim) StdoutLine: {'line': b'[ 11%] Built target turtlesim__rosidl_typesupport_fastrtps_cpp\n'}
+[1.520582] (-) TimerEvent: {}
+[1.621496] (-) TimerEvent: {}
+[1.623477] (turtlesim) StdoutLine: {'line': b'[ 21%] Built target turtlesim__rosidl_typesupport_introspection_cpp\n'}
+[1.721677] (-) TimerEvent: {}
+[1.822413] (-) TimerEvent: {}
+[1.923114] (-) TimerEvent: {}
+[2.023867] (-) TimerEvent: {}
+[2.124583] (-) TimerEvent: {}
+[2.225183] (-) TimerEvent: {}
+[2.325864] (-) TimerEvent: {}
+[2.426510] (-) TimerEvent: {}
+[2.527140] (-) TimerEvent: {}
+[2.627773] (-) TimerEvent: {}
+[2.728450] (-) TimerEvent: {}
+[2.829133] (-) TimerEvent: {}
+[2.847792] (turtlesim) StdoutLine: {'line': b'running egg_info\n'}
+[2.852340] (turtlesim) StdoutLine: {'line': b'writing turtlesim.egg-info/PKG-INFO\n'}
+[2.853841] (turtlesim) StdoutLine: {'line': b'writing dependency_links to turtlesim.egg-info/dependency_links.txt\n'}
+[2.855333] (turtlesim) StdoutLine: {'line': b'writing top-level names to turtlesim.egg-info/top_level.txt\n'}
+[2.871780] (turtlesim) StdoutLine: {'line': b"reading manifest file 'turtlesim.egg-info/SOURCES.txt'\n"}
+[2.875880] (turtlesim) StdoutLine: {'line': b"writing manifest file 'turtlesim.egg-info/SOURCES.txt'\n"}
+[2.929411] (-) TimerEvent: {}
+[3.008851] (turtlesim) StdoutLine: {'line': b'[ 21%] Built target ament_cmake_python_build_turtlesim_egg\n'}
+[3.029615] (-) TimerEvent: {}
+[3.130511] (-) TimerEvent: {}
+[3.159604] (turtlesim) StdoutLine: {'line': b'[ 31%] Built target turtlesim__rosidl_typesupport_cpp\n'}
+[3.230708] (-) TimerEvent: {}
+[3.301745] (turtlesim) StdoutLine: {'line': b'[ 41%] Built target turtlesim__rosidl_generator_c\n'}
+[3.330946] (-) TimerEvent: {}
+[3.362890] (turtlesim) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target draw_square\x1b[0m\n'}
+[3.431136] (-) TimerEvent: {}
+[3.530208] (turtlesim) StdoutLine: {'line': b'[ 43%] Built target draw_square\n'}
+[3.531270] (-) TimerEvent: {}
+[3.589263] (turtlesim) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target mimic\x1b[0m\n'}
+[3.631514] (-) TimerEvent: {}
+[3.693245] (turtlesim) StdoutLine: {'line': b'[ 45%] Built target mimic\n'}
+[3.731707] (-) TimerEvent: {}
+[3.832623] (-) TimerEvent: {}
+[3.858890] (turtlesim) StdoutLine: {'line': b'[ 55%] Built target turtlesim__rosidl_typesupport_fastrtps_c\n'}
+[3.932854] (-) TimerEvent: {}
+[4.034216] (-) TimerEvent: {}
+[4.134994] (-) TimerEvent: {}
+[4.173474] (turtlesim) StdoutLine: {'line': b'[ 65%] Built target turtlesim__rosidl_typesupport_introspection_c\n'}
+[4.235261] (-) TimerEvent: {}
+[4.336315] (-) TimerEvent: {}
+[4.437180] (-) TimerEvent: {}
+[4.446783] (turtlesim) StdoutLine: {'line': b'[ 75%] Built target turtlesim__rosidl_typesupport_c\n'}
+[4.505365] (turtlesim) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target turtle_teleop_key\x1b[0m\n'}
+[4.537335] (-) TimerEvent: {}
+[4.621726] (turtlesim) StdoutLine: {'line': b'[ 77%] Built target turtle_teleop_key\n'}
+[4.637520] (-) TimerEvent: {}
+[4.723796] (turtlesim) StdoutLine: {'line': b'[ 77%] Built target turtlesim\n'}
+[4.737695] (-) TimerEvent: {}
+[4.788441] (turtlesim) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target turtlesim_node\x1b[0m\n'}
+[4.837887] (-) TimerEvent: {}
+[4.938752] (-) TimerEvent: {}
+[4.962197] (turtlesim) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/turtlesim_node.dir/src/turtle.cpp.o\x1b[0m\n'}
+[5.039001] (-) TimerEvent: {}
+[5.140057] (-) TimerEvent: {}
+[5.241182] (-) TimerEvent: {}
+[5.342010] (-) TimerEvent: {}
+[5.442902] (-) TimerEvent: {}
+[5.543599] (-) TimerEvent: {}
+[5.644308] (-) TimerEvent: {}
+[5.745032] (-) TimerEvent: {}
+[5.845726] (-) TimerEvent: {}
+[5.946433] (-) TimerEvent: {}
+[6.047231] (-) TimerEvent: {}
+[6.147965] (-) TimerEvent: {}
+[6.248663] (-) TimerEvent: {}
+[6.349384] (-) TimerEvent: {}
+[6.450151] (-) TimerEvent: {}
+[6.551193] (-) TimerEvent: {}
+[6.651945] (-) TimerEvent: {}
+[6.752730] (-) TimerEvent: {}
+[6.853500] (-) TimerEvent: {}
+[6.954251] (-) TimerEvent: {}
+[7.055063] (-) TimerEvent: {}
+[7.155821] (-) TimerEvent: {}
+[7.256622] (-) TimerEvent: {}
+[7.357355] (-) TimerEvent: {}
+[7.458107] (-) TimerEvent: {}
+[7.558839] (-) TimerEvent: {}
+[7.659623] (-) TimerEvent: {}
+[7.760400] (-) TimerEvent: {}
+[7.861181] (-) TimerEvent: {}
+[7.961956] (-) TimerEvent: {}
+[8.062677] (-) TimerEvent: {}
+[8.163433] (-) TimerEvent: {}
+[8.264179] (-) TimerEvent: {}
+[8.364946] (-) TimerEvent: {}
+[8.465681] (-) TimerEvent: {}
+[8.566381] (-) TimerEvent: {}
+[8.667167] (-) TimerEvent: {}
+[8.767891] (-) TimerEvent: {}
+[8.868616] (-) TimerEvent: {}
+[8.969563] (-) TimerEvent: {}
+[9.070405] (-) TimerEvent: {}
+[9.171209] (-) TimerEvent: {}
+[9.272155] (-) TimerEvent: {}
+[9.373053] (-) TimerEvent: {}
+[9.474035] (-) TimerEvent: {}
+[9.574894] (-) TimerEvent: {}
+[9.675825] (-) TimerEvent: {}
+[9.776777] (-) TimerEvent: {}
+[9.877567] (-) TimerEvent: {}
+[9.978316] (-) TimerEvent: {}
+[10.079248] (-) TimerEvent: {}
+[10.179995] (-) TimerEvent: {}
+[10.280763] (-) TimerEvent: {}
+[10.381552] (-) TimerEvent: {}
+[10.482284] (-) TimerEvent: {}
+[10.583153] (-) TimerEvent: {}
+[10.683910] (-) TimerEvent: {}
+[10.784740] (-) TimerEvent: {}
+[10.885554] (-) TimerEvent: {}
+[10.986398] (-) TimerEvent: {}
+[11.087317] (-) TimerEvent: {}
+[11.188099] (-) TimerEvent: {}
+[11.288861] (-) TimerEvent: {}
+[11.389615] (-) TimerEvent: {}
+[11.490369] (-) TimerEvent: {}
+[11.591304] (-) TimerEvent: {}
+[11.692080] (-) TimerEvent: {}
+[11.792895] (-) TimerEvent: {}
+[11.893652] (-) TimerEvent: {}
+[11.994412] (-) TimerEvent: {}
+[12.095275] (-) TimerEvent: {}
+[12.196144] (-) TimerEvent: {}
+[12.296926] (-) TimerEvent: {}
+[12.397707] (-) TimerEvent: {}
+[12.498608] (-) TimerEvent: {}
+[12.599500] (-) TimerEvent: {}
+[12.700318] (-) TimerEvent: {}
+[12.801179] (-) TimerEvent: {}
+[12.902130] (-) TimerEvent: {}
+[13.002976] (-) TimerEvent: {}
+[13.103781] (-) TimerEvent: {}
+[13.204637] (-) TimerEvent: {}
+[13.305400] (-) TimerEvent: {}
+[13.406187] (-) TimerEvent: {}
+[13.507013] (-) TimerEvent: {}
+[13.607788] (-) TimerEvent: {}
+[13.708626] (-) TimerEvent: {}
+[13.809476] (-) TimerEvent: {}
+[13.910224] (-) TimerEvent: {}
+[14.011091] (-) TimerEvent: {}
+[14.111860] (-) TimerEvent: {}
+[14.212691] (-) TimerEvent: {}
+[14.313446] (-) TimerEvent: {}
+[14.414195] (-) TimerEvent: {}
+[14.515035] (-) TimerEvent: {}
+[14.615809] (-) TimerEvent: {}
+[14.716642] (-) TimerEvent: {}
+[14.817381] (-) TimerEvent: {}
+[14.918192] (-) TimerEvent: {}
+[15.019039] (-) TimerEvent: {}
+[15.119802] (-) TimerEvent: {}
+[15.220624] (-) TimerEvent: {}
+[15.321380] (-) TimerEvent: {}
+[15.422150] (-) TimerEvent: {}
+[15.523007] (-) TimerEvent: {}
+[15.623805] (-) TimerEvent: {}
+[15.724643] (-) TimerEvent: {}
+[15.825393] (-) TimerEvent: {}
+[15.926196] (-) TimerEvent: {}
+[16.027122] (-) TimerEvent: {}
+[16.127912] (-) TimerEvent: {}
+[16.228708] (-) TimerEvent: {}
+[16.329477] (-) TimerEvent: {}
+[16.430283] (-) TimerEvent: {}
+[16.531132] (-) TimerEvent: {}
+[16.631948] (-) TimerEvent: {}
+[16.732742] (-) TimerEvent: {}
+[16.833610] (-) TimerEvent: {}
+[16.934810] (-) TimerEvent: {}
+[17.035613] (-) TimerEvent: {}
+[17.136397] (-) TimerEvent: {}
+[17.237197] (-) TimerEvent: {}
+[17.337972] (-) TimerEvent: {}
+[17.438827] (-) TimerEvent: {}
+[17.539611] (-) TimerEvent: {}
+[17.640424] (-) TimerEvent: {}
+[17.741275] (-) TimerEvent: {}
+[17.842057] (-) TimerEvent: {}
+[17.942910] (-) TimerEvent: {}
+[18.043724] (-) TimerEvent: {}
+[18.144597] (-) TimerEvent: {}
+[18.245357] (-) TimerEvent: {}
+[18.346099] (-) TimerEvent: {}
+[18.446949] (-) TimerEvent: {}
+[18.547732] (-) TimerEvent: {}
+[18.648531] (-) TimerEvent: {}
+[18.749353] (-) TimerEvent: {}
+[18.850189] (-) TimerEvent: {}
+[18.951047] (-) TimerEvent: {}
+[19.052083] (-) TimerEvent: {}
+[19.152948] (-) TimerEvent: {}
+[19.253789] (-) TimerEvent: {}
+[19.354573] (-) TimerEvent: {}
+[19.455422] (-) TimerEvent: {}
+[19.556199] (-) TimerEvent: {}
+[19.656996] (-) TimerEvent: {}
+[19.757791] (-) TimerEvent: {}
+[19.858574] (-) TimerEvent: {}
+[19.959517] (-) TimerEvent: {}
+[20.060458] (-) TimerEvent: {}
+[20.161438] (-) TimerEvent: {}
+[20.262354] (-) TimerEvent: {}
+[20.363207] (-) TimerEvent: {}
+[20.463978] (-) TimerEvent: {}
+[20.564776] (-) TimerEvent: {}
+[20.665598] (-) TimerEvent: {}
+[20.766376] (-) TimerEvent: {}
+[20.867198] (-) TimerEvent: {}
+[20.967970] (-) TimerEvent: {}
+[21.068784] (-) TimerEvent: {}
+[21.169760] (-) TimerEvent: {}
+[21.270619] (-) TimerEvent: {}
+[21.371487] (-) TimerEvent: {}
+[21.472265] (-) TimerEvent: {}
+[21.573111] (-) TimerEvent: {}
+[21.673866] (-) TimerEvent: {}
+[21.774623] (-) TimerEvent: {}
+[21.875395] (-) TimerEvent: {}
+[21.976188] (-) TimerEvent: {}
+[22.076971] (-) TimerEvent: {}
+[22.177694] (-) TimerEvent: {}
+[22.278435] (-) TimerEvent: {}
+[22.379215] (-) TimerEvent: {}
+[22.479961] (-) TimerEvent: {}
+[22.580756] (-) TimerEvent: {}
+[22.681544] (-) TimerEvent: {}
+[22.782293] (-) TimerEvent: {}
+[22.883058] (-) TimerEvent: {}
+[22.983788] (-) TimerEvent: {}
+[23.084585] (-) TimerEvent: {}
+[23.185305] (-) TimerEvent: {}
+[23.286104] (-) TimerEvent: {}
+[23.386898] (-) TimerEvent: {}
+[23.487639] (-) TimerEvent: {}
+[23.588367] (-) TimerEvent: {}
+[23.689163] (-) TimerEvent: {}
+[23.789995] (-) TimerEvent: {}
+[23.890807] (-) TimerEvent: {}
+[23.991569] (-) TimerEvent: {}
+[24.092542] (-) TimerEvent: {}
+[24.193265] (-) TimerEvent: {}
+[24.294055] (-) TimerEvent: {}
+[24.394831] (-) TimerEvent: {}
+[24.495562] (-) TimerEvent: {}
+[24.596311] (-) TimerEvent: {}
+[24.697107] (-) TimerEvent: {}
+[24.797934] (-) TimerEvent: {}
+[24.898751] (-) TimerEvent: {}
+[24.999524] (-) TimerEvent: {}
+[25.100410] (-) TimerEvent: {}
+[25.201260] (-) TimerEvent: {}
+[25.302112] (-) TimerEvent: {}
+[25.402980] (-) TimerEvent: {}
+[25.503761] (-) TimerEvent: {}
+[25.604620] (-) TimerEvent: {}
+[25.705370] (-) TimerEvent: {}
+[25.806176] (-) TimerEvent: {}
+[25.907003] (-) TimerEvent: {}
+[26.007783] (-) TimerEvent: {}
+[26.108617] (-) TimerEvent: {}
+[26.209364] (-) TimerEvent: {}
+[26.310181] (-) TimerEvent: {}
+[26.411014] (-) TimerEvent: {}
+[26.511778] (-) TimerEvent: {}
+[26.612600] (-) TimerEvent: {}
+[26.713347] (-) TimerEvent: {}
+[26.814160] (-) TimerEvent: {}
+[26.915005] (-) TimerEvent: {}
+[27.015782] (-) TimerEvent: {}
+[27.116616] (-) TimerEvent: {}
+[27.217376] (-) TimerEvent: {}
+[27.318195] (-) TimerEvent: {}
+[27.419034] (-) TimerEvent: {}
+[27.519804] (-) TimerEvent: {}
+[27.620598] (-) TimerEvent: {}
+[27.721358] (-) TimerEvent: {}
+[27.822199] (-) TimerEvent: {}
+[27.923036] (-) TimerEvent: {}
+[28.023805] (-) TimerEvent: {}
+[28.124638] (-) TimerEvent: {}
+[28.225420] (-) TimerEvent: {}
+[28.326246] (-) TimerEvent: {}
+[28.427068] (-) TimerEvent: {}
+[28.527819] (-) TimerEvent: {}
+[28.628641] (-) TimerEvent: {}
+[28.729392] (-) TimerEvent: {}
+[28.830215] (-) TimerEvent: {}
+[28.931066] (-) TimerEvent: {}
+[29.031831] (-) TimerEvent: {}
+[29.132672] (-) TimerEvent: {}
+[29.233426] (-) TimerEvent: {}
+[29.334223] (-) TimerEvent: {}
+[29.435044] (-) TimerEvent: {}
+[29.535792] (-) TimerEvent: {}
+[29.636628] (-) TimerEvent: {}
+[29.737369] (-) TimerEvent: {}
+[29.838150] (-) TimerEvent: {}
+[29.939008] (-) TimerEvent: {}
+[30.039947] (-) TimerEvent: {}
+[30.140677] (-) TimerEvent: {}
+[30.241432] (-) TimerEvent: {}
+[30.342243] (-) TimerEvent: {}
+[30.443075] (-) TimerEvent: {}
+[30.543865] (-) TimerEvent: {}
+[30.644677] (-) TimerEvent: {}
+[30.745449] (-) TimerEvent: {}
+[30.846266] (-) TimerEvent: {}
+[30.947070] (-) TimerEvent: {}
+[31.047760] (-) TimerEvent: {}
+[31.148615] (-) TimerEvent: {}
+[31.249380] (-) TimerEvent: {}
+[31.350193] (-) TimerEvent: {}
+[31.451013] (-) TimerEvent: {}
+[31.551767] (-) TimerEvent: {}
+[31.652588] (-) TimerEvent: {}
+[31.753390] (-) TimerEvent: {}
+[31.854312] (-) TimerEvent: {}
+[31.955106] (-) TimerEvent: {}
+[32.055917] (-) TimerEvent: {}
+[32.156730] (-) TimerEvent: {}
+[32.257619] (-) TimerEvent: {}
+[32.358386] (-) TimerEvent: {}
+[32.459237] (-) TimerEvent: {}
+[32.560515] (-) TimerEvent: {}
+[32.661258] (-) TimerEvent: {}
+[32.761960] (-) TimerEvent: {}
+[32.862659] (-) TimerEvent: {}
+[32.963389] (-) TimerEvent: {}
+[33.064147] (-) TimerEvent: {}
+[33.165084] (-) TimerEvent: {}
+[33.265872] (-) TimerEvent: {}
+[33.366698] (-) TimerEvent: {}
+[33.467472] (-) TimerEvent: {}
+[33.568264] (-) TimerEvent: {}
+[33.669155] (-) TimerEvent: {}
+[33.769924] (-) TimerEvent: {}
+[33.870726] (-) TimerEvent: {}
+[33.971555] (-) TimerEvent: {}
+[34.072545] (-) TimerEvent: {}
+[34.173457] (-) TimerEvent: {}
+[34.274258] (-) TimerEvent: {}
+[34.375069] (-) TimerEvent: {}
+[34.475941] (-) TimerEvent: {}
+[34.577239] (-) TimerEvent: {}
+[34.678143] (-) TimerEvent: {}
+[34.778928] (-) TimerEvent: {}
+[34.879756] (-) TimerEvent: {}
+[34.980648] (-) TimerEvent: {}
+[35.081440] (-) TimerEvent: {}
+[35.182223] (-) TimerEvent: {}
+[35.282989] (-) TimerEvent: {}
+[35.383768] (-) TimerEvent: {}
+[35.484714] (-) TimerEvent: {}
+[35.586258] (-) TimerEvent: {}
+[35.687863] (-) TimerEvent: {}
+[35.788750] (-) TimerEvent: {}
+[35.889679] (-) TimerEvent: {}
+[35.990456] (-) TimerEvent: {}
+[36.091393] (-) TimerEvent: {}
+[36.192183] (-) TimerEvent: {}
+[36.292984] (-) TimerEvent: {}
+[36.393750] (-) TimerEvent: {}
+[36.494650] (-) TimerEvent: {}
+[36.595710] (-) TimerEvent: {}
+[36.696554] (-) TimerEvent: {}
+[36.797332] (-) TimerEvent: {}
+[36.898099] (-) TimerEvent: {}
+[36.998900] (-) TimerEvent: {}
+[37.099757] (-) TimerEvent: {}
+[37.200539] (-) TimerEvent: {}
+[37.301284] (-) TimerEvent: {}
+[37.402017] (-) TimerEvent: {}
+[37.502859] (-) TimerEvent: {}
+[37.603681] (-) TimerEvent: {}
+[37.704434] (-) TimerEvent: {}
+[37.805207] (-) TimerEvent: {}
+[37.905956] (-) TimerEvent: {}
+[38.006762] (-) TimerEvent: {}
+[38.107585] (-) TimerEvent: {}
+[38.208345] (-) TimerEvent: {}
+[38.309160] (-) TimerEvent: {}
+[38.409915] (-) TimerEvent: {}
+[38.510710] (-) TimerEvent: {}
+[38.611533] (-) TimerEvent: {}
+[38.712344] (-) TimerEvent: {}
+[38.813130] (-) TimerEvent: {}
+[38.913899] (-) TimerEvent: {}
+[39.014683] (-) TimerEvent: {}
+[39.115499] (-) TimerEvent: {}
+[39.216309] (-) TimerEvent: {}
+[39.317114] (-) TimerEvent: {}
+[39.417876] (-) TimerEvent: {}
+[39.518639] (-) TimerEvent: {}
+[39.619404] (-) TimerEvent: {}
+[39.720209] (-) TimerEvent: {}
+[39.821059] (-) TimerEvent: {}
+[39.921822] (-) TimerEvent: {}
+[40.022589] (-) TimerEvent: {}
+[40.123392] (-) TimerEvent: {}
+[40.224205] (-) TimerEvent: {}
+[40.324999] (-) TimerEvent: {}
+[40.425762] (-) TimerEvent: {}
+[40.526525] (-) TimerEvent: {}
+[40.627350] (-) TimerEvent: {}
+[40.728178] (-) TimerEvent: {}
+[40.828987] (-) TimerEvent: {}
+[40.929793] (-) TimerEvent: {}
+[41.030631] (-) TimerEvent: {}
+[41.131515] (-) TimerEvent: {}
+[41.232369] (-) TimerEvent: {}
+[41.333232] (-) TimerEvent: {}
+[41.434083] (-) TimerEvent: {}
+[41.534976] (-) TimerEvent: {}
+[41.635797] (-) TimerEvent: {}
+[41.736635] (-) TimerEvent: {}
+[41.837380] (-) TimerEvent: {}
+[41.938153] (-) TimerEvent: {}
+[42.038899] (-) TimerEvent: {}
+[42.139696] (-) TimerEvent: {}
+[42.240437] (-) TimerEvent: {}
+[42.341230] (-) TimerEvent: {}
+[42.442011] (-) TimerEvent: {}
+[42.542806] (-) TimerEvent: {}
+[42.643673] (-) TimerEvent: {}
+[42.744406] (-) TimerEvent: {}
+[42.845187] (-) TimerEvent: {}
+[42.945918] (-) TimerEvent: {}
+[43.046659] (-) TimerEvent: {}
+[43.147521] (-) TimerEvent: {}
+[43.248296] (-) TimerEvent: {}
+[43.349139] (-) TimerEvent: {}
+[43.449877] (-) TimerEvent: {}
+[43.550644] (-) TimerEvent: {}
+[43.651495] (-) TimerEvent: {}
+[43.752283] (-) TimerEvent: {}
+[43.853075] (-) TimerEvent: {}
+[43.953838] (-) TimerEvent: {}
+[44.054624] (-) TimerEvent: {}
+[44.155513] (-) TimerEvent: {}
+[44.256336] (-) TimerEvent: {}
+[44.357138] (-) TimerEvent: {}
+[44.457903] (-) TimerEvent: {}
+[44.558655] (-) TimerEvent: {}
+[44.659479] (-) TimerEvent: {}
+[44.760278] (-) TimerEvent: {}
+[44.861075] (-) TimerEvent: {}
+[44.961848] (-) TimerEvent: {}
+[45.062665] (-) TimerEvent: {}
+[45.163520] (-) TimerEvent: {}
+[45.264330] (-) TimerEvent: {}
+[45.365141] (-) TimerEvent: {}
+[45.465930] (-) TimerEvent: {}
+[45.566779] (-) TimerEvent: {}
+[45.667628] (-) TimerEvent: {}
+[45.768404] (-) TimerEvent: {}
+[45.869240] (-) TimerEvent: {}
+[45.970019] (-) TimerEvent: {}
+[46.070788] (-) TimerEvent: {}
+[46.171645] (-) TimerEvent: {}
+[46.272380] (-) TimerEvent: {}
+[46.373170] (-) TimerEvent: {}
+[46.473918] (-) TimerEvent: {}
+[46.574642] (-) TimerEvent: {}
+[46.675480] (-) TimerEvent: {}
+[46.776224] (-) TimerEvent: {}
+[46.877002] (-) TimerEvent: {}
+[46.977776] (-) TimerEvent: {}
+[47.078558] (-) TimerEvent: {}
+[47.179399] (-) TimerEvent: {}
+[47.280176] (-) TimerEvent: {}
+[47.380975] (-) TimerEvent: {}
+[47.481749] (-) TimerEvent: {}
+[47.582481] (-) TimerEvent: {}
+[47.683283] (-) TimerEvent: {}
+[47.784044] (-) TimerEvent: {}
+[47.884855] (-) TimerEvent: {}
+[47.985623] (-) TimerEvent: {}
+[48.086419] (-) TimerEvent: {}
+[48.187181] (-) TimerEvent: {}
+[48.287967] (-) TimerEvent: {}
+[48.388805] (-) TimerEvent: {}
+[48.489675] (-) TimerEvent: {}
+[48.590426] (-) TimerEvent: {}
+[48.691244] (-) TimerEvent: {}
+[48.791981] (-) TimerEvent: {}
+[48.892811] (-) TimerEvent: {}
+[48.993544] (-) TimerEvent: {}
+[49.094332] (-) TimerEvent: {}
+[49.195168] (-) TimerEvent: {}
+[49.295951] (-) TimerEvent: {}
+[49.396692] (-) TimerEvent: {}
+[49.497443] (-) TimerEvent: {}
+[49.598215] (-) TimerEvent: {}
+[49.699114] (-) TimerEvent: {}
+[49.799880] (-) TimerEvent: {}
+[49.900668] (-) TimerEvent: {}
+[50.001392] (-) TimerEvent: {}
+[50.102199] (-) TimerEvent: {}
+[50.203004] (-) TimerEvent: {}
+[50.303862] (-) TimerEvent: {}
+[50.404658] (-) TimerEvent: {}
+[50.505408] (-) TimerEvent: {}
+[50.606148] (-) TimerEvent: {}
+[50.706970] (-) TimerEvent: {}
+[50.807779] (-) TimerEvent: {}
+[50.908595] (-) TimerEvent: {}
+[51.009315] (-) TimerEvent: {}
+[51.110088] (-) TimerEvent: {}
+[51.210902] (-) TimerEvent: {}
+[51.311730] (-) TimerEvent: {}
+[51.412559] (-) TimerEvent: {}
+[51.513300] (-) TimerEvent: {}
+[51.614071] (-) TimerEvent: {}
+[51.714856] (-) TimerEvent: {}
+[51.815596] (-) TimerEvent: {}
+[51.916450] (-) TimerEvent: {}
+[52.017231] (-) TimerEvent: {}
+[52.118002] (-) TimerEvent: {}
+[52.218776] (-) TimerEvent: {}
+[52.319510] (-) TimerEvent: {}
+[52.420309] (-) TimerEvent: {}
+[52.521125] (-) TimerEvent: {}
+[52.621890] (-) TimerEvent: {}
+[52.722637] (-) TimerEvent: {}
+[52.823466] (-) TimerEvent: {}
+[52.924279] (-) TimerEvent: {}
+[53.025060] (-) TimerEvent: {}
+[53.125818] (-) TimerEvent: {}
+[53.226600] (-) TimerEvent: {}
+[53.327414] (-) TimerEvent: {}
+[53.428216] (-) TimerEvent: {}
+[53.529056] (-) TimerEvent: {}
+[53.629808] (-) TimerEvent: {}
+[53.730598] (-) TimerEvent: {}
+[53.831402] (-) TimerEvent: {}
+[53.932222] (-) TimerEvent: {}
+[54.032988] (-) TimerEvent: {}
+[54.133753] (-) TimerEvent: {}
+[54.234585] (-) TimerEvent: {}
+[54.335655] (-) TimerEvent: {}
+[54.436889] (-) TimerEvent: {}
+[54.537939] (-) TimerEvent: {}
+[54.639129] (-) TimerEvent: {}
+[54.740282] (-) TimerEvent: {}
+[54.841493] (-) TimerEvent: {}
+[54.942669] (-) TimerEvent: {}
+[55.043965] (-) TimerEvent: {}
+[55.145215] (-) TimerEvent: {}
+[55.246257] (-) TimerEvent: {}
+[55.347243] (-) TimerEvent: {}
+[55.448048] (-) TimerEvent: {}
+[55.549123] (-) TimerEvent: {}
+[55.650233] (-) TimerEvent: {}
+[55.751298] (-) TimerEvent: {}
+[55.852136] (-) TimerEvent: {}
+[55.953107] (-) TimerEvent: {}
+[56.053847] (-) TimerEvent: {}
+[56.154595] (-) TimerEvent: {}
+[56.255419] (-) TimerEvent: {}
+[56.356180] (-) TimerEvent: {}
+[56.457009] (-) TimerEvent: {}
+[56.557760] (-) TimerEvent: {}
+[56.658530] (-) TimerEvent: {}
+[56.759332] (-) TimerEvent: {}
+[56.860078] (-) TimerEvent: {}
+[56.960944] (-) TimerEvent: {}
+[57.061680] (-) TimerEvent: {}
+[57.162439] (-) TimerEvent: {}
+[57.263323] (-) TimerEvent: {}
+[57.364079] (-) TimerEvent: {}
+[57.464904] (-) TimerEvent: {}
+[57.565645] (-) TimerEvent: {}
+[57.666421] (-) TimerEvent: {}
+[57.767218] (-) TimerEvent: {}
+[57.867959] (-) TimerEvent: {}
+[57.968737] (-) TimerEvent: {}
+[58.069471] (-) TimerEvent: {}
+[58.170200] (-) TimerEvent: {}
+[58.270998] (-) TimerEvent: {}
+[58.371726] (-) TimerEvent: {}
+[58.472463] (-) TimerEvent: {}
+[58.573305] (-) TimerEvent: {}
+[58.674063] (-) TimerEvent: {}
+[58.774878] (-) TimerEvent: {}
+[58.875697] (-) TimerEvent: {}
+[58.976518] (-) TimerEvent: {}
+[59.077339] (-) TimerEvent: {}
+[59.178376] (-) TimerEvent: {}
+[59.279902] (-) TimerEvent: {}
+[59.381525] (-) TimerEvent: {}
+[59.482685] (-) TimerEvent: {}
+[59.583491] (-) TimerEvent: {}
+[59.684325] (-) TimerEvent: {}
+[59.785302] (-) TimerEvent: {}
+[59.886189] (-) TimerEvent: {}
+[59.987131] (-) TimerEvent: {}
+[60.088355] (-) TimerEvent: {}
+[60.189301] (-) TimerEvent: {}
+[60.290246] (-) TimerEvent: {}
+[60.391256] (-) TimerEvent: {}
+[60.492278] (-) TimerEvent: {}
+[60.593374] (-) TimerEvent: {}
+[60.619475] (turtlesim) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/turtlesim_node.dir/src/turtle_frame.cpp.o\x1b[0m\n'}
+[60.631391] (turtlesim) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/turtlesim_node.dir/include/turtlesim/moc_turtle_frame.cpp.o\x1b[0m\n'}
+[60.693653] (-) TimerEvent: {}
+[60.794608] (-) TimerEvent: {}
+[60.895514] (-) TimerEvent: {}
+[60.996335] (-) TimerEvent: {}
+[61.097143] (-) TimerEvent: {}
+[61.197985] (-) TimerEvent: {}
+[61.298693] (-) TimerEvent: {}
+[61.399554] (-) TimerEvent: {}
+[61.500344] (-) TimerEvent: {}
+[61.601112] (-) TimerEvent: {}
+[61.701844] (-) TimerEvent: {}
+[61.802592] (-) TimerEvent: {}
+[61.903423] (-) TimerEvent: {}
+[62.004328] (-) TimerEvent: {}
+[62.105176] (-) TimerEvent: {}
+[62.205893] (-) TimerEvent: {}
+[62.306615] (-) TimerEvent: {}
+[62.407534] (-) TimerEvent: {}
+[62.508307] (-) TimerEvent: {}
+[62.609077] (-) TimerEvent: {}
+[62.709834] (-) TimerEvent: {}
+[62.810808] (-) TimerEvent: {}
+[62.911528] (-) TimerEvent: {}
+[63.012418] (-) TimerEvent: {}
+[63.113245] (-) TimerEvent: {}
+[63.214128] (-) TimerEvent: {}
+[63.315115] (-) TimerEvent: {}
+[63.415951] (-) TimerEvent: {}
+[63.516894] (-) TimerEvent: {}
+[63.617673] (-) TimerEvent: {}
+[63.718575] (-) TimerEvent: {}
+[63.819442] (-) TimerEvent: {}
+[63.920261] (-) TimerEvent: {}
+[64.021027] (-) TimerEvent: {}
+[64.121873] (-) TimerEvent: {}
+[64.223125] (-) TimerEvent: {}
+[64.324105] (-) TimerEvent: {}
+[64.425096] (-) TimerEvent: {}
+[64.526281] (-) TimerEvent: {}
+[64.627325] (-) TimerEvent: {}
+[64.728366] (-) TimerEvent: {}
+[64.829406] (-) TimerEvent: {}
+[64.930323] (-) TimerEvent: {}
+[65.031275] (-) TimerEvent: {}
+[65.132209] (-) TimerEvent: {}
+[65.233124] (-) TimerEvent: {}
+[65.334156] (-) TimerEvent: {}
+[65.435153] (-) TimerEvent: {}
+[65.536110] (-) TimerEvent: {}
+[65.637353] (-) TimerEvent: {}
+[65.738551] (-) TimerEvent: {}
+[65.839453] (-) TimerEvent: {}
+[65.940443] (-) TimerEvent: {}
+[66.041434] (-) TimerEvent: {}
+[66.142313] (-) TimerEvent: {}
+[66.243342] (-) TimerEvent: {}
+[66.344295] (-) TimerEvent: {}
+[66.445288] (-) TimerEvent: {}
+[66.546255] (-) TimerEvent: {}
+[66.647243] (-) TimerEvent: {}
+[66.748154] (-) TimerEvent: {}
+[66.849163] (-) TimerEvent: {}
+[66.950317] (-) TimerEvent: {}
+[67.051518] (-) TimerEvent: {}
+[67.152451] (-) TimerEvent: {}
+[67.253514] (-) TimerEvent: {}
+[67.354499] (-) TimerEvent: {}
+[67.455483] (-) TimerEvent: {}
+[67.556423] (-) TimerEvent: {}
+[67.657440] (-) TimerEvent: {}
+[67.758860] (-) TimerEvent: {}
+[67.859776] (-) TimerEvent: {}
+[67.960740] (-) TimerEvent: {}
+[68.061700] (-) TimerEvent: {}
+[68.162714] (-) TimerEvent: {}
+[68.264003] (-) TimerEvent: {}
+[68.364939] (-) TimerEvent: {}
+[68.465958] (-) TimerEvent: {}
+[68.566876] (-) TimerEvent: {}
+[68.667817] (-) TimerEvent: {}
+[68.768903] (-) TimerEvent: {}
+[68.870022] (-) TimerEvent: {}
+[68.971058] (-) TimerEvent: {}
+[69.072041] (-) TimerEvent: {}
+[69.173096] (-) TimerEvent: {}
+[69.274273] (-) TimerEvent: {}
+[69.375236] (-) TimerEvent: {}
+[69.476364] (-) TimerEvent: {}
+[69.577348] (-) TimerEvent: {}
+[69.678356] (-) TimerEvent: {}
+[69.779288] (-) TimerEvent: {}
+[69.880225] (-) TimerEvent: {}
+[69.981189] (-) TimerEvent: {}
+[70.082294] (-) TimerEvent: {}
+[70.183367] (-) TimerEvent: {}
+[70.284246] (-) TimerEvent: {}
+[70.385151] (-) TimerEvent: {}
+[70.486079] (-) TimerEvent: {}
+[70.586966] (-) TimerEvent: {}
+[70.687848] (-) TimerEvent: {}
+[70.788738] (-) TimerEvent: {}
+[70.889664] (-) TimerEvent: {}
+[70.990556] (-) TimerEvent: {}
+[71.091472] (-) TimerEvent: {}
+[71.192418] (-) TimerEvent: {}
+[71.293417] (-) TimerEvent: {}
+[71.394319] (-) TimerEvent: {}
+[71.495215] (-) TimerEvent: {}
+[71.596168] (-) TimerEvent: {}
+[71.697082] (-) TimerEvent: {}
+[71.798156] (-) TimerEvent: {}
+[71.899366] (-) TimerEvent: {}
+[72.000291] (-) TimerEvent: {}
+[72.101239] (-) TimerEvent: {}
+[72.202394] (-) TimerEvent: {}
+[72.303319] (-) TimerEvent: {}
+[72.404282] (-) TimerEvent: {}
+[72.505241] (-) TimerEvent: {}
+[72.606186] (-) TimerEvent: {}
+[72.707147] (-) TimerEvent: {}
+[72.808141] (-) TimerEvent: {}
+[72.909099] (-) TimerEvent: {}
+[73.009977] (-) TimerEvent: {}
+[73.111030] (-) TimerEvent: {}
+[73.211967] (-) TimerEvent: {}
+[73.312910] (-) TimerEvent: {}
+[73.413798] (-) TimerEvent: {}
+[73.514821] (-) TimerEvent: {}
+[73.615702] (-) TimerEvent: {}
+[73.716663] (-) TimerEvent: {}
+[73.817531] (-) TimerEvent: {}
+[73.918452] (-) TimerEvent: {}
+[74.019432] (-) TimerEvent: {}
+[74.120294] (-) TimerEvent: {}
+[74.221214] (-) TimerEvent: {}
+[74.323957] (-) TimerEvent: {}
+[74.424926] (-) TimerEvent: {}
+[74.525848] (-) TimerEvent: {}
+[74.626883] (-) TimerEvent: {}
+[74.727757] (-) TimerEvent: {}
+[74.828689] (-) TimerEvent: {}
+[74.929626] (-) TimerEvent: {}
+[75.030501] (-) TimerEvent: {}
+[75.131425] (-) TimerEvent: {}
+[75.232345] (-) TimerEvent: {}
+[75.333279] (-) TimerEvent: {}
+[75.434163] (-) TimerEvent: {}
+[75.536403] (-) TimerEvent: {}
+[75.637369] (-) TimerEvent: {}
+[75.738252] (-) TimerEvent: {}
+[75.839228] (-) TimerEvent: {}
+[75.940126] (-) TimerEvent: {}
+[76.041029] (-) TimerEvent: {}
+[76.141911] (-) TimerEvent: {}
+[76.242834] (-) TimerEvent: {}
+[76.343731] (-) TimerEvent: {}
+[76.444631] (-) TimerEvent: {}
+[76.545516] (-) TimerEvent: {}
+[76.646437] (-) TimerEvent: {}
+[76.747379] (-) TimerEvent: {}
+[76.848419] (-) TimerEvent: {}
+[76.949379] (-) TimerEvent: {}
+[77.050317] (-) TimerEvent: {}
+[77.151218] (-) TimerEvent: {}
+[77.252157] (-) TimerEvent: {}
+[77.353107] (-) TimerEvent: {}
+[77.454157] (-) TimerEvent: {}
+[77.555264] (-) TimerEvent: {}
+[77.656337] (-) TimerEvent: {}
+[77.757363] (-) TimerEvent: {}
+[77.858262] (-) TimerEvent: {}
+[77.959241] (-) TimerEvent: {}
+[78.060183] (-) TimerEvent: {}
+[78.161121] (-) TimerEvent: {}
+[78.262035] (-) TimerEvent: {}
+[78.362942] (-) TimerEvent: {}
+[78.463935] (-) TimerEvent: {}
+[78.564964] (-) TimerEvent: {}
+[78.665857] (-) TimerEvent: {}
+[78.766743] (-) TimerEvent: {}
+[78.867672] (-) TimerEvent: {}
+[78.968610] (-) TimerEvent: {}
+[79.069472] (-) TimerEvent: {}
+[79.170337] (-) TimerEvent: {}
+[79.271205] (-) TimerEvent: {}
+[79.372331] (-) TimerEvent: {}
+[79.473263] (-) TimerEvent: {}
+[79.574170] (-) TimerEvent: {}
+[79.675405] (-) TimerEvent: {}
+[79.776351] (-) TimerEvent: {}
+[79.877283] (-) TimerEvent: {}
+[79.978174] (-) TimerEvent: {}
+[80.079127] (-) TimerEvent: {}
+[80.180004] (-) TimerEvent: {}
+[80.280932] (-) TimerEvent: {}
+[80.381826] (-) TimerEvent: {}
+[80.482822] (-) TimerEvent: {}
+[80.583711] (-) TimerEvent: {}
+[80.684633] (-) TimerEvent: {}
+[80.785518] (-) TimerEvent: {}
+[80.886436] (-) TimerEvent: {}
+[80.987309] (-) TimerEvent: {}
+[81.088209] (-) TimerEvent: {}
+[81.189180] (-) TimerEvent: {}
+[81.290144] (-) TimerEvent: {}
+[81.391118] (-) TimerEvent: {}
+[81.492001] (-) TimerEvent: {}
+[81.592861] (-) TimerEvent: {}
+[81.693766] (-) TimerEvent: {}
+[81.794642] (-) TimerEvent: {}
+[81.895710] (-) TimerEvent: {}
+[81.997185] (-) TimerEvent: {}
+[82.098064] (-) TimerEvent: {}
+[82.198973] (-) TimerEvent: {}
+[82.299936] (-) TimerEvent: {}
+[82.400790] (-) TimerEvent: {}
+[82.501555] (-) TimerEvent: {}
+[82.602331] (-) TimerEvent: {}
+[82.703163] (-) TimerEvent: {}
+[82.803935] (-) TimerEvent: {}
+[82.904777] (-) TimerEvent: {}
+[83.005556] (-) TimerEvent: {}
+[83.106316] (-) TimerEvent: {}
+[83.207172] (-) TimerEvent: {}
+[83.307941] (-) TimerEvent: {}
+[83.408798] (-) TimerEvent: {}
+[83.509572] (-) TimerEvent: {}
+[83.610348] (-) TimerEvent: {}
+[83.711200] (-) TimerEvent: {}
+[83.811974] (-) TimerEvent: {}
+[83.912827] (-) TimerEvent: {}
+[84.013600] (-) TimerEvent: {}
+[84.114379] (-) TimerEvent: {}
+[84.215225] (-) TimerEvent: {}
+[84.315997] (-) TimerEvent: {}
+[84.416988] (-) TimerEvent: {}
+[84.517814] (-) TimerEvent: {}
+[84.618632] (-) TimerEvent: {}
+[84.719432] (-) TimerEvent: {}
+[84.820223] (-) TimerEvent: {}
+[84.921090] (-) TimerEvent: {}
+[85.021895] (-) TimerEvent: {}
+[85.122706] (-) TimerEvent: {}
+[85.223521] (-) TimerEvent: {}
+[85.324289] (-) TimerEvent: {}
+[85.425238] (-) TimerEvent: {}
+[85.526003] (-) TimerEvent: {}
+[85.626784] (-) TimerEvent: {}
+[85.727543] (-) TimerEvent: {}
+[85.828301] (-) TimerEvent: {}
+[85.929181] (-) TimerEvent: {}
+[86.029944] (-) TimerEvent: {}
+[86.130712] (-) TimerEvent: {}
+[86.231471] (-) TimerEvent: {}
+[86.332252] (-) TimerEvent: {}
+[86.433103] (-) TimerEvent: {}
+[86.533853] (-) TimerEvent: {}
+[86.634600] (-) TimerEvent: {}
+[86.735343] (-) TimerEvent: {}
+[86.836137] (-) TimerEvent: {}
+[86.936963] (-) TimerEvent: {}
+[87.037696] (-) TimerEvent: {}
+[87.138468] (-) TimerEvent: {}
+[87.239229] (-) TimerEvent: {}
+[87.340038] (-) TimerEvent: {}
+[87.440888] (-) TimerEvent: {}
+[87.541651] (-) TimerEvent: {}
+[87.642427] (-) TimerEvent: {}
+[87.743224] (-) TimerEvent: {}
+[87.844037] (-) TimerEvent: {}
+[87.944892] (-) TimerEvent: {}
+[88.045666] (-) TimerEvent: {}
+[88.146462] (-) TimerEvent: {}
+[88.247240] (-) TimerEvent: {}
+[88.348076] (-) TimerEvent: {}
+[88.449035] (-) TimerEvent: {}
+[88.549854] (-) TimerEvent: {}
+[88.650655] (-) TimerEvent: {}
+[88.751528] (-) TimerEvent: {}
+[88.852431] (-) TimerEvent: {}
+[88.953323] (-) TimerEvent: {}
+[89.054140] (-) TimerEvent: {}
+[89.155296] (-) TimerEvent: {}
+[89.256144] (-) TimerEvent: {}
+[89.356963] (-) TimerEvent: {}
+[89.457845] (-) TimerEvent: {}
+[89.558645] (-) TimerEvent: {}
+[89.659496] (-) TimerEvent: {}
+[89.760310] (-) TimerEvent: {}
+[89.861090] (-) TimerEvent: {}
+[89.961866] (-) TimerEvent: {}
+[90.062615] (-) TimerEvent: {}
+[90.163438] (-) TimerEvent: {}
+[90.264231] (-) TimerEvent: {}
+[90.365031] (-) TimerEvent: {}
+[90.465815] (-) TimerEvent: {}
+[90.566597] (-) TimerEvent: {}
+[90.667536] (-) TimerEvent: {}
+[90.768600] (-) TimerEvent: {}
+[90.869313] (-) TimerEvent: {}
+[90.970138] (-) TimerEvent: {}
+[91.070874] (-) TimerEvent: {}
+[91.171601] (-) TimerEvent: {}
+[91.272363] (-) TimerEvent: {}
+[91.373163] (-) TimerEvent: {}
+[91.474127] (-) TimerEvent: {}
+[91.575003] (-) TimerEvent: {}
+[91.675924] (-) TimerEvent: {}
+[91.776895] (-) TimerEvent: {}
+[91.877774] (-) TimerEvent: {}
+[91.978581] (-) TimerEvent: {}
+[92.079463] (-) TimerEvent: {}
+[92.180274] (-) TimerEvent: {}
+[92.281103] (-) TimerEvent: {}
+[92.381956] (-) TimerEvent: {}
+[92.483153] (-) TimerEvent: {}
+[92.584179] (-) TimerEvent: {}
+[92.685172] (-) TimerEvent: {}
+[92.785970] (-) TimerEvent: {}
+[92.886765] (-) TimerEvent: {}
+[92.987614] (-) TimerEvent: {}
+[93.088406] (-) TimerEvent: {}
+[93.189205] (-) TimerEvent: {}
+[93.289960] (-) TimerEvent: {}
+[93.390911] (-) TimerEvent: {}
+[93.492560] (-) TimerEvent: {}
+[93.593478] (-) TimerEvent: {}
+[93.694520] (-) TimerEvent: {}
+[93.795614] (-) TimerEvent: {}
+[93.896423] (-) TimerEvent: {}
+[93.997199] (-) TimerEvent: {}
+[94.097958] (-) TimerEvent: {}
+[94.198792] (-) TimerEvent: {}
+[94.299525] (-) TimerEvent: {}
+[94.400277] (-) TimerEvent: {}
+[94.501112] (-) TimerEvent: {}
+[94.601861] (-) TimerEvent: {}
+[94.702654] (-) TimerEvent: {}
+[94.803512] (-) TimerEvent: {}
+[94.904312] (-) TimerEvent: {}
+[95.005118] (-) TimerEvent: {}
+[95.105891] (-) TimerEvent: {}
+[95.206714] (-) TimerEvent: {}
+[95.307483] (-) TimerEvent: {}
+[95.408291] (-) TimerEvent: {}
+[95.509158] (-) TimerEvent: {}
+[95.609935] (-) TimerEvent: {}
+[95.710749] (-) TimerEvent: {}
+[95.811533] (-) TimerEvent: {}
+[95.912345] (-) TimerEvent: {}
+[96.013475] (-) TimerEvent: {}
+[96.114252] (-) TimerEvent: {}
+[96.215055] (-) TimerEvent: {}
+[96.315800] (-) TimerEvent: {}
+[96.416660] (-) TimerEvent: {}
+[96.517479] (-) TimerEvent: {}
+[96.618252] (-) TimerEvent: {}
+[96.719111] (-) TimerEvent: {}
+[96.819891] (-) TimerEvent: {}
+[96.920673] (-) TimerEvent: {}
+[97.021453] (-) TimerEvent: {}
+[97.122240] (-) TimerEvent: {}
+[97.223037] (-) TimerEvent: {}
+[97.323779] (-) TimerEvent: {}
+[97.424613] (-) TimerEvent: {}
+[97.525387] (-) TimerEvent: {}
+[97.626196] (-) TimerEvent: {}
+[97.727011] (-) TimerEvent: {}
+[97.827802] (-) TimerEvent: {}
+[97.928675] (-) TimerEvent: {}
+[98.029442] (-) TimerEvent: {}
+[98.130232] (-) TimerEvent: {}
+[98.231042] (-) TimerEvent: {}
+[98.331803] (-) TimerEvent: {}
+[98.432626] (-) TimerEvent: {}
+[98.533401] (-) TimerEvent: {}
+[98.634246] (-) TimerEvent: {}
+[98.735038] (-) TimerEvent: {}
+[98.835843] (-) TimerEvent: {}
+[98.936651] (-) TimerEvent: {}
+[99.037428] (-) TimerEvent: {}
+[99.138245] (-) TimerEvent: {}
+[99.239043] (-) TimerEvent: {}
+[99.339816] (-) TimerEvent: {}
+[99.440637] (-) TimerEvent: {}
+[99.541397] (-) TimerEvent: {}
+[99.642265] (-) TimerEvent: {}
+[99.743082] (-) TimerEvent: {}
+[99.843867] (-) TimerEvent: {}
+[99.944685] (-) TimerEvent: {}
+[100.045477] (-) TimerEvent: {}
+[100.146292] (-) TimerEvent: {}
+[100.247119] (-) TimerEvent: {}
+[100.347949] (-) TimerEvent: {}
+[100.448777] (-) TimerEvent: {}
+[100.549556] (-) TimerEvent: {}
+[100.650387] (-) TimerEvent: {}
+[100.751138] (-) TimerEvent: {}
+[100.851903] (-) TimerEvent: {}
+[100.952639] (-) TimerEvent: {}
+[101.053396] (-) TimerEvent: {}
+[101.154195] (-) TimerEvent: {}
+[101.254952] (-) TimerEvent: {}
+[101.355722] (-) TimerEvent: {}
+[101.456447] (-) TimerEvent: {}
+[101.557243] (-) TimerEvent: {}
+[101.657997] (-) TimerEvent: {}
+[101.758809] (-) TimerEvent: {}
+[101.859583] (-) TimerEvent: {}
+[101.960338] (-) TimerEvent: {}
+[102.061104] (-) TimerEvent: {}
+[102.161820] (-) TimerEvent: {}
+[102.262633] (-) TimerEvent: {}
+[102.363397] (-) TimerEvent: {}
+[102.464190] (-) TimerEvent: {}
+[102.564937] (-) TimerEvent: {}
+[102.665700] (-) TimerEvent: {}
+[102.766497] (-) TimerEvent: {}
+[102.867229] (-) TimerEvent: {}
+[102.967965] (-) TimerEvent: {}
+[103.068762] (-) TimerEvent: {}
+[103.169531] (-) TimerEvent: {}
+[103.270270] (-) TimerEvent: {}
+[103.371091] (-) TimerEvent: {}
+[103.471867] (-) TimerEvent: {}
+[103.572650] (-) TimerEvent: {}
+[103.673384] (-) TimerEvent: {}
+[103.774152] (-) TimerEvent: {}
+[103.874969] (-) TimerEvent: {}
+[103.975725] (-) TimerEvent: {}
+[104.076537] (-) TimerEvent: {}
+[104.177272] (-) TimerEvent: {}
+[104.278045] (-) TimerEvent: {}
+[104.378785] (-) TimerEvent: {}
+[104.479546] (-) TimerEvent: {}
+[104.580320] (-) TimerEvent: {}
+[104.681116] (-) TimerEvent: {}
+[104.781864] (-) TimerEvent: {}
+[104.882585] (-) TimerEvent: {}
+[104.983414] (-) TimerEvent: {}
+[105.084172] (-) TimerEvent: {}
+[105.184960] (-) TimerEvent: {}
+[105.285720] (-) TimerEvent: {}
+[105.386460] (-) TimerEvent: {}
+[105.487322] (-) TimerEvent: {}
+[105.588073] (-) TimerEvent: {}
+[105.688917] (-) TimerEvent: {}
+[105.789667] (-) TimerEvent: {}
+[105.890430] (-) TimerEvent: {}
+[105.991309] (-) TimerEvent: {}
+[106.092078] (-) TimerEvent: {}
+[106.192865] (-) TimerEvent: {}
+[106.293623] (-) TimerEvent: {}
+[106.394403] (-) TimerEvent: {}
+[106.495260] (-) TimerEvent: {}
+[106.596005] (-) TimerEvent: {}
+[106.696757] (-) TimerEvent: {}
+[106.797503] (-) TimerEvent: {}
+[106.898232] (-) TimerEvent: {}
+[106.999048] (-) TimerEvent: {}
+[107.099815] (-) TimerEvent: {}
+[107.200608] (-) TimerEvent: {}
+[107.301342] (-) TimerEvent: {}
+[107.402091] (-) TimerEvent: {}
+[107.502871] (-) TimerEvent: {}
+[107.603598] (-) TimerEvent: {}
+[107.704383] (-) TimerEvent: {}
+[107.805168] (-) TimerEvent: {}
+[107.905941] (-) TimerEvent: {}
+[108.006750] (-) TimerEvent: {}
+[108.107565] (-) TimerEvent: {}
+[108.208370] (-) TimerEvent: {}
+[108.309165] (-) TimerEvent: {}
+[108.409947] (-) TimerEvent: {}
+[108.510803] (-) TimerEvent: {}
+[108.611918] (-) TimerEvent: {}
+[108.712874] (-) TimerEvent: {}
+[108.813705] (-) TimerEvent: {}
+[108.914750] (-) TimerEvent: {}
+[109.015873] (-) TimerEvent: {}
+[109.117010] (-) TimerEvent: {}
+[109.218223] (-) TimerEvent: {}
+[109.319113] (-) TimerEvent: {}
+[109.420130] (-) TimerEvent: {}
+[109.626239] (-) TimerEvent: {}
+[109.727205] (-) TimerEvent: {}
+[109.827981] (-) TimerEvent: {}
+[109.928754] (-) TimerEvent: {}
+[110.029532] (-) TimerEvent: {}
+[110.130282] (-) TimerEvent: {}
+[110.231007] (-) TimerEvent: {}
+[110.331826] (-) TimerEvent: {}
+[110.432606] (-) TimerEvent: {}
+[110.533350] (-) TimerEvent: {}
+[110.634072] (-) TimerEvent: {}
+[110.734811] (-) TimerEvent: {}
+[110.835590] (-) TimerEvent: {}
+[110.936382] (-) TimerEvent: {}
+[111.037125] (-) TimerEvent: {}
+[111.137872] (-) TimerEvent: {}
+[111.238604] (-) TimerEvent: {}
+[111.339354] (-) TimerEvent: {}
+[111.440072] (-) TimerEvent: {}
+[111.540823] (-) TimerEvent: {}
+[111.641552] (-) TimerEvent: {}
+[111.742307] (-) TimerEvent: {}
+[111.843118] (-) TimerEvent: {}
+[111.943861] (-) TimerEvent: {}
+[112.044669] (-) TimerEvent: {}
+[112.145393] (-) TimerEvent: {}
+[112.246126] (-) TimerEvent: {}
+[112.346923] (-) TimerEvent: {}
+[112.447648] (-) TimerEvent: {}
+[112.548662] (-) TimerEvent: {}
+[112.649945] (-) TimerEvent: {}
+[112.752285] (-) TimerEvent: {}
+[112.853423] (-) TimerEvent: {}
+[112.954201] (-) TimerEvent: {}
+[113.055052] (-) TimerEvent: {}
+[113.155959] (-) TimerEvent: {}
+[113.256957] (-) TimerEvent: {}
+[113.358156] (-) TimerEvent: {}
+[113.458957] (-) TimerEvent: {}
+[113.559799] (-) TimerEvent: {}
+[113.613556] (turtlesim) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX executable turtlesim_node\x1b[0m\n'}
+[113.660020] (-) TimerEvent: {}
+[113.760977] (-) TimerEvent: {}
+[113.862445] (-) TimerEvent: {}
+[113.963462] (-) TimerEvent: {}
+[114.064360] (-) TimerEvent: {}
+[114.165355] (-) TimerEvent: {}
+[114.266193] (-) TimerEvent: {}
+[114.367112] (-) TimerEvent: {}
+[114.467996] (-) TimerEvent: {}
+[114.569074] (-) TimerEvent: {}
+[114.670190] (-) TimerEvent: {}
+[114.771228] (-) TimerEvent: {}
+[114.872563] (-) TimerEvent: {}
+[114.973521] (-) TimerEvent: {}
+[115.074677] (-) TimerEvent: {}
+[115.175867] (-) TimerEvent: {}
+[115.277193] (-) TimerEvent: {}
+[115.378029] (-) TimerEvent: {}
+[115.478957] (-) TimerEvent: {}
+[115.580259] (-) TimerEvent: {}
+[115.681477] (-) TimerEvent: {}
+[115.782314] (-) TimerEvent: {}
+[115.883129] (-) TimerEvent: {}
+[115.984039] (-) TimerEvent: {}
+[116.085085] (-) TimerEvent: {}
+[116.186305] (-) TimerEvent: {}
+[116.287367] (-) TimerEvent: {}
+[116.388610] (-) TimerEvent: {}
+[116.489610] (-) TimerEvent: {}
+[116.590738] (-) TimerEvent: {}
+[116.691759] (-) TimerEvent: {}
+[116.793140] (-) TimerEvent: {}
+[116.894302] (-) TimerEvent: {}
+[116.995206] (-) TimerEvent: {}
+[117.096058] (-) TimerEvent: {}
+[117.197120] (-) TimerEvent: {}
+[117.298287] (-) TimerEvent: {}
+[117.399246] (-) TimerEvent: {}
+[117.500271] (-) TimerEvent: {}
+[117.601441] (-) TimerEvent: {}
+[117.702193] (-) TimerEvent: {}
+[117.802957] (-) TimerEvent: {}
+[117.903855] (-) TimerEvent: {}
+[118.004829] (-) TimerEvent: {}
+[118.105874] (-) TimerEvent: {}
+[118.207204] (-) TimerEvent: {}
+[118.308245] (-) TimerEvent: {}
+[118.409458] (-) TimerEvent: {}
+[118.510475] (-) TimerEvent: {}
+[118.611799] (-) TimerEvent: {}
+[118.712815] (-) TimerEvent: {}
+[118.814217] (-) TimerEvent: {}
+[118.915349] (-) TimerEvent: {}
+[119.016653] (-) TimerEvent: {}
+[119.117639] (-) TimerEvent: {}
+[119.218951] (-) TimerEvent: {}
+[119.319933] (-) TimerEvent: {}
+[119.421132] (-) TimerEvent: {}
+[119.522125] (-) TimerEvent: {}
+[119.623421] (-) TimerEvent: {}
+[119.724772] (-) TimerEvent: {}
+[119.825728] (-) TimerEvent: {}
+[119.927155] (-) TimerEvent: {}
+[120.028408] (-) TimerEvent: {}
+[120.129409] (-) TimerEvent: {}
+[120.230542] (-) TimerEvent: {}
+[120.331517] (-) TimerEvent: {}
+[120.432682] (-) TimerEvent: {}
+[120.533504] (-) TimerEvent: {}
+[120.634441] (-) TimerEvent: {}
+[120.735314] (-) TimerEvent: {}
+[120.836237] (-) TimerEvent: {}
+[120.937114] (-) TimerEvent: {}
+[121.037982] (-) TimerEvent: {}
+[121.139034] (-) TimerEvent: {}
+[121.239837] (-) TimerEvent: {}
+[121.340541] (-) TimerEvent: {}
+[121.441336] (-) TimerEvent: {}
+[121.542326] (-) TimerEvent: {}
+[121.642982] (-) TimerEvent: {}
+[121.743680] (-) TimerEvent: {}
+[121.844345] (-) TimerEvent: {}
+[121.945144] (-) TimerEvent: {}
+[122.046176] (-) TimerEvent: {}
+[122.146890] (-) TimerEvent: {}
+[122.248062] (-) TimerEvent: {}
+[122.348744] (-) TimerEvent: {}
+[122.449412] (-) TimerEvent: {}
+[122.550263] (-) TimerEvent: {}
+[122.651486] (-) TimerEvent: {}
+[122.752324] (-) TimerEvent: {}
+[122.853325] (-) TimerEvent: {}
+[122.954147] (-) TimerEvent: {}
+[123.054939] (-) TimerEvent: {}
+[123.155729] (-) TimerEvent: {}
+[123.256365] (-) TimerEvent: {}
+[123.357029] (-) TimerEvent: {}
+[123.457746] (-) TimerEvent: {}
+[123.558492] (-) TimerEvent: {}
+[123.659228] (-) TimerEvent: {}
+[123.738292] (turtlesim) StdoutLine: {'line': b'[ 83%] Built target turtlesim_node\n'}
+[123.759430] (-) TimerEvent: {}
+[123.860242] (-) TimerEvent: {}
+[123.865772] (turtlesim) StdoutLine: {'line': b'[ 84%] Built target turtlesim__py\n'}
+[123.939823] (turtlesim) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target turtlesim__rosidl_generator_py\x1b[0m\n'}
+[123.960413] (-) TimerEvent: {}
+[124.061227] (-) TimerEvent: {}
+[124.100769] (turtlesim) StdoutLine: {'line': b'[ 93%] Built target turtlesim__rosidl_generator_py\n'}
+[124.161445] (-) TimerEvent: {}
+[124.164732] (turtlesim) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target turtlesim__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[124.168739] (turtlesim) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target turtlesim__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[124.170544] (turtlesim) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target turtlesim__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[124.243378] (turtlesim) StdoutLine: {'line': b'[ 95%] Built target turtlesim__rosidl_typesupport_introspection_c__pyext\n'}
+[124.245247] (turtlesim) StdoutLine: {'line': b'[ 97%] Built target turtlesim__rosidl_typesupport_fastrtps_c__pyext\n'}
+[124.254106] (turtlesim) StdoutLine: {'line': b'[100%] Built target turtlesim__rosidl_typesupport_c__pyext\n'}
+[124.261622] (-) TimerEvent: {}
+[124.318878] (turtlesim) CommandEnded: {'returncode': 0}
+[124.361821] (-) TimerEvent: {}
+[124.462632] (-) TimerEvent: {}
+[124.563440] (-) TimerEvent: {}
+[124.664423] (-) TimerEvent: {}
+[124.765512] (-) TimerEvent: {}
+[124.866149] (-) TimerEvent: {}
+[124.966839] (-) TimerEvent: {}
+[125.067541] (-) TimerEvent: {}
+[125.168212] (-) TimerEvent: {}
+[125.268894] (-) TimerEvent: {}
+[125.369543] (-) TimerEvent: {}
+[125.470252] (-) TimerEvent: {}
+[125.570927] (-) TimerEvent: {}
+[125.660443] (turtlesim) JobProgress: {'identifier': 'turtlesim', 'progress': 'install'}
+[125.671135] (-) TimerEvent: {}
+[125.706337] (turtlesim) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a247:c100:3cc3:c9c1:d82:e979 50543 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a247:c100:3cc3:c9c1:d82:e979 50543 2a02:a31a:a247:c100:8b:b606:bb9a:4ffb 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[125.751014] (turtlesim) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[125.758669] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/ament_index/resource_index/rosidl_interfaces/turtlesim\n'}
+[125.762141] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim\n'}
+[125.763764] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv\n'}
+[125.765081] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/kill.h\n'}
+[125.767693] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/teleport_relative.h\n'}
+[125.770112] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail\n'}
+[125.771252] (-) TimerEvent: {}
+[125.776092] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__type_support.h\n'}
+[125.778508] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__type_support.h\n'}
+[125.780721] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__struct.h\n'}
+[125.782939] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__functions.c\n'}
+[125.785961] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__struct.h\n'}
+[125.788566] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__functions.c\n'}
+[125.791697] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__type_support.h\n'}
+[125.794334] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__functions.c\n'}
+[125.797491] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__type_support.h\n'}
+[125.799857] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__functions.h\n'}
+[125.802838] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__struct.h\n'}
+[125.805396] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__functions.c\n'}
+[125.808296] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__struct.h\n'}
+[125.810774] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__type_support.h\n'}
+[125.813457] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__functions.c\n'}
+[125.816409] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__struct.h\n'}
+[125.818801] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__functions.h\n'}
+[125.821478] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__functions.h\n'}
+[125.824182] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__functions.h\n'}
+[125.827165] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__functions.h\n'}
+[125.830086] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/set_pen.h\n'}
+[125.832343] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/spawn.h\n'}
+[125.834839] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/teleport_absolute.h\n'}
+[125.837156] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action\n'}
+[125.838176] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/rotate_absolute.h\n'}
+[125.840397] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail\n'}
+[125.841668] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__functions.h\n'}
+[125.846352] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__struct.h\n'}
+[125.849127] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__functions.c\n'}
+[125.854188] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__type_support.h\n'}
+[125.856847] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg\n'}
+[125.858189] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/rosidl_generator_c__visibility_control.h\n'}
+[125.861160] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/color.h\n'}
+[125.863678] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail\n'}
+[125.865254] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__type_support.h\n'}
+[125.867925] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__type_support.h\n'}
+[125.870403] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__struct.h\n'}
+[125.871381] (-) TimerEvent: {}
+[125.872826] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__functions.h\n'}
+[125.875422] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__functions.c\n'}
+[125.877922] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__functions.h\n'}
+[125.880350] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__struct.h\n'}
+[125.882680] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__functions.c\n'}
+[125.885235] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/pose.h\n'}
+[125.888867] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/library_path.sh\n'}
+[125.891351] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/library_path.dsv\n'}
+[125.894375] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_generator_c.so\n'}
+[125.903469] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_generator_c.so" to ""\n'}
+[125.904242] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim\n'}
+[125.905007] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv\n'}
+[125.905561] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail\n'}
+[125.906112] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__rosidl_typesupport_fastrtps_c.h\n'}
+[125.908728] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_fastrtps_c.h\n'}
+[125.911311] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__rosidl_typesupport_fastrtps_c.h\n'}
+[125.913830] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_fastrtps_c.h\n'}
+[125.916329] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__rosidl_typesupport_fastrtps_c.h\n'}
+[125.918747] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action\n'}
+[125.919399] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail\n'}
+[125.920062] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_fastrtps_c.h\n'}
+[125.922837] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg\n'}
+[125.923499] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[125.925915] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail\n'}
+[125.926602] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__rosidl_typesupport_fastrtps_c.h\n'}
+[125.929148] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__rosidl_typesupport_fastrtps_c.h\n'}
+[125.931947] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_fastrtps_c.so\n'}
+[125.939844] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[125.940587] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim\n'}
+[125.941141] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv\n'}
+[125.941811] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/kill.hpp\n'}
+[125.943663] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/spawn.hpp\n'}
+[125.945557] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/teleport_absolute.hpp\n'}
+[125.947416] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/set_pen.hpp\n'}
+[125.949173] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail\n'}
+[125.950305] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__struct.hpp\n'}
+[125.952355] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__struct.hpp\n'}
+[125.953921] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__traits.hpp\n'}
+[125.955296] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__builder.hpp\n'}
+[125.956756] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__traits.hpp\n'}
+[125.958198] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__builder.hpp\n'}
+[125.959537] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__struct.hpp\n'}
+[125.961081] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__builder.hpp\n'}
+[125.962397] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__builder.hpp\n'}
+[125.963770] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__traits.hpp\n'}
+[125.965204] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__struct.hpp\n'}
+[125.966582] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__traits.hpp\n'}
+[125.967941] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__struct.hpp\n'}
+[125.969406] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__builder.hpp\n'}
+[125.970818] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__traits.hpp\n'}
+[125.971497] (-) TimerEvent: {}
+[125.972261] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/teleport_relative.hpp\n'}
+[125.973662] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action\n'}
+[125.974193] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/rotate_absolute.hpp\n'}
+[125.975436] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail\n'}
+[125.976017] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__builder.hpp\n'}
+[125.977620] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__struct.hpp\n'}
+[125.979291] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__traits.hpp\n'}
+[125.980916] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg\n'}
+[125.981527] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/pose.hpp\n'}
+[125.982761] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/color.hpp\n'}
+[125.983871] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail\n'}
+[125.984521] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__struct.hpp\n'}
+[125.985940] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__traits.hpp\n'}
+[125.987233] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__traits.hpp\n'}
+[125.988566] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__builder.hpp\n'}
+[125.989881] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__builder.hpp\n'}
+[125.991194] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__struct.hpp\n'}
+[125.992713] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim\n'}
+[125.993274] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv\n'}
+[125.993708] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail\n'}
+[125.994290] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[125.996940] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[125.999461] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[126.001928] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[126.004578] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[126.007115] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/dds_fastrtps\n'}
+[126.008175] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action\n'}
+[126.008772] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail\n'}
+[126.009425] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[126.012876] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/dds_fastrtps\n'}
+[126.013837] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg\n'}
+[126.014522] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[126.016993] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail\n'}
+[126.017688] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[126.020266] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[126.022901] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/dds_fastrtps\n'}
+[126.024381] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_fastrtps_cpp.so\n'}
+[126.033391] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[126.034055] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim\n'}
+[126.034532] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv\n'}
+[126.035070] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail\n'}
+[126.035922] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__rosidl_typesupport_introspection_c.h\n'}
+[126.038766] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__type_support.c\n'}
+[126.041831] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_introspection_c.h\n'}
+[126.044614] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_introspection_c.h\n'}
+[126.047237] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__type_support.c\n'}
+[126.049978] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__rosidl_typesupport_introspection_c.h\n'}
+[126.052404] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__type_support.c\n'}
+[126.055431] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__type_support.c\n'}
+[126.058403] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__rosidl_typesupport_introspection_c.h\n'}
+[126.060937] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__type_support.c\n'}
+[126.063585] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action\n'}
+[126.064174] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail\n'}
+[126.064955] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_introspection_c.h\n'}
+[126.067990] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__type_support.c\n'}
+[126.071667] (-) TimerEvent: {}
+[126.072782] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg\n'}
+[126.073535] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[126.076279] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail\n'}
+[126.077130] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__type_support.c\n'}
+[126.080114] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__rosidl_typesupport_introspection_c.h\n'}
+[126.082898] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__rosidl_typesupport_introspection_c.h\n'}
+[126.085635] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__type_support.c\n'}
+[126.088698] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_introspection_c.so\n'}
+[126.095772] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_introspection_c.so" to ""\n'}
+[126.096595] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_c.so\n'}
+[126.103648] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_c.so" to ""\n'}
+[126.104471] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim\n'}
+[126.105231] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv\n'}
+[126.105917] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail\n'}
+[126.106640] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__type_support.cpp\n'}
+[126.110068] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__rosidl_typesupport_introspection_cpp.hpp\n'}
+[126.112770] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_introspection_cpp.hpp\n'}
+[126.115452] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__rosidl_typesupport_introspection_cpp.hpp\n'}
+[126.118160] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_introspection_cpp.hpp\n'}
+[126.120854] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/spawn__type_support.cpp\n'}
+[126.123618] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/kill__type_support.cpp\n'}
+[126.126328] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/teleport_absolute__type_support.cpp\n'}
+[126.129432] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__rosidl_typesupport_introspection_cpp.hpp\n'}
+[126.131950] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/srv/detail/set_pen__type_support.cpp\n'}
+[126.134840] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action\n'}
+[126.135438] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail\n'}
+[126.136076] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_introspection_cpp.hpp\n'}
+[126.139051] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/action/detail/rotate_absolute__type_support.cpp\n'}
+[126.143373] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg\n'}
+[126.144079] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail\n'}
+[126.144750] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[126.147491] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__type_support.cpp\n'}
+[126.150261] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/pose__type_support.cpp\n'}
+[126.152930] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/include/turtlesim/turtlesim/msg/detail/color__rosidl_typesupport_introspection_cpp.hpp\n'}
+[126.155861] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_introspection_cpp.so\n'}
+[126.164333] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[126.165071] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_cpp.so\n'}
+[126.169825] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_typesupport_cpp.so" to ""\n'}
+[126.170561] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/pythonpath.sh\n'}
+[126.171774] (-) TimerEvent: {}
+[126.173303] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/pythonpath.dsv\n'}
+[126.175623] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim-1.4.1-py3.10.egg-info\n'}
+[126.177094] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim-1.4.1-py3.10.egg-info/PKG-INFO\n'}
+[126.179333] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim-1.4.1-py3.10.egg-info/top_level.txt\n'}
+[126.181367] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim-1.4.1-py3.10.egg-info/SOURCES.txt\n'}
+[126.183584] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim-1.4.1-py3.10.egg-info/dependency_links.txt\n'}
+[126.185888] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim\n'}
+[126.186890] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv\n'}
+[126.188107] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_teleport_absolute.py\n'}
+[126.190852] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_set_pen_s.c\n'}
+[126.193535] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_teleport_relative.py\n'}
+[126.196053] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_kill.py\n'}
+[126.198635] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/__init__.py\n'}
+[126.200877] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_spawn.py\n'}
+[126.203494] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_teleport_relative_s.c\n'}
+[126.206184] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_teleport_absolute_s.c\n'}
+[126.208786] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_set_pen.py\n'}
+[126.211398] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_kill_s.c\n'}
+[126.213904] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_spawn_s.c\n'}
+[126.216561] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[126.221807] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action\n'}
+[126.222956] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action/_rotate_absolute.py\n'}
+[126.227948] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action/__init__.py\n'}
+[126.230743] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action/_rotate_absolute_s.c\n'}
+[126.235002] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/_turtlesim_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[126.242092] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg\n'}
+[126.243225] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/_color_s.c\n'}
+[126.246099] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/_color.py\n'}
+[126.249302] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/__init__.py\n'}
+[126.252303] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/_pose.py\n'}
+[126.255452] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/_pose_s.c\n'}
+[126.257766] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/__init__.py\n'}
+[126.259256] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/_turtlesim_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[126.266252] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[126.271842] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/libturtlesim__rosidl_generator_py.so\n'}
+[126.272441] (-) TimerEvent: {}
+[126.278266] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/_turtlesim_s.ep.rosidl_typesupport_c.c\n'}
+[126.285835] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[126.372621] (-) TimerEvent: {}
+[126.473349] (-) TimerEvent: {}
+[126.557299] (turtlesim) StdoutLine: {'line': b"Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim'...\n"}
+[126.558797] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/__init__.py'...\n"}
+[126.559760] (turtlesim) StdoutLine: {'line': b"Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action'...\n"}
+[126.560797] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action/__init__.py'...\n"}
+[126.561666] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/action/_rotate_absolute.py'...\n"}
+[126.562690] (turtlesim) StdoutLine: {'line': b"Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg'...\n"}
+[126.563539] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/__init__.py'...\n"}
+[126.564309] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/_color.py'...\n"}
+[126.565580] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/msg/_pose.py'...\n"}
+[126.566509] (turtlesim) StdoutLine: {'line': b"Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv'...\n"}
+[126.567449] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/__init__.py'...\n"}
+[126.568326] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_kill.py'...\n"}
+[126.569276] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_set_pen.py'...\n"}
+[126.570048] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_spawn.py'...\n"}
+[126.570951] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_teleport_absolute.py'...\n"}
+[126.571635] (turtlesim) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/srv/_teleport_relative.py'...\n"}
+[126.573575] (-) TimerEvent: {}
+[126.587589] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[126.591557] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[126.593731] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[126.598603] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[126.600890] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[126.605737] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages/turtlesim/turtlesim_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[126.606474] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_generator_py.so\n'}
+[126.610374] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/libturtlesim__rosidl_generator_py.so" to ""\n'}
+[126.611234] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/action/RotateAbsolute.idl\n'}
+[126.614896] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/msg/Color.idl\n'}
+[126.617295] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/msg/Pose.idl\n'}
+[126.620358] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Kill.idl\n'}
+[126.622837] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/SetPen.idl\n'}
+[126.625472] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Spawn.idl\n'}
+[126.627971] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportAbsolute.idl\n'}
+[126.630537] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportRelative.idl\n'}
+[126.633086] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/action/RotateAbsolute.action\n'}
+[126.635628] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/msg/Color.msg\n'}
+[126.638119] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/msg/Pose.msg\n'}
+[126.640626] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Kill.srv\n'}
+[126.643169] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Kill_Request.msg\n'}
+[126.645641] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Kill_Response.msg\n'}
+[126.647171] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/SetPen.srv\n'}
+[126.649652] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/SetPen_Request.msg\n'}
+[126.652136] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/SetPen_Response.msg\n'}
+[126.654785] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Spawn.srv\n'}
+[126.657266] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Spawn_Request.msg\n'}
+[126.659749] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/Spawn_Response.msg\n'}
+[126.662268] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportAbsolute.srv\n'}
+[126.664755] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportAbsolute_Request.msg\n'}
+[126.667429] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportAbsolute_Response.msg\n'}
+[126.669906] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportRelative.srv\n'}
+[126.672286] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportRelative_Request.msg\n'}
+[126.673678] (-) TimerEvent: {}
+[126.675052] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/srv/TeleportRelative_Response.msg\n'}
+[126.678217] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/turtlesim_node\n'}
+[126.754008] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/turtlesim_node" to ""\n'}
+[126.754640] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/turtle_teleop_key\n'}
+[126.773909] (-) TimerEvent: {}
+[126.799190] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/turtle_teleop_key" to ""\n'}
+[126.800077] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/draw_square\n'}
+[126.874109] (-) TimerEvent: {}
+[126.900815] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/draw_square" to ""\n'}
+[126.901734] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/mimic\n'}
+[126.974313] (-) TimerEvent: {}
+[126.992456] (turtlesim) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib/turtlesim/mimic" to ""\n'}
+[126.993340] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images\n'}
+[126.995446] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/eloquent.png\n'}
+[126.997978] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/ardent.png\n'}
+[127.000263] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/dashing.png\n'}
+[127.002644] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/humble.png\n'}
+[127.004846] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/foxy.png\n'}
+[127.007080] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/rolling.png\n'}
+[127.009355] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/galactic.png\n'}
+[127.011530] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/bouncy.png\n'}
+[127.014100] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/images/crystal.png\n'}
+[127.016574] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/launch\n'}
+[127.018312] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/launch/multisim.launch.py\n'}
+[127.021620] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/ament_index/resource_index/package_run_dependencies/turtlesim\n'}
+[127.024910] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/ament_index/resource_index/parent_prefix_path/turtlesim\n'}
+[127.027623] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/ament_prefix_path.sh\n'}
+[127.030275] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/ament_prefix_path.dsv\n'}
+[127.032918] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/path.sh\n'}
+[127.035334] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/environment/path.dsv\n'}
+[127.037975] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/local_setup.bash\n'}
+[127.040392] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/local_setup.sh\n'}
+[127.043264] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/local_setup.zsh\n'}
+[127.045876] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/local_setup.dsv\n'}
+[127.048499] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/package.dsv\n'}
+[127.051540] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/ament_index/resource_index/packages/turtlesim\n'}
+[127.057088] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_generator_cExport.cmake\n'}
+[127.060084] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_generator_cExport-noconfig.cmake\n'}
+[127.063298] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[127.066558] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[127.069794] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_generator_cppExport.cmake\n'}
+[127.072782] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[127.074423] (-) TimerEvent: {}
+[127.075913] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[127.079222] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cExport.cmake\n'}
+[127.082324] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[127.085416] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cExport.cmake\n'}
+[127.088435] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[127.091309] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[127.094348] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[127.097411] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cppExport.cmake\n'}
+[127.100372] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[127.103322] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_generator_pyExport.cmake\n'}
+[127.106355] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/export_turtlesim__rosidl_generator_pyExport-noconfig.cmake\n'}
+[127.109186] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/rosidl_cmake-extras.cmake\n'}
+[127.111812] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[127.114699] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[127.117574] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[127.120550] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[127.123312] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[127.126033] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[127.128893] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesimConfig.cmake\n'}
+[127.131230] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/cmake/turtlesimConfig-version.cmake\n'}
+[127.133933] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/share/turtlesim/package.xml\n'}
+[127.150449] (turtlesim) CommandEnded: {'returncode': 0}
+[127.174663] (-) TimerEvent: {}
+[127.275758] (-) TimerEvent: {}
+[127.376730] (-) TimerEvent: {}
+[127.477449] (-) TimerEvent: {}
+[127.578506] (-) TimerEvent: {}
+[127.679207] (-) TimerEvent: {}
+[127.779859] (-) TimerEvent: {}
+[127.881036] (-) TimerEvent: {}
+[127.981698] (-) TimerEvent: {}
+[128.082394] (-) TimerEvent: {}
+[128.183116] (-) TimerEvent: {}
+[128.283993] (-) TimerEvent: {}
+[128.384830] (-) TimerEvent: {}
+[128.486286] (-) TimerEvent: {}
+[128.586960] (-) TimerEvent: {}
+[128.686085] (turtlesim) JobEnded: {'identifier': 'turtlesim', 'rc': 0}
+[128.689273] (-) TimerEvent: {}
+[128.689617] (-) EventReactorShutdown: {}

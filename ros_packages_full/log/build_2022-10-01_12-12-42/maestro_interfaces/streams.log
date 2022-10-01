@@ -1,0 +1,34 @@
+[0.077s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/maestro_interfaces -DCMAKE_INSTALL_PREFIX=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces
+[1.323s] -- The C compiler identification is GNU 11.2.0
+[2.128s] -- The CXX compiler identification is GNU 11.2.0
+[2.185s] -- Detecting C compiler ABI info
+[2.594s] -- Detecting C compiler ABI info - done
+[2.624s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.626s] -- Detecting C compile features
+[2.630s] -- Detecting C compile features - done
+[2.648s] -- Detecting CXX compiler ABI info
+[3.080s] -- Detecting CXX compiler ABI info - done
+[3.113s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.114s] -- Detecting CXX compile features
+[3.116s] -- Detecting CXX compile features - done
+[3.152s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.067s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[4.766s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[5.273s] -- Added test 'lint_cmake' to check CMake code style
+[5.288s] -- Added test 'xmllint' to check XML markup files
+[5.321s] -- Found geometry_msgs: 4.2.2 (/opt/ros/humble/share/geometry_msgs/cmake)
+[5.811s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[5.869s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[5.956s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[6.073s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.233s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.877s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[6.940s] [31mCMake Error at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:64 (message):
+[6.941s]   rosidl_generate_interfaces() must be called before ament_package()
+[6.941s] Call Stack (most recent call first):
+[6.941s]   CMakeLists.txt:31 (rosidl_generate_interfaces)
+[6.942s] 
+[6.942s] [0m
+[6.943s] -- Configuring incomplete, errors occurred!
+[6.943s] See also "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces/CMakeFiles/CMakeOutput.log".
+[6.969s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/maestro_interfaces -DCMAKE_INSTALL_PREFIX=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces

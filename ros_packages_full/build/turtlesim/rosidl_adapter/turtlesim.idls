@@ -1,0 +1,8 @@
+/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim/rosidl_adapter/turtlesim:action/RotateAbsolute.idl
+/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim/rosidl_adapter/turtlesim:msg/Color.idl
+/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim/rosidl_adapter/turtlesim:msg/Pose.idl
+/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim/rosidl_adapter/turtlesim:srv/Kill.idl
+/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim/rosidl_adapter/turtlesim:srv/SetPen.idl
+/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim/rosidl_adapter/turtlesim:srv/Spawn.idl
+/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim/rosidl_adapter/turtlesim:srv/TeleportAbsolute.idl
+/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim/rosidl_adapter/turtlesim:srv/TeleportRelative.idl

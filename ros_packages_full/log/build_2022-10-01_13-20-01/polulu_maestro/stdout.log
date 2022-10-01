@@ -1,0 +1,38 @@
+running egg_info
+creating ../../build/polulu_maestro/polulu_maestro.egg-info
+writing ../../build/polulu_maestro/polulu_maestro.egg-info/PKG-INFO
+writing dependency_links to ../../build/polulu_maestro/polulu_maestro.egg-info/dependency_links.txt
+writing entry points to ../../build/polulu_maestro/polulu_maestro.egg-info/entry_points.txt
+writing requirements to ../../build/polulu_maestro/polulu_maestro.egg-info/requires.txt
+writing top-level names to ../../build/polulu_maestro/polulu_maestro.egg-info/top_level.txt
+writing manifest file '../../build/polulu_maestro/polulu_maestro.egg-info/SOURCES.txt'
+reading manifest file '../../build/polulu_maestro/polulu_maestro.egg-info/SOURCES.txt'
+writing manifest file '../../build/polulu_maestro/polulu_maestro.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build
+creating /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build/lib
+creating /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build/lib/polulu_maestro
+copying polulu_maestro/__init__.py -> /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build/lib/polulu_maestro
+copying polulu_maestro/MaestroController.py -> /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build/lib/polulu_maestro
+copying polulu_maestro/MaestroRosWrapper.py -> /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build/lib/polulu_maestro
+running install
+running install_lib
+creating /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro
+copying /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build/lib/polulu_maestro/__init__.py -> /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro
+copying /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build/lib/polulu_maestro/MaestroController.py -> /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro
+copying /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build/lib/polulu_maestro/MaestroRosWrapper.py -> /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro
+byte-compiling /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro/MaestroController.py to MaestroController.cpython-310.pyc
+byte-compiling /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro/MaestroRosWrapper.py to MaestroRosWrapper.cpython-310.pyc
+running install_data
+creating /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/ament_index
+creating /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/ament_index/resource_index
+creating /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/ament_index/resource_index/packages
+copying resource/polulu_maestro -> /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/ament_index/resource_index/packages
+copying package.xml -> /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro
+running install_egg_info
+Copying ../../build/polulu_maestro/polulu_maestro.egg-info to /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro-0.0.0-py3.10.egg-info
+running install_scripts
+Installing maestro_wrapper script to /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/polulu_maestro
+writing list of installed files to '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/install.log'
