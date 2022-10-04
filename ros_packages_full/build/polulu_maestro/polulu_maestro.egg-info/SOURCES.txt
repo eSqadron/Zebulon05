@@ -10,6 +10,7 @@ setup.py
 ../../build/polulu_maestro/polulu_maestro.egg-info/zip-safe
 polulu_maestro/MaestroController.py
 polulu_maestro/MaestroRosWrapper.py
+polulu_maestro/MaestroTestPub.py
 polulu_maestro/__init__.py
 resource/polulu_maestro
 test/test_copyright.py
