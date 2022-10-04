@@ -61,3 +61,17 @@ class MaestroTestPub(Node):
 
     def set_mode(self, mode: str):
         self.test_mode = mode
+
+
+def main(args=None):
+    rclpy.init(args=args)
+
+    maestro_t = MaestroTestPub()
+
+    rclpy.spin(maestro_t)
+
+    # Destroy the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    maestro_t.destroy_node()
+    rclpy.shutdown()
