@@ -3,9 +3,9 @@ from rclpy.node import Node
 
 from std_msgs.msg import String
 
-from msg import MaestroTarget, CurrentPosition
+from maestro_interfaces.msg import MaestroTarget, CurrentPositions
 
-from MaestroController import Controller
+from polulu_maestro.MaestroController import Controller
 
 
 class MaestroRosWrapper(Node):
@@ -18,7 +18,7 @@ class MaestroRosWrapper(Node):
             2)
 
         self.current_pos_publisher = self.create_publisher(
-            CurrentPosition,
+            CurrentPositions,
             'current_positions',
             2)
 
@@ -32,7 +32,7 @@ class MaestroRosWrapper(Node):
         #self.target_subscription  # prevent unused variable warning
 
     def pos_publisher_timer_callback(self):
-        msg = CurrentPosition()
+        msg = CurrentPositions()
         msg.current_ang = [self.maestro.getPosition(i) for i in range(24)]
 
         self.current_pos_publisher.publish(msg)
