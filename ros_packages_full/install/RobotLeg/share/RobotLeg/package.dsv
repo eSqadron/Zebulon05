@@ -1,0 +1,5 @@
+source;share/RobotLeg/local_setup.bash
+source;share/RobotLeg/local_setup.dsv
+source;share/RobotLeg/local_setup.ps1
+source;share/RobotLeg/local_setup.sh
+source;share/RobotLeg/local_setup.zsh
