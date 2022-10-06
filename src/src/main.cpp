@@ -1,4 +1,4 @@
-#include "RobotLeg.hpp"
+#include "RobotLegOld.hpp"
 #include <iostream>
 
 class SimServo: public ServoJoint{
@@ -16,7 +16,7 @@ int main(){
     SimServo serv2;
     SimServo serv3;
 
-    RobotLeg leg;
+    RobotLegOld leg;
     leg.set_servo(&serv1, 0);
     leg.set_servo(&serv2, 1);
     leg.set_servo(&serv3, 2);

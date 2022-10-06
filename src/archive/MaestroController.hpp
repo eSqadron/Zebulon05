@@ -24,16 +24,3 @@ private:
     int d90_t;
     int target;
 };
-
-class MaestroController{
-public:
-    MaestroController(int controller_size);
-    MaestroController() : MaestroController(6) {}
-    void setTarget(int servo_num, int new_target);
-
-    void sendTargets();
-
-private:
-    int controller_size_t;
-    Servo *servos;
-};
