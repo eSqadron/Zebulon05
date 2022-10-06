@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
 		'maestro_wrapper = polulu_maestro.MaestroRosWrapper:main',
+		'maestro_test_pub = polulu_maestro.MaestroTestPub:main',
         ],
     },
 )

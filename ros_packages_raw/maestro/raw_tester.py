@@ -2,8 +2,8 @@ from time import sleep
 
 from MaestroController import Controller
 
-c = Controller('COM4')
-
+#c = Controller('/dev/ttyACM4')
+c = Controller()
 
 while True:
     c.setTarget(0, 496*4)#2496, 496

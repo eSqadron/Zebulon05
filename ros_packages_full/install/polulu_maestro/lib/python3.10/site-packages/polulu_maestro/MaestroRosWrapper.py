@@ -38,11 +38,10 @@ class MaestroRosWrapper(Node):
         self.current_pos_publisher.publish(msg)
 
     def target_callback(self, msg):
-        # self.get_logger().info('I heard: "%s"' % msg.data)
+        self.get_logger().info('I heard: "%s"' % msg.target_ang)
         self.maestro.setTarget(msg.channel, msg.target_ang)
         self.maestro.setSpeed(msg.channel, msg.speed)
         self.maestro.setAccel(msg.channel, msg.acceleration)
-
 
 def main(args=None):
     rclpy.init(args=args)
