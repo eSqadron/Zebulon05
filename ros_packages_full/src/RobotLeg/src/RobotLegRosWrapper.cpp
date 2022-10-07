@@ -11,8 +11,8 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
-#include "maestro_interfaces/msg/MaestroTarget.hpp"
-#include "maestro_interfaces/msg/CurrentPositions.hpp"
+#include "maestro_interfaces/msg/maestro_target.hpp"
+#include "maestro_interfaces/msg/current_positions.hpp"
 
 using namespace std::chrono_literals;
 
@@ -23,7 +23,7 @@ class RobotLegRosWrapper : public rclcpp::Node{
 public:
     RobotLegRosWrapper() : Node("robot_leg_ros_wrapper"), count_(0){
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
-        timer_ = this->create_wall_timer(500ms, std::bind(&MinimalPublisher::timer_callback, this));
+        timer_ = this->create_wall_timer(500ms, std::bind(&RobotLegRosWrapper::timer_callback, this));
     }
 private:
 
@@ -57,7 +57,7 @@ void RobotLegRosWrapper::timer_callback(){
 int main(int argc, char * argv[])
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<MinimalPublisher>());
+    rclcpp::spin(std::make_shared<RobotLegRosWrapper>());
     rclcpp::shutdown();
     return 0;
 }

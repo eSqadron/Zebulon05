@@ -1,0 +1,7 @@
+[01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:[m[K In constructor ‘[01m[KRobotLegRosWrapper::RobotLegRosWrapper()[m[K’:
+[01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:26:60:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalPublisher[m[K’ has not been declared
+   26 |         timer_ = this->create_wall_timer(500ms, std::bind(&[01;31m[KMinimalPublisher[m[K::timer_callback, this));
+      |                                                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:76: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
