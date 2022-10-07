@@ -13,9 +13,10 @@
 #include <string>
 
 #include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
+//#include "std_msgs/msg/string.hpp"
 #include "maestro_interfaces/msg/maestro_target.hpp"
 #include "maestro_interfaces/msg/current_positions.hpp"
+#include "../include/RobotLeg/RobotLegRos.hpp"
 
 using namespace std::chrono_literals;
 
@@ -28,10 +29,11 @@ public:
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
         timer_ = this->create_wall_timer(500ms, std::bind(&RobotLegRosWrapper::timer_callback, this));
     }
+
+    robo_leg = RobotLegRos();
 private:
 
-    int target_i = 4*496;
-    int sweep_dir = 1;
+
 
     void timer_callback();
     rclcpp::TimerBase::SharedPtr timer_;

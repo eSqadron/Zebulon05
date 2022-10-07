@@ -14,7 +14,7 @@ find_package(maestro_interfaces REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
-add_executable(robot_leg_wrapper src/RobotLegRosWrapper.cpp include/RobotLeg/RobotLegRosWrapper.hpp)
+add_executable(robot_leg_wrapper src/RobotLegRosWrapper.cpp include/RobotLeg/RobotLegRosWrapper.hpp src/RobotLegRos.cpp include/RobotLeg/RobotLegRos.hpp)
 ament_target_dependencies(robot_leg_wrapper rclcpp std_msgs maestro_interfaces)
 
 install(TARGETS
