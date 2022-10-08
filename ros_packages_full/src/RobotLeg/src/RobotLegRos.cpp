@@ -26,7 +26,7 @@ void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
         message2.acceleration = 0;
         message3.speed = 0;
         message3.acceleration = 0;
-        
+
         message1.channel = servo_ids_[0];
         message1.target_ang = new_servo_pos[0];
 
@@ -44,7 +44,7 @@ void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
             pub_message_ptr_->publish(message2);
             rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
 
-            pub_message_ptr_->publish(message);
+            pub_message_ptr_->publish(message3);
             rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
 
         }
