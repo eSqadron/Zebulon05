@@ -8,13 +8,13 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(std_msgs REQUIRED)
+#find_package(std_msgs REQUIRED)
 find_package(maestro_interfaces REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
-add_executable(robot_leg_wrapper src/RobotLegRosWrapper.cpp include/RobotLeg/RobotLegRosWrapper.hpp src/RobotLegRos.cpp include/RobotLeg/RobotLegRos.hpp)
+add_executable(robot_leg_wrapper src/RobotLegRos.cpp include/RobotLeg/RobotLegRos.hpp src/RobotLegRosWrapper.cpp include/RobotLeg/RobotLegRosWrapper.hpp)
 ament_target_dependencies(robot_leg_wrapper rclcpp std_msgs maestro_interfaces)
 
 install(TARGETS
