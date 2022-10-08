@@ -16,7 +16,7 @@ void RobotLegRos::do_step(int step_length, int step_height){
     }
 }
 
-void RobotLegRos::get_servos_to_pos(<unsigned int, num_of_joints> new_servo_pos){
+void RobotLegRos::get_servos_to_pos(std::array<unsigned int, num_of_joints> new_servo_pos){
     if(pub_message_ptr_ == nullptr){
         throw std::invalid_argument("pub_message_ptr_ was not initialised");
     }

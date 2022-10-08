@@ -22,7 +22,7 @@ public:
         servo_ids_[2] = new_servo_ids[2];
     }
 
-    void get_servos_to_pos(<unsigned int, num_of_joints> new_servo_pos);
+    void get_servos_to_pos(std::array<unsigned int, num_of_joints> new_servo_pos);
 
     void write_last_known_positions(std::array<short unsigned int, 24> new_last_known_pos){
         last_known_pos = new_last_known_pos;
