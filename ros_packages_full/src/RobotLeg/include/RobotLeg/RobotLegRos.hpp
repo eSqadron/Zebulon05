@@ -11,12 +11,13 @@
 
 class RobotLegRos {
 public:
-    RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr) : pub_message_ptr_(pub_message_ptr) {};
-    RobotLegRos(){
-        pub_message_ptr_ = nullptr;
-    }
+    RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr) : pub_message_ptr_(pub_message_ptr) : last_known_pos{0} {};
+    RobotLegRos() : RobotLegRos(nullptr) {};
     void set_publisher(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr){
         pub_message_ptr_ = pub_message_ptr;
+    }
+    void write_last_known_positions(int new_last_known_pos[]){
+        pub_message_ptr_ = new_last_known_pos;
     }
 
     void do_step(int step_length, int step_height);
@@ -25,6 +26,7 @@ public:
 
 private:
     rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr_;
+    int last_known_pos[24];
 
 };
 

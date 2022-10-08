@@ -29,14 +29,12 @@ public:
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
         timer_ = this->create_wall_timer(500ms, std::bind(&RobotLegRosWrapper::timer_callback, this));
         robo_leg.set_publisher(publisher_);
-        //robo_leg = RobotLegRos(publisher_);
-//	RobotLegRos robo_leg(publisher_);
+
+        subscription_ = this->create_subscription<maestro_interfaces::msg::current_positions>("current_positions", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this, _1));
     }
-    //RobotLegRos robo_leg = RobotLegRos(publisher_);
+
 private:
-
-
-
+    void cur_pos_callback(const maestro_interfaces::msg::current_positions & msg);
     void timer_callback();
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr publisher_;

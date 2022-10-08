@@ -20,5 +20,7 @@ void RobotLegRos::do_step(int step_length, int step_height){
         if (target_i > 2496 * 4) sweep_dir = -1;
         if (target_i < 496 * 4) sweep_dir = 1;
         pub_message_ptr_->publish(message);
+        message.channel = 1;
+        pub_message_ptr_->publish(message);
     }
 }
