@@ -1,7 +1,9 @@
 CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: \
  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/chrono \
- /usr/include/c++/11/ratio /usr/include/c++/11/type_traits \
+ /usr/include/stdc-predef.h \
+ /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp \
+ /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
+ /usr/include/c++/11/type_traits \
  /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -611,10 +613,6 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/maestro_target.hpp \
  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__struct.hpp \
  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__builder.hpp \
@@ -622,4 +620,9 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: \
  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/current_positions.hpp \
  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__struct.hpp \
  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__builder.hpp \
- /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__traits.hpp
+ /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__traits.hpp \
+ /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp

@@ -1,0 +1,71 @@
+[0.000000] (-) TimerEvent: {}
+[0.001748] (RobotLeg) JobQueued: {'identifier': 'RobotLeg', 'dependencies': OrderedDict()}
+[0.002361] (maestro_interfaces) JobQueued: {'identifier': 'maestro_interfaces', 'dependencies': OrderedDict()}
+[0.003762] (polulu_maestro) JobQueued: {'identifier': 'polulu_maestro', 'dependencies': OrderedDict([('maestro_interfaces', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces')])}
+[0.004015] (maestro_interfaces) JobStarted: {'identifier': 'maestro_interfaces'}
+[0.045661] (RobotLeg) JobStarted: {'identifier': 'RobotLeg'}
+[0.080225] (maestro_interfaces) JobProgress: {'identifier': 'maestro_interfaces', 'progress': 'cmake'}
+[0.083706] (maestro_interfaces) JobProgress: {'identifier': 'maestro_interfaces', 'progress': 'build'}
+[0.086886] (maestro_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a247:c100:75a0:85d6:c1fa:4f4e 50356 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a247:c100:75a0:85d6:c1fa:4f4e 50356 2a02:a31a:a247:c100:8b:b606:bb9a:4ffb 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099257] (-) TimerEvent: {}
+[0.107726] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'cmake'}
+[0.111334] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'build'}
+[0.112769] (RobotLeg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', '--', '-j4', '-l4'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a247:c100:75a0:85d6:c1fa:4f4e 50356 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a247:c100:75a0:85d6:c1fa:4f4e 50356 2a02:a31a:a247:c100:8b:b606:bb9a:4ffb 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.199487] (-) TimerEvent: {}
+[0.300406] (-) TimerEvent: {}
+[0.317959] (RobotLeg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_leg_wrapper\x1b[0m\n'}
+[0.338740] (maestro_interfaces) StdoutLine: {'line': b'[  2%] Built target maestro_interfaces__cpp\n'}
+[0.351049] (maestro_interfaces) StdoutLine: {'line': b'[ 12%] Built target maestro_interfaces__rosidl_generator_c\n'}
+[0.400654] (-) TimerEvent: {}
+[0.420880] (maestro_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_maestro_interfaces\n'}
+[0.434901] (RobotLeg) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable robot_leg_wrapper\x1b[0m\n'}
+[0.479074] (maestro_interfaces) StdoutLine: {'line': b'[ 23%] Built target maestro_interfaces__rosidl_typesupport_cpp\n'}
+[0.500891] (-) TimerEvent: {}
+[0.502839] (maestro_interfaces) StdoutLine: {'line': b'[ 33%] Built target maestro_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.538769] (maestro_interfaces) StdoutLine: {'line': b'[ 43%] Built target maestro_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.590700] (maestro_interfaces) StdoutLine: {'line': b'[ 53%] Built target maestro_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.601136] (-) TimerEvent: {}
+[0.635485] (maestro_interfaces) StdoutLine: {'line': b'[ 64%] Built target maestro_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.659906] (maestro_interfaces) StdoutLine: {'line': b'[ 74%] Built target maestro_interfaces__rosidl_typesupport_c\n'}
+[0.701462] (-) TimerEvent: {}
+[0.788291] (maestro_interfaces) StdoutLine: {'line': b'[ 74%] Built target maestro_interfaces\n'}
+[0.801721] (-) TimerEvent: {}
+[0.904829] (-) TimerEvent: {}
+[0.919829] (maestro_interfaces) StdoutLine: {'line': b'[ 76%] Built target maestro_interfaces__py\n'}
+[1.005132] (-) TimerEvent: {}
+[1.056891] (maestro_interfaces) StdoutLine: {'line': b'[ 84%] Built target maestro_interfaces__rosidl_generator_py\n'}
+[1.105372] (-) TimerEvent: {}
+[1.207060] (maestro_interfaces) StdoutLine: {'line': b'[ 89%] Built target maestro_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.207873] (-) TimerEvent: {}
+[1.235436] (maestro_interfaces) StdoutLine: {'line': b'[ 94%] Built target maestro_interfaces__rosidl_typesupport_c__pyext\n'}
+[1.240763] (maestro_interfaces) StdoutLine: {'line': b'[100%] Built target maestro_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[1.308248] (-) TimerEvent: {}
+[1.409534] (-) TimerEvent: {}
+[1.458893] (RobotLeg) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: in function `RobotLegRosWrapper::timer_callback()':\n"}
+[1.459554] (RobotLeg) StderrLine: {'line': b"RobotLegRosWrapper.cpp:(.text+0x24): undefined reference to `RobotLegRos::do_step(int, int)'\n"}
+[1.509723] (-) TimerEvent: {}
+[1.531853] (RobotLeg) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[1.537177] (RobotLeg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:175: robot_leg_wrapper] Error 1\n'}
+[1.538288] (RobotLeg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2\n'}
+[1.539382] (RobotLeg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[1.546367] (RobotLeg) CommandEnded: {'returncode': 2}
+[1.609895] (-) TimerEvent: {}
+[1.711191] (-) TimerEvent: {}
+[1.776225] (RobotLeg) JobEnded: {'identifier': 'RobotLeg', 'rc': 2}
+[1.811371] (-) TimerEvent: {}
+[1.911998] (-) TimerEvent: {}
+[2.012687] (-) TimerEvent: {}
+[2.113442] (-) TimerEvent: {}
+[2.214086] (-) TimerEvent: {}
+[2.232810] (maestro_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[2.235408] (maestro_interfaces) StdoutLine: {'line': b'writing maestro_interfaces.egg-info/PKG-INFO\n'}
+[2.236467] (maestro_interfaces) StdoutLine: {'line': b'writing dependency_links to maestro_interfaces.egg-info/dependency_links.txt\n'}
+[2.237519] (maestro_interfaces) StdoutLine: {'line': b'writing top-level names to maestro_interfaces.egg-info/top_level.txt\n'}
+[2.248741] (maestro_interfaces) StdoutLine: {'line': b"reading manifest file 'maestro_interfaces.egg-info/SOURCES.txt'\n"}
+[2.251797] (maestro_interfaces) StdoutLine: {'line': b"writing manifest file 'maestro_interfaces.egg-info/SOURCES.txt'\n"}
+[2.314430] (-) TimerEvent: {}
+[2.383323] (maestro_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_maestro_interfaces_egg\n'}
+[2.414611] (-) TimerEvent: {}
+[2.429613] (maestro_interfaces) JobEnded: {'identifier': 'maestro_interfaces', 'rc': 'SIGINT'}
+[2.433301] (polulu_maestro) JobSkipped: {'identifier': 'polulu_maestro'}
+[2.433458] (-) EventReactorShutdown: {}

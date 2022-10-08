@@ -16,7 +16,7 @@
 //#include "std_msgs/msg/string.hpp"
 #include "maestro_interfaces/msg/maestro_target.hpp"
 #include "maestro_interfaces/msg/current_positions.hpp"
-#include "../include/RobotLeg/RobotLegRos.hpp"
+#include "RobotLegRos.hpp"
 
 using namespace std::chrono_literals;
 
@@ -28,9 +28,9 @@ public:
     RobotLegRosWrapper() : Node("robot_leg_ros_wrapper"), count_(0){
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
         timer_ = this->create_wall_timer(500ms, std::bind(&RobotLegRosWrapper::timer_callback, this));
+//	RobotLegRos robo_leg(publisher_);
     }
-
-    robo_leg = RobotLegRos();
+    RobotLegRos robo_leg = RobotLegRos(publisher_);
 private:
 
 

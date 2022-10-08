@@ -11,7 +11,7 @@
 
 class RobotLegRos {
 public:
-    RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr) : pub_message_ptr_(pub_message_ptr);
+    RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr) : pub_message_ptr_(pub_message_ptr) {};
     void do_step(int step_length, int step_height);
     int target_i = 4*496;
     int sweep_dir = 1;

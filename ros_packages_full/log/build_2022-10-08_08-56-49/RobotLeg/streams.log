@@ -1,0 +1,19 @@
+[0.078s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4
+[0.287s] [35m[1mConsolidate compiler generated dependencies of target robot_leg_wrapper[0m
+[0.407s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o[0m
+[12.512s] In file included from [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:19[m[K,
+[12.513s]                  from [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:5[m[K:
+[12.513s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:[m[K In constructor ‘[01m[KRobotLegRos::RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget_<std::allocator<void> > >::SharedPtr)[m[K’:
+[12.514s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:14:138:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ at end of input
+[12.514s]    14 | isher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr) : pub_message_ptr_(pub_message_ptr)[01;31m[K;[m[K
+[12.515s]       |                                                                                                              [01;31m[K^[m[K
+[12.515s] 
+[12.565s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:[m[K In member function ‘[01m[Kvoid RobotLegRosWrapper::timer_callback()[m[K’:
+[12.566s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:8:5:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[KRobotLegRos RobotLegRosWrapper::robo_leg()[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+[12.566s]     8 |     [01;31m[Krobo_leg[m[K.do_step(0, 0);
+[12.567s]       |     [01;31m[K^~~~~~~~[m[K
+[12.567s]       |             [32m[K()[m[K
+[15.479s] gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:76: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o] Error 1
+[15.480s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2
+[15.481s] gmake: *** [Makefile:146: all] Error 2
+[15.489s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4

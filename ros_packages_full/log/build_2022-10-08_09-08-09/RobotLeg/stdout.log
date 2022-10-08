@@ -1,0 +1,3 @@
+[35m[1mConsolidate compiler generated dependencies of target robot_leg_wrapper[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o[0m
+[100%] [32m[1mLinking CXX executable robot_leg_wrapper[0m

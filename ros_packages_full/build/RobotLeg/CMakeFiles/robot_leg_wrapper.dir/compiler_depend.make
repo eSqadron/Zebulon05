@@ -3,6 +3,7 @@
 
 CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp \
   /usr/include/stdc-predef.h \
+  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/include/RobotLeg/RobotLegRosWrapper.hpp \
   /usr/include/c++/11/chrono \
   /usr/include/c++/11/ratio \
   /usr/include/c++/11/type_traits \
@@ -683,10 +684,6 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
   /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/maestro_target.hpp \
   /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__struct.hpp \
   /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__builder.hpp \
@@ -694,8 +691,17 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
   /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/current_positions.hpp \
   /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__struct.hpp \
   /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__builder.hpp \
-  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__traits.hpp
+  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__traits.hpp \
+  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/include/RobotLeg/RobotLegRos.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp
 
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp:
 
 /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__builder.hpp:
 
@@ -704,10 +710,6 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__struct.hpp:
 
 /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/maestro_target.hpp:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp:
 
@@ -772,6 +774,8 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 /opt/ros/humble/include/rmw/rmw/qos_string_conversions.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/create_client.hpp:
+
+/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/include/RobotLeg/RobotLegRos.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/create_publisher.hpp:
 
@@ -876,8 +880,6 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 /usr/include/c++/11/tr1/hypergeometric.tcc:
 
 /usr/include/c++/11/tr1/ell_integral.tcc:
-
-/usr/include/c++/11/mutex:
 
 /usr/include/aarch64-linux-gnu/bits/signal_ext.h:
 
@@ -1065,10 +1067,6 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 
 /usr/include/sched.h:
 
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
-
-/usr/include/aarch64-linux-gnu/c++/11/bits/gthr.h:
-
 /usr/include/c++/11/bits/stl_pair.h:
 
 /usr/include/c++/11/bits/postypes.h:
@@ -1092,6 +1090,10 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 /usr/include/c++/11/bits/basic_ios.h:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp:
+
+/usr/include/c++/11/bits/stl_tempbuf.h:
+
+/usr/include/c++/11/bits/std_function.h:
 
 /usr/include/c++/11/bits/exception.h:
 
@@ -1199,6 +1201,16 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 
 /usr/include/c++/11/debug/debug.h:
 
+/usr/include/c++/11/tuple:
+
+/usr/include/aarch64-linux-gnu/bits/select.h:
+
+/opt/ros/humble/include/rcl/rcl/network_flow_endpoints.h:
+
+/usr/include/c++/11/streambuf:
+
+/usr/include/c++/11/ctime:
+
 /opt/ros/humble/include/rcutils/rcutils/logging_macros.h:
 
 /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h:
@@ -1225,16 +1237,6 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 
 /opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__traits.hpp:
 
-/usr/include/c++/11/tuple:
-
-/usr/include/aarch64-linux-gnu/bits/select.h:
-
-/opt/ros/humble/include/rcl/rcl/network_flow_endpoints.h:
-
-/usr/include/c++/11/streambuf:
-
-/usr/include/c++/11/ctime:
-
 /usr/include/aarch64-linux-gnu/bits/long-double.h:
 
 /usr/include/c++/11/bits/stl_heap.h:
@@ -1248,6 +1250,14 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 /usr/include/c++/11/bits/locale_facets.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/detail/subscription_callback_type_helper.hpp:
+
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
+
+/usr/include/aarch64-linux-gnu/c++/11/bits/gthr.h:
+
+/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/include/RobotLeg/RobotLegRosWrapper.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:
 
 /usr/include/stdint.h:
 
@@ -1417,10 +1427,6 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 
 /usr/include/c++/11/typeinfo:
 
-/usr/include/c++/11/bits/stl_tempbuf.h:
-
-/usr/include/c++/11/bits/std_function.h:
-
 /usr/include/c++/11/bits/stl_multimap.h:
 
 /usr/include/c++/11/cctype:
@@ -1505,9 +1511,9 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 
 /usr/include/stdlib.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/FILE.h:
-
 /usr/include/c++/11/tr1/beta_function.tcc:
+
+/usr/include/aarch64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/aarch64-linux-gnu/bits/waitstatus.h:
 
@@ -1576,6 +1582,8 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 /usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/c++/11/mutex:
 
 /usr/include/aarch64-linux-gnu/bits/procfs-prregset.h:
 
@@ -1888,8 +1896,6 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: /home/k/Desktop/Z
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__struct.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/client.hpp:
 

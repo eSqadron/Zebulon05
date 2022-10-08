@@ -1,0 +1,22 @@
+[3.127s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/polulu_maestro': CMAKE_PREFIX_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg LD_LIBRARY_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/polulu_maestro build --build-base /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build install --prefix /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro --record /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/install.log --single-version-externally-managed
+[4.381s] running egg_info
+[4.383s] writing ../../build/polulu_maestro/polulu_maestro.egg-info/PKG-INFO
+[4.384s] writing dependency_links to ../../build/polulu_maestro/polulu_maestro.egg-info/dependency_links.txt
+[4.385s] writing entry points to ../../build/polulu_maestro/polulu_maestro.egg-info/entry_points.txt
+[4.386s] writing requirements to ../../build/polulu_maestro/polulu_maestro.egg-info/requires.txt
+[4.387s] writing top-level names to ../../build/polulu_maestro/polulu_maestro.egg-info/top_level.txt
+[4.396s] reading manifest file '../../build/polulu_maestro/polulu_maestro.egg-info/SOURCES.txt'
+[4.401s] writing manifest file '../../build/polulu_maestro/polulu_maestro.egg-info/SOURCES.txt'
+[4.402s] running build
+[4.402s] running build_py
+[4.404s] running install
+[4.406s] running install_lib
+[4.412s] running install_data
+[4.415s] running install_egg_info
+[4.422s] removing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro-0.0.0-py3.10.egg-info' (and everything under it)
+[4.424s] Copying ../../build/polulu_maestro/polulu_maestro.egg-info to /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro-0.0.0-py3.10.egg-info
+[4.431s] running install_scripts
+[4.515s] Installing maestro_test_pub script to /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/polulu_maestro
+[4.516s] Installing maestro_wrapper script to /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/polulu_maestro
+[4.518s] writing list of installed files to '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/install.log'
+[4.656s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/polulu_maestro' returned '0': CMAKE_PREFIX_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg LD_LIBRARY_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/polulu_maestro build --build-base /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build install --prefix /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro --record /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/install.log --single-version-externally-managed

@@ -1,0 +1,6 @@
+/usr/bin/ld: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: in function `RobotLegRosWrapper::timer_callback()':
+RobotLegRosWrapper.cpp:(.text+0x24): undefined reference to `RobotLegRos::do_step(int, int)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:175: robot_leg_wrapper] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

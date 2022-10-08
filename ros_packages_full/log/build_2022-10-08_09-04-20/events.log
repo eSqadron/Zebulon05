@@ -1,0 +1,160 @@
+[0.000000] (-) TimerEvent: {}
+[0.001562] (-) JobUnselected: {'identifier': 'maestro_interfaces'}
+[0.002148] (-) JobUnselected: {'identifier': 'polulu_maestro'}
+[0.003570] (RobotLeg) JobQueued: {'identifier': 'RobotLeg', 'dependencies': OrderedDict()}
+[0.003836] (RobotLeg) JobStarted: {'identifier': 'RobotLeg'}
+[0.054343] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'cmake'}
+[0.058257] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'build'}
+[0.062196] (RobotLeg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', '--', '-j4', '-l4'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a247:c100:75a0:85d6:c1fa:4f4e 50356 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a247:c100:75a0:85d6:c1fa:4f4e 50356 2a02:a31a:a247:c100:8b:b606:bb9a:4ffb 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.098984] (-) TimerEvent: {}
+[0.199780] (-) TimerEvent: {}
+[0.267350] (RobotLeg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_leg_wrapper\x1b[0m\n'}
+[0.299982] (-) TimerEvent: {}
+[0.367365] (RobotLeg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o\x1b[0m\n'}
+[0.400200] (-) TimerEvent: {}
+[0.501060] (-) TimerEvent: {}
+[0.601779] (-) TimerEvent: {}
+[0.702547] (-) TimerEvent: {}
+[0.803270] (-) TimerEvent: {}
+[0.904246] (-) TimerEvent: {}
+[1.004964] (-) TimerEvent: {}
+[1.105700] (-) TimerEvent: {}
+[1.206433] (-) TimerEvent: {}
+[1.307122] (-) TimerEvent: {}
+[1.407862] (-) TimerEvent: {}
+[1.508560] (-) TimerEvent: {}
+[1.609242] (-) TimerEvent: {}
+[1.709943] (-) TimerEvent: {}
+[1.810653] (-) TimerEvent: {}
+[1.911387] (-) TimerEvent: {}
+[2.012165] (-) TimerEvent: {}
+[2.112865] (-) TimerEvent: {}
+[2.213565] (-) TimerEvent: {}
+[2.314347] (-) TimerEvent: {}
+[2.415206] (-) TimerEvent: {}
+[2.516070] (-) TimerEvent: {}
+[2.616826] (-) TimerEvent: {}
+[2.717673] (-) TimerEvent: {}
+[2.818467] (-) TimerEvent: {}
+[2.919252] (-) TimerEvent: {}
+[3.020121] (-) TimerEvent: {}
+[3.120884] (-) TimerEvent: {}
+[3.221622] (-) TimerEvent: {}
+[3.322390] (-) TimerEvent: {}
+[3.423268] (-) TimerEvent: {}
+[3.524120] (-) TimerEvent: {}
+[3.624954] (-) TimerEvent: {}
+[3.725870] (-) TimerEvent: {}
+[3.826683] (-) TimerEvent: {}
+[3.927548] (-) TimerEvent: {}
+[4.028523] (-) TimerEvent: {}
+[4.129393] (-) TimerEvent: {}
+[4.230245] (-) TimerEvent: {}
+[4.331025] (-) TimerEvent: {}
+[4.431903] (-) TimerEvent: {}
+[4.532675] (-) TimerEvent: {}
+[4.633476] (-) TimerEvent: {}
+[4.734350] (-) TimerEvent: {}
+[4.835110] (-) TimerEvent: {}
+[4.935910] (-) TimerEvent: {}
+[5.036675] (-) TimerEvent: {}
+[5.137517] (-) TimerEvent: {}
+[5.238332] (-) TimerEvent: {}
+[5.339077] (-) TimerEvent: {}
+[5.439918] (-) TimerEvent: {}
+[5.540669] (-) TimerEvent: {}
+[5.641431] (-) TimerEvent: {}
+[5.742261] (-) TimerEvent: {}
+[5.843005] (-) TimerEvent: {}
+[5.943942] (-) TimerEvent: {}
+[6.044691] (-) TimerEvent: {}
+[6.145427] (-) TimerEvent: {}
+[6.246217] (-) TimerEvent: {}
+[6.346980] (-) TimerEvent: {}
+[6.447875] (-) TimerEvent: {}
+[6.548669] (-) TimerEvent: {}
+[6.649422] (-) TimerEvent: {}
+[6.750250] (-) TimerEvent: {}
+[6.851040] (-) TimerEvent: {}
+[6.951876] (-) TimerEvent: {}
+[7.052641] (-) TimerEvent: {}
+[7.153404] (-) TimerEvent: {}
+[7.254230] (-) TimerEvent: {}
+[7.354995] (-) TimerEvent: {}
+[7.455914] (-) TimerEvent: {}
+[7.556703] (-) TimerEvent: {}
+[7.657494] (-) TimerEvent: {}
+[7.758323] (-) TimerEvent: {}
+[7.859090] (-) TimerEvent: {}
+[7.959876] (-) TimerEvent: {}
+[8.060655] (-) TimerEvent: {}
+[8.161444] (-) TimerEvent: {}
+[8.262261] (-) TimerEvent: {}
+[8.363120] (-) TimerEvent: {}
+[8.463919] (-) TimerEvent: {}
+[8.564677] (-) TimerEvent: {}
+[8.665438] (-) TimerEvent: {}
+[8.766275] (-) TimerEvent: {}
+[8.867096] (-) TimerEvent: {}
+[8.967914] (-) TimerEvent: {}
+[9.068679] (-) TimerEvent: {}
+[9.169482] (-) TimerEvent: {}
+[9.270330] (-) TimerEvent: {}
+[9.371117] (-) TimerEvent: {}
+[9.471914] (-) TimerEvent: {}
+[9.572676] (-) TimerEvent: {}
+[9.673440] (-) TimerEvent: {}
+[9.774281] (-) TimerEvent: {}
+[9.875123] (-) TimerEvent: {}
+[9.975951] (-) TimerEvent: {}
+[10.076791] (-) TimerEvent: {}
+[10.177594] (-) TimerEvent: {}
+[10.278424] (-) TimerEvent: {}
+[10.379221] (-) TimerEvent: {}
+[10.480066] (-) TimerEvent: {}
+[10.580837] (-) TimerEvent: {}
+[10.681614] (-) TimerEvent: {}
+[10.782448] (-) TimerEvent: {}
+[10.883221] (-) TimerEvent: {}
+[10.984183] (-) TimerEvent: {}
+[11.045540] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotLegRosWrapper::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[11.046264] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:8:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krobo_leg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.046716] (RobotLeg) StderrLine: {'line': b'    8 |     \x1b[01;31m\x1b[Krobo_leg\x1b[m\x1b[K.do_step(0, 0);\n'}
+[11.047159] (RobotLeg) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[11.084385] (-) TimerEvent: {}
+[11.185169] (-) TimerEvent: {}
+[11.285929] (-) TimerEvent: {}
+[11.386711] (-) TimerEvent: {}
+[11.487522] (-) TimerEvent: {}
+[11.588350] (-) TimerEvent: {}
+[11.689107] (-) TimerEvent: {}
+[11.789884] (-) TimerEvent: {}
+[11.890659] (-) TimerEvent: {}
+[11.991486] (-) TimerEvent: {}
+[12.092344] (-) TimerEvent: {}
+[12.193106] (-) TimerEvent: {}
+[12.293860] (-) TimerEvent: {}
+[12.394618] (-) TimerEvent: {}
+[12.495412] (-) TimerEvent: {}
+[12.596271] (-) TimerEvent: {}
+[12.697043] (-) TimerEvent: {}
+[12.797833] (-) TimerEvent: {}
+[12.898620] (-) TimerEvent: {}
+[12.999418] (-) TimerEvent: {}
+[13.100614] (-) TimerEvent: {}
+[13.201878] (-) TimerEvent: {}
+[13.302810] (-) TimerEvent: {}
+[13.403625] (-) TimerEvent: {}
+[13.504587] (-) TimerEvent: {}
+[13.605391] (-) TimerEvent: {}
+[13.706154] (-) TimerEvent: {}
+[13.806913] (-) TimerEvent: {}
+[13.907806] (-) TimerEvent: {}
+[13.940852] (RobotLeg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:76: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o] Error 1\n'}
+[13.941856] (RobotLeg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2\n'}
+[13.942686] (RobotLeg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[13.950349] (RobotLeg) CommandEnded: {'returncode': 2}
+[14.007981] (-) TimerEvent: {}
+[14.108939] (-) TimerEvent: {}
+[14.190314] (RobotLeg) JobEnded: {'identifier': 'RobotLeg', 'rc': 2}
+[14.202447] (-) EventReactorShutdown: {}

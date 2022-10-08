@@ -5,7 +5,7 @@
 #include "../include/RobotLeg/RobotLegRosWrapper.hpp"
 
 void RobotLegRosWrapper::timer_callback(){
-    robo_leg.do_step();
+    robo_leg.do_step(0, 0);
 }
 
 int main(int argc, char * argv[]){
