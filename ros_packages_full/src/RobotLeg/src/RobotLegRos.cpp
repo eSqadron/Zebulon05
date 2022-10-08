@@ -31,18 +31,18 @@ void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
         message.target_ang = new_servo_pos[0];
         pub_message_ptr_->publish(message);
 
-        rclcpp::sleep_for(std::chrono::nanoseconds(100000));
+        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
 
         message.channel = servo_ids_[1];
         message.target_ang = new_servo_pos[1];
         pub_message_ptr_->publish(message);
 
-        rclcpp::sleep_for(std::chrono::nanoseconds(100000));
+        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
 
         message.channel = servo_ids_[2];
         message.target_ang = new_servo_pos[2];
         pub_message_ptr_->publish(message);
 
-        rclcpp::sleep_for(std::chrono::nanoseconds(100000));
+        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
     }
 }
