@@ -7,7 +7,7 @@
 
 void RobotLegRos::do_step(int step_length, int step_height){
     if(pub_message_ptr_ == nullptr){
-        RCLCPP_INFO(this->get_logger(), "publisher pointer NOT initialised!");
+        throw std::invalid_argument("pub_message_ptr_ was not initialised");
     }
     else {
         auto message = maestro_interfaces::msg::MaestroTarget();
