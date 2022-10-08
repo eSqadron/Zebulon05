@@ -42,7 +42,7 @@ void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
         rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
 
         while(((last_known_pos[0] != new_servo_pos[0]) or (last_known_pos[1] != new_servo_pos[1])) or (last_known_pos[2] != new_servo_pos[2])){
-            rclcpp::sleep_for(std::chrono::nanoseconds(100));
+            //rclcpp::sleep_for(std::chrono::nanoseconds(100));
         }
 
     }
