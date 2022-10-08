@@ -11,12 +11,12 @@
 
 class RobotLegRos {
 public:
-    RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr, std::array<short unsigned int, num_of_joints> servo_ids) : pub_message_ptr_(pub_message_ptr), last_known_pos{0}, servo_ids_(servo_ids) {};
+    RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr, std::array<short unsigned int, num_of_joints> servo_ids) : pub_message_ptr_(pub_message_ptr), last_known_pos{0}, servo_ids_(servo_ids), num_of_joints(3) {};
     RobotLegRos() : RobotLegRos(nullptr), servo_ids_{0, 1, 2} {};
     void set_publisher(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr){
         pub_message_ptr_ = pub_message_ptr;
     }
-    void set_servo_ids(std::array<short unsigned int, num_of_joints> new_servo_ids){
+    void set_servo_ids(std::array<short unsigned int, 3> new_servo_ids){
         servo_ids_[0] = new_servo_ids[0];
         servo_ids_[1] = new_servo_ids[1];
         servo_ids_[2] = new_servo_ids[2];
