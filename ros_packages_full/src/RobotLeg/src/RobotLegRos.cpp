@@ -29,13 +29,13 @@ void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
         message.target_ang = new_servo_pos[0];
         pub_message_ptr_->publish(message);
 
-        rclcpp::sleep_for(10, pub_message_ptr_);
+        rclcpp::sleep_for(10ns, pub_message_ptr_);
 
         message.channel = servo_ids_[1];
         message.target_ang = new_servo_pos[1];
         pub_message_ptr_->publish(message);
 
-        rclcpp::sleep_for(10, pub_message_ptr_);
+        rclcpp::sleep_for(10ns, pub_message_ptr_);
 
         message.channel = servo_ids_[2];
         message.target_ang = new_servo_pos[2];
