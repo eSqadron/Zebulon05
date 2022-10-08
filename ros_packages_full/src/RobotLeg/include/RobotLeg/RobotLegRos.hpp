@@ -16,8 +16,8 @@ public:
     void set_publisher(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr){
         pub_message_ptr_ = pub_message_ptr;
     }
-    void write_last_known_positions(int new_last_known_pos[]){
-        pub_message_ptr_ = new_last_known_pos;
+    void write_last_known_positions(std::array<short unsigned int, 24> new_last_known_pos){
+        last_known_pos = new_last_known_pos;
     }
 
     void do_step(int step_length, int step_height);
@@ -26,7 +26,7 @@ public:
 
 private:
     rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr_;
-    int last_known_pos[24];
+    std::array<short unsigned int, 24> last_known_pos;
 
 };
 
