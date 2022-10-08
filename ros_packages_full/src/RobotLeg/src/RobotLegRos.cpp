@@ -9,6 +9,7 @@ void RobotLegRos::do_step(int step_length, int step_height){
         this->get_servos_to_pos(std::array<unsigned int, 3>({2496 * 4, 2496 * 4, 2496 * 4 * step_length * step_height}));
         rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
         this->get_servos_to_pos(std::array<unsigned int, 3>({496  * 4, 496  * 4, 496  * 4 * step_length * step_height}));
+        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
 }
 
 void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
@@ -40,7 +41,7 @@ void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
 
         rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
 
-        while(last_known_pos[0] != new_servo_pos[0] or last_known_pos[1] != new_servo_pos[1] or last_known_pos[2] != new_servo_pos[2]){
+        while(((last_known_pos[0] != new_servo_pos[0]) or (last_known_pos[1] != new_servo_pos[1])) or (last_known_pos[2] != new_servo_pos[2])){
             rclcpp::sleep_for(std::chrono::nanoseconds(100));
         }
 
