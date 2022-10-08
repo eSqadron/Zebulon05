@@ -1,0 +1,60 @@
+[0.074s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4
+[0.297s] [35m[1mConsolidate compiler generated dependencies of target robot_leg_wrapper[0m
+[0.417s] [ 33%] [32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRos.cpp.o[0m
+[0.421s] [ 66%] [32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o[0m
+[12.433s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[12.435s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:23[m[K,
+[12.436s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[12.437s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[12.438s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[12.438s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[12.439s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[12.440s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[12.440s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[12.441s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[12.442s]                  from [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:8[m[K,
+[12.442s]                  from [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:5[m[K:
+[12.443s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:[m[K In member function ‘[01m[Kvoid RobotLegRos::do_step(int, int)[m[K’:
+[12.444s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:10:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass RobotLegRos[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[12.444s]    10 |         RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "publisher pointer NOT initialised!");
+[12.445s]       |                           [01;31m[K^~~~~~~~~~[m[K
+[12.446s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:10:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass RobotLegRos[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[12.446s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:10:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[12.447s]    10 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "publisher pointer NOT initialised!");
+[12.447s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[12.448s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:10:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K-fpermissive[m[K]
+[12.449s]    10 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "publisher pointer NOT initialised!");
+[12.449s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[12.450s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:10:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[12.450s]    10 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "publisher pointer NOT initialised!");
+[12.451s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[12.452s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:10:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K-fpermissive[m[K]
+[12.452s]    10 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "publisher pointer NOT initialised!");
+[12.453s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[12.453s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:10:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[12.454s]    10 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "publisher pointer NOT initialised!");
+[12.455s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[12.455s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[12.456s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[12.457s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:23[m[K,
+[12.457s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[12.458s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[12.459s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[12.459s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[12.460s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[12.460s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[12.461s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[12.462s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[12.462s]                  from [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:8[m[K,
+[12.463s]                  from [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:5[m[K:
+[12.463s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:10:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass RobotLegRos[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[12.464s]    10 |         RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "publisher pointer NOT initialised!");
+[12.465s]       |                           [01;31m[K^~~~~~~~~~[m[K
+[12.465s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:10:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass RobotLegRos[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[12.466s]    10 |         RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "publisher pointer NOT initialised!");
+[12.466s]       |                           [01;31m[K^~~~~~~~~~[m[K
+[14.760s] gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:76: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRos.cpp.o] Error 1
+[14.760s] gmake[2]: *** Waiting for unfinished jobs....
+[20.001s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2
+[20.002s] gmake: *** [Makefile:146: all] Error 2
+[20.022s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4

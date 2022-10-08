@@ -1,0 +1,410 @@
+[0.000000] (-) TimerEvent: {}
+[0.001575] (-) JobUnselected: {'identifier': 'maestro_interfaces'}
+[0.002161] (-) JobUnselected: {'identifier': 'polulu_maestro'}
+[0.003603] (RobotLeg) JobQueued: {'identifier': 'RobotLeg', 'dependencies': OrderedDict()}
+[0.003841] (RobotLeg) JobStarted: {'identifier': 'RobotLeg'}
+[0.064616] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'cmake'}
+[0.068706] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'build'}
+[0.072121] (RobotLeg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', '--', '-j4', '-l4'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a247:c100:75a0:85d6:c1fa:4f4e 50356 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a247:c100:75a0:85d6:c1fa:4f4e 50356 2a02:a31a:a247:c100:8b:b606:bb9a:4ffb 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[0.098883] (-) TimerEvent: {}
+[0.199619] (-) TimerEvent: {}
+[0.298859] (RobotLeg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_leg_wrapper\x1b[0m\n'}
+[0.299625] (-) TimerEvent: {}
+[0.400325] (-) TimerEvent: {}
+[0.420614] (RobotLeg) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRos.cpp.o\x1b[0m\n'}
+[0.424781] (RobotLeg) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o\x1b[0m\n'}
+[0.500514] (-) TimerEvent: {}
+[0.601606] (-) TimerEvent: {}
+[0.702642] (-) TimerEvent: {}
+[0.803697] (-) TimerEvent: {}
+[0.904853] (-) TimerEvent: {}
+[1.005888] (-) TimerEvent: {}
+[1.106959] (-) TimerEvent: {}
+[1.208095] (-) TimerEvent: {}
+[1.309143] (-) TimerEvent: {}
+[1.410313] (-) TimerEvent: {}
+[1.511785] (-) TimerEvent: {}
+[1.612881] (-) TimerEvent: {}
+[1.714035] (-) TimerEvent: {}
+[1.815146] (-) TimerEvent: {}
+[1.916220] (-) TimerEvent: {}
+[2.017397] (-) TimerEvent: {}
+[2.118563] (-) TimerEvent: {}
+[2.219739] (-) TimerEvent: {}
+[2.320598] (-) TimerEvent: {}
+[2.421530] (-) TimerEvent: {}
+[2.522573] (-) TimerEvent: {}
+[2.623482] (-) TimerEvent: {}
+[2.724423] (-) TimerEvent: {}
+[2.825577] (-) TimerEvent: {}
+[2.927004] (-) TimerEvent: {}
+[3.028301] (-) TimerEvent: {}
+[3.129979] (-) TimerEvent: {}
+[3.231396] (-) TimerEvent: {}
+[3.332874] (-) TimerEvent: {}
+[3.434177] (-) TimerEvent: {}
+[3.535861] (-) TimerEvent: {}
+[3.637359] (-) TimerEvent: {}
+[3.738339] (-) TimerEvent: {}
+[3.839478] (-) TimerEvent: {}
+[3.940469] (-) TimerEvent: {}
+[4.041461] (-) TimerEvent: {}
+[4.142414] (-) TimerEvent: {}
+[4.243438] (-) TimerEvent: {}
+[4.344452] (-) TimerEvent: {}
+[4.446034] (-) TimerEvent: {}
+[4.547374] (-) TimerEvent: {}
+[4.648733] (-) TimerEvent: {}
+[4.750268] (-) TimerEvent: {}
+[4.851228] (-) TimerEvent: {}
+[4.952146] (-) TimerEvent: {}
+[5.053081] (-) TimerEvent: {}
+[5.154215] (-) TimerEvent: {}
+[5.255425] (-) TimerEvent: {}
+[5.356535] (-) TimerEvent: {}
+[5.457558] (-) TimerEvent: {}
+[5.558551] (-) TimerEvent: {}
+[5.659570] (-) TimerEvent: {}
+[5.760454] (-) TimerEvent: {}
+[5.861813] (-) TimerEvent: {}
+[5.963140] (-) TimerEvent: {}
+[6.064580] (-) TimerEvent: {}
+[6.166132] (-) TimerEvent: {}
+[6.267418] (-) TimerEvent: {}
+[6.368316] (-) TimerEvent: {}
+[6.469215] (-) TimerEvent: {}
+[6.570121] (-) TimerEvent: {}
+[6.671103] (-) TimerEvent: {}
+[6.772093] (-) TimerEvent: {}
+[6.872953] (-) TimerEvent: {}
+[6.973843] (-) TimerEvent: {}
+[7.074805] (-) TimerEvent: {}
+[7.175946] (-) TimerEvent: {}
+[7.277122] (-) TimerEvent: {}
+[7.378016] (-) TimerEvent: {}
+[7.479053] (-) TimerEvent: {}
+[7.579950] (-) TimerEvent: {}
+[7.680859] (-) TimerEvent: {}
+[7.781867] (-) TimerEvent: {}
+[7.882819] (-) TimerEvent: {}
+[7.983719] (-) TimerEvent: {}
+[8.084630] (-) TimerEvent: {}
+[8.185523] (-) TimerEvent: {}
+[8.286459] (-) TimerEvent: {}
+[8.387403] (-) TimerEvent: {}
+[8.488322] (-) TimerEvent: {}
+[8.589266] (-) TimerEvent: {}
+[8.690144] (-) TimerEvent: {}
+[8.790977] (-) TimerEvent: {}
+[8.891915] (-) TimerEvent: {}
+[8.992789] (-) TimerEvent: {}
+[9.093802] (-) TimerEvent: {}
+[9.194728] (-) TimerEvent: {}
+[9.295576] (-) TimerEvent: {}
+[9.396435] (-) TimerEvent: {}
+[9.497546] (-) TimerEvent: {}
+[9.598442] (-) TimerEvent: {}
+[9.699410] (-) TimerEvent: {}
+[9.800263] (-) TimerEvent: {}
+[9.901281] (-) TimerEvent: {}
+[10.002551] (-) TimerEvent: {}
+[10.103882] (-) TimerEvent: {}
+[10.205236] (-) TimerEvent: {}
+[10.306698] (-) TimerEvent: {}
+[10.408072] (-) TimerEvent: {}
+[10.509371] (-) TimerEvent: {}
+[10.610784] (-) TimerEvent: {}
+[10.712171] (-) TimerEvent: {}
+[10.813999] (-) TimerEvent: {}
+[10.915353] (-) TimerEvent: {}
+[11.016721] (-) TimerEvent: {}
+[11.118421] (-) TimerEvent: {}
+[11.219939] (-) TimerEvent: {}
+[11.321633] (-) TimerEvent: {}
+[11.423637] (-) TimerEvent: {}
+[11.524993] (-) TimerEvent: {}
+[11.626353] (-) TimerEvent: {}
+[11.727708] (-) TimerEvent: {}
+[11.829092] (-) TimerEvent: {}
+[11.930385] (-) TimerEvent: {}
+[12.031651] (-) TimerEvent: {}
+[12.133024] (-) TimerEvent: {}
+[12.234305] (-) TimerEvent: {}
+[12.335628] (-) TimerEvent: {}
+[12.411498] (RobotLeg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:19\x1b[m\x1b[K,\n'}
+[12.412882] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:5\x1b[m\x1b[K:\n'}
+[12.413700] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:14:134:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knum_of_joints\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.414422] (RobotLeg) StderrLine: {'line': b'   14 |     RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr, std::array<short unsigned int, \x1b[01;31m\x1b[Knum_of_joints\x1b[m\x1b[K> servo_ids) : pub_message_ptr_(pub_message_ptr), last_known_pos{0}, servo_ids_(servo_ids) {};\n'}
+[12.415220] (RobotLeg) StderrLine: {'line': b'      |                                                                                                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.415894] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:14:147:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[12.416601] (RobotLeg) StderrLine: {'line': b'   14 |     RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr, std::array<short unsigned int, num_of_joints\x1b[01;31m\x1b[K>\x1b[m\x1b[K servo_ids) : pub_message_ptr_(pub_message_ptr), last_known_pos{0}, servo_ids_(servo_ids) {};\n'}
+[12.417370] (RobotLeg) StderrLine: {'line': b'      |                                                                                                                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.435858] (-) TimerEvent: {}
+[12.448390] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:19:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knum_of_joints\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.449624] (RobotLeg) StderrLine: {'line': b'   19 |     void set_servo_ids(std::array<short unsigned int, \x1b[01;31m\x1b[Knum_of_joints\x1b[m\x1b[K> new_servo_ids){\n'}
+[12.450356] (RobotLeg) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.451154] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:19:68:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[12.452010] (RobotLeg) StderrLine: {'line': b'   19 |     void set_servo_ids(std::array<short unsigned int, num_of_joints\x1b[01;31m\x1b[K>\x1b[m\x1b[K new_servo_ids){\n'}
+[12.452734] (RobotLeg) StderrLine: {'line': b'      |                                                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.453462] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:25:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected identifier before \xe2\x80\x98\x1b[01m\x1b[K<\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[12.454196] (RobotLeg) StderrLine: {'line': b'   25 |     void get_servos_to_pos(\x1b[01;31m\x1b[K<\x1b[m\x1b[Kunsigned int, num_of_joints> new_servo_pos);\n'}
+[12.454959] (RobotLeg) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.455705] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:25:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K,\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K...\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K<\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[12.460379] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:41:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of non-static data member \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::num_of_joints\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.461180] (RobotLeg) StderrLine: {'line': b'   41 |     std::array<short unsigned int, \x1b[01;31m\x1b[Knum_of_joints\x1b[m\x1b[K> servo_ids_;\n'}
+[12.461662] (RobotLeg) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.462432] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:35:30:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[12.463133] (RobotLeg) StderrLine: {'line': b'   35 |     const short unsigned int \x1b[01;36m\x1b[Knum_of_joints\x1b[m\x1b[K = 3;\n'}
+[12.463728] (RobotLeg) StderrLine: {'line': b'      |                              \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.464318] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:41:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[12.464930] (RobotLeg) StderrLine: {'line': b'   41 |     std::array<short unsigned int, num_of_joints\x1b[01;31m\x1b[K>\x1b[m\x1b[K servo_ids_;\n'}
+[12.465605] (RobotLeg) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.467846] (RobotLeg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:5\x1b[m\x1b[K:\n'}
+[12.469231] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:14:134:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knum_of_joints\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.469752] (RobotLeg) StderrLine: {'line': b'   14 |     RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr, std::array<short unsigned int, \x1b[01;31m\x1b[Knum_of_joints\x1b[m\x1b[K> servo_ids) : pub_message_ptr_(pub_message_ptr), last_known_pos{0}, servo_ids_(servo_ids) {};\n'}
+[12.470224] (RobotLeg) StderrLine: {'line': b'      |                                                                                                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.470710] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:14:147:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[12.471276] (RobotLeg) StderrLine: {'line': b'   14 |     RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr, std::array<short unsigned int, num_of_joints\x1b[01;31m\x1b[K>\x1b[m\x1b[K servo_ids) : pub_message_ptr_(pub_message_ptr), last_known_pos{0}, servo_ids_(servo_ids) {};\n'}
+[12.471733] (RobotLeg) StderrLine: {'line': b'      |                                                                                                                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.472185] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.473350] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:15:61:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmem-initializer for \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::servo_ids_\x1b[m\x1b[K\xe2\x80\x99 follows constructor delegation\n'}
+[12.474180] (RobotLeg) StderrLine: {'line': b'   15 |     RobotLegRos() : RobotLegRos(nullptr), servo_ids_{0, 1, 2\x1b[01;31m\x1b[K}\x1b[m\x1b[K {};\n'}
+[12.475056] (RobotLeg) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.475754] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:15:61:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos(std::nullptr_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.476494] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:15:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.477197] (RobotLeg) StderrLine: {'line': b'   15 |     \x1b[01;36m\x1b[KRobotLegRos\x1b[m\x1b[K() : RobotLegRos(nullptr), servo_ids_{0, 1, 2} {};\n'}
+[12.478057] (RobotLeg) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.479913] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:15:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 1 provided\n'}
+[12.480428] (RobotLeg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:19\x1b[m\x1b[K,\n'}
+[12.480882] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:5\x1b[m\x1b[K:\n'}
+[12.481315] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:14:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget_<std::allocator<void> > >::SharedPtr, int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.481815] (RobotLeg) StderrLine: {'line': b'   14 |     \x1b[01;36m\x1b[KRobotLegRos\x1b[m\x1b[K(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr, std::array<short unsigned int, num_of_joints> servo_ids) : pub_message_ptr_(pub_message_ptr), last_known_pos{0}, servo_ids_(servo_ids) {};\n'}
+[12.482292] (RobotLeg) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.482817] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:14:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[12.483279] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:12:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos(const RobotLegRos&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.483769] (RobotLeg) StderrLine: {'line': b'   12 | class \x1b[01;36m\x1b[KRobotLegRos\x1b[m\x1b[K {\n'}
+[12.484210] (RobotLeg) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.484777] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:12:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::nullptr_t\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst RobotLegRos&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.485518] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:12:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos(RobotLegRos&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.486146] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:12:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::nullptr_t\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.486903] (RobotLeg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:19\x1b[m\x1b[K,\n'}
+[12.487604] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:5\x1b[m\x1b[K:\n'}
+[12.488235] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotLegRos::set_servo_ids(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.488926] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:20:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.489654] (RobotLeg) StderrLine: {'line': b'   20 |         servo_ids_\x1b[01;31m\x1b[K[\x1b[m\x1b[K0] = new_servo_ids[0];\n'}
+[12.490348] (RobotLeg) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.491151] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:20:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.491837] (RobotLeg) StderrLine: {'line': b'   20 |         servo_ids_[0] = new_servo_ids\x1b[01;31m\x1b[K[\x1b[m\x1b[K0];\n'}
+[12.492558] (RobotLeg) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.493266] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:21:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.493999] (RobotLeg) StderrLine: {'line': b'   21 |         servo_ids_\x1b[01;31m\x1b[K[\x1b[m\x1b[K1] = new_servo_ids[1];\n'}
+[12.494922] (RobotLeg) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.495692] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:21:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.496346] (RobotLeg) StderrLine: {'line': b'   21 |         servo_ids_[1] = new_servo_ids\x1b[01;31m\x1b[K[\x1b[m\x1b[K1];\n'}
+[12.496768] (RobotLeg) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.497210] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:22:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.497654] (RobotLeg) StderrLine: {'line': b'   22 |         servo_ids_\x1b[01;31m\x1b[K[\x1b[m\x1b[K2] = new_servo_ids[2];\n'}
+[12.498133] (RobotLeg) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.498558] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:22:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.499073] (RobotLeg) StderrLine: {'line': b'   22 |         servo_ids_[2] = new_servo_ids\x1b[01;31m\x1b[K[\x1b[m\x1b[K2];\n'}
+[12.499503] (RobotLeg) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.506453] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:19:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knum_of_joints\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.507656] (RobotLeg) StderrLine: {'line': b'   19 |     void set_servo_ids(std::array<short unsigned int, \x1b[01;31m\x1b[Knum_of_joints\x1b[m\x1b[K> new_servo_ids){\n'}
+[12.508317] (RobotLeg) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.508915] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:19:68:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[12.509533] (RobotLeg) StderrLine: {'line': b'   19 |     void set_servo_ids(std::array<short unsigned int, num_of_joints\x1b[01;31m\x1b[K>\x1b[m\x1b[K new_servo_ids){\n'}
+[12.510226] (RobotLeg) StderrLine: {'line': b'      |                                                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.510883] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:25:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected identifier before \xe2\x80\x98\x1b[01m\x1b[K<\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[12.511620] (RobotLeg) StderrLine: {'line': b'   25 |     void get_servos_to_pos(\x1b[01;31m\x1b[K<\x1b[m\x1b[Kunsigned int, num_of_joints> new_servo_pos);\n'}
+[12.512225] (RobotLeg) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.512757] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:25:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K,\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K...\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K<\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[12.519087] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:41:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of non-static data member \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::num_of_joints\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.520049] (RobotLeg) StderrLine: {'line': b'   41 |     std::array<short unsigned int, \x1b[01;31m\x1b[Knum_of_joints\x1b[m\x1b[K> servo_ids_;\n'}
+[12.520676] (RobotLeg) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.521345] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:35:30:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[12.521942] (RobotLeg) StderrLine: {'line': b'   35 |     const short unsigned int \x1b[01;36m\x1b[Knum_of_joints\x1b[m\x1b[K = 3;\n'}
+[12.522545] (RobotLeg) StderrLine: {'line': b'      |                              \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.523238] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:41:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[12.523924] (RobotLeg) StderrLine: {'line': b'   41 |     std::array<short unsigned int, num_of_joints\x1b[01;31m\x1b[K>\x1b[m\x1b[K servo_ids_;\n'}
+[12.524554] (RobotLeg) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.526962] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.528479] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:15:61:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmem-initializer for \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::servo_ids_\x1b[m\x1b[K\xe2\x80\x99 follows constructor delegation\n'}
+[12.529126] (RobotLeg) StderrLine: {'line': b'   15 |     RobotLegRos() : RobotLegRos(nullptr), servo_ids_{0, 1, 2\x1b[01;31m\x1b[K}\x1b[m\x1b[K {};\n'}
+[12.529732] (RobotLeg) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.530355] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:15:61:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos(std::nullptr_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.531057] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:15:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.532459] (RobotLeg) StderrLine: {'line': b'   15 |     \x1b[01;36m\x1b[KRobotLegRos\x1b[m\x1b[K() : RobotLegRos(nullptr), servo_ids_{0, 1, 2} {};\n'}
+[12.533821] (RobotLeg) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.535357] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:15:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 1 provided\n'}
+[12.536061] (-) TimerEvent: {}
+[12.537476] (RobotLeg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:5\x1b[m\x1b[K:\n'}
+[12.538273] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:14:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget_<std::allocator<void> > >::SharedPtr, int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.539170] (RobotLeg) StderrLine: {'line': b'   14 |     \x1b[01;36m\x1b[KRobotLegRos\x1b[m\x1b[K(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr, std::array<short unsigned int, num_of_joints> servo_ids) : pub_message_ptr_(pub_message_ptr), last_known_pos{0}, servo_ids_(servo_ids) {};\n'}
+[12.539878] (RobotLeg) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.540522] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:14:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[12.541323] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:12:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos(const RobotLegRos&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.542111] (RobotLeg) StderrLine: {'line': b'   12 | class \x1b[01;36m\x1b[KRobotLegRos\x1b[m\x1b[K {\n'}
+[12.542883] (RobotLeg) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.543617] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:12:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::nullptr_t\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst RobotLegRos&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.544450] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:12:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos::RobotLegRos(RobotLegRos&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.545228] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:12:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::nullptr_t\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KRobotLegRos&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.546073] (RobotLeg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:5\x1b[m\x1b[K:\n'}
+[12.546755] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotLegRos::set_servo_ids(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.547260] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:20:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.547705] (RobotLeg) StderrLine: {'line': b'   20 |         servo_ids_\x1b[01;31m\x1b[K[\x1b[m\x1b[K0] = new_servo_ids[0];\n'}
+[12.548128] (RobotLeg) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.548540] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:20:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.548960] (RobotLeg) StderrLine: {'line': b'   20 |         servo_ids_[0] = new_servo_ids\x1b[01;31m\x1b[K[\x1b[m\x1b[K0];\n'}
+[12.549464] (RobotLeg) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.549896] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:21:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.550330] (RobotLeg) StderrLine: {'line': b'   21 |         servo_ids_\x1b[01;31m\x1b[K[\x1b[m\x1b[K1] = new_servo_ids[1];\n'}
+[12.550844] (RobotLeg) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.551459] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:21:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.552210] (RobotLeg) StderrLine: {'line': b'   21 |         servo_ids_[1] = new_servo_ids\x1b[01;31m\x1b[K[\x1b[m\x1b[K1];\n'}
+[12.552798] (RobotLeg) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.553378] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:22:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.553971] (RobotLeg) StderrLine: {'line': b'   22 |         servo_ids_\x1b[01;31m\x1b[K[\x1b[m\x1b[K2] = new_servo_ids[2];\n'}
+[12.554540] (RobotLeg) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.555180] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:22:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kint[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[12.555825] (RobotLeg) StderrLine: {'line': b'   22 |         servo_ids_[2] = new_servo_ids\x1b[01;31m\x1b[K[\x1b[m\x1b[K2];\n'}
+[12.556386] (RobotLeg) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.557208] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotLegRos::do_step(int, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.558039] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:10:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.558772] (RobotLeg) StderrLine: {'line': b'   10 |         \x1b[01;31m\x1b[Kthis->get_servos_to_pos({2496 * 4, 2496 * 4, 2496 * 4 * step_length * step_height})\x1b[m\x1b[K;\n'}
+[12.559436] (RobotLeg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.560061] (RobotLeg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:5\x1b[m\x1b[K:\n'}
+[12.560727] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:25:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotLegRos::get_servos_to_pos(int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.561492] (RobotLeg) StderrLine: {'line': b'   25 |     void get_servos_to_pos(\x1b[01;36m\x1b[K<\x1b[m\x1b[Kunsigned int, num_of_joints> new_servo_pos);\n'}
+[12.562307] (RobotLeg) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[12.563177] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:14:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.563957] (RobotLeg) StderrLine: {'line': b'   14 |         \x1b[01;31m\x1b[Kthis->get_servos_to_pos({496 * 4, 496 * 4, 496 * 4 * step_length * step_height})\x1b[m\x1b[K;\n'}
+[12.564638] (RobotLeg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.565335] (RobotLeg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:5\x1b[m\x1b[K:\n'}
+[12.566044] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp:25:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotLegRos::get_servos_to_pos(int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.566773] (RobotLeg) StderrLine: {'line': b'   25 |     void get_servos_to_pos(\x1b[01;36m\x1b[K<\x1b[m\x1b[Kunsigned int, num_of_joints> new_servo_pos);\n'}
+[12.567548] (RobotLeg) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[12.568297] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:\x1b[m\x1b[K At global scope:\n'}
+[12.568973] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:19:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kvariable or field \xe2\x80\x98\x1b[01m\x1b[Kget_servos_to_pos\x1b[m\x1b[K\xe2\x80\x99 declared void\n'}
+[12.569433] (RobotLeg) StderrLine: {'line': b'   19 | void \x1b[01;31m\x1b[KRobotLegRos\x1b[m\x1b[K::get_servos_to_pos(<unsigned int, num_of_joints> new_servo_pos){\n'}
+[12.569848] (RobotLeg) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.570308] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:19:37:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K<\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[12.570783] (RobotLeg) StderrLine: {'line': b'   19 | void RobotLegRos::get_servos_to_pos(\x1b[01;31m\x1b[K<\x1b[m\x1b[Kunsigned int, num_of_joints> new_servo_pos){\n'}
+[12.571241] (RobotLeg) StderrLine: {'line': b'      |                                     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.571664] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:19:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[Kunsigned\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.572158] (RobotLeg) StderrLine: {'line': b'   19 | void RobotLegRos::get_servos_to_pos(<\x1b[01;31m\x1b[Kunsigned\x1b[m\x1b[K int, num_of_joints> new_servo_pos){\n'}
+[12.572602] (RobotLeg) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[12.573126] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:19:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knum_of_joints\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.573790] (RobotLeg) StderrLine: {'line': b'   19 | void RobotLegRos::get_servos_to_pos(<unsigned int, \x1b[01;31m\x1b[Knum_of_joints\x1b[m\x1b[K> new_servo_pos){\n'}
+[12.574363] (RobotLeg) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.578072] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:19:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knew_servo_pos\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.579168] (RobotLeg) StderrLine: {'line': b'   19 | void RobotLegRos::get_servos_to_pos(<unsigned int, num_of_joints> \x1b[01;31m\x1b[Knew_servo_pos\x1b[m\x1b[K){\n'}
+[12.579808] (RobotLeg) StderrLine: {'line': b'      |                                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.636313] (-) TimerEvent: {}
+[12.737264] (-) TimerEvent: {}
+[12.838602] (-) TimerEvent: {}
+[12.940007] (-) TimerEvent: {}
+[13.041319] (-) TimerEvent: {}
+[13.142261] (-) TimerEvent: {}
+[13.243778] (-) TimerEvent: {}
+[13.344699] (-) TimerEvent: {}
+[13.445722] (-) TimerEvent: {}
+[13.546694] (-) TimerEvent: {}
+[13.647993] (-) TimerEvent: {}
+[13.751026] (-) TimerEvent: {}
+[13.852368] (-) TimerEvent: {}
+[13.953273] (-) TimerEvent: {}
+[14.054148] (-) TimerEvent: {}
+[14.155059] (-) TimerEvent: {}
+[14.256156] (-) TimerEvent: {}
+[14.358491] (-) TimerEvent: {}
+[14.459809] (-) TimerEvent: {}
+[14.491710] (RobotLeg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:76: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRos.cpp.o] Error 1\n'}
+[14.492826] (RobotLeg) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[14.560022] (-) TimerEvent: {}
+[14.660836] (-) TimerEvent: {}
+[14.761698] (-) TimerEvent: {}
+[14.862479] (-) TimerEvent: {}
+[14.963286] (-) TimerEvent: {}
+[15.064052] (-) TimerEvent: {}
+[15.164823] (-) TimerEvent: {}
+[15.265661] (-) TimerEvent: {}
+[15.366426] (-) TimerEvent: {}
+[15.467245] (-) TimerEvent: {}
+[15.568003] (-) TimerEvent: {}
+[15.668784] (-) TimerEvent: {}
+[15.769634] (-) TimerEvent: {}
+[15.870415] (-) TimerEvent: {}
+[15.971255] (-) TimerEvent: {}
+[16.072023] (-) TimerEvent: {}
+[16.172795] (-) TimerEvent: {}
+[16.273634] (-) TimerEvent: {}
+[16.374432] (-) TimerEvent: {}
+[16.475277] (-) TimerEvent: {}
+[16.576026] (-) TimerEvent: {}
+[16.676790] (-) TimerEvent: {}
+[16.777639] (-) TimerEvent: {}
+[16.878410] (-) TimerEvent: {}
+[16.979250] (-) TimerEvent: {}
+[17.080014] (-) TimerEvent: {}
+[17.180900] (-) TimerEvent: {}
+[17.281712] (-) TimerEvent: {}
+[17.382496] (-) TimerEvent: {}
+[17.483287] (-) TimerEvent: {}
+[17.584076] (-) TimerEvent: {}
+[17.684882] (-) TimerEvent: {}
+[17.785660] (-) TimerEvent: {}
+[17.886433] (-) TimerEvent: {}
+[17.987288] (-) TimerEvent: {}
+[18.088088] (-) TimerEvent: {}
+[18.188890] (-) TimerEvent: {}
+[18.289678] (-) TimerEvent: {}
+[18.390479] (-) TimerEvent: {}
+[18.491301] (-) TimerEvent: {}
+[18.592064] (-) TimerEvent: {}
+[18.692831] (-) TimerEvent: {}
+[18.793611] (-) TimerEvent: {}
+[18.894425] (-) TimerEvent: {}
+[18.995262] (-) TimerEvent: {}
+[19.096050] (-) TimerEvent: {}
+[19.196864] (-) TimerEvent: {}
+[19.297690] (-) TimerEvent: {}
+[19.398516] (-) TimerEvent: {}
+[19.499421] (-) TimerEvent: {}
+[19.600354] (-) TimerEvent: {}
+[19.701472] (-) TimerEvent: {}
+[19.802242] (-) TimerEvent: {}
+[19.903146] (-) TimerEvent: {}
+[20.003927] (-) TimerEvent: {}
+[20.104687] (-) TimerEvent: {}
+[20.205507] (-) TimerEvent: {}
+[20.306267] (-) TimerEvent: {}
+[20.407100] (-) TimerEvent: {}
+[20.507847] (-) TimerEvent: {}
+[20.608662] (-) TimerEvent: {}
+[20.709490] (-) TimerEvent: {}
+[20.810250] (-) TimerEvent: {}
+[20.911101] (-) TimerEvent: {}
+[21.011850] (-) TimerEvent: {}
+[21.112648] (-) TimerEvent: {}
+[21.213725] (-) TimerEvent: {}
+[21.314441] (-) TimerEvent: {}
+[21.415279] (-) TimerEvent: {}
+[21.515964] (-) TimerEvent: {}
+[21.616697] (-) TimerEvent: {}
+[21.717526] (-) TimerEvent: {}
+[21.818349] (-) TimerEvent: {}
+[21.919291] (-) TimerEvent: {}
+[22.020118] (-) TimerEvent: {}
+[22.120938] (-) TimerEvent: {}
+[22.221745] (-) TimerEvent: {}
+[22.322597] (-) TimerEvent: {}
+[22.423529] (-) TimerEvent: {}
+[22.476111] (RobotLeg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:90: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o] Error 1\n'}
+[22.477604] (RobotLeg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2\n'}
+[22.479056] (RobotLeg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[22.489996] (RobotLeg) CommandEnded: {'returncode': 2}
+[22.523784] (-) TimerEvent: {}
+[22.624697] (-) TimerEvent: {}
+[22.725707] (-) TimerEvent: {}
+[22.751815] (RobotLeg) JobEnded: {'identifier': 'RobotLeg', 'rc': 2}
+[22.763820] (-) EventReactorShutdown: {}

@@ -1,0 +1,23 @@
+[0.078s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4
+[0.301s] [35m[1mConsolidate compiler generated dependencies of target robot_leg_wrapper[0m
+[0.421s] [ 33%] [32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRos.cpp.o[0m
+[11.018s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:[m[K In member function ‘[01m[Kvoid RobotLegRos::do_step(int, int)[m[K’:
+[11.019s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:10:105:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((2496 * 4) * step_length) * step_height)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kunsigned int[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[11.019s]    10 |         this->get_servos_to_pos(std::array<unsigned int, 3>({2496 * 4, 2496 * 4, [01;35m[K2496 * 4 * step_length * step_height[m[K}));
+[11.020s]       |                                                                                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[11.020s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:14:102:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((496 * 4) * step_length) * step_height)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kunsigned int[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[11.020s]    14 |         this->get_servos_to_pos(std::array<unsigned int, 3>({496 * 4, 496 * 4, [01;35m[K496 * 4 * step_length * step_height[m[K}));
+[11.021s]       |                                                                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[11.025s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:[m[K In member function ‘[01m[Kvoid RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3>)[m[K’:
+[11.025s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:32:57:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K((RobotLegRos*)this)->RobotLegRos::pub_message_ptr_[m[K’ from ‘[01m[Kshared_ptr<[01;32m[Krclcpp::Publisher<maestro_interfaces::msg::MaestroTarget_<std::allocator<void> > >[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Krclcpp::Context[m[K>[m[K’
+[11.026s]    32 |         rclcpp::sleep_for(std::chrono::nanoseconds(10), [01;31m[Kpub_message_ptr_[m[K);
+[11.027s]       |                                                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[11.027s]       |                                                         [01;31m[K|[m[K
+[11.028s]       |                                                         [01;31m[Kshared_ptr<rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget_<std::allocator<void> > >>[m[K
+[11.028s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:38:27:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""ns[m[K’
+[11.029s]    38 |         rclcpp::sleep_for([01;31m[K10ns[m[K, pub_message_ptr_);
+[11.029s]       |                           [01;31m[K^~~~[m[K
+[13.024s] gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:76: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRos.cpp.o] Error 1
+[13.025s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2
+[13.026s] gmake: *** [Makefile:146: all] Error 2
+[13.034s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4
