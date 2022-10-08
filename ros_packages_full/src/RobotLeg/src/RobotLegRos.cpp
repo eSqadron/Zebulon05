@@ -17,32 +17,36 @@ void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
         throw std::invalid_argument("pub_message_ptr_ was not initialised");
     }
     else {
-        auto message = maestro_interfaces::msg::MaestroTarget();
-        message.speed = 0;
-        message.acceleration = 0;
+        auto message1 = maestro_interfaces::msg::MaestroTarget();
+        auto message2 = maestro_interfaces::msg::MaestroTarget();
+        auto message3 = maestro_interfaces::msg::MaestroTarget();
+        message1.speed = 0;
+        message1.acceleration = 0;
+        message2.speed = 0;
+        message2.acceleration = 0;
+        message3.speed = 0;
+        message3.acceleration = 0;
+        
+        message1.channel = servo_ids_[0];
+        message1.target_ang = new_servo_pos[0];
 
+        message2.channel = servo_ids_[1];
+        message2.target_ang = new_servo_pos[1];
 
+        message3.channel = servo_ids_[2];
+        message3.target_ang = new_servo_pos[2];
 
-        message.channel = servo_ids_[0];
-        message.target_ang = new_servo_pos[0];
-        pub_message_ptr_->publish(message);
-
-        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
-
-        message.channel = servo_ids_[1];
-        message.target_ang = new_servo_pos[1];
-        pub_message_ptr_->publish(message);
-
-        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
-
-        message.channel = servo_ids_[2];
-        message.target_ang = new_servo_pos[2];
-        pub_message_ptr_->publish(message);
-
-        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
 
         while(((last_known_pos[0] != new_servo_pos[0]) or (last_known_pos[1] != new_servo_pos[1])) or (last_known_pos[2] != new_servo_pos[2])){
-            //rclcpp::sleep_for(std::chrono::nanoseconds(100));
+            pub_message_ptr_->publish(message1);
+            rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
+
+            pub_message_ptr_->publish(message2);
+            rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
+
+            pub_message_ptr_->publish(message);
+            rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
+
         }
 
     }
