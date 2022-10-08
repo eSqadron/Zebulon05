@@ -11,11 +11,19 @@
 
 class RobotLegRos {
 public:
-    RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr) : pub_message_ptr_(pub_message_ptr), last_known_pos{0} {};
-    RobotLegRos() : RobotLegRos(nullptr) {};
+    RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr, std::array<short unsigned int, num_of_joints> servo_ids) : pub_message_ptr_(pub_message_ptr), last_known_pos{0}, servo_ids_(servo_ids) {};
+    RobotLegRos() : RobotLegRos(nullptr), servo_ids_{0, 1, 2} {};
     void set_publisher(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr){
         pub_message_ptr_ = pub_message_ptr;
     }
+    void set_servo_ids(std::array<short unsigned int, num_of_joints> new_servo_ids){
+        servo_ids_[0] = new_servo_ids[0];
+        servo_ids_[1] = new_servo_ids[1];
+        servo_ids_[2] = new_servo_ids[2];
+    }
+
+    void get_servos_to_pos(<unsigned int, num_of_joints> new_servo_pos);
+
     void write_last_known_positions(std::array<short unsigned int, 24> new_last_known_pos){
         last_known_pos = new_last_known_pos;
     }
@@ -24,9 +32,13 @@ public:
     int target_i = 4*496;
     int sweep_dir = 1;
 
+    const short unsigned int num_of_joints = 3;
+
+
 private:
     rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr_;
     std::array<short unsigned int, 24> last_known_pos;
+    std::array<short unsigned int, num_of_joints> servo_ids_;
 
 };
 

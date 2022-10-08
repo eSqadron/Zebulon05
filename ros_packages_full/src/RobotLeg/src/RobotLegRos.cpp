@@ -6,21 +6,35 @@
 
 
 void RobotLegRos::do_step(int step_length, int step_height){
+    if(sweep_dir == 1) {
+        this->get_servos_to_pos({2496 * 4, 2496 * 4, 2496 * 4 * step_length * step_height});
+        sweep_dir = -1;
+    }
+    else {
+        this->get_servos_to_pos({496 * 4, 496 * 4, 496 * 4 * step_length * step_height});
+        sweep_dir = 1;
+    }
+}
+
+void RobotLegRos::get_servos_to_pos(<unsigned int, num_of_joints> new_servo_pos){
     if(pub_message_ptr_ == nullptr){
         throw std::invalid_argument("pub_message_ptr_ was not initialised");
     }
     else {
         auto message = maestro_interfaces::msg::MaestroTarget();
-        message.channel = 0;
         message.speed = 0;
         message.acceleration = 0;
 
-        message.target_ang = target_i;
-        target_i += (100 * sweep_dir * step_length * step_height);
-        if (target_i > 2496 * 4) sweep_dir = -1;
-        if (target_i < 496 * 4) sweep_dir = 1;
+        message.channel = servo_ids_[0];
+        message.target_ang = new_servo_pos[0];
         pub_message_ptr_->publish(message);
-        message.channel = 1;
+
+        message.channel = servo_ids_[1];
+        message.target_ang = new_servo_pos[1];
+        pub_message_ptr_->publish(message);
+
+        message.channel = servo_ids_[2];
+        message.target_ang = new_servo_pos[2];
         pub_message_ptr_->publish(message);
     }
 }
