@@ -12,7 +12,7 @@
 class RobotLegRos {
 public:
     RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr, std::array<short unsigned int, 3> servo_ids) : pub_message_ptr_(pub_message_ptr), last_known_pos{0}, servo_ids_(servo_ids){};
-    RobotLegRos() : RobotLegRos(nullptr), servo_ids_({0, 1, 2}) {};
+    RobotLegRos() : RobotLegRos(pub_message_ptr = nullptr, servo_ids = {0, 1, 2}) {};
     void set_publisher(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr){
         pub_message_ptr_ = pub_message_ptr;
     }
