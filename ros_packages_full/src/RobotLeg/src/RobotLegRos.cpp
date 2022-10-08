@@ -7,7 +7,8 @@
 
 void RobotLegRos::do_step(int step_length, int step_height){
         this->get_servos_to_pos(std::array<unsigned int, 3>({2496 * 4, 2496 * 4, 2496 * 4 * step_length * step_height}));
-        this->get_servos_to_pos(std::array<unsigned int, 3>({496 * 4, 496 * 4, 496 * 4 * step_length * step_height}));
+        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
+        this->get_servos_to_pos(std::array<unsigned int, 3>({496  * 4, 496  * 4, 496  * 4 * step_length * step_height}));
 }
 
 void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
