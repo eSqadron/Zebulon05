@@ -6,14 +6,8 @@
 
 
 void RobotLegRos::do_step(int step_length, int step_height){
-    if(sweep_dir == 1) {
         this->get_servos_to_pos(std::array<unsigned int, 3>({2496 * 4, 2496 * 4, 2496 * 4 * step_length * step_height}));
-        sweep_dir = -1;
-    }
-    else {
         this->get_servos_to_pos(std::array<unsigned int, 3>({496 * 4, 496 * 4, 496 * 4 * step_length * step_height}));
-        sweep_dir = 1;
-    }
 }
 
 void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
