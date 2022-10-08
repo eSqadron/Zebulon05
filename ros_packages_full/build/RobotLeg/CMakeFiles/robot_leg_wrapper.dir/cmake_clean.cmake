@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRos.cpp.o"
+  "CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRos.cpp.o.d"
   "CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o"
   "CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o.d"
   "robot_leg_wrapper"

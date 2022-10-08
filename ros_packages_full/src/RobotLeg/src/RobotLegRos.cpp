@@ -12,7 +12,7 @@ void RobotLegRos::do_step(int step_length, int step_height){
     message.acceleration = 0;
 
     message.target_ang = target_i;
-    target_i+=(100*sweep_dir);
+    target_i+=(100*sweep_dir * step_length*step_height);
     if(target_i > 2496 * 4) sweep_dir = -1;
     if(target_i < 496 * 4) sweep_dir = 1;
     pub_message_ptr_->publish(message);
