@@ -30,11 +30,11 @@ public:
         timer_ = this->create_wall_timer(500ms, std::bind(&RobotLegRosWrapper::timer_callback, this));
         robo_leg.set_publisher(publisher_);
 
-        subscription_ = this->create_subscription<maestro_interfaces::msg::current_positions>("current_positions", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this, _1));
+        subscription_ = this->create_subscription<maestro_interfaces::msg::CurrentPositions>("current_positions", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this, _1));
     }
 
 private:
-    void cur_pos_callback(const maestro_interfaces::msg::current_positions & msg);
+    void cur_pos_callback(const maestro_interfaces::msg::CurrentPositions & msg);
     void timer_callback();
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr publisher_;

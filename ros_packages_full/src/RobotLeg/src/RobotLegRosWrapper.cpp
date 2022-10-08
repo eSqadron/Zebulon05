@@ -13,7 +13,7 @@ void RobotLegRosWrapper::timer_callback(){
 
 }
 
-void cur_pos_callback(const maestro_interfaces::msg::current_positions& msg){
+void cur_pos_callback(const maestro_interfaces::msg::CurrentPositions& msg){
     robo_leg.write_last_known_positions(msg.current_ang)
 }
 
