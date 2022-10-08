@@ -15,12 +15,12 @@ class MaestroRosWrapper(Node):
             MaestroTarget,
             'maestro_target',
             self.target_callback,
-            2)
+            3)
 
         self.current_pos_publisher = self.create_publisher(
             CurrentPositions,
             'current_positions',
-            2)
+            3)
 
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(
