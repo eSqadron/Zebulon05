@@ -28,9 +28,10 @@ public:
     RobotLegRosWrapper() : Node("robot_leg_ros_wrapper"), count_(0){
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
         timer_ = this->create_wall_timer(500ms, std::bind(&RobotLegRosWrapper::timer_callback, this));
+        robo_leg = RobotLegRos(publisher_);
 //	RobotLegRos robo_leg(publisher_);
     }
-    RobotLegRos robo_leg = RobotLegRos(publisher_);
+    //RobotLegRos robo_leg = RobotLegRos(publisher_);
 private:
 
 
@@ -39,6 +40,7 @@ private:
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr publisher_;
     size_t count_;
+    RobotLegRos robo_leg;
 };
 
 
