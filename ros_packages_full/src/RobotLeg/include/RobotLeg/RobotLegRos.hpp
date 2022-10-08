@@ -28,6 +28,10 @@ public:
         last_known_pos = new_last_known_pos;
     }
 
+    std::array<short unsigned int, 24> get_last_known_pos(){
+        return last_known_pos;
+    }
+
     void do_step(int step_length, int step_height);
     int target_i = 4*496;
     int sweep_dir = 1;
