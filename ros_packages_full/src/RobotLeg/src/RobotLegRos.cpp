@@ -23,7 +23,10 @@ void RobotLegRos::perform_step(){
     if(step_stage_ == idle){
         interpolated_step_stages_ = interpolate_step();
         publish_position(interpolated_step_stages_[interpolated_stage_num_]);
-        step_stage_ = performing_step;
+        step_stage_ = start_step;
+    }
+    else if(step_stage_ == start_step){
+        publish_position(interpolated_step_stages_[interpolated_stage_num_]);
     }
     else if(step_stage_ == performing_step){
         if((last_known_pos[0] == interpolated_step_stages_[interpolated_stage_num_][0]) and
@@ -32,7 +35,7 @@ void RobotLegRos::perform_step(){
             step_stage_ = increment_step;
         }
         else{
-            publish_position(interpolated_step_stages_[interpolated_stage_num_]);
+            //publish_position(interpolated_step_stages_[interpolated_stage_num_]);
             step_stage_ = performing_step;
         }
     }
@@ -42,6 +45,7 @@ void RobotLegRos::perform_step(){
             step_stage_ = finish_step;
         }
         else{
+            publish_position(interpolated_step_stages_[interpolated_stage_num_]);
             step_stage_ = performing_step;
         }
     }
@@ -61,7 +65,7 @@ void RobotLegRos::publish_position(std::array<unsigned int, 3> new_servo_pos){
         auto message1 = maestro_interfaces::msg::MaestroTarget();
         auto message2 = maestro_interfaces::msg::MaestroTarget();
         auto message3 = maestro_interfaces::msg::MaestroTarget();
-        int max_spd = 166;
+        int max_spd = 160;
         message1.speed = max_spd;
         message1.acceleration = 0;
         message2.speed = max_spd;

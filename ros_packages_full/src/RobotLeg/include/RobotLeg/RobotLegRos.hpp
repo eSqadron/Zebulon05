@@ -13,6 +13,7 @@
 
 enum StepStage{
     idle,
+    start_step,
     performing_step,
     increment_step,
     finish_step
