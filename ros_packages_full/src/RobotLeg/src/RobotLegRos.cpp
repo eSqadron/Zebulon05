@@ -27,6 +27,7 @@ void RobotLegRos::perform_step(){
     }
     else if(step_stage_ == start_step){
         publish_position(interpolated_step_stages_[interpolated_stage_num_]);
+        step_stage_ = performing_step;
     }
     else if(step_stage_ == performing_step){
         if((last_known_pos[0] == interpolated_step_stages_[interpolated_stage_num_][0]) and
