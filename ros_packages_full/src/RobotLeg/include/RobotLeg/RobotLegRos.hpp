@@ -51,9 +51,9 @@ public:
 
     void perform_step();
 
-    void do_step(int step_length, int step_height);
-    int target_i = 4*496;
-    int sweep_dir = 1;
+//    void do_step(int step_length, int step_height);
+//    int target_i = 4*496;
+//    int sweep_dir = 1;
 
 
 private:

@@ -5,12 +5,12 @@
 #include "../include/RobotLeg/RobotLegRos.hpp"
 
 
-void RobotLegRos::do_step(int step_length, int step_height){
-        this->publish_position(std::array<unsigned int, 3>({2496 * 4, 2496 * 4, 2496 * 4 * step_length * step_height}));
-        
-        this->publish_position(std::array<unsigned int, 3>({496  * 4, 496  * 4, 496  * 4 * step_length * step_height}));
-        
-}
+//void RobotLegRos::do_step(int step_length, int step_height){
+//        this->publish_position(std::array<unsigned int, 3>({2496 * 4, 2496 * 4, 2496 * 4 * step_length * step_height}));
+//
+//        this->publish_position(std::array<unsigned int, 3>({496  * 4, 496  * 4, 496  * 4 * step_length * step_height}));
+//
+//}
 
 std::vector<std::array<unsigned int, 3>> RobotLegRos::interpolate_step(){
     std::vector<std::array<unsigned int, 3>> result;
@@ -70,12 +70,18 @@ void RobotLegRos::publish_position(std::array<unsigned int, 3> new_servo_pos){
 
         message1.channel = servo_ids_[0];
         message1.target_ang = new_servo_pos[0];
+        pub_message_ptr_->publish(message1);
+        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
 
         message2.channel = servo_ids_[1];
         message2.target_ang = new_servo_pos[1];
+        pub_message_ptr_->publish(message2);
+        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
 
         message3.channel = servo_ids_[2];
         message3.target_ang = new_servo_pos[2];
+        pub_message_ptr_->publish(message3);
+        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
 
 
 //        while(((last_known_pos[0] != new_servo_pos[0]) or (last_known_pos[1] != new_servo_pos[1])) or (last_known_pos[2] != new_servo_pos[2])){
