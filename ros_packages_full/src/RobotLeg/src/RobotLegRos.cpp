@@ -21,11 +21,11 @@ std::vector<std::array<unsigned int, 3>> RobotLegRos::interpolate_step(){
 
 void RobotLegRos::perform_step(){
     if(step_stage_ == idle){
-        interpolated_step_stages_ = interpolate_step();
-        publish_position(interpolated_step_stages_[interpolated_stage_num_]);
         step_stage_ = start_step;
     }
     else if(step_stage_ == start_step){
+        interpolated_step_stages_ = interpolate_step();
+        interpolated_stage_num_ = 0;
         publish_position(interpolated_step_stages_[interpolated_stage_num_]);
         step_stage_ = performing_step;
     }
