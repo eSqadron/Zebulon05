@@ -6,7 +6,7 @@
 
 void RobotLegRosWrapper::timer_callback(){
     try{
-        robo_leg.do_step(1, 1);
+        robo_leg.perform_step();
     } catch(const std::invalid_argument& e){
         RCLCPP_INFO(this->get_logger(), e.what());
     }

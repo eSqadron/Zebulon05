@@ -6,13 +6,54 @@
 
 
 void RobotLegRos::do_step(int step_length, int step_height){
-        this->get_servos_to_pos(std::array<unsigned int, 3>({2496 * 4, 2496 * 4, 2496 * 4 * step_length * step_height}));
-        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
-        this->get_servos_to_pos(std::array<unsigned int, 3>({496  * 4, 496  * 4, 496  * 4 * step_length * step_height}));
-        rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
+        this->publish_position(std::array<unsigned int, 3>({2496 * 4, 2496 * 4, 2496 * 4 * step_length * step_height}));
+        
+        this->publish_position(std::array<unsigned int, 3>({496  * 4, 496  * 4, 496  * 4 * step_length * step_height}));
+        
 }
 
-void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
+std::vector<std::array<unsigned int, 3>> RobotLegRos::interpolate_step(){
+    std::vector<std::array<unsigned int, 3>> result;
+    result.push_back({2496 * 4, 2496 * 4, 2496 * 4});
+    result.push_back({496  * 4, 496  * 4, 496  * 4});
+    return result;
+}
+
+void RobotLegRos::perform_step(){
+    if(step_stage_ == idle){
+        interpolated_step_stages_ = interpolate_step();
+        publish_position(interpolated_step_stages_[interpolated_stage_num_]);
+        step_stage_ = performing_step;
+    }
+    else if(step_stage_ == performing_step){
+        if((last_known_pos[0] == interpolated_step_stages_[interpolated_stage_num_][0]) and
+           (last_known_pos[1] == interpolated_step_stages_[interpolated_stage_num_][1]) and
+           (last_known_pos[2] == interpolated_step_stages_[interpolated_stage_num_][2])){
+            step_stage_ = increment_step;
+        }
+        else{
+            publish_position(interpolated_step_stages_[interpolated_stage_num_]);
+            step_stage_ = performing_step;
+        }
+    }
+    else if(step_stage_ == increment_step){
+        interpolated_stage_num_++;
+        if(interpolated_stage_num_ == interpolated_step_stages_.size()){
+            step_stage_ = finish_step;
+        }
+        else{
+            step_stage_ = performing_step;
+        }
+    }
+    else if(step_stage_ == finish_step){
+        interpolated_step_stages_ = std::vector<std::array<unsigned int, 3>>();
+        interpolated_stage_num_ = 0;
+
+        step_stage_ = idle;
+    }
+}
+
+void RobotLegRos::publish_position(std::array<unsigned int, 3> new_servo_pos){
     if(pub_message_ptr_ == nullptr){
         throw std::invalid_argument("pub_message_ptr_ was not initialised");
     }
@@ -37,17 +78,17 @@ void RobotLegRos::get_servos_to_pos(std::array<unsigned int, 3> new_servo_pos){
         message3.target_ang = new_servo_pos[2];
 
 
-        while(((last_known_pos[0] != new_servo_pos[0]) or (last_known_pos[1] != new_servo_pos[1])) or (last_known_pos[2] != new_servo_pos[2])){
-            pub_message_ptr_->publish(message1);
-            rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
-
-            pub_message_ptr_->publish(message2);
-            rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
-
-            pub_message_ptr_->publish(message3);
-            rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
-
-        }
+//        while(((last_known_pos[0] != new_servo_pos[0]) or (last_known_pos[1] != new_servo_pos[1])) or (last_known_pos[2] != new_servo_pos[2])){
+//            pub_message_ptr_->publish(message1);
+//            rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
+//
+//            pub_message_ptr_->publish(message2);
+//            rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
+//
+//            pub_message_ptr_->publish(message3);
+//            rclcpp::sleep_for(std::chrono::nanoseconds(1000000));
+//
+//        }
 
     }
 }

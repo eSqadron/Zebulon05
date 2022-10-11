@@ -27,7 +27,7 @@ class RobotLegRosWrapper : public rclcpp::Node{
 public:
     RobotLegRosWrapper() : Node("robot_leg_ros_wrapper"), count_(0){
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
-        timer_ = this->create_wall_timer(8000ms, std::bind(&RobotLegRosWrapper::timer_callback, this));
+        timer_ = this->create_wall_timer(100ms, std::bind(&RobotLegRosWrapper::timer_callback, this));
         robo_leg.set_publisher(publisher_);
 
         subscription_ = this->create_subscription<maestro_interfaces::msg::CurrentPositions>("current_positions", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this,  std::placeholders::_1));
