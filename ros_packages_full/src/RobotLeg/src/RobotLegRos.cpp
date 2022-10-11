@@ -61,11 +61,11 @@ void RobotLegRos::publish_position(std::array<unsigned int, 3> new_servo_pos){
         auto message1 = maestro_interfaces::msg::MaestroTarget();
         auto message2 = maestro_interfaces::msg::MaestroTarget();
         auto message3 = maestro_interfaces::msg::MaestroTarget();
-        message1.speed = 0;
+        message1.speed = 1000;
         message1.acceleration = 0;
-        message2.speed = 0;
+        message2.speed = 1000;
         message2.acceleration = 0;
-        message3.speed = 0;
+        message3.speed = 1000;
         message3.acceleration = 0;
 
         message1.channel = servo_ids_[0];
