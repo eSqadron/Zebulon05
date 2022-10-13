@@ -15,6 +15,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "maestro_interfaces/msg/maestro_target.hpp"
 #include "maestro_interfaces/msg/current_positions.hpp"
+#include "robot_interfaces/msg/step.hpp"
 #include "RobotLegRos.hpp"
 
 using namespace std::chrono_literals;
@@ -30,14 +31,18 @@ public:
         robo_leg.set_publisher(publisher_);
 
         subscription_ = this->create_subscription<maestro_interfaces::msg::CurrentPositions>("current_positions", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this,  std::placeholders::_1));
+        step_subscription_ = this->create_subscription<std_msgs::msg::String>("step_1", 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
     }
 
 private:
     void cur_pos_callback(const maestro_interfaces::msg::CurrentPositions & msg);
     void timer_callback();
+    void step_callback(const robot_interfaces::msg::Step& msg);
+
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr publisher_;
     rclcpp::Subscription<maestro_interfaces::msg::CurrentPositions>::SharedPtr subscription_;
+    rclcpp::Subscription<robot_interfaces::msg::Step>::SharedPtr step_subscription_;
 
     size_t count_;
     RobotLegRos robo_leg;

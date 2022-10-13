@@ -51,6 +51,8 @@ public:
     }
 
     void perform_step();
+    void start_step();
+    bool is_step_being_performed();
 
 //    void do_step(int step_length, int step_height);
 //    int target_i = 4*496;

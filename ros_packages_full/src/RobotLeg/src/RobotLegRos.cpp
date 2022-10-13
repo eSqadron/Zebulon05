@@ -26,12 +26,23 @@ std::vector<std::array<unsigned int, 3>> RobotLegRos::interpolate_step(){
     return result;
 }
 
+
+void RobotLegRos::start_step(){
+    if(step_stage_==idle){
+        step_stage_ = start_step;
+        interpolated_step_stages_ = interpolate_step();
+    }
+    else{
+        throw std::invalid_argument("received negative value");
+    }
+
+}
+
 void RobotLegRos::perform_step(){
     if(step_stage_ == idle){
-        step_stage_ = start_step;
+        step_stage_ = idle;
     }
     else if(step_stage_ == start_step){
-        interpolated_step_stages_ = interpolate_step();
         interpolated_stage_num_ = 0;
         publish_position(interpolated_step_stages_[interpolated_stage_num_]);
         step_stage_ = performing_step;
@@ -63,6 +74,11 @@ void RobotLegRos::perform_step(){
 
         step_stage_ = idle;
     }
+}
+
+bool RobotLegRos::is_step_being_performed(){
+    if(step_stage_ == idle) return true;
+    return false;
 }
 
 void RobotLegRos::publish_position(std::array<unsigned int, 3> new_servo_pos){
