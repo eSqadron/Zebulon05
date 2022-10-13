@@ -16,10 +16,10 @@ std::vector<std::array<unsigned int, 3>> RobotLegRos::interpolate_step(){
     std::vector<std::array<unsigned int, 3>> result;
     result.push_back({1486 * 4, 1913 * 4, 2400 * 4});
 
-//    result.push_back({981 * 4, 2195 * 4, 2107 * 4});
-//    result.push_back({981 * 4, 1913 * 4, 2400 * 4});
-//    result.push_back({1991 * 4, 1913 * 4, 2400 * 4});
-//    result.push_back({1486 * 4, 2195 * 4, 2107 * 4});
+    result.push_back({981 * 4, 2195 * 4, 2107 * 4});
+    result.push_back({981 * 4, 1913 * 4, 2400 * 4});
+    result.push_back({1991 * 4, 1913 * 4, 2400 * 4});
+    result.push_back({1486 * 4, 2195 * 4, 2107 * 4});
 
     result.push_back({1486 * 4, 1913 * 4, 2400 * 4});
 
