@@ -37,12 +37,12 @@ public:
 private:
     void cur_pos_callback(const maestro_interfaces::msg::CurrentPositions & msg);
     void timer_callback();
-    void step_callback(const robot_interfaces::msg::Step& msg);
+    void step_callback(const walking_robot_interfaces::msg::Step& msg);
 
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr publisher_;
     rclcpp::Subscription<maestro_interfaces::msg::CurrentPositions>::SharedPtr subscription_;
-    rclcpp::Subscription<robot_interfaces::msg::Step>::SharedPtr step_subscription_;
+    rclcpp::Subscription<walking_robot_interfaces::msg::Step>::SharedPtr step_subscription_;
 
     size_t count_;
     RobotLegRos robo_leg;

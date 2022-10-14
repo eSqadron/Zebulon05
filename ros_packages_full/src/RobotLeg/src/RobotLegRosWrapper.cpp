@@ -24,7 +24,7 @@ void RobotLegRosWrapper::cur_pos_callback(const maestro_interfaces::msg::Current
     RCLCPP_INFO(this->get_logger(), "%d", robo_leg.get_last_known_pos()[1]);
 }
 
-void RobotLegRosWrapper::step_callback(const robot_interfaces::msg::Step& msg){
+void RobotLegRosWrapper::step_callback(const walking_robot_interfaces::msg::Step& msg){
     if(robo_leg.is_step_being_performed()){
         RCLCPP_INFO(this->get_logger(), "previous step not finished! %d", msg.type);
     }
