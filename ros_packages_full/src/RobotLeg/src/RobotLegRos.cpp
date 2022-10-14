@@ -77,7 +77,7 @@ void RobotLegRos::perform_step(){
 }
 
 bool RobotLegRos::is_step_being_performed(){
-    if(step_stage_ == idle) return true;
+    if(step_stage_ != idle) return true;
     return false;
 }
 
