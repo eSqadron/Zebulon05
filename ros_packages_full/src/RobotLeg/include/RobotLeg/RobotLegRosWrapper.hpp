@@ -15,7 +15,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "maestro_interfaces/msg/maestro_target.hpp"
 #include "maestro_interfaces/msg/current_positions.hpp"
-#include "robot_interfaces/msg/step.hpp"
+#include "walking_robot_interfaces/msg/step.hpp"
 #include "RobotLegRos.hpp"
 
 using namespace std::chrono_literals;
