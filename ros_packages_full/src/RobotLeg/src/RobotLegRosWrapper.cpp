@@ -6,7 +6,6 @@
 
 void RobotLegRosWrapper::timer_callback(){
     try{
-        robo_leg.perform_step();
         if(robo_leg.is_step_being_performed()){
             robo_leg.perform_step();
         }
@@ -21,7 +20,7 @@ void RobotLegRosWrapper::timer_callback(){
 
 void RobotLegRosWrapper::cur_pos_callback(const maestro_interfaces::msg::CurrentPositions& msg){
     robo_leg.write_last_known_positions(msg.current_ang);
-    RCLCPP_INFO(this->get_logger(), "%d", robo_leg.get_last_known_pos()[1]);
+    //RCLCPP_INFO(this->get_logger(), "%d", robo_leg.get_last_known_pos()[1]);
 }
 
 void RobotLegRosWrapper::step_callback(const walking_robot_interfaces::msg::Step& msg){
