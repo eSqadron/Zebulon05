@@ -30,8 +30,8 @@ public:
         timer_ = this->create_wall_timer(100ms, std::bind(&RobotLegRosWrapper::timer_callback, this));
         robo_leg.set_publisher(publisher_);
 
-        subscription_ = this->create_subscription<maestro_interfaces::msg::CurrentPositions>("current_positions", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this,  std::placeholders::_1));
-        step_subscription_ = this->create_subscription<std_msgs::msg::String>("step_1", 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
+        subscription_ = this->create_subscription<maestro_interfaces::msg::CurrentPositions>("current_positions", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this, std::placeholders::_1));
+        step_subscription_ = this->create_subscription<walking_robot_interfaces::msg::Step>("step_1", 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
     }
 
 private:
