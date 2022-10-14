@@ -27,7 +27,7 @@ std::vector<std::array<unsigned int, 3>> RobotLegRos::interpolate_step(){
 }
 
 
-void RobotLegRos::start_step(){
+void RobotLegRos::start_performing_step(){
     if(step_stage_==idle){
         step_stage_ = start_step;
         interpolated_step_stages_ = interpolate_step();

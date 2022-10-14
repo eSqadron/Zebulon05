@@ -51,7 +51,7 @@ public:
     }
 
     void perform_step();
-    void start_step();
+    void start_performing_step();
     bool is_step_being_performed();
 
 //    void do_step(int step_length, int step_height);
