@@ -7,9 +7,11 @@
 void RobotLegRosWrapper::timer_callback(){
     try{
         if(robo_leg.is_step_being_performed()){
+            RCLCPP_INFO(this->get_logger(), "step is being performed");
             robo_leg.perform_step();
         }
         else{
+            RCLCPP_INFO(this->get_logger(), "step is being started");
             robo_leg.start_performing_step();
         }
     } catch(const std::invalid_argument& e){
