@@ -1,0 +1,36 @@
+[0.108s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4
+[0.485s] [35m[1mConsolidate compiler generated dependencies of target robot_leg_wrapper[0m
+[0.641s] [ 33%] [32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRos.cpp.o[0m
+[12.515s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:[m[K In member function ‘[01m[Kvoid RobotLegRos::publish_position(std::array<unsigned int, 3>)[m[K’:
+[12.515s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:64:26:[m[K [01;35m[Kwarning: [m[Kunsigned conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kmaestro_interfaces::msg::MaestroTarget_<std::allocator<void> >::_speed_type[m[K’ {aka ‘[01m[Kunsigned char[m[K’} changes value from ‘[01m[K1000[m[K’ to ‘[01m[K232[m[K’ [[01;35m[K-Woverflow[m[K]
+[12.516s]    64 |         message1.speed = [01;35m[K1000[m[K;
+[12.516s]       |                          [01;35m[K^~~~[m[K
+[12.517s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:66:26:[m[K [01;35m[Kwarning: [m[Kunsigned conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kmaestro_interfaces::msg::MaestroTarget_<std::allocator<void> >::_speed_type[m[K’ {aka ‘[01m[Kunsigned char[m[K’} changes value from ‘[01m[K1000[m[K’ to ‘[01m[K232[m[K’ [[01;35m[K-Woverflow[m[K]
+[12.517s]    66 |         message2.speed = [01;35m[K1000[m[K;
+[12.518s]       |                          [01;35m[K^~~~[m[K
+[12.518s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRos.cpp:68:26:[m[K [01;35m[Kwarning: [m[Kunsigned conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kmaestro_interfaces::msg::MaestroTarget_<std::allocator<void> >::_speed_type[m[K’ {aka ‘[01m[Kunsigned char[m[K’} changes value from ‘[01m[K1000[m[K’ to ‘[01m[K232[m[K’ [[01;35m[K-Woverflow[m[K]
+[12.518s]    68 |         message3.speed = [01;35m[K1000[m[K;
+[12.519s]       |                          [01;35m[K^~~~[m[K
+[15.791s] [ 66%] [32m[1mLinking CXX executable robot_leg_wrapper[0m
+[17.944s] [100%] Built target robot_leg_wrapper
+[17.991s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4
+[18.210s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg
+[18.245s] -- Install configuration: ""
+[18.246s] -- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib/RobotLeg/robot_leg_wrapper
+[18.281s] -- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib/RobotLeg/robot_leg_wrapper" to ""
+[18.282s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/ament_index/resource_index/package_run_dependencies/RobotLeg
+[18.282s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/ament_index/resource_index/parent_prefix_path/RobotLeg
+[18.283s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/ament_prefix_path.sh
+[18.283s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/ament_prefix_path.dsv
+[18.284s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/path.sh
+[18.284s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/path.dsv
+[18.285s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.bash
+[18.285s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.sh
+[18.285s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.zsh
+[18.286s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.dsv
+[18.286s] -- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.dsv
+[18.288s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/ament_index/resource_index/packages/RobotLeg
+[18.288s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/cmake/RobotLegConfig.cmake
+[18.289s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/cmake/RobotLegConfig-version.cmake
+[18.289s] -- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.xml
+[18.297s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg

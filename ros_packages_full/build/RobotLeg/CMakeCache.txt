@@ -278,7 +278,7 @@ SITE:STRING=UbuntuRPi
 TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 
 //Path to a library.
-_lib:FILEPATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/libmaestro_interfaces__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_fastrtps_cpp.so
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/humble/share/ament_cmake/cmake
@@ -495,6 +495,9 @@ std_msgs_DIR:PATH=/opt/ros/humble/share/std_msgs/cmake
 
 //The directory containing a CMake configuration file for tracetools.
 tracetools_DIR:PATH=/opt/ros/humble/share/tracetools/cmake
+
+//The directory containing a CMake configuration file for walking_robot_interfaces.
+walking_robot_interfaces_DIR:PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake
 
 //Path to a program.
 xmllint_BIN:FILEPATH=/usr/bin/xmllint

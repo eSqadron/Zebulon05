@@ -1,0 +1,8 @@
+setup.py
+walking_robot_interfaces/__init__.py
+walking_robot_interfaces.egg-info/PKG-INFO
+walking_robot_interfaces.egg-info/SOURCES.txt
+walking_robot_interfaces.egg-info/dependency_links.txt
+walking_robot_interfaces.egg-info/top_level.txt
+walking_robot_interfaces/msg/__init__.py
+walking_robot_interfaces/msg/_step.py

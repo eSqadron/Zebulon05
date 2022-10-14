@@ -1,0 +1,416 @@
+[0.000000] (-) TimerEvent: {}
+[0.001564] (-) JobUnselected: {'identifier': 'maestro_interfaces'}
+[0.002142] (-) JobUnselected: {'identifier': 'polulu_maestro'}
+[0.003519] (-) JobUnselected: {'identifier': 'walking_robot_interfaces'}
+[0.003785] (RobotLeg) JobQueued: {'identifier': 'RobotLeg', 'dependencies': OrderedDict()}
+[0.003899] (RobotLeg) JobStarted: {'identifier': 'RobotLeg'}
+[0.083466] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'cmake'}
+[0.088417] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'build'}
+[0.093939] (RobotLeg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', '--', '-j4', '-l4'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[0.098856] (-) TimerEvent: {}
+[0.199635] (-) TimerEvent: {}
+[0.300444] (-) TimerEvent: {}
+[0.321501] (RobotLeg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400596] (-) TimerEvent: {}
+[0.501252] (-) TimerEvent: {}
+[0.601961] (-) TimerEvent: {}
+[0.702673] (-) TimerEvent: {}
+[0.803334] (-) TimerEvent: {}
+[0.904032] (-) TimerEvent: {}
+[1.004711] (-) TimerEvent: {}
+[1.105411] (-) TimerEvent: {}
+[1.169026] (RobotLeg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.205615] (-) TimerEvent: {}
+[1.306501] (-) TimerEvent: {}
+[1.407204] (-) TimerEvent: {}
+[1.426367] (RobotLeg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.439035] (RobotLeg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.468083] (RobotLeg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.507372] (-) TimerEvent: {}
+[1.521121] (RobotLeg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.595708] (RobotLeg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.607551] (-) TimerEvent: {}
+[1.708256] (-) TimerEvent: {}
+[1.808949] (-) TimerEvent: {}
+[1.871439] (RobotLeg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.879458] (RobotLeg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.909108] (-) TimerEvent: {}
+[2.009838] (-) TimerEvent: {}
+[2.110563] (-) TimerEvent: {}
+[2.211236] (-) TimerEvent: {}
+[2.311931] (-) TimerEvent: {}
+[2.412642] (-) TimerEvent: {}
+[2.513349] (-) TimerEvent: {}
+[2.614257] (-) TimerEvent: {}
+[2.714924] (-) TimerEvent: {}
+[2.815782] (-) TimerEvent: {}
+[2.916546] (-) TimerEvent: {}
+[3.017243] (-) TimerEvent: {}
+[3.089573] (RobotLeg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.117411] (-) TimerEvent: {}
+[3.218106] (-) TimerEvent: {}
+[3.318833] (-) TimerEvent: {}
+[3.419550] (-) TimerEvent: {}
+[3.520342] (-) TimerEvent: {}
+[3.621045] (-) TimerEvent: {}
+[3.721763] (-) TimerEvent: {}
+[3.761488] (RobotLeg) StdoutLine: {'line': b'-- Found maestro_interfaces: 0.0.0 (/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake)\n'}
+[3.821978] (-) TimerEvent: {}
+[3.922670] (-) TimerEvent: {}
+[4.023539] (-) TimerEvent: {}
+[4.124344] (-) TimerEvent: {}
+[4.225048] (-) TimerEvent: {}
+[4.299813] (RobotLeg) StdoutLine: {'line': b'-- Found walking_robot_interfaces: 0.0.0 (/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake)\n'}
+[4.325218] (-) TimerEvent: {}
+[4.391862] (RobotLeg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[4.425350] (-) TimerEvent: {}
+[4.525983] (-) TimerEvent: {}
+[4.626660] (-) TimerEvent: {}
+[4.662796] (RobotLeg) StderrLine: {'line': b'WARNING: Package name "RobotLeg" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.\n'}
+[4.726879] (-) TimerEvent: {}
+[4.790376] (RobotLeg) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[4.791152] (RobotLeg) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[4.791651] (RobotLeg) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[4.797098] (RobotLeg) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.808867] (RobotLeg) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[4.809497] (RobotLeg) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.812094] (RobotLeg) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.821728] (RobotLeg) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.827036] (-) TimerEvent: {}
+[4.926519] (RobotLeg) StdoutLine: {'line': b'-- Generating done\n'}
+[4.927248] (-) TimerEvent: {}
+[4.943752] (RobotLeg) StdoutLine: {'line': b'-- Build files have been written to: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg\n'}
+[5.027628] (-) TimerEvent: {}
+[5.077335] (RobotLeg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_leg_wrapper\x1b[0m\n'}
+[5.127735] (-) TimerEvent: {}
+[5.208804] (RobotLeg) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o\x1b[0m\n'}
+[5.227919] (-) TimerEvent: {}
+[5.328648] (-) TimerEvent: {}
+[5.429365] (-) TimerEvent: {}
+[5.530096] (-) TimerEvent: {}
+[5.630795] (-) TimerEvent: {}
+[5.731545] (-) TimerEvent: {}
+[5.832254] (-) TimerEvent: {}
+[5.932940] (-) TimerEvent: {}
+[6.033645] (-) TimerEvent: {}
+[6.134316] (-) TimerEvent: {}
+[6.235009] (-) TimerEvent: {}
+[6.335719] (-) TimerEvent: {}
+[6.436469] (-) TimerEvent: {}
+[6.537143] (-) TimerEvent: {}
+[6.637888] (-) TimerEvent: {}
+[6.738650] (-) TimerEvent: {}
+[6.839353] (-) TimerEvent: {}
+[6.940094] (-) TimerEvent: {}
+[7.040939] (-) TimerEvent: {}
+[7.141910] (-) TimerEvent: {}
+[7.242624] (-) TimerEvent: {}
+[7.343374] (-) TimerEvent: {}
+[7.444259] (-) TimerEvent: {}
+[7.545044] (-) TimerEvent: {}
+[7.645841] (-) TimerEvent: {}
+[7.746659] (-) TimerEvent: {}
+[7.847451] (-) TimerEvent: {}
+[7.948300] (-) TimerEvent: {}
+[8.049034] (-) TimerEvent: {}
+[8.149778] (-) TimerEvent: {}
+[8.250664] (-) TimerEvent: {}
+[8.351460] (-) TimerEvent: {}
+[8.452411] (-) TimerEvent: {}
+[8.553168] (-) TimerEvent: {}
+[8.654046] (-) TimerEvent: {}
+[8.754764] (-) TimerEvent: {}
+[8.855548] (-) TimerEvent: {}
+[8.956540] (-) TimerEvent: {}
+[9.057608] (-) TimerEvent: {}
+[9.158432] (-) TimerEvent: {}
+[9.259234] (-) TimerEvent: {}
+[9.360130] (-) TimerEvent: {}
+[9.460891] (-) TimerEvent: {}
+[9.561649] (-) TimerEvent: {}
+[9.662466] (-) TimerEvent: {}
+[9.763232] (-) TimerEvent: {}
+[9.863991] (-) TimerEvent: {}
+[9.964889] (-) TimerEvent: {}
+[10.065669] (-) TimerEvent: {}
+[10.166518] (-) TimerEvent: {}
+[10.267410] (-) TimerEvent: {}
+[10.368268] (-) TimerEvent: {}
+[10.469033] (-) TimerEvent: {}
+[10.569827] (-) TimerEvent: {}
+[10.670583] (-) TimerEvent: {}
+[10.771345] (-) TimerEvent: {}
+[10.872225] (-) TimerEvent: {}
+[10.972962] (-) TimerEvent: {}
+[11.073804] (-) TimerEvent: {}
+[11.174596] (-) TimerEvent: {}
+[11.275380] (-) TimerEvent: {}
+[11.376226] (-) TimerEvent: {}
+[11.477015] (-) TimerEvent: {}
+[11.577872] (-) TimerEvent: {}
+[11.678631] (-) TimerEvent: {}
+[11.779427] (-) TimerEvent: {}
+[11.880286] (-) TimerEvent: {}
+[11.981038] (-) TimerEvent: {}
+[12.081810] (-) TimerEvent: {}
+[12.182585] (-) TimerEvent: {}
+[12.283395] (-) TimerEvent: {}
+[12.384228] (-) TimerEvent: {}
+[12.484982] (-) TimerEvent: {}
+[12.585732] (-) TimerEvent: {}
+[12.686495] (-) TimerEvent: {}
+[12.787307] (-) TimerEvent: {}
+[12.888154] (-) TimerEvent: {}
+[12.988906] (-) TimerEvent: {}
+[13.089663] (-) TimerEvent: {}
+[13.190446] (-) TimerEvent: {}
+[13.291256] (-) TimerEvent: {}
+[13.392085] (-) TimerEvent: {}
+[13.492916] (-) TimerEvent: {}
+[13.593679] (-) TimerEvent: {}
+[13.694473] (-) TimerEvent: {}
+[13.795287] (-) TimerEvent: {}
+[13.896162] (-) TimerEvent: {}
+[13.996917] (-) TimerEvent: {}
+[14.097840] (-) TimerEvent: {}
+[14.198624] (-) TimerEvent: {}
+[14.299498] (-) TimerEvent: {}
+[14.400339] (-) TimerEvent: {}
+[14.501091] (-) TimerEvent: {}
+[14.601843] (-) TimerEvent: {}
+[14.702599] (-) TimerEvent: {}
+[14.803380] (-) TimerEvent: {}
+[14.904235] (-) TimerEvent: {}
+[15.005024] (-) TimerEvent: {}
+[15.105797] (-) TimerEvent: {}
+[15.206587] (-) TimerEvent: {}
+[15.307384] (-) TimerEvent: {}
+[15.408249] (-) TimerEvent: {}
+[15.508990] (-) TimerEvent: {}
+[15.609741] (-) TimerEvent: {}
+[15.710506] (-) TimerEvent: {}
+[15.811321] (-) TimerEvent: {}
+[15.912130] (-) TimerEvent: {}
+[16.012936] (-) TimerEvent: {}
+[16.113698] (-) TimerEvent: {}
+[16.114892] (RobotLeg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:5\x1b[m\x1b[K:\n'}
+[16.116199] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:40:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krobot_interfaces\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[16.116717] (RobotLeg) StderrLine: {'line': b'   40 |     void step_callback(const \x1b[01;31m\x1b[Krobot_interfaces\x1b[m\x1b[K::msg::Step& msg);\n'}
+[16.117167] (RobotLeg) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[16.117587] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:40:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[K::\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[16.118090] (RobotLeg) StderrLine: {'line': b'   40 |     void step_callback(const robot_interfaces::msg\x1b[01;31m\x1b[K::\x1b[m\x1b[KStep& msg);\n'}
+[16.118589] (RobotLeg) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[16.119025] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:40:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K::\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[16.119483] (RobotLeg) StderrLine: {'line': b'   40 |     void step_callback\x1b[34m\x1b[K(\x1b[m\x1b[Kconst robot_interfaces::msg\x1b[01;31m\x1b[K:\x1b[m\x1b[K\x1b[32m\x1b[K:\x1b[m\x1b[KStep& msg);\n'}
+[16.120124] (RobotLeg) StderrLine: {'line': b'      |                       \x1b[34m\x1b[K~\x1b[m\x1b[K                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\x1b[32m\x1b[K~\x1b[m\x1b[K\n'}
+[16.120599] (RobotLeg) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[16.121124] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:40:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 at end of member declaration\n'}
+[16.121708] (RobotLeg) StderrLine: {'line': b'   40 |     void step_callback(const robot_interfaces::\x1b[01;31m\x1b[Kmsg\x1b[m\x1b[K::Step& msg);\n'}
+[16.122165] (RobotLeg) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[16.122704] (RobotLeg) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[16.125654] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:40:53:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 in namespace \xe2\x80\x98\x1b[01m\x1b[K::\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstrsep\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[16.126319] (RobotLeg) StderrLine: {'line': b'   40 |     void step_callback(const robot_interfaces::msg::\x1b[01;31m\x1b[KStep\x1b[m\x1b[K& msg);\n'}
+[16.126759] (RobotLeg) StderrLine: {'line': b'      |                                                     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[16.127165] (RobotLeg) StderrLine: {'line': b'      |                                                     \x1b[32m\x1b[Kstrsep\x1b[m\x1b[K\n'}
+[16.213893] (-) TimerEvent: {}
+[16.314718] (-) TimerEvent: {}
+[16.322734] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krobot_interfaces\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krcl_interfaces\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[16.323707] (RobotLeg) StderrLine: {'line': b'   45 |     rclcpp::Subscription<\x1b[01;31m\x1b[Krobot_interfaces\x1b[m\x1b[K::msg::Step>::SharedPtr step_subscription_;\n'}
+[16.324233] (RobotLeg) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[16.324576] (RobotLeg) StderrLine: {'line': b'      |                          \x1b[32m\x1b[Krcl_interfaces\x1b[m\x1b[K\n'}
+[16.324877] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:53:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[16.325181] (RobotLeg) StderrLine: {'line': b'   45 |     rclcpp::Subscription<robot_interfaces::msg::Step\x1b[01;31m\x1b[K>\x1b[m\x1b[K::SharedPtr step_subscription_;\n'}
+[16.325478] (RobotLeg) StderrLine: {'line': b'      |                                                     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[16.325843] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:53:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 3 is invalid\n'}
+[16.326300] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:53:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 4 is invalid\n'}
+[16.326743] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:53:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 5 is invalid\n'}
+[16.327089] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 at end of member declaration\n'}
+[16.327454] (RobotLeg) StderrLine: {'line': b'   45 |     rclcpp::Subscription<robot_interfaces::msg::Step>::\x1b[01;31m\x1b[KSharedPtr\x1b[m\x1b[K step_subscription_;\n'}
+[16.327884] (RobotLeg) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[16.328223] (RobotLeg) StderrLine: {'line': b'      |                                                                 \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[16.332963] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:66:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstep_subscription_\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_subscription_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[16.333617] (RobotLeg) StderrLine: {'line': b'   45 |     rclcpp::Subscription<robot_interfaces::msg::Step>::SharedPtr \x1b[01;31m\x1b[Kstep_subscription_\x1b[m\x1b[K;\n'}
+[16.334102] (RobotLeg) StderrLine: {'line': b'      |                                                                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[16.334551] (RobotLeg) StderrLine: {'line': b'      |                                                                  \x1b[32m\x1b[Krmw_subscription_t\x1b[m\x1b[K\n'}
+[16.414894] (-) TimerEvent: {}
+[16.434329] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KRobotLegRosWrapper::RobotLegRosWrapper()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[16.434924] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:34:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstep_subscription_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksubscription_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[16.435414] (RobotLeg) StderrLine: {'line': b'   34 |         \x1b[01;31m\x1b[Kstep_subscription_\x1b[m\x1b[K = this->create_subscription<std_msgs::msg::String>("step_1", 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));\n'}
+[16.435972] (RobotLeg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[16.436380] (RobotLeg) StderrLine: {'line': b'      |         \x1b[32m\x1b[Ksubscription_\x1b[m\x1b[K\n'}
+[16.515099] (-) TimerEvent: {}
+[16.615879] (-) TimerEvent: {}
+[16.630319] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:\x1b[m\x1b[K At global scope:\n'}
+[16.631227] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:27:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krobot_interfaces\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[16.631785] (RobotLeg) StderrLine: {'line': b'   27 | void RobotLegRosWrapper::step_callback(const \x1b[01;31m\x1b[Krobot_interfaces\x1b[m\x1b[K::msg::Step& msg){\n'}
+[16.632272] (RobotLeg) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[16.632659] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:27:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[K::\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[16.633048] (RobotLeg) StderrLine: {'line': b'   27 | void RobotLegRosWrapper::step_callback(const robot_interfaces::msg\x1b[01;31m\x1b[K::\x1b[m\x1b[KStep& msg){\n'}
+[16.633439] (RobotLeg) StderrLine: {'line': b'      |                                                                   \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[16.633845] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:27:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K::\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[16.634345] (RobotLeg) StderrLine: {'line': b'   27 | void RobotLegRosWrapper::step_callback\x1b[34m\x1b[K(\x1b[m\x1b[Kconst robot_interfaces::msg\x1b[01;31m\x1b[K:\x1b[m\x1b[K\x1b[32m\x1b[K:\x1b[m\x1b[KStep& msg){\n'}
+[16.634759] (RobotLeg) StderrLine: {'line': b'      |                                       \x1b[34m\x1b[K~\x1b[m\x1b[K                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\x1b[32m\x1b[K~\x1b[m\x1b[K\n'}
+[16.635171] (RobotLeg) StderrLine: {'line': b'      |                                                                   \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[16.635642] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:27:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected initializer before \xe2\x80\x98\x1b[01m\x1b[K::\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[16.636053] (RobotLeg) StderrLine: {'line': b'   27 | void RobotLegRosWrapper::step_callback(const robot_interfaces::msg\x1b[01;31m\x1b[K::\x1b[m\x1b[KStep& msg){\n'}
+[16.636468] (RobotLeg) StderrLine: {'line': b'      |                                                                   \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[16.716069] (-) TimerEvent: {}
+[16.816816] (-) TimerEvent: {}
+[16.917570] (-) TimerEvent: {}
+[17.018346] (-) TimerEvent: {}
+[17.119139] (-) TimerEvent: {}
+[17.219942] (-) TimerEvent: {}
+[17.320695] (-) TimerEvent: {}
+[17.421456] (-) TimerEvent: {}
+[17.522258] (-) TimerEvent: {}
+[17.623056] (-) TimerEvent: {}
+[17.723864] (-) TimerEvent: {}
+[17.824624] (-) TimerEvent: {}
+[17.925356] (-) TimerEvent: {}
+[18.026183] (-) TimerEvent: {}
+[18.126975] (-) TimerEvent: {}
+[18.227736] (-) TimerEvent: {}
+[18.328477] (-) TimerEvent: {}
+[18.429260] (-) TimerEvent: {}
+[18.530030] (-) TimerEvent: {}
+[18.554133] (RobotLeg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:39\x1b[m\x1b[K,\n'}
+[18.555004] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[18.555445] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[18.555970] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[18.556412] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[18.556900] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[18.557329] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[18.557742] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[18.558137] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[18.558521] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[18.558915] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:15\x1b[m\x1b[K,\n'}
+[18.559331] (RobotLeg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:5\x1b[m\x1b[K:\n'}
+[18.559860] (RobotLeg) StderrLine: {'line': b'/opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kstruct rclcpp::function_traits::function_traits<std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)> >\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[18.560398] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_subscription_callback.hpp:380:10:\x1b[m\x1b[K   recursively required by substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class MessageT, class CallbackT> struct rclcpp::detail::SubscriptionCallbackTypeHelper<MessageT, CallbackT, typename std::enable_if<rclcpp::function_traits::same_arguments<CallbackT, std::function<void(std::shared_ptr<_Tp>, const rclcpp::MessageInfo&)> >::value, void>::type> [with MessageT = std_msgs::msg::String_<std::allocator<void> >; CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.560847] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_subscription_callback.hpp:380:10:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Krclcpp::AnySubscriptionCallback<MessageT, AllocatorT> rclcpp::AnySubscriptionCallback<MessageT, AllocatorT>::set(CallbackT) [with CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>; MessageT = std_msgs::msg::String_<std::allocator<void> >; AllocatorT = std::allocator<void>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.561239] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_factory.hpp:94:32:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Krclcpp::SubscriptionFactory rclcpp::create_subscription_factory(CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr, std::shared_ptr<rclcpp::topic_statistics::SubscriptionTopicStatistics<ROSMessageType> >) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> >; ROSMessageType = std_msgs::msg::String_<std::allocator<void> >; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.561725] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/create_subscription.hpp:122:63:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<ROSMessageT> rclcpp::detail::create_subscription(NodeParametersT&, NodeTopicsT&, const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> >; NodeParametersT = rclcpp::Node; NodeTopicsT = rclcpp::Node; ROSMessageType = std_msgs::msg::String_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.562268] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/create_subscription.hpp:191:76:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<ROSMessageT> rclcpp::create_subscription(NodeT&, const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> >; NodeT = rclcpp::Node; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.562768] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:99:47:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.563281] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:34:78:\x1b[m\x1b[K   required from here\n'}
+[18.563761] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:51:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdecltype\x1b[m\x1b[K\xe2\x80\x99 cannot resolve address of overloaded function\n'}
+[18.564191] (RobotLeg) StderrLine: {'line': b'   51 |   using \x1b[01;31m\x1b[Karguments\x1b[m\x1b[K = typename tuple_tail<\n'}
+[18.564601] (RobotLeg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[18.564967] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:57:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdecltype\x1b[m\x1b[K\xe2\x80\x99 cannot resolve address of overloaded function\n'}
+[18.565324] (RobotLeg) StderrLine: {'line': b'   57 |   using \x1b[01;31m\x1b[Kargument_type\x1b[m\x1b[K = typename std::tuple_element<N, arguments>::type;\n'}
+[18.565761] (RobotLeg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.566131] (RobotLeg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:59:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdecltype\x1b[m\x1b[K\xe2\x80\x99 cannot resolve address of overloaded function\n'}
+[18.566554] (RobotLeg) StderrLine: {'line': b'   59 |   using \x1b[01;31m\x1b[Kreturn_type\x1b[m\x1b[K = typename function_traits<decltype( &FunctionT::operator())>::return_type;\n'}
+[18.566926] (RobotLeg) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.630258] (-) TimerEvent: {}
+[18.731035] (-) TimerEvent: {}
+[18.831846] (-) TimerEvent: {}
+[18.932588] (-) TimerEvent: {}
+[19.033331] (-) TimerEvent: {}
+[19.134289] (-) TimerEvent: {}
+[19.235059] (-) TimerEvent: {}
+[19.335859] (-) TimerEvent: {}
+[19.436599] (-) TimerEvent: {}
+[19.537367] (-) TimerEvent: {}
+[19.638174] (-) TimerEvent: {}
+[19.738954] (-) TimerEvent: {}
+[19.839770] (-) TimerEvent: {}
+[19.940604] (-) TimerEvent: {}
+[20.041397] (-) TimerEvent: {}
+[20.142216] (-) TimerEvent: {}
+[20.242977] (-) TimerEvent: {}
+[20.343732] (-) TimerEvent: {}
+[20.444476] (-) TimerEvent: {}
+[20.545257] (-) TimerEvent: {}
+[20.646045] (-) TimerEvent: {}
+[20.746855] (-) TimerEvent: {}
+[20.847718] (-) TimerEvent: {}
+[20.948492] (-) TimerEvent: {}
+[21.049225] (-) TimerEvent: {}
+[21.150051] (-) TimerEvent: {}
+[21.250835] (-) TimerEvent: {}
+[21.351639] (-) TimerEvent: {}
+[21.452441] (-) TimerEvent: {}
+[21.553207] (-) TimerEvent: {}
+[21.654011] (-) TimerEvent: {}
+[21.754805] (-) TimerEvent: {}
+[21.855672] (-) TimerEvent: {}
+[21.956432] (-) TimerEvent: {}
+[22.057185] (-) TimerEvent: {}
+[22.157969] (-) TimerEvent: {}
+[22.258800] (-) TimerEvent: {}
+[22.359703] (-) TimerEvent: {}
+[22.460497] (-) TimerEvent: {}
+[22.561266] (-) TimerEvent: {}
+[22.662161] (-) TimerEvent: {}
+[22.763017] (-) TimerEvent: {}
+[22.864040] (-) TimerEvent: {}
+[22.964816] (-) TimerEvent: {}
+[23.065634] (-) TimerEvent: {}
+[23.166556] (-) TimerEvent: {}
+[23.267369] (-) TimerEvent: {}
+[23.368224] (-) TimerEvent: {}
+[23.469039] (-) TimerEvent: {}
+[23.569887] (-) TimerEvent: {}
+[23.670743] (-) TimerEvent: {}
+[23.771532] (-) TimerEvent: {}
+[23.872356] (-) TimerEvent: {}
+[23.973147] (-) TimerEvent: {}
+[24.073969] (-) TimerEvent: {}
+[24.178577] (-) TimerEvent: {}
+[24.279362] (-) TimerEvent: {}
+[24.380221] (-) TimerEvent: {}
+[24.480997] (-) TimerEvent: {}
+[24.581760] (-) TimerEvent: {}
+[24.682592] (-) TimerEvent: {}
+[24.783409] (-) TimerEvent: {}
+[24.884288] (-) TimerEvent: {}
+[24.985100] (-) TimerEvent: {}
+[25.085859] (-) TimerEvent: {}
+[25.186600] (-) TimerEvent: {}
+[25.287407] (-) TimerEvent: {}
+[25.388274] (-) TimerEvent: {}
+[25.489041] (-) TimerEvent: {}
+[25.589788] (-) TimerEvent: {}
+[25.690546] (-) TimerEvent: {}
+[25.791335] (-) TimerEvent: {}
+[25.892183] (-) TimerEvent: {}
+[25.992974] (-) TimerEvent: {}
+[26.093737] (-) TimerEvent: {}
+[26.194539] (-) TimerEvent: {}
+[26.295334] (-) TimerEvent: {}
+[26.396193] (-) TimerEvent: {}
+[26.496969] (-) TimerEvent: {}
+[26.597736] (-) TimerEvent: {}
+[26.698498] (-) TimerEvent: {}
+[26.799287] (-) TimerEvent: {}
+[26.900122] (-) TimerEvent: {}
+[27.000878] (-) TimerEvent: {}
+[27.101622] (-) TimerEvent: {}
+[27.202430] (-) TimerEvent: {}
+[27.303161] (-) TimerEvent: {}
+[27.403884] (-) TimerEvent: {}
+[27.504567] (-) TimerEvent: {}
+[27.605246] (-) TimerEvent: {}
+[27.705957] (-) TimerEvent: {}
+[27.806668] (-) TimerEvent: {}
+[27.907395] (-) TimerEvent: {}
+[28.008121] (-) TimerEvent: {}
+[28.108883] (-) TimerEvent: {}
+[28.209653] (-) TimerEvent: {}
+[28.310482] (-) TimerEvent: {}
+[28.411273] (-) TimerEvent: {}
+[28.512068] (-) TimerEvent: {}
+[28.612885] (-) TimerEvent: {}
+[28.713637] (-) TimerEvent: {}
+[28.814453] (-) TimerEvent: {}
+[28.915379] (-) TimerEvent: {}
+[28.958054] (RobotLeg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:90: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o] Error 1\n'}
+[28.959033] (RobotLeg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2\n'}
+[28.960095] (RobotLeg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[28.967032] (RobotLeg) CommandEnded: {'returncode': 2}
+[29.015653] (-) TimerEvent: {}
+[29.116402] (-) TimerEvent: {}
+[29.217235] (-) TimerEvent: {}
+[29.233064] (RobotLeg) JobEnded: {'identifier': 'RobotLeg', 'rc': 2}
+[29.244962] (-) EventReactorShutdown: {}

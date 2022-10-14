@@ -1,0 +1,264 @@
+[0.721s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.721s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffbd8c7850>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffbd8c72e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffbd8c72e0>>)
+[0.857s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.857s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.857s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.857s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.857s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.858s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.858s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(src/RobotLeg) by extensions ['ignore', 'ignore_ament_install']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(src/RobotLeg) by extension 'ignore'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(src/RobotLeg) by extension 'ignore_ament_install'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(src/RobotLeg) by extensions ['colcon_pkg']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(src/RobotLeg) by extension 'colcon_pkg'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/RobotLeg) by extensions ['colcon_meta']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/RobotLeg) by extension 'colcon_meta'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/RobotLeg) by extensions ['ros']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/RobotLeg) by extension 'ros'
+[0.934s] DEBUG:colcon.colcon_core.package_identification:Package 'src/RobotLeg' with type 'ros.ament_cmake' and name 'RobotLeg'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/maestro_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/maestro_interfaces) by extension 'ignore'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/maestro_interfaces) by extension 'ignore_ament_install'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/maestro_interfaces) by extensions ['colcon_pkg']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/maestro_interfaces) by extension 'colcon_pkg'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/maestro_interfaces) by extensions ['colcon_meta']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/maestro_interfaces) by extension 'colcon_meta'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/maestro_interfaces) by extensions ['ros']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/maestro_interfaces) by extension 'ros'
+[0.939s] DEBUG:colcon.colcon_core.package_identification:Package 'src/maestro_interfaces' with type 'ros.ament_cmake' and name 'maestro_interfaces'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/polulu_maestro) by extensions ['ignore', 'ignore_ament_install']
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/polulu_maestro) by extension 'ignore'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/polulu_maestro) by extension 'ignore_ament_install'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/polulu_maestro) by extensions ['colcon_pkg']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/polulu_maestro) by extension 'colcon_pkg'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/polulu_maestro) by extensions ['colcon_meta']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/polulu_maestro) by extension 'colcon_meta'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/polulu_maestro) by extensions ['ros']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/polulu_maestro) by extension 'ros'
+[0.944s] DEBUG:colcon.colcon_core.package_identification:Package 'src/polulu_maestro' with type 'ros.ament_python' and name 'polulu_maestro'
+[0.944s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.944s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.944s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.945s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.945s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.049s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.065s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install
+[1.077s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[1.089s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.376s] Level 5:colcon.colcon_core.verb:set package 'RobotLeg' build argument 'cmake_args' from command line to 'None'
+[1.377s] Level 5:colcon.colcon_core.verb:set package 'RobotLeg' build argument 'cmake_target' from command line to 'None'
+[1.377s] Level 5:colcon.colcon_core.verb:set package 'RobotLeg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.377s] Level 5:colcon.colcon_core.verb:set package 'RobotLeg' build argument 'cmake_clean_cache' from command line to 'False'
+[1.377s] Level 5:colcon.colcon_core.verb:set package 'RobotLeg' build argument 'cmake_clean_first' from command line to 'False'
+[1.377s] Level 5:colcon.colcon_core.verb:set package 'RobotLeg' build argument 'cmake_force_configure' from command line to 'False'
+[1.377s] Level 5:colcon.colcon_core.verb:set package 'RobotLeg' build argument 'ament_cmake_args' from command line to 'None'
+[1.377s] Level 5:colcon.colcon_core.verb:set package 'RobotLeg' build argument 'catkin_cmake_args' from command line to 'None'
+[1.378s] Level 5:colcon.colcon_core.verb:set package 'RobotLeg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.378s] DEBUG:colcon.colcon_core.verb:Building package 'RobotLeg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg', 'merge_install': False, 'path': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg', 'symlink_install': False, 'test_result_base': None}
+[1.382s] Level 5:colcon.colcon_core.verb:set package 'maestro_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.383s] Level 5:colcon.colcon_core.verb:set package 'maestro_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.383s] Level 5:colcon.colcon_core.verb:set package 'maestro_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.383s] Level 5:colcon.colcon_core.verb:set package 'maestro_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.383s] Level 5:colcon.colcon_core.verb:set package 'maestro_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.383s] Level 5:colcon.colcon_core.verb:set package 'maestro_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.383s] Level 5:colcon.colcon_core.verb:set package 'maestro_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.383s] Level 5:colcon.colcon_core.verb:set package 'maestro_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.384s] Level 5:colcon.colcon_core.verb:set package 'maestro_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.384s] DEBUG:colcon.colcon_core.verb:Building package 'maestro_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces', 'merge_install': False, 'path': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/maestro_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.388s] Level 5:colcon.colcon_core.verb:set package 'polulu_maestro' build argument 'cmake_args' from command line to 'None'
+[1.388s] Level 5:colcon.colcon_core.verb:set package 'polulu_maestro' build argument 'cmake_target' from command line to 'None'
+[1.389s] Level 5:colcon.colcon_core.verb:set package 'polulu_maestro' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.389s] Level 5:colcon.colcon_core.verb:set package 'polulu_maestro' build argument 'cmake_clean_cache' from command line to 'False'
+[1.389s] Level 5:colcon.colcon_core.verb:set package 'polulu_maestro' build argument 'cmake_clean_first' from command line to 'False'
+[1.389s] Level 5:colcon.colcon_core.verb:set package 'polulu_maestro' build argument 'cmake_force_configure' from command line to 'False'
+[1.389s] Level 5:colcon.colcon_core.verb:set package 'polulu_maestro' build argument 'ament_cmake_args' from command line to 'None'
+[1.389s] Level 5:colcon.colcon_core.verb:set package 'polulu_maestro' build argument 'catkin_cmake_args' from command line to 'None'
+[1.389s] Level 5:colcon.colcon_core.verb:set package 'polulu_maestro' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.389s] DEBUG:colcon.colcon_core.verb:Building package 'polulu_maestro' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro', 'merge_install': False, 'path': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/polulu_maestro', 'symlink_install': False, 'test_result_base': None}
+[1.392s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.409s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.411s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/maestro_interfaces' with build type 'ament_cmake'
+[1.411s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/maestro_interfaces'
+[1.431s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.432s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.433s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.461s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg' with build type 'ament_cmake'
+[1.462s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg'
+[1.469s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.469s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.516s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces -- -j4 -l4
+[1.546s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4
+[1.931s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4
+[2.189s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg
+[2.250s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(RobotLeg)
+[2.253s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg
+[2.282s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg' for CMake module files
+[2.286s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg' for CMake config files
+[2.290s] Level 1:colcon.colcon_core.shell:create_environment_hook('RobotLeg', 'cmake_prefix_path')
+[2.296s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/hook/cmake_prefix_path.ps1'
+[2.300s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/hook/cmake_prefix_path.dsv'
+[2.302s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/hook/cmake_prefix_path.sh'
+[2.307s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib'
+[2.308s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/bin'
+[2.309s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib/pkgconfig/RobotLeg.pc'
+[2.310s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib/python3.10/site-packages'
+[2.312s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/bin'
+[2.319s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.ps1'
+[2.325s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.dsv'
+[2.328s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.sh'
+[2.333s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.bash'
+[2.337s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.zsh'
+[2.341s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/colcon-core/packages/RobotLeg)
+[2.556s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(RobotLeg)
+[2.568s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg' for CMake module files
+[2.572s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg' for CMake config files
+[2.575s] Level 1:colcon.colcon_core.shell:create_environment_hook('RobotLeg', 'cmake_prefix_path')
+[2.582s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/hook/cmake_prefix_path.ps1'
+[2.584s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/hook/cmake_prefix_path.dsv'
+[2.587s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/hook/cmake_prefix_path.sh'
+[2.591s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib'
+[2.592s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/bin'
+[2.592s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib/pkgconfig/RobotLeg.pc'
+[2.594s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib/python3.10/site-packages'
+[2.595s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/bin'
+[2.612s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.ps1'
+[2.617s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.dsv'
+[2.620s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.sh'
+[2.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.bash'
+[2.627s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.zsh'
+[2.630s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/colcon-core/packages/RobotLeg)
+[3.651s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces -- -j4 -l4
+[4.202s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces
+[4.535s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(maestro_interfaces)
+[4.544s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces' for CMake module files
+[4.546s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces
+[4.551s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces' for CMake config files
+[4.553s] Level 1:colcon.colcon_core.shell:create_environment_hook('maestro_interfaces', 'cmake_prefix_path')
+[4.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/cmake_prefix_path.ps1'
+[4.562s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/cmake_prefix_path.dsv'
+[4.568s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/cmake_prefix_path.sh'
+[4.571s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib'
+[4.571s] Level 1:colcon.colcon_core.shell:create_environment_hook('maestro_interfaces', 'ld_library_path_lib')
+[4.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/ld_library_path_lib.ps1'
+[4.579s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/ld_library_path_lib.dsv'
+[4.581s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/ld_library_path_lib.sh'
+[4.583s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/bin'
+[4.583s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/pkgconfig/maestro_interfaces.pc'
+[4.584s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/python3.10/site-packages'
+[4.585s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/bin'
+[4.591s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.ps1'
+[4.594s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.dsv'
+[4.596s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.sh'
+[4.598s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.bash'
+[4.600s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.zsh'
+[4.602s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/colcon-core/packages/maestro_interfaces)
+[5.144s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(maestro_interfaces)
+[5.154s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces' for CMake module files
+[5.159s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces' for CMake config files
+[5.161s] Level 1:colcon.colcon_core.shell:create_environment_hook('maestro_interfaces', 'cmake_prefix_path')
+[5.167s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/cmake_prefix_path.ps1'
+[5.169s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/cmake_prefix_path.dsv'
+[5.171s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/cmake_prefix_path.sh'
+[5.173s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib'
+[5.174s] Level 1:colcon.colcon_core.shell:create_environment_hook('maestro_interfaces', 'ld_library_path_lib')
+[5.179s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/ld_library_path_lib.ps1'
+[5.181s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/ld_library_path_lib.dsv'
+[5.183s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/hook/ld_library_path_lib.sh'
+[5.185s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/bin'
+[5.186s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/pkgconfig/maestro_interfaces.pc'
+[5.187s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/python3.10/site-packages'
+[5.188s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/bin'
+[5.194s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.ps1'
+[5.196s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.dsv'
+[5.199s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.sh'
+[5.201s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.bash'
+[5.203s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.zsh'
+[5.205s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/colcon-core/packages/maestro_interfaces)
+[5.207s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/polulu_maestro' with build type 'ament_python'
+[5.208s] Level 1:colcon.colcon_core.shell:create_environment_hook('polulu_maestro', 'ament_prefix_path')
+[5.214s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro/hook/ament_prefix_path.ps1'
+[5.216s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro/hook/ament_prefix_path.dsv'
+[5.219s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro/hook/ament_prefix_path.sh'
+[5.227s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.228s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.620s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/polulu_maestro'
+[6.626s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.626s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.349s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/polulu_maestro': CMAKE_PREFIX_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg LD_LIBRARY_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/polulu_maestro build --build-base /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build install --prefix /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro --record /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/install.log --single-version-externally-managed
+[9.874s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro' for CMake module files
+[9.876s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/polulu_maestro' returned '0': CMAKE_PREFIX_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg LD_LIBRARY_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/polulu_maestro build --build-base /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build install --prefix /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro --record /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/install.log --single-version-externally-managed
+[9.878s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro' for CMake config files
+[9.883s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib'
+[9.883s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/bin'
+[9.884s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/pkgconfig/polulu_maestro.pc'
+[9.885s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages'
+[9.885s] Level 1:colcon.colcon_core.shell:create_environment_hook('polulu_maestro', 'pythonpath')
+[9.891s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro/hook/pythonpath.ps1'
+[9.893s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro/hook/pythonpath.dsv'
+[9.895s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro/hook/pythonpath.sh'
+[9.898s] Level 1:colcon.colcon_core.environment:checking '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/bin'
+[9.898s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(polulu_maestro)
+[9.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro/package.ps1'
+[9.907s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro/package.dsv'
+[9.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro/package.sh'
+[9.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro/package.bash'
+[9.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/polulu_maestro/package.zsh'
+[9.915s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/share/colcon-core/packages/polulu_maestro)
+[9.916s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.918s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.918s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.919s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.948s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.949s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.949s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.955s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[9.955s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.962s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/local_setup.ps1'
+[9.967s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/_local_setup_util_ps1.py'
+[9.974s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/setup.ps1'
+[9.982s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/local_setup.sh'
+[9.985s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/_local_setup_util_sh.py'
+[9.987s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/setup.sh'
+[9.995s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/local_setup.bash'
+[9.997s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/setup.bash'
+[10.006s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/local_setup.zsh'
+[10.008s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/setup.zsh'

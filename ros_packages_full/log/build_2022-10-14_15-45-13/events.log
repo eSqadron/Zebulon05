@@ -1,0 +1,221 @@
+[0.000000] (-) TimerEvent: {}
+[0.001557] (-) JobUnselected: {'identifier': 'maestro_interfaces'}
+[0.002136] (-) JobUnselected: {'identifier': 'polulu_maestro'}
+[0.003616] (-) JobUnselected: {'identifier': 'walking_robot_interfaces'}
+[0.003850] (RobotLeg) JobQueued: {'identifier': 'RobotLeg', 'dependencies': OrderedDict()}
+[0.003968] (RobotLeg) JobStarted: {'identifier': 'RobotLeg'}
+[0.068699] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'cmake'}
+[0.072452] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'build'}
+[0.075990] (RobotLeg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', '--', '-j4', '-l4'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[0.098946] (-) TimerEvent: {}
+[0.199806] (-) TimerEvent: {}
+[0.300597] (-) TimerEvent: {}
+[0.374303] (RobotLeg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_leg_wrapper\x1b[0m\n'}
+[0.400765] (-) TimerEvent: {}
+[0.501456] (-) TimerEvent: {}
+[0.536483] (RobotLeg) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRos.cpp.o\x1b[0m\n'}
+[0.601660] (-) TimerEvent: {}
+[0.702339] (-) TimerEvent: {}
+[0.803000] (-) TimerEvent: {}
+[0.903694] (-) TimerEvent: {}
+[1.004376] (-) TimerEvent: {}
+[1.105080] (-) TimerEvent: {}
+[1.205803] (-) TimerEvent: {}
+[1.306564] (-) TimerEvent: {}
+[1.407316] (-) TimerEvent: {}
+[1.508118] (-) TimerEvent: {}
+[1.608864] (-) TimerEvent: {}
+[1.709677] (-) TimerEvent: {}
+[1.810405] (-) TimerEvent: {}
+[1.911122] (-) TimerEvent: {}
+[2.011884] (-) TimerEvent: {}
+[2.112619] (-) TimerEvent: {}
+[2.213318] (-) TimerEvent: {}
+[2.314067] (-) TimerEvent: {}
+[2.414804] (-) TimerEvent: {}
+[2.515520] (-) TimerEvent: {}
+[2.616310] (-) TimerEvent: {}
+[2.717177] (-) TimerEvent: {}
+[2.817983] (-) TimerEvent: {}
+[2.918838] (-) TimerEvent: {}
+[3.019654] (-) TimerEvent: {}
+[3.120482] (-) TimerEvent: {}
+[3.221338] (-) TimerEvent: {}
+[3.322141] (-) TimerEvent: {}
+[3.423105] (-) TimerEvent: {}
+[3.523972] (-) TimerEvent: {}
+[3.624764] (-) TimerEvent: {}
+[3.725598] (-) TimerEvent: {}
+[3.826399] (-) TimerEvent: {}
+[3.927153] (-) TimerEvent: {}
+[4.027965] (-) TimerEvent: {}
+[4.128834] (-) TimerEvent: {}
+[4.229724] (-) TimerEvent: {}
+[4.330661] (-) TimerEvent: {}
+[4.431857] (-) TimerEvent: {}
+[4.532762] (-) TimerEvent: {}
+[4.633661] (-) TimerEvent: {}
+[4.734472] (-) TimerEvent: {}
+[4.835303] (-) TimerEvent: {}
+[4.936122] (-) TimerEvent: {}
+[5.036971] (-) TimerEvent: {}
+[5.137833] (-) TimerEvent: {}
+[5.238698] (-) TimerEvent: {}
+[5.339537] (-) TimerEvent: {}
+[5.440301] (-) TimerEvent: {}
+[5.541205] (-) TimerEvent: {}
+[5.642013] (-) TimerEvent: {}
+[5.742862] (-) TimerEvent: {}
+[5.843683] (-) TimerEvent: {}
+[5.944459] (-) TimerEvent: {}
+[6.045291] (-) TimerEvent: {}
+[6.146094] (-) TimerEvent: {}
+[6.246921] (-) TimerEvent: {}
+[6.347786] (-) TimerEvent: {}
+[6.448691] (-) TimerEvent: {}
+[6.549511] (-) TimerEvent: {}
+[6.650356] (-) TimerEvent: {}
+[6.751185] (-) TimerEvent: {}
+[6.851951] (-) TimerEvent: {}
+[6.952744] (-) TimerEvent: {}
+[7.053550] (-) TimerEvent: {}
+[7.154394] (-) TimerEvent: {}
+[7.255222] (-) TimerEvent: {}
+[7.356054] (-) TimerEvent: {}
+[7.456822] (-) TimerEvent: {}
+[7.557630] (-) TimerEvent: {}
+[7.658422] (-) TimerEvent: {}
+[7.759264] (-) TimerEvent: {}
+[7.860058] (-) TimerEvent: {}
+[7.960919] (-) TimerEvent: {}
+[8.061742] (-) TimerEvent: {}
+[8.162547] (-) TimerEvent: {}
+[8.263314] (-) TimerEvent: {}
+[8.364090] (-) TimerEvent: {}
+[8.464896] (-) TimerEvent: {}
+[8.565683] (-) TimerEvent: {}
+[8.666504] (-) TimerEvent: {}
+[8.767320] (-) TimerEvent: {}
+[8.868150] (-) TimerEvent: {}
+[8.969002] (-) TimerEvent: {}
+[9.069870] (-) TimerEvent: {}
+[9.170731] (-) TimerEvent: {}
+[9.271493] (-) TimerEvent: {}
+[9.372294] (-) TimerEvent: {}
+[9.473160] (-) TimerEvent: {}
+[9.574010] (-) TimerEvent: {}
+[9.674985] (-) TimerEvent: {}
+[9.775772] (-) TimerEvent: {}
+[9.876574] (-) TimerEvent: {}
+[9.977372] (-) TimerEvent: {}
+[10.078160] (-) TimerEvent: {}
+[10.179044] (-) TimerEvent: {}
+[10.279856] (-) TimerEvent: {}
+[10.380668] (-) TimerEvent: {}
+[10.481489] (-) TimerEvent: {}
+[10.582372] (-) TimerEvent: {}
+[10.683158] (-) TimerEvent: {}
+[10.784017] (-) TimerEvent: {}
+[10.884753] (-) TimerEvent: {}
+[10.985488] (-) TimerEvent: {}
+[11.086249] (-) TimerEvent: {}
+[11.186997] (-) TimerEvent: {}
+[11.287709] (-) TimerEvent: {}
+[11.388467] (-) TimerEvent: {}
+[11.489152] (-) TimerEvent: {}
+[11.589881] (-) TimerEvent: {}
+[11.690665] (-) TimerEvent: {}
+[11.791442] (-) TimerEvent: {}
+[11.892610] (-) TimerEvent: {}
+[11.993366] (-) TimerEvent: {}
+[12.094105] (-) TimerEvent: {}
+[12.194954] (-) TimerEvent: {}
+[12.295715] (-) TimerEvent: {}
+[12.396526] (-) TimerEvent: {}
+[12.497332] (-) TimerEvent: {}
+[12.598165] (-) TimerEvent: {}
+[12.699050] (-) TimerEvent: {}
+[12.799863] (-) TimerEvent: {}
+[12.900665] (-) TimerEvent: {}
+[13.001465] (-) TimerEvent: {}
+[13.102338] (-) TimerEvent: {}
+[13.203171] (-) TimerEvent: {}
+[13.303921] (-) TimerEvent: {}
+[13.404671] (-) TimerEvent: {}
+[13.505549] (-) TimerEvent: {}
+[13.606607] (-) TimerEvent: {}
+[13.707385] (-) TimerEvent: {}
+[13.808171] (-) TimerEvent: {}
+[13.909013] (-) TimerEvent: {}
+[14.009801] (-) TimerEvent: {}
+[14.110670] (-) TimerEvent: {}
+[14.211462] (-) TimerEvent: {}
+[14.312249] (-) TimerEvent: {}
+[14.413037] (-) TimerEvent: {}
+[14.513891] (-) TimerEvent: {}
+[14.614742] (-) TimerEvent: {}
+[14.715663] (-) TimerEvent: {}
+[14.816766] (-) TimerEvent: {}
+[14.917765] (-) TimerEvent: {}
+[15.000953] (RobotLeg) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable robot_leg_wrapper\x1b[0m\n'}
+[15.017981] (-) TimerEvent: {}
+[15.118913] (-) TimerEvent: {}
+[15.219770] (-) TimerEvent: {}
+[15.320694] (-) TimerEvent: {}
+[15.422088] (-) TimerEvent: {}
+[15.523018] (-) TimerEvent: {}
+[15.623916] (-) TimerEvent: {}
+[15.725241] (-) TimerEvent: {}
+[15.826630] (-) TimerEvent: {}
+[15.927520] (-) TimerEvent: {}
+[16.028478] (-) TimerEvent: {}
+[16.129489] (-) TimerEvent: {}
+[16.230462] (-) TimerEvent: {}
+[16.331295] (-) TimerEvent: {}
+[16.432124] (-) TimerEvent: {}
+[16.533126] (-) TimerEvent: {}
+[16.633811] (-) TimerEvent: {}
+[16.734525] (-) TimerEvent: {}
+[16.835216] (-) TimerEvent: {}
+[16.935907] (-) TimerEvent: {}
+[17.036761] (-) TimerEvent: {}
+[17.137473] (-) TimerEvent: {}
+[17.238154] (-) TimerEvent: {}
+[17.338943] (-) TimerEvent: {}
+[17.439654] (-) TimerEvent: {}
+[17.540468] (-) TimerEvent: {}
+[17.641189] (-) TimerEvent: {}
+[17.741896] (-) TimerEvent: {}
+[17.842735] (-) TimerEvent: {}
+[17.910552] (RobotLeg) StdoutLine: {'line': b'[100%] Built target robot_leg_wrapper\n'}
+[17.942926] (-) TimerEvent: {}
+[17.958282] (RobotLeg) CommandEnded: {'returncode': 0}
+[18.043130] (-) TimerEvent: {}
+[18.142167] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'install'}
+[18.145400] (-) TimerEvent: {}
+[18.185389] (RobotLeg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[18.228258] (RobotLeg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.229720] (RobotLeg) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib/RobotLeg/robot_leg_wrapper\n'}
+[18.245591] (-) TimerEvent: {}
+[18.279633] (RobotLeg) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib/RobotLeg/robot_leg_wrapper" to ""\n'}
+[18.280300] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/ament_index/resource_index/package_run_dependencies/RobotLeg\n'}
+[18.280765] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/ament_index/resource_index/parent_prefix_path/RobotLeg\n'}
+[18.281226] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/ament_prefix_path.sh\n'}
+[18.281678] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/ament_prefix_path.dsv\n'}
+[18.282324] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/path.sh\n'}
+[18.283127] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/path.dsv\n'}
+[18.283729] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.bash\n'}
+[18.284321] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.sh\n'}
+[18.284887] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.zsh\n'}
+[18.285469] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.dsv\n'}
+[18.286122] (RobotLeg) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.dsv\n'}
+[18.288394] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/ament_index/resource_index/packages/RobotLeg\n'}
+[18.289124] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/cmake/RobotLegConfig.cmake\n'}
+[18.289737] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/cmake/RobotLegConfig-version.cmake\n'}
+[18.290303] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.xml\n'}
+[18.296276] (RobotLeg) CommandEnded: {'returncode': 0}
+[18.350844] (-) TimerEvent: {}
+[18.451927] (-) TimerEvent: {}
+[18.557787] (-) TimerEvent: {}
+[18.604250] (RobotLeg) JobEnded: {'identifier': 'RobotLeg', 'rc': 0}
+[18.612006] (-) EventReactorShutdown: {}

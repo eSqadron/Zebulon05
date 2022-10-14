@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from walking_robot_interfaces/msg/Step.msg
+// generated code does not contain a copyright notice
+
+
+module walking_robot_interfaces {
+  module msg {
+    struct Step {
+      @default (value=0)
+      uint8 type;
+
+      int16 step_length;
+
+      int16 step_height;
+    };
+  };
+};

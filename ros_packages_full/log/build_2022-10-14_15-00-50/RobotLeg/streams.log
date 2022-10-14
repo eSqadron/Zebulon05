@@ -1,0 +1,117 @@
+[0.076s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4
+[0.210s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.975s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
+[1.193s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.205s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.234s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.287s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.362s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.636s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.643s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.832s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.501s] -- Found maestro_interfaces: 0.0.0 (/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake)
+[3.995s] -- Found walking_robot_interfaces: 0.0.0 (/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake)
+[4.073s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.344s] WARNING: Package name "RobotLeg" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[4.439s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.440s] -- Configured cppcheck include dirs: 
+[4.440s] -- Configured cppcheck exclude dirs and/or files: 
+[4.444s] -- Added test 'lint_cmake' to check CMake code style
+[4.454s] -- Added test 'uncrustify' to check C / C++ code style
+[4.455s] -- Configured uncrustify additional arguments: 
+[4.457s] -- Added test 'xmllint' to check XML markup files
+[4.465s] -- Configuring done
+[4.570s] -- Generating done
+[4.583s] -- Build files have been written to: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg
+[4.720s] [35m[1mConsolidate compiler generated dependencies of target robot_leg_wrapper[0m
+[4.846s] [ 33%] [32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRos.cpp.o[0m
+[4.851s] [ 66%] [32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o[0m
+[17.071s] In file included from [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:5[m[K:
+[17.074s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:40:30:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_interfaces[m[K’ does not name a type
+[17.075s]    40 |     void step_callback(const [01;31m[Krobot_interfaces[m[K::msg::Step& msg);
+[17.076s]       |                              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[17.077s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:40:51:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+[17.077s]    40 |     void step_callback(const robot_interfaces::msg[01;31m[K::[m[KStep& msg);
+[17.078s]       |                                                   [01;31m[K^~[m[K
+[17.079s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:40:51:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+[17.080s]    40 |     void step_callback[34m[K([m[Kconst robot_interfaces::msg[01;31m[K:[m[K[32m[K:[m[KStep& msg);
+[17.080s]       |                       [34m[K~[m[K                           [01;31m[K^[m[K[32m[K~[m[K
+[17.081s]       |                                                   [32m[K)[m[K
+[17.082s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:40:48:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[17.083s]    40 |     void step_callback(const robot_interfaces::[01;31m[Kmsg[m[K::Step& msg);
+[17.083s]       |                                                [01;31m[K^~~[m[K
+[17.084s]       |                                                   [32m[K;[m[K
+[17.085s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:40:53:[m[K [01;31m[Kerror: [m[K‘[01m[KStep[m[K’ in namespace ‘[01m[K::[m[K’ does not name a type; did you mean ‘[01m[Kstrsep[m[K’?
+[17.085s]    40 |     void step_callback(const robot_interfaces::msg::[01;31m[KStep[m[K& msg);
+[17.086s]       |                                                     [01;31m[K^~~~[m[K
+[17.087s]       |                                                     [32m[Kstrsep[m[K
+[17.314s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:26:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_interfaces[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_interfaces[m[K’?
+[17.315s]    45 |     rclcpp::Subscription<[01;31m[Krobot_interfaces[m[K::msg::Step>::SharedPtr step_subscription_;
+[17.315s]       |                          [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[17.315s]       |                          [32m[Krcl_interfaces[m[K
+[17.316s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:53:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[17.317s]    45 |     rclcpp::Subscription<robot_interfaces::msg::Step[01;31m[K>[m[K::SharedPtr step_subscription_;
+[17.317s]       |                                                     [01;31m[K^[m[K
+[17.318s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:53:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[17.318s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:53:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[17.319s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:53:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[17.319s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:56:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[17.320s]    45 |     rclcpp::Subscription<robot_interfaces::msg::Step>::[01;31m[KSharedPtr[m[K step_subscription_;
+[17.321s]       |                                                        [01;31m[K^~~~~~~~~[m[K
+[17.321s]       |                                                                 [32m[K;[m[K
+[17.324s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:45:66:[m[K [01;31m[Kerror: [m[K‘[01m[Kstep_subscription_[m[K’ does not name a type; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+[17.325s]    45 |     rclcpp::Subscription<robot_interfaces::msg::Step>::SharedPtr [01;31m[Kstep_subscription_[m[K;
+[17.326s]       |                                                                  [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[17.326s]       |                                                                  [32m[Krmw_subscription_t[m[K
+[17.444s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:[m[K In constructor ‘[01m[KRobotLegRosWrapper::RobotLegRosWrapper()[m[K’:
+[17.445s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:34:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstep_subscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksubscription_[m[K’?
+[17.446s]    34 |         [01;31m[Kstep_subscription_[m[K = this->create_subscription<std_msgs::msg::String>("step_1", 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
+[17.446s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[17.447s]       |         [32m[Ksubscription_[m[K
+[17.675s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:[m[K At global scope:
+[17.677s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:27:46:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_interfaces[m[K’ does not name a type
+[17.677s]    27 | void RobotLegRosWrapper::step_callback(const [01;31m[Krobot_interfaces[m[K::msg::Step& msg){
+[17.678s]       |                                              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[17.679s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:27:67:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+[17.679s]    27 | void RobotLegRosWrapper::step_callback(const robot_interfaces::msg[01;31m[K::[m[KStep& msg){
+[17.680s]       |                                                                   [01;31m[K^~[m[K
+[17.681s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:27:67:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+[17.681s]    27 | void RobotLegRosWrapper::step_callback[34m[K([m[Kconst robot_interfaces::msg[01;31m[K:[m[K[32m[K:[m[KStep& msg){
+[17.682s]       |                                       [34m[K~[m[K                           [01;31m[K^[m[K[32m[K~[m[K
+[17.682s]       |                                                                   [32m[K)[m[K
+[17.683s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:27:67:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K::[m[K’ token
+[17.683s]    27 | void RobotLegRosWrapper::step_callback(const robot_interfaces::msg[01;31m[K::[m[KStep& msg){
+[17.684s]       |                                                                   [01;31m[K^~[m[K
+[19.977s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:39[m[K,
+[19.978s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:23[m[K,
+[19.978s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[19.979s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[19.980s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[19.980s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[19.981s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[19.982s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[19.982s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[19.983s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[19.984s]                  from [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:15[m[K,
+[19.984s]                  from [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:5[m[K:
+[19.985s] /opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp: In instantiation of ‘[01m[Kstruct rclcpp::function_traits::function_traits<std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)> >[m[K’:
+[19.986s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_subscription_callback.hpp:380:10:[m[K   recursively required by substitution of ‘[01m[Ktemplate<class MessageT, class CallbackT> struct rclcpp::detail::SubscriptionCallbackTypeHelper<MessageT, CallbackT, typename std::enable_if<rclcpp::function_traits::same_arguments<CallbackT, std::function<void(std::shared_ptr<_Tp>, const rclcpp::MessageInfo&)> >::value, void>::type> [with MessageT = std_msgs::msg::String_<std::allocator<void> >; CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>][m[K’
+[19.986s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_subscription_callback.hpp:380:10:[m[K   required from ‘[01m[Krclcpp::AnySubscriptionCallback<MessageT, AllocatorT> rclcpp::AnySubscriptionCallback<MessageT, AllocatorT>::set(CallbackT) [with CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>; MessageT = std_msgs::msg::String_<std::allocator<void> >; AllocatorT = std::allocator<void>][m[K’
+[19.987s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_factory.hpp:94:32:[m[K   required from ‘[01m[Krclcpp::SubscriptionFactory rclcpp::create_subscription_factory(CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr, std::shared_ptr<rclcpp::topic_statistics::SubscriptionTopicStatistics<ROSMessageType> >) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> >; ROSMessageType = std_msgs::msg::String_<std::allocator<void> >; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[19.988s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/create_subscription.hpp:122:63:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::detail::create_subscription(NodeParametersT&, NodeTopicsT&, const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> >; NodeParametersT = rclcpp::Node; NodeTopicsT = rclcpp::Node; ROSMessageType = std_msgs::msg::String_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[19.989s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/create_subscription.hpp:191:76:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::create_subscription(NodeT&, const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> >; NodeT = rclcpp::Node; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[19.989s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:99:47:[m[K   required from ‘[01m[Kstd::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; CallbackT = std::_Bind<void (RobotLegRosWrapper::*(RobotLegRosWrapper*, std::_Placeholder<1>))(...)>; AllocatorT = std::allocator<void>; SubscriptionT = rclcpp::Subscription<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void>, std_msgs::msg::String_<std::allocator<void> >, std_msgs::msg::String_<std::allocator<void> >, rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >; MessageMemoryStrategyT = rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> >; std::string = std::__cxx11::basic_string<char>; typename MessageMemoryStrategyT::SharedPtr = std::shared_ptr<rclcpp::message_memory_strategy::MessageMemoryStrategy<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> > >][m[K’
+[19.990s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:34:78:[m[K   required from here
+[19.991s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:51:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdecltype[m[K’ cannot resolve address of overloaded function
+[19.991s]    51 |   using [01;31m[Karguments[m[K = typename tuple_tail<
+[19.992s]       |         [01;31m[K^~~~~~~~~[m[K
+[19.992s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:57:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdecltype[m[K’ cannot resolve address of overloaded function
+[19.993s]    57 |   using [01;31m[Kargument_type[m[K = typename std::tuple_element<N, arguments>::type;
+[19.994s]       |         [01;31m[K^~~~~~~~~~~~~[m[K
+[19.994s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:59:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdecltype[m[K’ cannot resolve address of overloaded function
+[19.995s]    59 |   using [01;31m[Kreturn_type[m[K = typename function_traits<decltype( &FunctionT::operator())>::return_type;
+[19.995s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[30.629s] gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:90: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o] Error 1
+[30.630s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2
+[30.632s] gmake: *** [Makefile:146: all] Error 2
+[30.711s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4

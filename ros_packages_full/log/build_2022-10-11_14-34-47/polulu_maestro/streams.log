@@ -1,0 +1,25 @@
+[5.241s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/polulu_maestro': AMENT_PREFIX_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces LD_LIBRARY_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/polulu_maestro build --build-base /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build install --prefix /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro --record /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/install.log --single-version-externally-managed
+[7.258s] running egg_info
+[7.264s] writing ../../build/polulu_maestro/polulu_maestro.egg-info/PKG-INFO
+[7.265s] writing dependency_links to ../../build/polulu_maestro/polulu_maestro.egg-info/dependency_links.txt
+[7.267s] writing entry points to ../../build/polulu_maestro/polulu_maestro.egg-info/entry_points.txt
+[7.268s] writing requirements to ../../build/polulu_maestro/polulu_maestro.egg-info/requires.txt
+[7.270s] writing top-level names to ../../build/polulu_maestro/polulu_maestro.egg-info/top_level.txt
+[7.282s] reading manifest file '../../build/polulu_maestro/polulu_maestro.egg-info/SOURCES.txt'
+[7.290s] writing manifest file '../../build/polulu_maestro/polulu_maestro.egg-info/SOURCES.txt'
+[7.291s] running build
+[7.294s] running build_py
+[7.296s] copying polulu_maestro/MaestroRosWrapper.py -> /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build/lib/polulu_maestro
+[7.298s] running install
+[7.298s] running install_lib
+[7.304s] copying /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build/lib/polulu_maestro/MaestroRosWrapper.py -> /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro
+[7.308s] byte-compiling /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro/MaestroRosWrapper.py to MaestroRosWrapper.cpython-310.pyc
+[7.312s] running install_data
+[7.316s] running install_egg_info
+[7.326s] removing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro-0.0.0-py3.10.egg-info' (and everything under it)
+[7.329s] Copying ../../build/polulu_maestro/polulu_maestro.egg-info to /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro-0.0.0-py3.10.egg-info
+[7.342s] running install_scripts
+[7.449s] Installing maestro_test_pub script to /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/polulu_maestro
+[7.451s] Installing maestro_wrapper script to /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/polulu_maestro
+[7.453s] writing list of installed files to '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/install.log'
+[7.630s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/polulu_maestro' returned '0': AMENT_PREFIX_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces LD_LIBRARY_PATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/polulu_maestro build --build-base /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build install --prefix /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro --record /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/install.log --single-version-externally-managed

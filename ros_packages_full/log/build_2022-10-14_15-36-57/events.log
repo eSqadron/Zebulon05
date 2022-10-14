@@ -1,0 +1,929 @@
+[0.000000] (-) TimerEvent: {}
+[0.001735] (RobotLeg) JobQueued: {'identifier': 'RobotLeg', 'dependencies': OrderedDict()}
+[0.002371] (maestro_interfaces) JobQueued: {'identifier': 'maestro_interfaces', 'dependencies': OrderedDict()}
+[0.004081] (walking_robot_interfaces) JobQueued: {'identifier': 'walking_robot_interfaces', 'dependencies': OrderedDict()}
+[0.004355] (polulu_maestro) JobQueued: {'identifier': 'polulu_maestro', 'dependencies': OrderedDict([('maestro_interfaces', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces')])}
+[0.004484] (maestro_interfaces) JobStarted: {'identifier': 'maestro_interfaces'}
+[0.054211] (RobotLeg) JobStarted: {'identifier': 'RobotLeg'}
+[0.090623] (walking_robot_interfaces) JobStarted: {'identifier': 'walking_robot_interfaces'}
+[0.100330] (-) TimerEvent: {}
+[0.135469] (maestro_interfaces) JobProgress: {'identifier': 'maestro_interfaces', 'progress': 'cmake'}
+[0.141904] (maestro_interfaces) JobProgress: {'identifier': 'maestro_interfaces', 'progress': 'build'}
+[0.145133] (maestro_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[0.161598] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'cmake'}
+[0.165061] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'build'}
+[0.172396] (RobotLeg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', '--', '-j4', '-l4'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[0.187265] (walking_robot_interfaces) JobProgress: {'identifier': 'walking_robot_interfaces', 'progress': 'cmake'}
+[0.194778] (walking_robot_interfaces) JobProgress: {'identifier': 'walking_robot_interfaces', 'progress': 'build'}
+[0.196495] (walking_robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[0.208257] (-) TimerEvent: {}
+[0.310696] (-) TimerEvent: {}
+[0.412015] (-) TimerEvent: {}
+[0.436376] (RobotLeg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_leg_wrapper\x1b[0m\n'}
+[0.512286] (-) TimerEvent: {}
+[0.520987] (maestro_interfaces) StdoutLine: {'line': b'[  2%] Built target maestro_interfaces__cpp\n'}
+[0.525804] (walking_robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target walking_robot_interfaces__rosidl_generator_c\x1b[0m\n'}
+[0.552478] (maestro_interfaces) StdoutLine: {'line': b'[ 12%] Built target maestro_interfaces__rosidl_generator_c\n'}
+[0.612856] (-) TimerEvent: {}
+[0.615036] (maestro_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_maestro_interfaces\n'}
+[0.630686] (walking_robot_interfaces) StdoutLine: {'line': b'[  3%] Built target walking_robot_interfaces__cpp\n'}
+[0.651936] (walking_robot_interfaces) StdoutLine: {'line': b'[ 12%] Built target walking_robot_interfaces__rosidl_generator_c\n'}
+[0.677094] (RobotLeg) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o\x1b[0m\n'}
+[0.713064] (-) TimerEvent: {}
+[0.745018] (walking_robot_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_walking_robot_interfaces\n'}
+[0.801667] (walking_robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target walking_robot_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[0.813376] (walking_robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target walking_robot_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[0.814030] (-) TimerEvent: {}
+[0.815922] (walking_robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target walking_robot_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[0.822980] (maestro_interfaces) StdoutLine: {'line': b'[ 23%] Built target maestro_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.851739] (maestro_interfaces) StdoutLine: {'line': b'[ 33%] Built target maestro_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.894217] (maestro_interfaces) StdoutLine: {'line': b'[ 43%] Built target maestro_interfaces__rosidl_typesupport_cpp\n'}
+[0.914414] (-) TimerEvent: {}
+[0.916942] (maestro_interfaces) StdoutLine: {'line': b'[ 53%] Built target maestro_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.941888] (walking_robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target walking_robot_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[0.968869] (walking_robot_interfaces) StdoutLine: {'line': b'[ 29%] Built target walking_robot_interfaces__rosidl_typesupport_cpp\n'}
+[0.970496] (walking_robot_interfaces) StdoutLine: {'line': b'[ 38%] Built target walking_robot_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.974546] (walking_robot_interfaces) StdoutLine: {'line': b'[ 41%] Built target walking_robot_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[1.014741] (-) TimerEvent: {}
+[1.076361] (walking_robot_interfaces) StdoutLine: {'line': b'[ 51%] Built target walking_robot_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[1.087793] (walking_robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target walking_robot_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[1.093006] (maestro_interfaces) StdoutLine: {'line': b'[ 64%] Built target maestro_interfaces__rosidl_typesupport_introspection_c\n'}
+[1.105331] (walking_robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target walking_robot_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[1.114966] (-) TimerEvent: {}
+[1.137900] (maestro_interfaces) StdoutLine: {'line': b'[ 74%] Built target maestro_interfaces__rosidl_typesupport_c\n'}
+[1.206576] (walking_robot_interfaces) StdoutLine: {'line': b'[ 61%] Built target walking_robot_interfaces__rosidl_typesupport_c\n'}
+[1.214516] (walking_robot_interfaces) StdoutLine: {'line': b'[ 70%] Built target walking_robot_interfaces__rosidl_typesupport_introspection_c\n'}
+[1.215319] (-) TimerEvent: {}
+[1.316335] (-) TimerEvent: {}
+[1.380596] (maestro_interfaces) StdoutLine: {'line': b'[ 74%] Built target maestro_interfaces\n'}
+[1.416520] (-) TimerEvent: {}
+[1.421798] (walking_robot_interfaces) StdoutLine: {'line': b'[ 70%] Built target walking_robot_interfaces\n'}
+[1.516698] (-) TimerEvent: {}
+[1.609018] (maestro_interfaces) StdoutLine: {'line': b'[ 76%] Built target maestro_interfaces__py\n'}
+[1.616973] (-) TimerEvent: {}
+[1.656951] (walking_robot_interfaces) StdoutLine: {'line': b'[ 74%] Built target walking_robot_interfaces__py\n'}
+[1.717164] (-) TimerEvent: {}
+[1.780585] (walking_robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target walking_robot_interfaces__rosidl_generator_py\x1b[0m\n'}
+[1.817356] (-) TimerEvent: {}
+[1.865107] (maestro_interfaces) StdoutLine: {'line': b'[ 84%] Built target maestro_interfaces__rosidl_generator_py\n'}
+[1.917565] (-) TimerEvent: {}
+[1.922688] (walking_robot_interfaces) StdoutLine: {'line': b'[ 80%] Built target walking_robot_interfaces__rosidl_generator_py\n'}
+[2.017798] (-) TimerEvent: {}
+[2.055644] (walking_robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target walking_robot_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[2.070082] (walking_robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target walking_robot_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[2.099029] (walking_robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target walking_robot_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[2.118080] (-) TimerEvent: {}
+[2.181719] (maestro_interfaces) StdoutLine: {'line': b'[ 89%] Built target maestro_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[2.214997] (walking_robot_interfaces) StdoutLine: {'line': b'[ 87%] Built target walking_robot_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[2.218276] (-) TimerEvent: {}
+[2.249427] (maestro_interfaces) StdoutLine: {'line': b'[ 94%] Built target maestro_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.257656] (maestro_interfaces) StdoutLine: {'line': b'[100%] Built target maestro_interfaces__rosidl_typesupport_c__pyext\n'}
+[2.279982] (walking_robot_interfaces) StdoutLine: {'line': b'[100%] Built target walking_robot_interfaces__rosidl_typesupport_c__pyext\n'}
+[2.284584] (walking_robot_interfaces) StdoutLine: {'line': b'[100%] Built target walking_robot_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.318509] (-) TimerEvent: {}
+[2.420798] (-) TimerEvent: {}
+[2.522612] (-) TimerEvent: {}
+[2.624471] (-) TimerEvent: {}
+[2.726594] (-) TimerEvent: {}
+[2.828465] (-) TimerEvent: {}
+[2.924428] (maestro_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[2.927265] (maestro_interfaces) StdoutLine: {'line': b'writing maestro_interfaces.egg-info/PKG-INFO\n'}
+[2.928673] (maestro_interfaces) StdoutLine: {'line': b'writing dependency_links to maestro_interfaces.egg-info/dependency_links.txt\n'}
+[2.929318] (-) TimerEvent: {}
+[2.931123] (maestro_interfaces) StdoutLine: {'line': b'writing top-level names to maestro_interfaces.egg-info/top_level.txt\n'}
+[2.947479] (maestro_interfaces) StdoutLine: {'line': b"reading manifest file 'maestro_interfaces.egg-info/SOURCES.txt'\n"}
+[2.950558] (maestro_interfaces) StdoutLine: {'line': b"writing manifest file 'maestro_interfaces.egg-info/SOURCES.txt'\n"}
+[3.029715] (-) TimerEvent: {}
+[3.055111] (walking_robot_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[3.059981] (walking_robot_interfaces) StdoutLine: {'line': b'writing walking_robot_interfaces.egg-info/PKG-INFO\n'}
+[3.063063] (walking_robot_interfaces) StdoutLine: {'line': b'writing dependency_links to walking_robot_interfaces.egg-info/dependency_links.txt\n'}
+[3.065337] (walking_robot_interfaces) StdoutLine: {'line': b'writing top-level names to walking_robot_interfaces.egg-info/top_level.txt\n'}
+[3.077760] (walking_robot_interfaces) StdoutLine: {'line': b"reading manifest file 'walking_robot_interfaces.egg-info/SOURCES.txt'\n"}
+[3.082169] (walking_robot_interfaces) StdoutLine: {'line': b"writing manifest file 'walking_robot_interfaces.egg-info/SOURCES.txt'\n"}
+[3.124116] (maestro_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_maestro_interfaces_egg\n'}
+[3.130135] (-) TimerEvent: {}
+[3.201325] (maestro_interfaces) CommandEnded: {'returncode': 0}
+[3.230424] (-) TimerEvent: {}
+[3.247291] (walking_robot_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_walking_robot_interfaces_egg\n'}
+[3.300819] (walking_robot_interfaces) CommandEnded: {'returncode': 0}
+[3.330609] (-) TimerEvent: {}
+[3.432640] (-) TimerEvent: {}
+[3.534700] (-) TimerEvent: {}
+[3.636608] (-) TimerEvent: {}
+[3.738794] (-) TimerEvent: {}
+[3.766758] (walking_robot_interfaces) JobProgress: {'identifier': 'walking_robot_interfaces', 'progress': 'install'}
+[3.812234] (walking_robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[3.830921] (maestro_interfaces) JobProgress: {'identifier': 'maestro_interfaces', 'progress': 'install'}
+[3.835220] (maestro_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/maestro_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[3.840745] (-) TimerEvent: {}
+[3.864088] (walking_robot_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.865264] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/ament_index/resource_index/rosidl_interfaces/walking_robot_interfaces\n'}
+[3.866224] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[3.867399] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[3.868560] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/step.h\n'}
+[3.869905] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.870968] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[3.871844] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__type_support.h\n'}
+[3.873064] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__functions.h\n'}
+[3.874149] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__struct.h\n'}
+[3.875029] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__functions.c\n'}
+[3.876118] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/library_path.sh\n'}
+[3.877383] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/library_path.dsv\n'}
+[3.879721] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_generator_c.so\n'}
+[3.881832] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[3.882949] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[3.883745] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.884734] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[3.885464] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__rosidl_typesupport_fastrtps_c.h\n'}
+[3.886695] (maestro_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.887804] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[3.888770] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/ament_index/resource_index/rosidl_interfaces/maestro_interfaces\n'}
+[3.889545] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces\n'}
+[3.890288] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg\n'}
+[3.891423] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/maestro_target.h\n'}
+[3.892474] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.893520] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail\n'}
+[3.895110] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[3.896141] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__functions.c\n'}
+[3.897757] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[3.898511] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__functions.c\n'}
+[3.899596] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__type_support.h\n'}
+[3.900517] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__struct.h\n'}
+[3.901897] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.903003] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__type_support.h\n'}
+[3.904407] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__struct.h\n'}
+[3.905272] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[3.906268] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__functions.h\n'}
+[3.907689] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__functions.h\n'}
+[3.909004] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/current_positions.h\n'}
+[3.910171] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__type_support.c\n'}
+[3.911012] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/environment/library_path.sh\n'}
+[3.911938] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/environment/library_path.dsv\n'}
+[3.912827] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__rosidl_typesupport_introspection_c.h\n'}
+[3.913518] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/libmaestro_interfaces__rosidl_generator_c.so\n'}
+[3.914699] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[3.915563] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces\n'}
+[3.917160] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg\n'}
+[3.918139] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_c.so\n'}
+[3.919300] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.920403] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail\n'}
+[3.921503] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[3.922615] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__rosidl_typesupport_fastrtps_c.h\n'}
+[3.923720] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__rosidl_typesupport_fastrtps_c.h\n'}
+[3.924831] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[3.925581] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/step.hpp\n'}
+[3.926433] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[3.927125] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/libmaestro_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[3.928078] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__struct.hpp\n'}
+[3.929385] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__traits.hpp\n'}
+[3.930367] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces\n'}
+[3.931697] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__builder.hpp\n'}
+[3.932789] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg\n'}
+[3.934219] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[3.935067] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[3.935562] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/current_positions.hpp\n'}
+[3.936482] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/maestro_target.hpp\n'}
+[3.937421] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.937988] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail\n'}
+[3.938642] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[3.939919] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__struct.hpp\n'}
+[3.940642] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.941877] (-) TimerEvent: {}
+[3.942769] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__builder.hpp\n'}
+[3.944208] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__traits.hpp\n'}
+[3.945155] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/dds_fastrtps\n'}
+[3.945874] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__traits.hpp\n'}
+[3.946860] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__builder.hpp\n'}
+[3.947680] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__struct.hpp\n'}
+[3.948543] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces\n'}
+[3.949557] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.950388] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg\n'}
+[3.951288] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.952086] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail\n'}
+[3.952784] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[3.954097] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.955905] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.957288] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/dds_fastrtps\n'}
+[3.959226] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[3.960494] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[3.962059] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/libmaestro_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.962827] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.963854] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__type_support.cpp\n'}
+[3.964891] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces\n'}
+[3.965880] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg\n'}
+[3.966886] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.967493] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[3.968228] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail\n'}
+[3.968918] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__type_support.c\n'}
+[3.969555] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__rosidl_typesupport_introspection_c.h\n'}
+[3.970353] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__rosidl_typesupport_introspection_c.h\n'}
+[3.971392] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__type_support.c\n'}
+[3.972689] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_cpp.so\n'}
+[3.973651] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/libmaestro_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[3.974465] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/pythonpath.sh\n'}
+[3.975354] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/pythonpath.dsv\n'}
+[3.976149] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/libmaestro_interfaces__rosidl_typesupport_c.so\n'}
+[3.976966] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces-0.0.0-py3.10.egg-info\n'}
+[3.978097] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces\n'}
+[3.979105] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[3.980052] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg\n'}
+[3.981352] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail\n'}
+[3.982075] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.982774] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/maestro_target__type_support.cpp\n'}
+[3.983570] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[3.984343] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__type_support.cpp\n'}
+[3.985019] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.985839] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[3.986709] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/libmaestro_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[3.987299] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[3.987878] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/libmaestro_interfaces__rosidl_typesupport_cpp.so\n'}
+[3.988664] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/environment/pythonpath.sh\n'}
+[3.989434] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces\n'}
+[3.989999] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/environment/pythonpath.dsv\n'}
+[3.990586] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces-0.0.0-py3.10.egg-info\n'}
+[3.991370] (maestro_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[3.992028] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.992755] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/libwalking_robot_interfaces__rosidl_generator_py.so\n'}
+[3.993410] (maestro_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[3.993991] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg\n'}
+[3.994524] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg/_step_s.c\n'}
+[3.995239] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg/__init__.py\n'}
+[3.995913] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg/_step.py\n'}
+[3.996993] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/_walking_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[3.997476] (maestro_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[3.997928] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/__init__.py\n'}
+[3.998344] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.998926] (maestro_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[3.999583] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.000579] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/_walking_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.001219] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces\n'}
+[4.001834] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/_walking_robot_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[4.002507] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/maestro_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.003380] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/_maestro_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.004053] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/_maestro_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[4.004885] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/msg\n'}
+[4.005433] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/msg/_current_positions_s.c\n'}
+[4.005941] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/msg/_current_positions.py\n'}
+[4.006531] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/msg/__init__.py\n'}
+[4.007216] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/msg/_maestro_target_s.c\n'}
+[4.008016] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/msg/_maestro_target.py\n'}
+[4.008925] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/__init__.py\n'}
+[4.009705] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/maestro_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.010456] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/libmaestro_interfaces__rosidl_generator_py.so\n'}
+[4.011418] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/maestro_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.012077] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/_maestro_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.042079] (-) TimerEvent: {}
+[4.142966] (-) TimerEvent: {}
+[4.176603] (walking_robot_interfaces) StdoutLine: {'line': b"Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces'...\n"}
+[4.178123] (walking_robot_interfaces) StdoutLine: {'line': b"Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg'...\n"}
+[4.184154] (maestro_interfaces) StdoutLine: {'line': b"Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces'...\n"}
+[4.186280] (maestro_interfaces) StdoutLine: {'line': b"Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/msg'...\n"}
+[4.225256] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.227342] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/maestro_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.228896] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.232099] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/maestro_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.233599] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.235574] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages/maestro_interfaces/maestro_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.236945] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_generator_py.so\n'}
+[4.238806] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib/libmaestro_interfaces__rosidl_generator_py.so\n'}
+[4.239732] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/msg/Step.idl\n'}
+[4.240901] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/msg/Step.msg\n'}
+[4.241528] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/ament_index/resource_index/package_run_dependencies/walking_robot_interfaces\n'}
+[4.242699] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/ament_index/resource_index/parent_prefix_path/walking_robot_interfaces\n'}
+[4.245666] (-) TimerEvent: {}
+[4.246413] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/msg/CurrentPositions.idl\n'}
+[4.247756] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/ament_prefix_path.sh\n'}
+[4.248753] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/ament_prefix_path.dsv\n'}
+[4.249685] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/msg/MaestroTarget.idl\n'}
+[4.250667] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/path.sh\n'}
+[4.251462] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/msg/CurrentPositions.msg\n'}
+[4.252984] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/path.dsv\n'}
+[4.254586] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/local_setup.bash\n'}
+[4.255652] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/msg/MaestroTarget.msg\n'}
+[4.256712] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/local_setup.sh\n'}
+[4.257769] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/local_setup.zsh\n'}
+[4.258581] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/ament_index/resource_index/package_run_dependencies/maestro_interfaces\n'}
+[4.259646] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/local_setup.dsv\n'}
+[4.261110] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/package.dsv\n'}
+[4.262077] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/ament_index/resource_index/parent_prefix_path/maestro_interfaces\n'}
+[4.263294] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/environment/ament_prefix_path.sh\n'}
+[4.265138] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/environment/ament_prefix_path.dsv\n'}
+[4.266252] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/environment/path.sh\n'}
+[4.267129] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/environment/path.dsv\n'}
+[4.268444] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/ament_index/resource_index/packages/walking_robot_interfaces\n'}
+[4.269701] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/local_setup.bash\n'}
+[4.270341] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/local_setup.sh\n'}
+[4.271288] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/local_setup.zsh\n'}
+[4.272250] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_generator_cExport.cmake\n'}
+[4.272973] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.273539] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/local_setup.dsv\n'}
+[4.274459] (maestro_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.dsv\n'}
+[4.275077] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.276087] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.277209] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/ament_index/resource_index/packages/maestro_interfaces\n'}
+[4.278214] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.279167] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.280521] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/export_maestro_interfaces__rosidl_generator_cExport.cmake\n'}
+[4.281364] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/export_maestro_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.282304] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[4.283417] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.287616] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/export_maestro_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.309886] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_generator_cppExport.cmake\n'}
+[4.310377] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/export_maestro_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.310824] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.311355] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/export_maestro_interfaces__rosidl_generator_cppExport.cmake\n'}
+[4.311770] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.312287] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.312901] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.313494] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/export_maestro_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.314080] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/export_maestro_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.314763] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[4.315265] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.315725] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/maestro_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.316119] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/maestro_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.316563] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_generator_pyExport.cmake\n'}
+[4.316959] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.317342] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[4.317720] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/maestro_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[4.318464] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.319487] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/maestro_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.321400] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.322102] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.322686] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.323375] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.323975] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.324680] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfacesConfig.cmake\n'}
+[4.325378] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfacesConfig-version.cmake\n'}
+[4.326371] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/package.xml\n'}
+[4.327092] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/maestro_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.328348] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/maestro_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.331159] (walking_robot_interfaces) CommandEnded: {'returncode': 0}
+[4.338188] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/maestro_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[4.339261] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/maestro_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.345841] (-) TimerEvent: {}
+[4.348982] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/export_maestro_interfaces__rosidl_generator_pyExport.cmake\n'}
+[4.350187] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/export_maestro_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.352319] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[4.353294] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.355031] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.358640] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.359242] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.360250] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.360858] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.363013] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/maestro_interfacesConfig.cmake\n'}
+[4.364323] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/cmake/maestro_interfacesConfig-version.cmake\n'}
+[4.369503] (maestro_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/share/maestro_interfaces/package.xml\n'}
+[4.446039] (-) TimerEvent: {}
+[4.457768] (maestro_interfaces) CommandEnded: {'returncode': 0}
+[4.546275] (-) TimerEvent: {}
+[4.649110] (-) TimerEvent: {}
+[4.750034] (-) TimerEvent: {}
+[4.850921] (-) TimerEvent: {}
+[4.953139] (-) TimerEvent: {}
+[5.026667] (walking_robot_interfaces) JobEnded: {'identifier': 'walking_robot_interfaces', 'rc': 0}
+[5.053335] (-) TimerEvent: {}
+[5.154083] (-) TimerEvent: {}
+[5.257211] (-) TimerEvent: {}
+[5.276983] (maestro_interfaces) JobEnded: {'identifier': 'maestro_interfaces', 'rc': 0}
+[5.289616] (polulu_maestro) JobStarted: {'identifier': 'polulu_maestro'}
+[5.357446] (-) TimerEvent: {}
+[5.458284] (-) TimerEvent: {}
+[5.559287] (-) TimerEvent: {}
+[5.660297] (-) TimerEvent: {}
+[5.761146] (-) TimerEvent: {}
+[5.862019] (-) TimerEvent: {}
+[5.963073] (-) TimerEvent: {}
+[6.064008] (-) TimerEvent: {}
+[6.164852] (-) TimerEvent: {}
+[6.265759] (-) TimerEvent: {}
+[6.366653] (-) TimerEvent: {}
+[6.467480] (-) TimerEvent: {}
+[6.568462] (-) TimerEvent: {}
+[6.669354] (-) TimerEvent: {}
+[6.770248] (-) TimerEvent: {}
+[6.871131] (-) TimerEvent: {}
+[6.972028] (-) TimerEvent: {}
+[7.073280] (-) TimerEvent: {}
+[7.177878] (-) TimerEvent: {}
+[7.278786] (-) TimerEvent: {}
+[7.379703] (-) TimerEvent: {}
+[7.480703] (-) TimerEvent: {}
+[7.581602] (-) TimerEvent: {}
+[7.682480] (-) TimerEvent: {}
+[7.783374] (-) TimerEvent: {}
+[7.884159] (-) TimerEvent: {}
+[7.985049] (-) TimerEvent: {}
+[8.085939] (-) TimerEvent: {}
+[8.186875] (-) TimerEvent: {}
+[8.287706] (-) TimerEvent: {}
+[8.388566] (-) TimerEvent: {}
+[8.489449] (-) TimerEvent: {}
+[8.590302] (-) TimerEvent: {}
+[8.691252] (-) TimerEvent: {}
+[8.792085] (-) TimerEvent: {}
+[8.892935] (-) TimerEvent: {}
+[8.993779] (-) TimerEvent: {}
+[9.094682] (-) TimerEvent: {}
+[9.195539] (-) TimerEvent: {}
+[9.296472] (-) TimerEvent: {}
+[9.427360] (-) TimerEvent: {}
+[9.528315] (-) TimerEvent: {}
+[9.629105] (-) TimerEvent: {}
+[9.730109] (-) TimerEvent: {}
+[9.831790] (-) TimerEvent: {}
+[9.861447] (polulu_maestro) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/polulu_maestro', 'build', '--build-base', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/build', 'install', '--prefix', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro', '--record', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/install.log', '--single-version-externally-managed'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/polulu_maestro', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'k', 'SSH_CLIENT': '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22', 'LC_TIME': 'pl_PL.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/k', 'OLDPWD': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'pl_PL.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'k', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'pl_PL.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'pl_PL.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'pl_PL.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'pl_PL.UTF-8', 'LC_IDENTIFICATION': 'pl_PL.UTF-8', 'PWD': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'pl_PL.UTF-8', 'LC_PAPER': 'pl_PL.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg'}, 'shell': False}
+[9.931988] (-) TimerEvent: {}
+[10.032816] (-) TimerEvent: {}
+[10.133664] (-) TimerEvent: {}
+[10.234530] (-) TimerEvent: {}
+[10.335329] (-) TimerEvent: {}
+[10.436284] (-) TimerEvent: {}
+[10.537074] (-) TimerEvent: {}
+[10.637904] (-) TimerEvent: {}
+[10.738772] (-) TimerEvent: {}
+[10.839563] (-) TimerEvent: {}
+[10.940375] (-) TimerEvent: {}
+[11.041158] (-) TimerEvent: {}
+[11.142052] (-) TimerEvent: {}
+[11.242943] (-) TimerEvent: {}
+[11.343824] (-) TimerEvent: {}
+[11.444702] (-) TimerEvent: {}
+[11.480909] (polulu_maestro) StdoutLine: {'line': b'running egg_info\n'}
+[11.484039] (polulu_maestro) StdoutLine: {'line': b'writing ../../build/polulu_maestro/polulu_maestro.egg-info/PKG-INFO\n'}
+[11.485518] (polulu_maestro) StdoutLine: {'line': b'writing dependency_links to ../../build/polulu_maestro/polulu_maestro.egg-info/dependency_links.txt\n'}
+[11.486707] (polulu_maestro) StdoutLine: {'line': b'writing entry points to ../../build/polulu_maestro/polulu_maestro.egg-info/entry_points.txt\n'}
+[11.487651] (polulu_maestro) StdoutLine: {'line': b'writing requirements to ../../build/polulu_maestro/polulu_maestro.egg-info/requires.txt\n'}
+[11.496846] (polulu_maestro) StdoutLine: {'line': b'writing top-level names to ../../build/polulu_maestro/polulu_maestro.egg-info/top_level.txt\n'}
+[11.508607] (polulu_maestro) StdoutLine: {'line': b"reading manifest file '../../build/polulu_maestro/polulu_maestro.egg-info/SOURCES.txt'\n"}
+[11.514976] (polulu_maestro) StdoutLine: {'line': b"writing manifest file '../../build/polulu_maestro/polulu_maestro.egg-info/SOURCES.txt'\n"}
+[11.515883] (polulu_maestro) StdoutLine: {'line': b'running build\n'}
+[11.516692] (polulu_maestro) StdoutLine: {'line': b'running build_py\n'}
+[11.518877] (polulu_maestro) StdoutLine: {'line': b'running install\n'}
+[11.520450] (polulu_maestro) StdoutLine: {'line': b'running install_lib\n'}
+[11.528752] (polulu_maestro) StdoutLine: {'line': b'running install_data\n'}
+[11.531761] (polulu_maestro) StdoutLine: {'line': b'running install_egg_info\n'}
+[11.540104] (polulu_maestro) StdoutLine: {'line': b"removing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[11.544529] (polulu_maestro) StdoutLine: {'line': b'Copying ../../build/polulu_maestro/polulu_maestro.egg-info to /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages/polulu_maestro-0.0.0-py3.10.egg-info\n'}
+[11.545151] (-) TimerEvent: {}
+[11.554225] (polulu_maestro) StdoutLine: {'line': b'running install_scripts\n'}
+[11.645504] (-) TimerEvent: {}
+[11.653419] (polulu_maestro) StdoutLine: {'line': b'Installing maestro_test_pub script to /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/polulu_maestro\n'}
+[11.654604] (polulu_maestro) StdoutLine: {'line': b'Installing maestro_wrapper script to /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/polulu_maestro\n'}
+[11.656887] (polulu_maestro) StdoutLine: {'line': b"writing list of installed files to '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/polulu_maestro/install.log'\n"}
+[11.745777] (-) TimerEvent: {}
+[11.802854] (polulu_maestro) CommandEnded: {'returncode': 0}
+[11.845985] (-) TimerEvent: {}
+[11.861426] (polulu_maestro) JobEnded: {'identifier': 'polulu_maestro', 'rc': 0}
+[11.946210] (-) TimerEvent: {}
+[12.047142] (-) TimerEvent: {}
+[12.147937] (-) TimerEvent: {}
+[12.248943] (-) TimerEvent: {}
+[12.350218] (-) TimerEvent: {}
+[12.451048] (-) TimerEvent: {}
+[12.551820] (-) TimerEvent: {}
+[12.652619] (-) TimerEvent: {}
+[12.753394] (-) TimerEvent: {}
+[12.854307] (-) TimerEvent: {}
+[12.955146] (-) TimerEvent: {}
+[13.055959] (-) TimerEvent: {}
+[13.156800] (-) TimerEvent: {}
+[13.257571] (-) TimerEvent: {}
+[13.358428] (-) TimerEvent: {}
+[13.459277] (-) TimerEvent: {}
+[13.560085] (-) TimerEvent: {}
+[13.660922] (-) TimerEvent: {}
+[13.761676] (-) TimerEvent: {}
+[13.862488] (-) TimerEvent: {}
+[13.963313] (-) TimerEvent: {}
+[14.064111] (-) TimerEvent: {}
+[14.164936] (-) TimerEvent: {}
+[14.265726] (-) TimerEvent: {}
+[14.366553] (-) TimerEvent: {}
+[14.467362] (-) TimerEvent: {}
+[14.568148] (-) TimerEvent: {}
+[14.668963] (-) TimerEvent: {}
+[14.769732] (-) TimerEvent: {}
+[14.870544] (-) TimerEvent: {}
+[14.971350] (-) TimerEvent: {}
+[15.072121] (-) TimerEvent: {}
+[15.172933] (-) TimerEvent: {}
+[15.274062] (-) TimerEvent: {}
+[15.374919] (-) TimerEvent: {}
+[15.475715] (-) TimerEvent: {}
+[15.576535] (-) TimerEvent: {}
+[15.677335] (-) TimerEvent: {}
+[15.778138] (-) TimerEvent: {}
+[15.879006] (-) TimerEvent: {}
+[15.979799] (-) TimerEvent: {}
+[16.080621] (-) TimerEvent: {}
+[16.181404] (-) TimerEvent: {}
+[16.282226] (-) TimerEvent: {}
+[16.383071] (-) TimerEvent: {}
+[16.483853] (-) TimerEvent: {}
+[16.584654] (-) TimerEvent: {}
+[16.685423] (-) TimerEvent: {}
+[16.786221] (-) TimerEvent: {}
+[16.887061] (-) TimerEvent: {}
+[16.987846] (-) TimerEvent: {}
+[17.088660] (-) TimerEvent: {}
+[17.189441] (-) TimerEvent: {}
+[17.290236] (-) TimerEvent: {}
+[17.391081] (-) TimerEvent: {}
+[17.491858] (-) TimerEvent: {}
+[17.592667] (-) TimerEvent: {}
+[17.693437] (-) TimerEvent: {}
+[17.794248] (-) TimerEvent: {}
+[17.895087] (-) TimerEvent: {}
+[17.995852] (-) TimerEvent: {}
+[18.096630] (-) TimerEvent: {}
+[18.197354] (-) TimerEvent: {}
+[18.298160] (-) TimerEvent: {}
+[18.399071] (-) TimerEvent: {}
+[18.500263] (-) TimerEvent: {}
+[18.601051] (-) TimerEvent: {}
+[18.701845] (-) TimerEvent: {}
+[18.802684] (-) TimerEvent: {}
+[18.903492] (-) TimerEvent: {}
+[19.004351] (-) TimerEvent: {}
+[19.105154] (-) TimerEvent: {}
+[19.206017] (-) TimerEvent: {}
+[19.306791] (-) TimerEvent: {}
+[19.407588] (-) TimerEvent: {}
+[19.508347] (-) TimerEvent: {}
+[19.609109] (-) TimerEvent: {}
+[19.709931] (-) TimerEvent: {}
+[19.810721] (-) TimerEvent: {}
+[19.911556] (-) TimerEvent: {}
+[20.012507] (-) TimerEvent: {}
+[20.113355] (-) TimerEvent: {}
+[20.214285] (-) TimerEvent: {}
+[20.315135] (-) TimerEvent: {}
+[20.415975] (-) TimerEvent: {}
+[20.516842] (-) TimerEvent: {}
+[20.617677] (-) TimerEvent: {}
+[20.718495] (-) TimerEvent: {}
+[20.819293] (-) TimerEvent: {}
+[20.920138] (-) TimerEvent: {}
+[21.021002] (-) TimerEvent: {}
+[21.121789] (-) TimerEvent: {}
+[21.222635] (-) TimerEvent: {}
+[21.323469] (-) TimerEvent: {}
+[21.424313] (-) TimerEvent: {}
+[21.525090] (-) TimerEvent: {}
+[21.625863] (-) TimerEvent: {}
+[21.726706] (-) TimerEvent: {}
+[21.827533] (-) TimerEvent: {}
+[21.928365] (-) TimerEvent: {}
+[22.029192] (-) TimerEvent: {}
+[22.129998] (-) TimerEvent: {}
+[22.230872] (-) TimerEvent: {}
+[22.331647] (-) TimerEvent: {}
+[22.432456] (-) TimerEvent: {}
+[22.533292] (-) TimerEvent: {}
+[22.634103] (-) TimerEvent: {}
+[22.734948] (-) TimerEvent: {}
+[22.835720] (-) TimerEvent: {}
+[22.936562] (-) TimerEvent: {}
+[23.037407] (-) TimerEvent: {}
+[23.138204] (-) TimerEvent: {}
+[23.239059] (-) TimerEvent: {}
+[23.339833] (-) TimerEvent: {}
+[23.440643] (-) TimerEvent: {}
+[23.541531] (-) TimerEvent: {}
+[23.642263] (-) TimerEvent: {}
+[23.743122] (-) TimerEvent: {}
+[23.843944] (-) TimerEvent: {}
+[23.944778] (-) TimerEvent: {}
+[24.045684] (-) TimerEvent: {}
+[24.146504] (-) TimerEvent: {}
+[24.247259] (-) TimerEvent: {}
+[24.348014] (-) TimerEvent: {}
+[24.448820] (-) TimerEvent: {}
+[24.549636] (-) TimerEvent: {}
+[24.650450] (-) TimerEvent: {}
+[24.751250] (-) TimerEvent: {}
+[24.852030] (-) TimerEvent: {}
+[24.952829] (-) TimerEvent: {}
+[25.053657] (-) TimerEvent: {}
+[25.154405] (-) TimerEvent: {}
+[25.255162] (-) TimerEvent: {}
+[25.355876] (-) TimerEvent: {}
+[25.456609] (-) TimerEvent: {}
+[25.557357] (-) TimerEvent: {}
+[25.658063] (-) TimerEvent: {}
+[25.758870] (-) TimerEvent: {}
+[25.859682] (-) TimerEvent: {}
+[25.960557] (-) TimerEvent: {}
+[26.061443] (-) TimerEvent: {}
+[26.162285] (-) TimerEvent: {}
+[26.263105] (-) TimerEvent: {}
+[26.363912] (-) TimerEvent: {}
+[26.464743] (-) TimerEvent: {}
+[26.565614] (-) TimerEvent: {}
+[26.666423] (-) TimerEvent: {}
+[26.767267] (-) TimerEvent: {}
+[26.868062] (-) TimerEvent: {}
+[26.969065] (-) TimerEvent: {}
+[27.070173] (-) TimerEvent: {}
+[27.171617] (-) TimerEvent: {}
+[27.272481] (-) TimerEvent: {}
+[27.373274] (-) TimerEvent: {}
+[27.474079] (-) TimerEvent: {}
+[27.574943] (-) TimerEvent: {}
+[27.675746] (-) TimerEvent: {}
+[27.776539] (-) TimerEvent: {}
+[27.877477] (-) TimerEvent: {}
+[27.978536] (-) TimerEvent: {}
+[28.079402] (-) TimerEvent: {}
+[28.180391] (-) TimerEvent: {}
+[28.281236] (-) TimerEvent: {}
+[28.382017] (-) TimerEvent: {}
+[28.482863] (-) TimerEvent: {}
+[28.583657] (-) TimerEvent: {}
+[28.684536] (-) TimerEvent: {}
+[28.785350] (-) TimerEvent: {}
+[28.886095] (-) TimerEvent: {}
+[28.986911] (-) TimerEvent: {}
+[29.087689] (-) TimerEvent: {}
+[29.188582] (-) TimerEvent: {}
+[29.289404] (-) TimerEvent: {}
+[29.390207] (-) TimerEvent: {}
+[29.491033] (-) TimerEvent: {}
+[29.591914] (-) TimerEvent: {}
+[29.692994] (-) TimerEvent: {}
+[29.794057] (-) TimerEvent: {}
+[29.895225] (-) TimerEvent: {}
+[29.996152] (-) TimerEvent: {}
+[30.097221] (-) TimerEvent: {}
+[30.198256] (-) TimerEvent: {}
+[30.299244] (-) TimerEvent: {}
+[30.400313] (-) TimerEvent: {}
+[30.501113] (-) TimerEvent: {}
+[30.601918] (-) TimerEvent: {}
+[30.702791] (-) TimerEvent: {}
+[30.803533] (-) TimerEvent: {}
+[30.904403] (-) TimerEvent: {}
+[31.005131] (-) TimerEvent: {}
+[31.105885] (-) TimerEvent: {}
+[31.206747] (-) TimerEvent: {}
+[31.307780] (-) TimerEvent: {}
+[31.408927] (-) TimerEvent: {}
+[31.509702] (-) TimerEvent: {}
+[31.610547] (-) TimerEvent: {}
+[31.711318] (-) TimerEvent: {}
+[31.812104] (-) TimerEvent: {}
+[31.912928] (-) TimerEvent: {}
+[32.013707] (-) TimerEvent: {}
+[32.114521] (-) TimerEvent: {}
+[32.215411] (-) TimerEvent: {}
+[32.316488] (-) TimerEvent: {}
+[32.417285] (-) TimerEvent: {}
+[32.518107] (-) TimerEvent: {}
+[32.618899] (-) TimerEvent: {}
+[32.719648] (-) TimerEvent: {}
+[32.820453] (-) TimerEvent: {}
+[32.921215] (-) TimerEvent: {}
+[33.022028] (-) TimerEvent: {}
+[33.122827] (-) TimerEvent: {}
+[33.223643] (-) TimerEvent: {}
+[33.324414] (-) TimerEvent: {}
+[33.425249] (-) TimerEvent: {}
+[33.526033] (-) TimerEvent: {}
+[33.626841] (-) TimerEvent: {}
+[33.727588] (-) TimerEvent: {}
+[33.828445] (-) TimerEvent: {}
+[33.929185] (-) TimerEvent: {}
+[34.029937] (-) TimerEvent: {}
+[34.130784] (-) TimerEvent: {}
+[34.231552] (-) TimerEvent: {}
+[34.332360] (-) TimerEvent: {}
+[34.433244] (-) TimerEvent: {}
+[34.534085] (-) TimerEvent: {}
+[34.634909] (-) TimerEvent: {}
+[34.735694] (-) TimerEvent: {}
+[34.836504] (-) TimerEvent: {}
+[34.937248] (-) TimerEvent: {}
+[35.038086] (-) TimerEvent: {}
+[35.138900] (-) TimerEvent: {}
+[35.239672] (-) TimerEvent: {}
+[35.340528] (-) TimerEvent: {}
+[35.441344] (-) TimerEvent: {}
+[35.542202] (-) TimerEvent: {}
+[35.642982] (-) TimerEvent: {}
+[35.743743] (-) TimerEvent: {}
+[35.844611] (-) TimerEvent: {}
+[35.945352] (-) TimerEvent: {}
+[36.046182] (-) TimerEvent: {}
+[36.146987] (-) TimerEvent: {}
+[36.247723] (-) TimerEvent: {}
+[36.348553] (-) TimerEvent: {}
+[36.449372] (-) TimerEvent: {}
+[36.550185] (-) TimerEvent: {}
+[36.651046] (-) TimerEvent: {}
+[36.751854] (-) TimerEvent: {}
+[36.852689] (-) TimerEvent: {}
+[36.953475] (-) TimerEvent: {}
+[37.054246] (-) TimerEvent: {}
+[37.155117] (-) TimerEvent: {}
+[37.255901] (-) TimerEvent: {}
+[37.356668] (-) TimerEvent: {}
+[37.457441] (-) TimerEvent: {}
+[37.558225] (-) TimerEvent: {}
+[37.659044] (-) TimerEvent: {}
+[37.759826] (-) TimerEvent: {}
+[37.860633] (-) TimerEvent: {}
+[37.961432] (-) TimerEvent: {}
+[38.062243] (-) TimerEvent: {}
+[38.163083] (-) TimerEvent: {}
+[38.263873] (-) TimerEvent: {}
+[38.364776] (-) TimerEvent: {}
+[38.465563] (-) TimerEvent: {}
+[38.566418] (-) TimerEvent: {}
+[38.667217] (-) TimerEvent: {}
+[38.767982] (-) TimerEvent: {}
+[38.868798] (-) TimerEvent: {}
+[38.969536] (-) TimerEvent: {}
+[39.070313] (-) TimerEvent: {}
+[39.171118] (-) TimerEvent: {}
+[39.271912] (-) TimerEvent: {}
+[39.372741] (-) TimerEvent: {}
+[39.473520] (-) TimerEvent: {}
+[39.574288] (-) TimerEvent: {}
+[39.675163] (-) TimerEvent: {}
+[39.776082] (-) TimerEvent: {}
+[39.876929] (-) TimerEvent: {}
+[39.977731] (-) TimerEvent: {}
+[40.078546] (-) TimerEvent: {}
+[40.179315] (-) TimerEvent: {}
+[40.280099] (-) TimerEvent: {}
+[40.380846] (-) TimerEvent: {}
+[40.481624] (-) TimerEvent: {}
+[40.582498] (-) TimerEvent: {}
+[40.683268] (-) TimerEvent: {}
+[40.784062] (-) TimerEvent: {}
+[40.884864] (-) TimerEvent: {}
+[40.985615] (-) TimerEvent: {}
+[41.086376] (-) TimerEvent: {}
+[41.187135] (-) TimerEvent: {}
+[41.287920] (-) TimerEvent: {}
+[41.388778] (-) TimerEvent: {}
+[41.489563] (-) TimerEvent: {}
+[41.590342] (-) TimerEvent: {}
+[41.691196] (-) TimerEvent: {}
+[41.791994] (-) TimerEvent: {}
+[41.892725] (-) TimerEvent: {}
+[41.993468] (-) TimerEvent: {}
+[42.094634] (-) TimerEvent: {}
+[42.195652] (-) TimerEvent: {}
+[42.296580] (-) TimerEvent: {}
+[42.397414] (-) TimerEvent: {}
+[42.498576] (-) TimerEvent: {}
+[42.599387] (-) TimerEvent: {}
+[42.700213] (-) TimerEvent: {}
+[42.801011] (-) TimerEvent: {}
+[42.901769] (-) TimerEvent: {}
+[43.002583] (-) TimerEvent: {}
+[43.103356] (-) TimerEvent: {}
+[43.204263] (-) TimerEvent: {}
+[43.305192] (-) TimerEvent: {}
+[43.405941] (-) TimerEvent: {}
+[43.506728] (-) TimerEvent: {}
+[43.607557] (-) TimerEvent: {}
+[43.708338] (-) TimerEvent: {}
+[43.809137] (-) TimerEvent: {}
+[43.909916] (-) TimerEvent: {}
+[44.010743] (-) TimerEvent: {}
+[44.111824] (-) TimerEvent: {}
+[44.212622] (-) TimerEvent: {}
+[44.313418] (-) TimerEvent: {}
+[44.414159] (-) TimerEvent: {}
+[44.514903] (-) TimerEvent: {}
+[44.615676] (-) TimerEvent: {}
+[44.716456] (-) TimerEvent: {}
+[44.817258] (-) TimerEvent: {}
+[44.918040] (-) TimerEvent: {}
+[45.018837] (-) TimerEvent: {}
+[45.119684] (-) TimerEvent: {}
+[45.220525] (-) TimerEvent: {}
+[45.321346] (-) TimerEvent: {}
+[45.422157] (-) TimerEvent: {}
+[45.522989] (-) TimerEvent: {}
+[45.623845] (-) TimerEvent: {}
+[45.724758] (-) TimerEvent: {}
+[45.825640] (-) TimerEvent: {}
+[45.926414] (-) TimerEvent: {}
+[46.027198] (-) TimerEvent: {}
+[46.128019] (-) TimerEvent: {}
+[46.228843] (-) TimerEvent: {}
+[46.329666] (-) TimerEvent: {}
+[46.430497] (-) TimerEvent: {}
+[46.531325] (-) TimerEvent: {}
+[46.632515] (-) TimerEvent: {}
+[46.733383] (-) TimerEvent: {}
+[46.834424] (-) TimerEvent: {}
+[46.935519] (-) TimerEvent: {}
+[47.036352] (-) TimerEvent: {}
+[47.137144] (-) TimerEvent: {}
+[47.237958] (-) TimerEvent: {}
+[47.338728] (-) TimerEvent: {}
+[47.439758] (-) TimerEvent: {}
+[47.540562] (-) TimerEvent: {}
+[47.641312] (-) TimerEvent: {}
+[47.742393] (-) TimerEvent: {}
+[47.843174] (-) TimerEvent: {}
+[47.943962] (-) TimerEvent: {}
+[48.044766] (-) TimerEvent: {}
+[48.145533] (-) TimerEvent: {}
+[48.246296] (-) TimerEvent: {}
+[48.347145] (-) TimerEvent: {}
+[48.447958] (-) TimerEvent: {}
+[48.548783] (-) TimerEvent: {}
+[48.649692] (-) TimerEvent: {}
+[48.750488] (-) TimerEvent: {}
+[48.851254] (-) TimerEvent: {}
+[48.952052] (-) TimerEvent: {}
+[49.052816] (-) TimerEvent: {}
+[49.153564] (-) TimerEvent: {}
+[49.254372] (-) TimerEvent: {}
+[49.355206] (-) TimerEvent: {}
+[49.456072] (-) TimerEvent: {}
+[49.556889] (-) TimerEvent: {}
+[49.657675] (-) TimerEvent: {}
+[49.758434] (-) TimerEvent: {}
+[49.859272] (-) TimerEvent: {}
+[49.960079] (-) TimerEvent: {}
+[50.061014] (-) TimerEvent: {}
+[50.162131] (-) TimerEvent: {}
+[50.264003] (-) TimerEvent: {}
+[50.365018] (-) TimerEvent: {}
+[50.465788] (-) TimerEvent: {}
+[50.566645] (-) TimerEvent: {}
+[50.667616] (-) TimerEvent: {}
+[50.768698] (-) TimerEvent: {}
+[50.869912] (-) TimerEvent: {}
+[50.970751] (-) TimerEvent: {}
+[51.071628] (-) TimerEvent: {}
+[51.172742] (-) TimerEvent: {}
+[51.270872] (RobotLeg) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable robot_leg_wrapper\x1b[0m\n'}
+[51.278244] (-) TimerEvent: {}
+[51.379167] (-) TimerEvent: {}
+[51.480296] (-) TimerEvent: {}
+[51.581278] (-) TimerEvent: {}
+[51.682134] (-) TimerEvent: {}
+[51.783078] (-) TimerEvent: {}
+[51.884025] (-) TimerEvent: {}
+[51.984934] (-) TimerEvent: {}
+[52.085969] (-) TimerEvent: {}
+[52.187399] (-) TimerEvent: {}
+[52.288270] (-) TimerEvent: {}
+[52.389177] (-) TimerEvent: {}
+[52.490546] (-) TimerEvent: {}
+[52.591859] (-) TimerEvent: {}
+[52.692930] (-) TimerEvent: {}
+[52.794097] (-) TimerEvent: {}
+[52.895078] (-) TimerEvent: {}
+[52.996258] (-) TimerEvent: {}
+[53.096973] (-) TimerEvent: {}
+[53.197637] (-) TimerEvent: {}
+[53.298327] (-) TimerEvent: {}
+[53.399007] (-) TimerEvent: {}
+[53.499665] (-) TimerEvent: {}
+[53.600328] (-) TimerEvent: {}
+[53.701142] (-) TimerEvent: {}
+[53.801868] (-) TimerEvent: {}
+[53.902767] (-) TimerEvent: {}
+[54.004024] (-) TimerEvent: {}
+[54.104736] (-) TimerEvent: {}
+[54.205478] (-) TimerEvent: {}
+[54.295741] (RobotLeg) StdoutLine: {'line': b'[100%] Built target robot_leg_wrapper\n'}
+[54.305678] (-) TimerEvent: {}
+[54.349726] (RobotLeg) CommandEnded: {'returncode': 0}
+[54.405908] (-) TimerEvent: {}
+[54.506941] (-) TimerEvent: {}
+[54.533394] (RobotLeg) JobProgress: {'identifier': 'RobotLeg', 'progress': 'install'}
+[54.536900] (RobotLeg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[54.576798] (RobotLeg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[54.578296] (RobotLeg) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib/RobotLeg/robot_leg_wrapper\n'}
+[54.607159] (-) TimerEvent: {}
+[54.628274] (RobotLeg) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/lib/RobotLeg/robot_leg_wrapper" to ""\n'}
+[54.631218] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/ament_index/resource_index/package_run_dependencies/RobotLeg\n'}
+[54.631844] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/ament_index/resource_index/parent_prefix_path/RobotLeg\n'}
+[54.632561] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/ament_prefix_path.sh\n'}
+[54.633153] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/ament_prefix_path.dsv\n'}
+[54.633694] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/path.sh\n'}
+[54.634206] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/environment/path.dsv\n'}
+[54.634763] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.bash\n'}
+[54.635311] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.sh\n'}
+[54.635933] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.zsh\n'}
+[54.636530] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/local_setup.dsv\n'}
+[54.637099] (RobotLeg) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.dsv\n'}
+[54.638973] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/ament_index/resource_index/packages/RobotLeg\n'}
+[54.639590] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/cmake/RobotLegConfig.cmake\n'}
+[54.640094] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/cmake/RobotLegConfig-version.cmake\n'}
+[54.640729] (RobotLeg) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg/share/RobotLeg/package.xml\n'}
+[54.646633] (RobotLeg) CommandEnded: {'returncode': 0}
+[54.707322] (-) TimerEvent: {}
+[54.808061] (-) TimerEvent: {}
+[54.909255] (-) TimerEvent: {}
+[54.938373] (RobotLeg) JobEnded: {'identifier': 'RobotLeg', 'rc': 0}
+[54.942392] (-) EventReactorShutdown: {}

@@ -1,0 +1,12 @@
+[0.077s] Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4
+[0.298s] [35m[1mConsolidate compiler generated dependencies of target robot_leg_wrapper[0m
+[0.416s] [ 33%] [32mBuilding CXX object CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o[0m
+[2.197s] In file included from [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:5[m[K:
+[2.198s] [01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRosWrapper.hpp:18:10:[m[K [01;31m[Kfatal error: [m[Kwalking_robot_interfaces/msg/step.hpp: No such file or directory
+[2.198s]    18 | #include [01;31m[K"walking_robot_interfaces/msg/step.hpp"[m[K
+[2.198s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.199s] compilation terminated.
+[2.207s] gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:90: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o] Error 1
+[2.208s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2
+[2.213s] gmake: *** [Makefile:146: all] Error 2
+[2.216s] Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/RobotLeg -- -j4 -l4

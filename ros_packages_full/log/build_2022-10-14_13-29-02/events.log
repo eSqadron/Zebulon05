@@ -1,0 +1,466 @@
+[0.000000] (-) TimerEvent: {}
+[0.001564] (-) JobUnselected: {'identifier': 'RobotLeg'}
+[0.002197] (-) JobUnselected: {'identifier': 'maestro_interfaces'}
+[0.003619] (-) JobUnselected: {'identifier': 'polulu_maestro'}
+[0.003852] (walking_robot_interfaces) JobQueued: {'identifier': 'walking_robot_interfaces', 'dependencies': OrderedDict()}
+[0.003971] (walking_robot_interfaces) JobStarted: {'identifier': 'walking_robot_interfaces'}
+[0.065727] (walking_robot_interfaces) JobProgress: {'identifier': 'walking_robot_interfaces', 'progress': 'cmake'}
+[0.066918] (walking_robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/walking_robot_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[0.099055] (-) TimerEvent: {}
+[0.199932] (-) TimerEvent: {}
+[0.300706] (-) TimerEvent: {}
+[0.378900] (walking_robot_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.2.0\n'}
+[0.400887] (-) TimerEvent: {}
+[0.501603] (-) TimerEvent: {}
+[0.602362] (-) TimerEvent: {}
+[0.664025] (walking_robot_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.2.0\n'}
+[0.698366] (walking_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.702527] (-) TimerEvent: {}
+[0.803209] (-) TimerEvent: {}
+[0.903983] (-) TimerEvent: {}
+[1.004902] (-) TimerEvent: {}
+[1.070312] (walking_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.101460] (walking_robot_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.102408] (walking_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.104046] (walking_robot_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.104993] (-) TimerEvent: {}
+[1.117206] (walking_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.205257] (-) TimerEvent: {}
+[1.306110] (-) TimerEvent: {}
+[1.407039] (-) TimerEvent: {}
+[1.507951] (-) TimerEvent: {}
+[1.528079] (walking_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.557980] (walking_robot_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.559004] (walking_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.560883] (walking_robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.593060] (walking_robot_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.608070] (-) TimerEvent: {}
+[1.708712] (-) TimerEvent: {}
+[1.809437] (-) TimerEvent: {}
+[1.910683] (-) TimerEvent: {}
+[2.011357] (-) TimerEvent: {}
+[2.112055] (-) TimerEvent: {}
+[2.212748] (-) TimerEvent: {}
+[2.313466] (-) TimerEvent: {}
+[2.414427] (-) TimerEvent: {}
+[2.515561] (-) TimerEvent: {}
+[2.569586] (walking_robot_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter \n'}
+[2.615718] (-) TimerEvent: {}
+[2.716421] (-) TimerEvent: {}
+[2.817155] (-) TimerEvent: {}
+[2.917888] (-) TimerEvent: {}
+[3.018651] (-) TimerEvent: {}
+[3.119347] (-) TimerEvent: {}
+[3.220074] (-) TimerEvent: {}
+[3.268407] (walking_robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[3.303608] (walking_robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.320186] (-) TimerEvent: {}
+[3.390533] (walking_robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.420358] (-) TimerEvent: {}
+[3.521040] (-) TimerEvent: {}
+[3.621729] (-) TimerEvent: {}
+[3.722434] (-) TimerEvent: {}
+[3.805654] (walking_robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.822557] (-) TimerEvent: {}
+[3.923218] (-) TimerEvent: {}
+[4.024012] (-) TimerEvent: {}
+[4.124698] (-) TimerEvent: {}
+[4.225450] (-) TimerEvent: {}
+[4.326182] (-) TimerEvent: {}
+[4.427133] (-) TimerEvent: {}
+[4.528101] (-) TimerEvent: {}
+[4.628788] (-) TimerEvent: {}
+[4.729444] (-) TimerEvent: {}
+[4.830231] (-) TimerEvent: {}
+[4.931039] (-) TimerEvent: {}
+[5.031836] (-) TimerEvent: {}
+[5.132699] (-) TimerEvent: {}
+[5.233399] (-) TimerEvent: {}
+[5.334142] (-) TimerEvent: {}
+[5.355135] (walking_robot_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[5.434330] (-) TimerEvent: {}
+[5.535052] (-) TimerEvent: {}
+[5.635739] (-) TimerEvent: {}
+[5.736447] (-) TimerEvent: {}
+[5.837174] (-) TimerEvent: {}
+[5.937865] (-) TimerEvent: {}
+[6.038545] (-) TimerEvent: {}
+[6.139265] (-) TimerEvent: {}
+[6.240230] (-) TimerEvent: {}
+[6.341015] (-) TimerEvent: {}
+[6.406483] (walking_robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.441276] (-) TimerEvent: {}
+[6.542046] (-) TimerEvent: {}
+[6.642914] (-) TimerEvent: {}
+[6.743623] (-) TimerEvent: {}
+[6.844335] (-) TimerEvent: {}
+[6.945003] (-) TimerEvent: {}
+[7.045902] (-) TimerEvent: {}
+[7.146847] (-) TimerEvent: {}
+[7.247809] (-) TimerEvent: {}
+[7.348705] (-) TimerEvent: {}
+[7.449514] (-) TimerEvent: {}
+[7.550359] (-) TimerEvent: {}
+[7.651274] (-) TimerEvent: {}
+[7.668322] (walking_robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.751469] (-) TimerEvent: {}
+[7.793958] (walking_robot_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.6", minimum required is "3.6") \n'}
+[7.823628] (walking_robot_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[7.851637] (-) TimerEvent: {}
+[7.952502] (-) TimerEvent: {}
+[7.978262] (walking_robot_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.6", minimum required is "3.5") \n'}
+[7.979298] (walking_robot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[7.980155] (walking_robot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[7.980711] (walking_robot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[8.052792] (-) TimerEvent: {}
+[8.096868] (walking_robot_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[8.152922] (-) TimerEvent: {}
+[8.253615] (-) TimerEvent: {}
+[8.306899] (walking_robot_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[8.353792] (-) TimerEvent: {}
+[8.454519] (-) TimerEvent: {}
+[8.555287] (-) TimerEvent: {}
+[8.596318] (walking_robot_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[8.612155] (walking_robot_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[8.637760] (walking_robot_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[8.655456] (-) TimerEvent: {}
+[8.756121] (-) TimerEvent: {}
+[8.850225] (walking_robot_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[8.856255] (-) TimerEvent: {}
+[8.868065] (walking_robot_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces\n'}
+[8.889262] (walking_robot_interfaces) CommandEnded: {'returncode': 0}
+[8.891229] (walking_robot_interfaces) JobProgress: {'identifier': 'walking_robot_interfaces', 'progress': 'build'}
+[8.893946] (walking_robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[8.956541] (-) TimerEvent: {}
+[9.057414] (-) TimerEvent: {}
+[9.096758] (walking_robot_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[9.153355] (walking_robot_interfaces) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[9.157583] (-) TimerEvent: {}
+[9.199675] (walking_robot_interfaces) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_copy_walking_robot_interfaces\n'}
+[9.257824] (-) TimerEvent: {}
+[9.360532] (-) TimerEvent: {}
+[9.461536] (-) TimerEvent: {}
+[9.562271] (-) TimerEvent: {}
+[9.663057] (-) TimerEvent: {}
+[9.763966] (-) TimerEvent: {}
+[9.864658] (-) TimerEvent: {}
+[9.965444] (-) TimerEvent: {}
+[10.066233] (-) TimerEvent: {}
+[10.167283] (-) TimerEvent: {}
+[10.269317] (-) TimerEvent: {}
+[10.371210] (-) TimerEvent: {}
+[10.472978] (-) TimerEvent: {}
+[10.574865] (-) TimerEvent: {}
+[10.676771] (-) TimerEvent: {}
+[10.780847] (-) TimerEvent: {}
+[10.866622] (walking_robot_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[10.876749] (walking_robot_interfaces) StdoutLine: {'line': b'creating walking_robot_interfaces.egg-info\n'}
+[10.878651] (walking_robot_interfaces) StdoutLine: {'line': b'writing walking_robot_interfaces.egg-info/PKG-INFO\n'}
+[10.880125] (walking_robot_interfaces) StdoutLine: {'line': b'writing dependency_links to walking_robot_interfaces.egg-info/dependency_links.txt\n'}
+[10.880873] (-) TimerEvent: {}
+[10.885176] (walking_robot_interfaces) StdoutLine: {'line': b'writing top-level names to walking_robot_interfaces.egg-info/top_level.txt\n'}
+[10.888017] (walking_robot_interfaces) StdoutLine: {'line': b"writing manifest file 'walking_robot_interfaces.egg-info/SOURCES.txt'\n"}
+[10.906313] (walking_robot_interfaces) StdoutLine: {'line': b"reading manifest file 'walking_robot_interfaces.egg-info/SOURCES.txt'\n"}
+[10.910232] (walking_robot_interfaces) StdoutLine: {'line': b"writing manifest file 'walking_robot_interfaces.egg-info/SOURCES.txt'\n"}
+[10.960207] (walking_robot_interfaces) StdoutLine: {'line': b'[  6%] Built target walking_robot_interfaces__cpp\n'}
+[10.981189] (-) TimerEvent: {}
+[11.037233] (walking_robot_interfaces) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[11.043360] (walking_robot_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[11.079649] (walking_robot_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/walking_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/walking_robot_interfaces/msg/detail/step__functions.c.o\x1b[0m\n'}
+[11.081433] (-) TimerEvent: {}
+[11.090458] (walking_robot_interfaces) StdoutLine: {'line': b'[ 16%] Built target ament_cmake_python_build_walking_robot_interfaces_egg\n'}
+[11.158949] (walking_robot_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[11.181686] (-) TimerEvent: {}
+[11.282669] (-) TimerEvent: {}
+[11.383754] (-) TimerEvent: {}
+[11.459696] (walking_robot_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libwalking_robot_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[11.483962] (-) TimerEvent: {}
+[11.585574] (-) TimerEvent: {}
+[11.687586] (-) TimerEvent: {}
+[11.697101] (walking_robot_interfaces) StdoutLine: {'line': b'[ 22%] Built target walking_robot_interfaces__rosidl_generator_c\n'}
+[11.755719] (walking_robot_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[11.787764] (-) TimerEvent: {}
+[11.889262] (-) TimerEvent: {}
+[11.990833] (-) TimerEvent: {}
+[12.092502] (-) TimerEvent: {}
+[12.194120] (-) TimerEvent: {}
+[12.295775] (-) TimerEvent: {}
+[12.399090] (-) TimerEvent: {}
+[12.502295] (-) TimerEvent: {}
+[12.582114] (walking_robot_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/walking_robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/walking_robot_interfaces/msg/detail/step__type_support.cpp.o\x1b[0m\n'}
+[12.602473] (-) TimerEvent: {}
+[12.632765] (walking_robot_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/walking_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/walking_robot_interfaces/msg/step__type_support.cpp.o\x1b[0m\n'}
+[12.654865] (walking_robot_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/walking_robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/walking_robot_interfaces/msg/detail/dds_fastrtps/step__type_support.cpp.o\x1b[0m\n'}
+[12.702767] (-) TimerEvent: {}
+[12.803679] (-) TimerEvent: {}
+[12.904465] (-) TimerEvent: {}
+[13.005366] (-) TimerEvent: {}
+[13.106541] (-) TimerEvent: {}
+[13.208175] (-) TimerEvent: {}
+[13.309260] (-) TimerEvent: {}
+[13.326655] (walking_robot_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/walking_robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/walking_robot_interfaces/msg/detail/step__type_support_c.cpp.o\x1b[0m\n'}
+[13.409502] (-) TimerEvent: {}
+[13.511303] (-) TimerEvent: {}
+[13.613335] (-) TimerEvent: {}
+[13.715778] (-) TimerEvent: {}
+[13.817535] (-) TimerEvent: {}
+[13.919857] (-) TimerEvent: {}
+[14.021903] (-) TimerEvent: {}
+[14.124174] (-) TimerEvent: {}
+[14.226561] (-) TimerEvent: {}
+[14.328379] (-) TimerEvent: {}
+[14.430677] (-) TimerEvent: {}
+[14.474023] (walking_robot_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX shared library libwalking_robot_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[14.531005] (-) TimerEvent: {}
+[14.633617] (-) TimerEvent: {}
+[14.734743] (-) TimerEvent: {}
+[14.740818] (walking_robot_interfaces) StdoutLine: {'line': b'[ 41%] Built target walking_robot_interfaces__rosidl_typesupport_cpp\n'}
+[14.818968] (walking_robot_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[14.835062] (-) TimerEvent: {}
+[14.936257] (-) TimerEvent: {}
+[15.037759] (-) TimerEvent: {}
+[15.139815] (-) TimerEvent: {}
+[15.241383] (-) TimerEvent: {}
+[15.296023] (walking_robot_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libwalking_robot_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[15.341691] (-) TimerEvent: {}
+[15.343951] (walking_robot_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libwalking_robot_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[15.441990] (-) TimerEvent: {}
+[15.544290] (-) TimerEvent: {}
+[15.567129] (walking_robot_interfaces) StdoutLine: {'line': b'[ 51%] Built target walking_robot_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[15.640922] (walking_robot_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[15.644702] (-) TimerEvent: {}
+[15.746353] (-) TimerEvent: {}
+[15.774378] (walking_robot_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libwalking_robot_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[15.815791] (walking_robot_interfaces) StdoutLine: {'line': b'[ 58%] Built target walking_robot_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[15.846553] (-) TimerEvent: {}
+[15.948259] (-) TimerEvent: {}
+[16.050960] (-) TimerEvent: {}
+[16.153052] (-) TimerEvent: {}
+[16.190608] (walking_robot_interfaces) StdoutLine: {'line': b'[ 58%] Built target walking_robot_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[16.253270] (-) TimerEvent: {}
+[16.354170] (-) TimerEvent: {}
+[16.455148] (-) TimerEvent: {}
+[16.492181] (walking_robot_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/walking_robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/walking_robot_interfaces/msg/detail/step__type_support.c.o\x1b[0m\n'}
+[16.555359] (-) TimerEvent: {}
+[16.656177] (-) TimerEvent: {}
+[16.689556] (walking_robot_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking C shared library libwalking_robot_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[16.756574] (-) TimerEvent: {}
+[16.857930] (-) TimerEvent: {}
+[16.861716] (walking_robot_interfaces) StdoutLine: {'line': b'[ 64%] Built target walking_robot_interfaces__rosidl_typesupport_introspection_c\n'}
+[16.930238] (walking_robot_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/walking_robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/walking_robot_interfaces/msg/step__type_support.cpp.o\x1b[0m\n'}
+[16.958112] (-) TimerEvent: {}
+[17.058909] (-) TimerEvent: {}
+[17.104499] (walking_robot_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libwalking_robot_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[17.159193] (-) TimerEvent: {}
+[17.260109] (-) TimerEvent: {}
+[17.298016] (walking_robot_interfaces) StdoutLine: {'line': b'[ 70%] Built target walking_robot_interfaces__rosidl_typesupport_c\n'}
+[17.360285] (-) TimerEvent: {}
+[17.399567] (walking_robot_interfaces) StdoutLine: {'line': b'[ 70%] Built target walking_robot_interfaces\n'}
+[17.460493] (-) TimerEvent: {}
+[17.507648] (walking_robot_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[17.560656] (-) TimerEvent: {}
+[17.661342] (-) TimerEvent: {}
+[17.762191] (-) TimerEvent: {}
+[17.862936] (-) TimerEvent: {}
+[17.963597] (-) TimerEvent: {}
+[18.064295] (-) TimerEvent: {}
+[18.164982] (-) TimerEvent: {}
+[18.265653] (-) TimerEvent: {}
+[18.366354] (-) TimerEvent: {}
+[18.467121] (-) TimerEvent: {}
+[18.568108] (-) TimerEvent: {}
+[18.668913] (-) TimerEvent: {}
+[18.769709] (-) TimerEvent: {}
+[18.870450] (-) TimerEvent: {}
+[18.971273] (-) TimerEvent: {}
+[19.072355] (-) TimerEvent: {}
+[19.173062] (-) TimerEvent: {}
+[19.273697] (-) TimerEvent: {}
+[19.374350] (-) TimerEvent: {}
+[19.475465] (-) TimerEvent: {}
+[19.576200] (-) TimerEvent: {}
+[19.677082] (-) TimerEvent: {}
+[19.777991] (-) TimerEvent: {}
+[19.778646] (walking_robot_interfaces) StdoutLine: {'line': b'[ 74%] Built target walking_robot_interfaces__py\n'}
+[19.878259] (-) TimerEvent: {}
+[19.884979] (walking_robot_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/walking_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/walking_robot_interfaces/msg/_step_s.c.o\x1b[0m\n'}
+[19.978432] (-) TimerEvent: {}
+[20.079188] (-) TimerEvent: {}
+[20.179996] (-) TimerEvent: {}
+[20.280726] (-) TimerEvent: {}
+[20.381513] (-) TimerEvent: {}
+[20.482310] (-) TimerEvent: {}
+[20.538039] (walking_robot_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/walking_robot_interfaces/libwalking_robot_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[20.582595] (-) TimerEvent: {}
+[20.683467] (-) TimerEvent: {}
+[20.759657] (walking_robot_interfaces) StdoutLine: {'line': b'[ 80%] Built target walking_robot_interfaces__rosidl_generator_py\n'}
+[20.783683] (-) TimerEvent: {}
+[20.870510] (walking_robot_interfaces) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/walking_robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/walking_robot_interfaces/_walking_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[20.872046] (walking_robot_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/walking_robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/walking_robot_interfaces/_walking_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[20.876280] (walking_robot_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/walking_robot_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/walking_robot_interfaces/_walking_robot_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[20.883878] (-) TimerEvent: {}
+[20.985238] (-) TimerEvent: {}
+[21.086972] (-) TimerEvent: {}
+[21.188836] (-) TimerEvent: {}
+[21.290796] (-) TimerEvent: {}
+[21.392863] (-) TimerEvent: {}
+[21.397777] (walking_robot_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[21.417679] (walking_robot_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[21.463739] (walking_robot_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[21.493218] (-) TimerEvent: {}
+[21.595388] (walking_robot_interfaces) StdoutLine: {'line': b'[100%] Built target walking_robot_interfaces__rosidl_typesupport_c__pyext\n'}
+[21.597025] (-) TimerEvent: {}
+[21.621241] (walking_robot_interfaces) StdoutLine: {'line': b'[100%] Built target walking_robot_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[21.665179] (walking_robot_interfaces) StdoutLine: {'line': b'[100%] Built target walking_robot_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[21.697232] (-) TimerEvent: {}
+[21.715677] (walking_robot_interfaces) CommandEnded: {'returncode': 0}
+[21.797480] (-) TimerEvent: {}
+[21.898217] (-) TimerEvent: {}
+[21.998924] (-) TimerEvent: {}
+[22.100222] (-) TimerEvent: {}
+[22.127299] (walking_robot_interfaces) JobProgress: {'identifier': 'walking_robot_interfaces', 'progress': 'install'}
+[22.168064] (walking_robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces'], 'cwd': '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'k'), ('SSH_CLIENT', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 22'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/lib:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/k'), ('OLDPWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'k'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('PWD', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/walking_robot_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '2a02:a31a:a441:4780:6d5b:b8fe:222b:cef 57373 2a02:a31a:a441:4780:4471:7ac8:ac68:507f 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim/local/lib/python3.10/dist-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro/lib/python3.10/site-packages:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/turtlesim:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/RobotLeg:/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/polulu_maestro:/opt/ros/humble')]), 'shell': False}
+[22.200423] (-) TimerEvent: {}
+[22.211552] (walking_robot_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[22.213293] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/ament_index/resource_index/rosidl_interfaces/walking_robot_interfaces\n'}
+[22.215007] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[22.216076] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[22.217007] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/step.h\n'}
+[22.218637] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[22.220191] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[22.221231] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__type_support.h\n'}
+[22.222817] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__functions.h\n'}
+[22.224433] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__struct.h\n'}
+[22.225947] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__functions.c\n'}
+[22.228220] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/library_path.sh\n'}
+[22.229799] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/library_path.dsv\n'}
+[22.231931] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_generator_c.so\n'}
+[22.234898] (walking_robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_generator_c.so" to ""\n'}
+[22.235415] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[22.235975] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[22.236674] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[22.238343] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[22.239047] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__rosidl_typesupport_fastrtps_c.h\n'}
+[22.241082] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[22.244321] (walking_robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[22.244876] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[22.245304] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[22.245979] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[22.247677] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[22.248352] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__type_support.c\n'}
+[22.250080] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__rosidl_typesupport_introspection_c.h\n'}
+[22.252323] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[22.255383] (walking_robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[22.256023] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_c.so\n'}
+[22.258952] (walking_robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[22.259532] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[22.260003] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[22.260529] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/step.hpp\n'}
+[22.262035] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[22.262670] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__struct.hpp\n'}
+[22.264455] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__traits.hpp\n'}
+[22.266010] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__builder.hpp\n'}
+[22.267709] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[22.268265] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[22.268898] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[22.270522] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[22.271197] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[22.272846] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/dds_fastrtps\n'}
+[22.274258] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[22.277461] (walking_robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[22.278022] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces\n'}
+[22.278454] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg\n'}
+[22.278987] (walking_robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail\n'}
+[22.279675] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__rosidl_typesupport_introspection_cpp.hpp\n'}
+[22.281495] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__type_support.cpp\n'}
+[22.283416] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[22.286531] (walking_robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[22.287144] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_cpp.so\n'}
+[22.290147] (walking_robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[22.290776] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/pythonpath.sh\n'}
+[22.292356] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/pythonpath.dsv\n'}
+[22.293823] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces-0.0.0-py3.10.egg-info\n'}
+[22.295300] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[22.297138] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[22.298715] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[22.300350] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[22.300826] (-) TimerEvent: {}
+[22.302158] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces\n'}
+[22.303343] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.305417] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/libwalking_robot_interfaces__rosidl_generator_py.so\n'}
+[22.307045] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg\n'}
+[22.308107] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg/_step_s.c\n'}
+[22.309663] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg/__init__.py\n'}
+[22.311236] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg/_step.py\n'}
+[22.313017] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/_walking_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[22.314704] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/__init__.py\n'}
+[22.316279] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.318306] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.320307] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/_walking_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[22.322075] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/_walking_robot_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[22.401008] (-) TimerEvent: {}
+[22.501754] (-) TimerEvent: {}
+[22.503532] (walking_robot_interfaces) StdoutLine: {'line': b"Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces'...\n"}
+[22.504673] (walking_robot_interfaces) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/__init__.py'...\n"}
+[22.505740] (walking_robot_interfaces) StdoutLine: {'line': b"Listing '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg'...\n"}
+[22.507130] (walking_robot_interfaces) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg/__init__.py'...\n"}
+[22.508238] (walking_robot_interfaces) StdoutLine: {'line': b"Compiling '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/msg/_step.py'...\n"}
+[22.529937] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.533436] (walking_robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[22.535323] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.538901] (walking_robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[22.540836] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.544335] (walking_robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/local/lib/python3.10/dist-packages/walking_robot_interfaces/walking_robot_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[22.545022] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_generator_py.so\n'}
+[22.548231] (walking_robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/lib/libwalking_robot_interfaces__rosidl_generator_py.so" to ""\n'}
+[22.549193] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/msg/Step.idl\n'}
+[22.550790] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/msg/Step.msg\n'}
+[22.552844] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/ament_index/resource_index/package_run_dependencies/walking_robot_interfaces\n'}
+[22.555084] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/ament_index/resource_index/parent_prefix_path/walking_robot_interfaces\n'}
+[22.556883] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/ament_prefix_path.sh\n'}
+[22.558468] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/ament_prefix_path.dsv\n'}
+[22.560175] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/path.sh\n'}
+[22.561669] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/environment/path.dsv\n'}
+[22.563221] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/local_setup.bash\n'}
+[22.564883] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/local_setup.sh\n'}
+[22.566486] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/local_setup.zsh\n'}
+[22.568200] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/local_setup.dsv\n'}
+[22.569817] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/package.dsv\n'}
+[22.571865] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/ament_index/resource_index/packages/walking_robot_interfaces\n'}
+[22.574045] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_generator_cExport.cmake\n'}
+[22.576145] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[22.578242] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[22.580341] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[22.582448] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[22.584531] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[22.586652] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[22.588791] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[22.590892] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_generator_cppExport.cmake\n'}
+[22.593000] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[22.595026] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[22.597280] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[22.599294] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[22.601466] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[22.601918] (-) TimerEvent: {}
+[22.603575] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[22.605763] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_generator_pyExport.cmake\n'}
+[22.607766] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/export_walking_robot_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[22.609648] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[22.611342] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[22.613302] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[22.615110] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[22.616866] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[22.618656] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[22.620494] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[22.622242] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfacesConfig.cmake\n'}
+[22.623785] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/cmake/walking_robot_interfacesConfig-version.cmake\n'}
+[22.625418] (walking_robot_interfaces) StdoutLine: {'line': b'-- Installing: /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/share/walking_robot_interfaces/package.xml\n'}
+[22.633584] (walking_robot_interfaces) CommandEnded: {'returncode': 0}
+[22.702404] (-) TimerEvent: {}
+[22.803148] (-) TimerEvent: {}
+[22.904245] (-) TimerEvent: {}
+[23.004913] (-) TimerEvent: {}
+[23.105714] (-) TimerEvent: {}
+[23.206504] (-) TimerEvent: {}
+[23.218937] (walking_robot_interfaces) JobEnded: {'identifier': 'walking_robot_interfaces', 'rc': 0}
+[23.221862] (-) EventReactorShutdown: {}
