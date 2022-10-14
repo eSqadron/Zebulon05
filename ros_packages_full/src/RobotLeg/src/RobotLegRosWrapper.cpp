@@ -29,7 +29,7 @@ void RobotLegRosWrapper::step_callback(const walking_robot_interfaces::msg::Step
         RCLCPP_INFO(this->get_logger(), "previous step not finished! %d", msg.type);
     }
     else{
-        robo_leg.start_prforming_step();
+        robo_leg.start_performing_step();
     }
 }
 
