@@ -68,3 +68,7 @@ latech/cpp.toc
 ros_packages_full/src/RobotLeg/.idea
 ros_packages_full/src/RobotLeg/cmake-build-debug
 ros_packages_full/src/polulu_maestro/polulu_maestro/.idea
+ros_packages_full/log
+ros_packages_full/install
+ros_packages_full/build
+
