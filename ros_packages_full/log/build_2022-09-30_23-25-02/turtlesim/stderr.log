@@ -1,8 +1,0 @@
-gmake[2]: *** [CMakeFiles/draw_square.dir/build.make:76: CMakeFiles/draw_square.dir/tutorials/draw_square.cpp.o] Interrupt
-gmake[2]: *** [CMakeFiles/turtle_teleop_key.dir/build.make:76: CMakeFiles/turtle_teleop_key.dir/tutorials/teleop_turtle_key.cpp.o] Interrupt
-gmake[2]: *** [CMakeFiles/turtlesim_node.dir/build.make:80: CMakeFiles/turtlesim_node.dir/src/turtlesim.cpp.o] Interrupt
-gmake[2]: *** [CMakeFiles/turtlesim_node.dir/build.make:94: CMakeFiles/turtlesim_node.dir/src/turtle.cpp.o] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:626: CMakeFiles/turtle_teleop_key.dir/all] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:653: CMakeFiles/draw_square.dir/all] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:599: CMakeFiles/turtlesim_node.dir/all] Interrupt
-gmake: *** [Makefile:146: all] Interrupt

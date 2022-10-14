@@ -1,7 +1,0 @@
-[01m[K/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/RobotLegRosWrapper.cpp:14:10:[m[K [01;31m[Kfatal error: [m[Kmaestro_interfaces/msg/maestrotarget.hpp: No such file or directory
-   14 | #include [01;31m[K"maestro_interfaces/msg/maestrotarget.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/robot_leg_wrapper.dir/build.make:76: CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_leg_wrapper.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
