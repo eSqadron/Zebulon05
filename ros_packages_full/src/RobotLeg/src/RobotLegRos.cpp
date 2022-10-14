@@ -89,7 +89,7 @@ void RobotLegRos::publish_position(std::array<unsigned int, 3> new_servo_pos){
         auto message1 = maestro_interfaces::msg::MaestroTarget();
         auto message2 = maestro_interfaces::msg::MaestroTarget();
         auto message3 = maestro_interfaces::msg::MaestroTarget();
-        int max_spd = 160;
+        int max_spd = 140;
         message1.speed = max_spd;
         message1.acceleration = 0;
         message2.speed = max_spd;
