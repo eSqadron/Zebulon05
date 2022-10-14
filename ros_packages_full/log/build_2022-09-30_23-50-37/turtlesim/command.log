@@ -1,4 +1,0 @@
-Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim -- -j4 -l4
-Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim -- -j4 -l4
-Invoking command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim
-Invoked command in '/home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/build/turtlesim

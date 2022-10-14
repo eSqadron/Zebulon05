@@ -1,4 +1,0 @@
-[console_scripts]
-maestro_test_pub = polulu_maestro.MaestroTestPub:main
-maestro_wrapper = polulu_maestro.MaestroRosWrapper:main
-
