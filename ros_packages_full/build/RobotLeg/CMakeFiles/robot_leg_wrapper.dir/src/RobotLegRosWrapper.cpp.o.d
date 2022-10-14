@@ -621,6 +621,10 @@ CMakeFiles/robot_leg_wrapper.dir/src/RobotLegRosWrapper.cpp.o: \
  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__struct.hpp \
  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__builder.hpp \
  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/maestro_interfaces/include/maestro_interfaces/maestro_interfaces/msg/detail/current_positions__traits.hpp \
+ /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/step.hpp \
+ /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__struct.hpp \
+ /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__builder.hpp \
+ /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/install/walking_robot_interfaces/include/walking_robot_interfaces/walking_robot_interfaces/msg/detail/step__traits.hpp \
  /home/k/Desktop/Zeb05/Zebulon05/ros_packages_full/src/RobotLeg/src/../include/RobotLeg/RobotLegRos.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
