@@ -71,4 +71,6 @@ ros_packages_full/src/polulu_maestro/polulu_maestro/.idea
 ros_packages_full/log
 ros_packages_full/install
 ros_packages_full/build
+ros_packages_full/src/three_legs_controller/.idea
+ros_packages_full/src/three_legs_controller/cmake-build-debug
 
