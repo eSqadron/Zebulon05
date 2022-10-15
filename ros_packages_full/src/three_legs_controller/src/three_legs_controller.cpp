@@ -29,25 +29,30 @@ class ThreeLegsController : public rclcpp::Node
 {
 public:
     ThreeLegsController()
-  : Node("three_legs_controller"), count_(0)
-  {
-    publisher_ = this->create_publisher<walking_robot_interfaces::msg::Step>("step_1", 10);
-    timer_ = this->create_wall_timer(
-      5000ms, std::bind(&ThreeLegsController::timer_callback, this));
-  }
+    : Node("three_legs_controller"), count_(0)
+    {
+        step_1_publisher_ = this->create_publisher<walking_robot_interfaces::msg::Step>("step_1", 10);
+        step_2_publisher_ = this->create_publisher<walking_robot_interfaces::msg::Step>("step_2", 10);
+        step_3_publisher_ = this->create_publisher<walking_robot_interfaces::msg::Step>("step_3", 10);
+        timer_ = this->create_wall_timer(5000ms, std::bind(&ThreeLegsController::timer_callback, this));
+    }
 
 private:
-  void timer_callback()
-  {
-    auto message = walking_robot_interfaces::msg::Step();
+    void timer_callback()
+    {
+        auto message = walking_robot_interfaces::msg::Step();
+        message.step_dir = 90;
+        message.step_length = 100;
+        message.step_height = 100;
 
+        step_1_publisher_->publish(message);
+    }
 
-    publisher_->publish(message);
-  }
-
-  rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Publisher<walking_robot_interfaces::msg::Step>::SharedPtr publisher_;
-  size_t count_;
+    rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::Publisher<walking_robot_interfaces::msg::Step>::SharedPtr step_1_publisher_;
+    rclcpp::Publisher<walking_robot_interfaces::msg::Step>::SharedPtr step_2_publisher_;
+    rclcpp::Publisher<walking_robot_interfaces::msg::Step>::SharedPtr step_3_publisher_;
+    size_t count_;
 };
 
 int main(int argc, char * argv[])

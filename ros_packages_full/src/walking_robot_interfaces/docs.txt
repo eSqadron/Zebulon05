@@ -1,0 +1,6 @@
+Step.msg:
+type - type of step
+0 - full step (lift leg and move it forward; put leg on the ground; move it to the back; lift it up; move to the neutral position and put on the ground)
+1 - forward step (lift leg and move it forward; put leg on the ground)
+2 - push off (move leg to the back)
+3 - reset leg (lift leg up and return to neutral position; put it on the ground)
