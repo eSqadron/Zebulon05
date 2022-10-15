@@ -40,7 +40,7 @@ public:
 
     void publish_position(std::array<unsigned int, 3> new_servo_pos);
 
-    std::vector<std::array<unsigned int, 3>> interpolate_step();
+    std::vector<std::array<unsigned int, 3>> interpolate_step(short unsigned int step_type, short int step_ang, int step_length, int step_height);
 
     void write_last_known_positions(std::array<short unsigned int, 24> new_last_known_pos){
         last_known_pos = new_last_known_pos;
@@ -51,7 +51,7 @@ public:
     }
 
     void perform_step();
-    void start_performing_step();
+    void start_performing_step(short unsigned int step_type, short int step_ang, int step_length, int step_height);
     bool is_step_being_performed();
 
 //    void do_step(int step_length, int step_height);

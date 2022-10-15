@@ -12,25 +12,34 @@
 //
 //}
 
-std::vector<std::array<unsigned int, 3>> RobotLegRos::interpolate_step(){
+std::vector<std::array<unsigned int, 3>> RobotLegRos::interpolate_step(short unsigned int step_type, short int step_ang, int step_length, int step_height){
+    // step ang i step_length jest bez sensu, powinno być jedno i z góry narzucony rozstaw nóg
+    // chyba że ma się poruszać w stronę nogi a nie zawsze w stronę pomiędzy nogami
     std::vector<std::array<unsigned int, 3>> result;
-    result.push_back({1486 * 4, 1913 * 4, 2400 * 4});
+    // 2496 * 4: -90
+    // 496 * 4: 90
 
-    result.push_back({981 * 4, 2195 * 4, 2107 * 4});
-//    result.push_back({981 * 4, 1913 * 4, 2400 * 4});
-//    result.push_back({1991 * 4, 1913 * 4, 2400 * 4});
-//    result.push_back({1486 * 4, 2195 * 4, 2107 * 4});
+    if(step_type == 0) {
+        result.push_back({1486 * 4, 1913 * 4, 2400 * 4}); // inverse_kinematics(0, 100, 0) angle, leg_length, leg_height
+        // leg_length = step_ang/sin(step_type)
+        // leg_height =  step_height
 
-    result.push_back({1486 * 4, 1913 * 4, 2400 * 4});
+        result.push_back({981 * 4, 2195 * 4, 2107 * 4}); // inverse_kinematics(45, 100, 100)
+        //result.push_back({981 * 4, 1913 * 4, 2400 * 4}); // inverse_kinematics(45, 100, 0)
+        //result.push_back({1991 * 4, 1913 * 4, 2400 * 4}); // inverse_kinematics(-45, 100, 0)
+        //result.push_back({1486 * 4, 2195 * 4, 2107 * 4}); // inverse_kinematics(0, 100, 100)
+
+        result.push_back({1486 * 4, 1913 * 4, 2400 * 4}); // inverse_kinematics(0, 100, 0)
+    }
 
     return result;
 }
 
 
-void RobotLegRos::start_performing_step(){
+void RobotLegRos::start_performing_step(short unsigned int step_type, short int step_ang, int step_length, int step_height){
     if(step_stage_==idle){
         step_stage_ = start_step;
-        interpolated_step_stages_ = interpolate_step();
+        interpolated_step_stages_ = interpolate_step(step_type, step_ang, step_length, step_height);
     }
     else{
         throw std::invalid_argument("received negative value");
