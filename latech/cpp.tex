@@ -45,9 +45,10 @@
 }
 \tableofcontents
 
-\section{Noga robota}
+\section{Model Matematyczny}
 Noga ma 3 stopnie swobody. Wszystkie są typu obrotowego, przy czym dwie obracają się dookoła osi poziomej, a jedna dookoła osi pionowej. Są to te same osi obrotu co w przypadku ramienia robotycznego typu antromorficznego.
-\subsection{Model matematyczny w przestrzeni kartezjańskiej}
+\subsection{Noga robota typu RRR}
+Jest to noga o 3 rotacyjnych stopniach swobody, przy czym 1 stopień obraca się dookoła osi z, a 2 stopnie dookoła osi y. Model matematyczny takiej nogi, a co za tym idzie także jej kinematyka, będzie identyczny jak model ramienia robotycznego typu antropomorficznego (zwanego także "angular" bądź "jointed").
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{img/math_model.jpg}
@@ -216,7 +217,27 @@ a_{temp} = a_2 \cos{\theta_1} + \sqrt{a_3^2 - (a_2 \sin{\theta_1 + h_0 - h_1 - Z
 
 Niestety wzór \ref{theta_1_eq2} nie pozwala jednoznacznie wyznaczyć jawnego $\theta_1$. Przybliżanie metodą Taylora także się w tym przypadku nie sprawdzi. 
 
-\subsection{Model matematyczny w przestrzeni cylindrycznej}
+\subsection{Cały Robot}
+Zwykle konstruując roboty wzorujemy się na zwierzętach występujących w naturze. W tym przypadku nie mamy jednak tego luksusu, dlatego na początek należy przyjąć jakieś najbardziej intuicyjne założenie. Dlatego też uznałem że najlepszym rozwiązaniem będzie rozmieścić nogi na jednej płaszczyźnie w równych odstępach - co $120\deg$.
+
+W poprzednim podrozdziale przyjąłem osie układu relatywne do ułożenia początkowego nogi robota. Oznacza to że robot trójnożny będzie miał 3 niezależne osie $x$ i 3 niezależne osie $y$, tylko oś $z$ zgadza się między kolejnymi nogami. Idzie za tym konieczność stworzenia pewnej metody "obracania" wszystkich tych osi $x$ i $y$ do jednego zunifikowanego układu współżędnych. Pozwoli to obliczyć konematykę całego robota.
+
+\subsubsection{Matematyka kroku}
+Aby móc w prosty sposób napisać później algorytmy chodu i móc się skupić na kolejności przestawiania nóg przez robota, długości i wysokości kroku i innych tego typu aspektach, należy teraz dobrze ten krok sparametryzować. Na podstawie moich poprzednich doświadczeń z podobnymi projektami, uważam że najbardziej intuicyjne będzie sparametryzowanie kroku do:
+\begin{itemize}
+\item wartości kąta pomiędzy kierunkiem "do przodu" kroku a osią $x$ danej nogi
+\item długości kroku
+\item wysokości kroku
+\end{itemize}
+
+
+
+\section{Model CAD i druk 3D}
+
+\section{Środowisko ROS}
+\subsection{Schemat implementacji}
+
+\section{Algorytm Chodu}
 
 \begin{thebibliography}{9}
 \bibitem{DH_AA_article}
