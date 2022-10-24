@@ -67,7 +67,7 @@ private:
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_1_publisher_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_2_publisher_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_3_publisher_;
-    //size_t count_;
+    size_t count_;
     int counter;
 };
 
