@@ -134,7 +134,7 @@ std::array<float, 3> RobotLegRos::inverse_kinematics(const std::array<float, 3> 
     return result;
 }
 
-void RobotLegRos::move_leg(float x, float y, float z){
+void RobotLegRos::move_leg_xyz(float x, float y, float z){
     publish_servo_position(rad2qns(inverse_kinematics({x, y, z})));
 }
 

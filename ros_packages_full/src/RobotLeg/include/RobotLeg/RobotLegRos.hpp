@@ -43,7 +43,7 @@ public:
         a_3_ = a3;
     }
 
-    void move_leg(float x, float y, float z);
+    void move_leg_xyz(float x, float y, float z);
 
     void publish_servo_position(std::array<unsigned int, 3> new_servo_pos);
 
