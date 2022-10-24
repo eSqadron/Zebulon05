@@ -101,7 +101,11 @@
 //}
 
 unsigned int rad2qns(float rad){
-    return rad // TODO
+    // 2496 * 4: -90, -PI/2
+    // 496 * 4: 90, PI/2
+    // 1496 * 4: 0, 0
+
+    return (int) (rad * 1000)/(PI/2) + 1496;
 }
 
 bool RobotLegRos::is_step_being_performed(){
@@ -135,7 +139,8 @@ std::array<float, 3> RobotLegRos::inverse_kinematics(const std::array<float, 3> 
 }
 
 void RobotLegRos::move_leg_xyz(float x, float y, float z){
-    publish_servo_position(rad2qns(inverse_kinematics({x, y, z})));
+    std::array<float, 3> inv_k = inverse_kinematics({x, y, z});
+    publish_servo_position({rad2qns(inv_k[0]), rad2qns(inv_k[1]), rad2qns(inv_k[2])});
 }
 
 void RobotLegRos::publish_servo_position(std::array<unsigned int, 3> new_servo_pos){

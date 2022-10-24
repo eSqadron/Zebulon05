@@ -43,19 +43,24 @@ private:
     void timer_callback()
     {
         auto message = geometry_msgs::msg::Point();
-        if(counter == 0) {
-            message.x = 100;
-            message.y = 100;
-            message.z = 100;
-        } else if (counter == 1){
-            message.x = 100;
-            message.y = 100;
-            message.z = 0;
-        } else if (counter == 2){
-            message.x = 0;
-            message.y = 0;
-            message.z = 0;
-        }
+        //robo_leg.set_physical_params(40, 55, 125, 180);
+        message.x = 55 + 125 + 180;
+        message.y = 0;
+        message.z = -40;
+
+//        if(counter == 0) {
+//            message.x = 100;
+//            message.y = 100;
+//            message.z = 100;
+//        } else if (counter == 1){
+//            message.x = 100;
+//            message.y = 100;
+//            message.z = 0;
+//        } else if (counter == 2){
+//            message.x = 0;
+//            message.y = 0;
+//            message.z = 0;
+//        }
 
 
         step_1_publisher_->publish(message);
