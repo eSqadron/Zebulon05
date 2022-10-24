@@ -115,11 +115,11 @@ unsigned int rad2qns(float rad){
 
 std::array<float, 3> RobotLegRos::forward_kinematics(const std::array<float, 3> angles_deg){
     //std::array<float, 3> angles_deg = {quarter_nano_seconds_to_rad(angles[0]), quarter_nano_seconds_to_rad(angles[1]), quarter_nano_seconds_to_rad(angles[2])};
-    std::array<int, 3> result;
-    int a_temp = a_2_ * (int) cos(angles_deg[1]) + a_3_ * (int) cos(angles_deg[2] - angles_deg[1]) + a_1_;
-    result[0] = a_temp * (int) cos(angles_deg[0]);
-    result[1] = a_temp * (int) sin(angles_deg[0]);
-    result[2] = a_2_ * (int) sin(angles_deg[1]) - a_3_ * (int) sin(angles_deg[2] - angles_deg[1]);
+    std::array<float, 3> result;
+    float a_temp = a_2_ * cos(angles_deg[1]) + a_3_ * cos(angles_deg[2] - angles_deg[1]) + a_1_;
+    result[0] = a_temp * cos(angles_deg[0]);
+    result[1] = a_temp * sin(angles_deg[0]);
+    result[2] = a_2_ * sin(angles_deg[1]) - a_3_ * sin(angles_deg[2] - angles_deg[1]);
 
     return result;
 }
