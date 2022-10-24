@@ -108,10 +108,10 @@ unsigned int rad2qns(float rad){
     return (int) (rad * 1000)/(PI/2) + 1496;
 }
 
-bool RobotLegRos::is_step_being_performed(){
-    if(step_stage_ != idle) return true;
-    return false;
-}
+//bool RobotLegRos::is_step_being_performed(){
+//    //if(step_stage_ != idle) return true;
+//    return false;
+//}
 
 std::array<float, 3> RobotLegRos::forward_kinematics(const std::array<float, 3> angles_deg){
     //std::array<float, 3> angles_deg = {quarter_nano_seconds_to_rad(angles[0]), quarter_nano_seconds_to_rad(angles[1]), quarter_nano_seconds_to_rad(angles[2])};

@@ -47,7 +47,7 @@ public:
 
     void publish_servo_position(std::array<unsigned int, 3> new_servo_pos);
 
-    std::array<int, 3> forward_kinematics(const std::array<int, 3> angles);
+    std::array<float, 3> forward_kinematics(const std::array<int, 3> angles_deg);
     std::array<float, 3> inverse_kinematics(const std::array<float, 3> xyz_pos);
 
     //std::vector<std::array<unsigned int, 3>> interpolate_step(short unsigned int step_type, short int step_ang, int step_length, int step_height);
@@ -62,7 +62,7 @@ public:
 
 //    void perform_step();
 //    void start_performing_step(short unsigned int step_type, short int step_ang, int step_length, int step_height);
-    bool is_step_being_performed();
+    //bool is_step_being_performed();
 
 //    void do_step(int step_length, int step_height);
 //    int target_i = 4*496;
