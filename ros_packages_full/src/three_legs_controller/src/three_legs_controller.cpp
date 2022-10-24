@@ -35,7 +35,7 @@ public:
         step_2_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_2", 10);
         step_3_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_3", 10);
         timer_ = this->create_wall_timer(5000ms, std::bind(&ThreeLegsController::timer_callback, this));
-        int counter = 0;
+        counter = 0;
 
     }
 
@@ -67,7 +67,8 @@ private:
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_1_publisher_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_2_publisher_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_3_publisher_;
-    size_t count_;
+    //size_t count_;
+    int counter;
 };
 
 int main(int argc, char * argv[])
