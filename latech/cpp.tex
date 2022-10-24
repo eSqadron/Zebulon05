@@ -62,8 +62,8 @@ Jest to noga o 3 rotacyjnych stopniach swobody, przy czym 1 stopień obraca się
 \begin{split}
 a_{temp} &= a_2 \cos{\theta_1} + a_3 \cos{\left(\theta_2 - \theta_1\right)} + a_1\\
 Y &= a_{temp} \cdot \sin{\theta_0}\\
-X &= a_{temp} \cdot \cos{\theta_0} + a_0\\
-Z &= h_0 - h_1 + a_2 \sin{\theta_1} - a_3 \sin{\left(\theta_2 - \theta_1\right)}
+X &= a_{temp} \cdot \cos{\theta_0}\\
+Z &= a_2 \sin{\theta_1} - a_3 \sin{\left(\theta_2 - \theta_1\right)}
 \end{split}
 \end{equation}
 
@@ -158,7 +158,7 @@ Najprościej jest wyprowadzić wzór na $\theta_0$, można to zrobić na podstaw
 \begin{equation}
 \begin{split}
 \begin{cases}
-Y = a_{temp} \cdot \sin{\theta_0} + a_0\\
+Y = a_{temp} \cdot \sin{\theta_0}\\
 X = a_{temp} \cdot \cos{\theta_0}
 \end{cases}
 \end{split}
@@ -168,54 +168,73 @@ X = a_{temp} \cdot \cos{\theta_0}
 \begin{split}
 \begin{cases}
 Y = a_{temp} \cdot \sin{\theta_0}\\
-a_{temp} = \frac{X - a_0}{\cos{\theta_0}}
+a_{temp} = \frac{X}{\cos{\theta_0}}
 \end{cases}
 \end{split}
 \end{equation}
 
 
 \begin{equation}
-Y = \frac{X - a_0}{\cos{\theta_0}} \cdot \sin{\theta_0}\\
+Y = \frac{X}{\cos{\theta_0}} \cdot \sin{\theta_0}\\
 \end{equation}
 
 \begin{equation}
-\theta_0 = \arctan{\frac{Y}{X - a_0}}
+\theta_0 = \arctan{\frac{Y}{X}}
 \end{equation}
 
-Wzór na $\theta_2$ można wyprowadzić także z równania \ref{FK_ver_1}
+%Wzór na $\theta_2$ można wyprowadzić także z równania \ref{FK_ver_1}
 
-\[
-Z = (h_0 - h_1) + a_2 \cdot \sin{\theta_1} - a_3 \sin{\left( \theta_2 - \theta_1 \right)}
-\]
+%\[
+%Z = (- h_1) + a_2 \cdot \sin{\theta_1} - a_3 \sin{\left( \theta_2 - \theta_1 %\right)}
+%\]
 
-\[
-Z - (h_1 + h_0) = a_2 \cdot \sin{\theta_1} - a_3 \sin{\left( \theta_2 - \theta_1 \right)}
-\]
+%\[
+%Z - h_1 = a_2 \cdot \sin{\theta_1} - a_3 \sin{\left( \theta_2 - \theta_1 \right)}
+%\]
 
-\[
-\frac{(h_1 + h_0) - Z - a_2 \cdot \sin{\theta_1}}{a_3} = \sin{\left( \theta_2 - \theta_1 \right)}
-\]
+%\[
+%\frac{h_1 - Z - a_2 \cdot \sin{\theta_1}}{a_3} = \sin{\left( \theta_2 - \theta_1 \right)}
+%\]
 
 
-\begin{equation} \label{theta_2_eq}
-\theta_2 = \arcsin{\left(\frac{(h_1 + h_0) - Z - a_2 \cdot \sin{\theta_1}}{a_3}\right)} + \theta_1
+%\begin{equation} \label{theta_2_eq}
+%\theta_2 = \arcsin{\left(\frac{h_1 - Z - a_2 \cdot \sin{\theta_1}}{a_3}\right)} + \theta_1
+%\end{equation}
+
+%Równanie \ref{theta_2_eq} jest nadal uzależnione od $\theta_1$, które należy wyznaczyć.
+
+N%ajbardziej oczywistym wydaje się pod równanie \ref{FK_ver_1} na $a_{temp}$ podstawić obliczone równanie \ref{theta_2_eq} i daje to równanie  \ref{theta_1_eq1}
+
+%\begin{equation} \label{theta_1_eq1}
+%a_{temp} = a_2 \cos{\theta_1} + a_3 \cos{\left(\arcsin{\left(\frac{h_1 - Z - a_2 \cdot \sin{\theta_1}}{a_3}\right)}\right)} + a_1\\
+%\end{equation}
+
+%Do fragmentu $a_3 \cos{\left(\arcsin{\left(\frac{h_1 - Z - a_2 \cdot \sin{\theta_1}}{a_3}\right)}\right)}$ można zastosować wzór $\cos{\left(\arcsin{\left(x\right)}\right)} = \sqrt{1 - x^2}$. Daje to wzór \ref{theta_1_eq2}
+
+%\begin{equation} \label{theta_1_eq2}
+%a_{temp} = a_2 \cos{\theta_1} + \sqrt{a_3^2 - (a_2 \sin{\theta_1} - h_1 - Z)^2} + a_1\\
+%\end{equation}
+
+%Niestety wzór \ref{theta_1_eq2} nie pozwala jednoznacznie wyznaczyć jawnego $\theta_1$ i co za tym idzie nie da się tego wzoru jednoznacznie zaimplementować softwareowo, co jest niezbędne w dalszej części pracy. Można natomiast powrócić do rysunku \ref{math_model} i zastosować na trójkącie utworzonym z $a_2$ i $a_3$ twierdzenie cosinusów połączone z twierdzeniem pitagorasa.
+
+Jeżeli wyznaczanie równań $\theta_1$ i $\theta_2$ sprowadzi się do problemu dwuwymiarowego, obliczenia stają się w zasadzie identyczne jak w przypadku obliczeń kinematyki odwrotnej dla robota typu SCARA, co było już robione wielokrotnie.\\
+
+Aby obliczyć kąt $\theta_2$ można powrócić do rysunku \ref{math_model} i zastosować na trójkącie utworzonym z $a_2$ i $a_3$ twierdzenie cosinusów połączone z twierdzeniem pitagorasa.
+
+\begin{equation}
+(x - a_1)^2 + (z - h_1)^2 = a_2^2 + a_3^2 - 2 \cdot a_2 \cdot a_3 \cdot \cos{(180^o - \theta_2)}\\
 \end{equation}
 
-Równanie \ref{theta_2_eq} jest nadal uzależnione od $\theta_1$, które należy wyznaczyć.
-
-Pod równanie \ref{FK_ver_1} na $a_{temp}$ podstawiam obliczone równanie \ref{theta_2_eq} i otrzymuję równanie  \ref{theta_1_eq1}
-
-\begin{equation} \label{theta_1_eq1}
-a_{temp} = a_2 \cos{\theta_1} + a_3 \cos{\left(\arcsin{\left(\frac{(h_1 + h_0) - Z - a_2 \cdot \sin{\theta_1}}{a_3}\right)}\right)} + a_1\\
+\begin{equation}
+\theta_2 = 180 - \arccos{\left( \frac{(x - a_1)^2 + (z - h_1)^2 - a_2^2 - a_3^2}{2 a_2 a_3} \right)}\\ \cite{SCARA_model}
 \end{equation}
+Natomiast obliczenia dla $\theta_1$ TODO
 
-Do fragmentu $a_3 \cos{\left(\arcsin{\left(\frac{(h_1 + h_0) - Z - a_2 \cdot \sin{\theta_1}}{a_3}\right)}\right)}$ można zastosować wzór $\cos{\left(\arcsin{\left(x\right)}\right)} = \sqrt{1 - x^2}$. Daje to wzór \ref{theta_1_eq2}
+\begin{equation}
+\theta_1 = \arctan{\frac{z - h_1}{x - a_1}} - \arcsin{\left( \frac{L_2 \sin{\theta_2} }{ \sqrt{ (x - a_1)^2 + (z - h_1)^2}} \right)}\\ \cite{SCARA_model}
+\end{equation} 
 
-\begin{equation} \label{theta_1_eq2}
-a_{temp} = a_2 \cos{\theta_1} + \sqrt{a_3^2 - (a_2 \sin{\theta_1 + h_0 - h_1 - Z})^2} + a_1\\
-\end{equation}
-
-Niestety wzór \ref{theta_1_eq2} nie pozwala jednoznacznie wyznaczyć jawnego $\theta_1$. Przybliżanie metodą Taylora także się w tym przypadku nie sprawdzi. 
+TODO - ograniczenia.
 
 \subsection{Cały Robot}
 Zwykle konstruując roboty wzorujemy się na zwierzętach występujących w naturze. W tym przypadku nie mamy jednak tego luksusu, dlatego na początek należy przyjąć jakieś najbardziej intuicyjne założenie. Dlatego też uznałem że najlepszym rozwiązaniem będzie rozmieścić nogi na jednej płaszczyźnie w równych odstępach - co $120\deg$.
@@ -248,6 +267,10 @@ Aby móc w prosty sposób napisać później algorytmy chodu i móc się skupić
 
 \bibitem{DH_Matlab_calc}
 \href{./DH_calculations.m}{Matlab Denavit Hartenberg calculations}
+
+\bibitem{SCARA_model}
+\href{https://sj.umg.edu.pl/sites/default/files/ZN20.pdf}{Adam Labuda, Janusz Pomirski, Andrzej Rak (2009) Model manipulatora o dwóch stopniach swobody}
+
 
 \bibitem{}
 \href{https://www.diva-portal.org/smash/get/diva2:1462059/FULLTEXT01.pdf}{Alexander Wallen Kiessling, Niclas Maatta (2020) Anthropomorphic Robot Arm}

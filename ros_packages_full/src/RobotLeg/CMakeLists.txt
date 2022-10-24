@@ -10,13 +10,14 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 #find_package(std_msgs REQUIRED)
 find_package(maestro_interfaces REQUIRED)
+find_package(geometry_msgs REQUIRED)
 find_package(walking_robot_interfaces REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
 add_executable(robot_leg_wrapper src/RobotLegRos.cpp include/RobotLeg/RobotLegRos.hpp src/RobotLegRosWrapper.cpp include/RobotLeg/RobotLegRosWrapper.hpp)
-ament_target_dependencies(robot_leg_wrapper rclcpp std_msgs maestro_interfaces walking_robot_interfaces)
+ament_target_dependencies(robot_leg_wrapper rclcpp std_msgs maestro_interfaces walking_robot_interfaces geometry_msgs)
 
 install(TARGETS
   robot_leg_wrapper

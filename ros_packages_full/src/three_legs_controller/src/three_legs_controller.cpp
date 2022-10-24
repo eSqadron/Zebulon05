@@ -18,7 +18,7 @@
 #include <string>
 
 #include "rclcpp/rclcpp.hpp"
-#include "walking_robot_interfaces/msg/step.hpp"
+#include "geometry_msgs/msg/point.hpp"
 
 using namespace std::chrono_literals;
 
@@ -31,27 +31,42 @@ public:
     ThreeLegsController()
     : Node("three_legs_controller"), count_(0)
     {
-        step_1_publisher_ = this->create_publisher<walking_robot_interfaces::msg::Step>("step_1", 10);
-        step_2_publisher_ = this->create_publisher<walking_robot_interfaces::msg::Step>("step_2", 10);
-        step_3_publisher_ = this->create_publisher<walking_robot_interfaces::msg::Step>("step_3", 10);
+        step_1_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_1", 10);
+        step_2_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_2", 10);
+        step_3_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_3", 10);
         timer_ = this->create_wall_timer(5000ms, std::bind(&ThreeLegsController::timer_callback, this));
+        int counter = 0;
+
     }
 
 private:
     void timer_callback()
     {
-        auto message = walking_robot_interfaces::msg::Step();
-        message.step_dir = 90;
-        message.step_length = 100;
-        message.step_height = 100;
+        auto message = geometry_msgs::msg::Point();
+        if(counter == 0) {
+            message.x = 100;
+            message.y = 100;
+            message.z = 100;
+        } else if (counter == 1){
+            message.x = 100;
+            message.y = 100;
+            message.z = 0;
+        } else if (counter == 2){
+            message.x = 0;
+            message.y = 0;
+            message.z = 0;
+        }
+
 
         step_1_publisher_->publish(message);
+        counter++;
+        if(counter >= 3) counter = 0;
     }
 
     rclcpp::TimerBase::SharedPtr timer_;
-    rclcpp::Publisher<walking_robot_interfaces::msg::Step>::SharedPtr step_1_publisher_;
-    rclcpp::Publisher<walking_robot_interfaces::msg::Step>::SharedPtr step_2_publisher_;
-    rclcpp::Publisher<walking_robot_interfaces::msg::Step>::SharedPtr step_3_publisher_;
+    rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_1_publisher_;
+    rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_2_publisher_;
+    rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_3_publisher_;
     size_t count_;
 };
 

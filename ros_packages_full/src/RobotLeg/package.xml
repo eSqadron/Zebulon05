@@ -16,6 +16,7 @@
     <build_type>ament_cmake</build_type>
     <depend>rclcpp</depend>
     <depend>std_msgs</depend>
+    <depend>geometry_msgs</depend>
     <depend>maestro_interfaces</depend>
     <depend>walking_robot_interfaces</depend>
   </export>
