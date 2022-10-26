@@ -104,8 +104,10 @@ unsigned int rad2qns(float rad){
     // 2496 * 4: -90, -PI/2
     // 496 * 4: 90, PI/2
     // 1496 * 4: 0, 0
-
-    return static_cast<unsigned int>((((rad * 1000)/(PI/2)) + 1496)*4);
+    temp_out_buffer_ = rad;
+    float temp = (((rad * 1000)/(PI/2)) + 1496)*4;
+    temp_out_buffer2_ = temp;
+    return static_cast<unsigned int>(temp);
 }
 
 //bool RobotLegRos::is_step_being_performed(){
@@ -132,7 +134,6 @@ std::array<float, 3> RobotLegRos::inverse_kinematics(const std::array<float, 3> 
     result_rad[0] = atan(y/x);
     result_rad[2] = PI - acos((pow(x-a_1_, 2) + pow(z - h_1_, 2) - pow(a_2_, 2) - pow(a_3_, 2))/(2*a_2_*a_3_));
     result_rad[1] = atan((z - h_1_)/(x - a_1_)) - asin(a_3_ * sin(result_rad[2])/(sqrt(pow(x - a_1_, 2) + pow(z - h_1_, 2))));
-    temp_out_buffer_ = result_rad[0];
     return result_rad;
 }
 

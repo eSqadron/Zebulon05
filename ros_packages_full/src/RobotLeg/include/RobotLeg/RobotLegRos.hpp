@@ -50,7 +50,8 @@ public:
     std::array<float, 3> forward_kinematics(const std::array<float, 3> angles_deg);
     std::array<float, 3> inverse_kinematics(const std::array<float, 3> xyz_pos);
 
-    int temp_out_buffer_;
+    float temp_out_buffer_;
+    float temp_out_buffer2_;
 
     //std::vector<std::array<unsigned int, 3>> interpolate_step(short unsigned int step_type, short int step_ang, int step_length, int step_height);
 
