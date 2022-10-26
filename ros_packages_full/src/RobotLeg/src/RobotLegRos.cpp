@@ -105,7 +105,7 @@ unsigned int rad2qns(float rad){
     // 496 * 4: 90, PI/2
     // 1496 * 4: 0, 0
 
-    return (int) (rad * 1000)/(PI/2) + 1496;
+    return (int) ((rad * 1000)/(PI/2) + 1496)*4;
 }
 
 //bool RobotLegRos::is_step_being_performed(){
