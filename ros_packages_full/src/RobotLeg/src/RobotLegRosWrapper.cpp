@@ -4,6 +4,8 @@
 
 #include "../include/RobotLeg/RobotLegRosWrapper.hpp"
 
+#include <string>
+
 void RobotLegRosWrapper::timer_callback(){
 //    try{
 //        if(robo_leg.is_step_being_performed()){
@@ -34,7 +36,7 @@ void RobotLegRosWrapper::step_callback(const geometry_msgs::msg::Point& msg){
 //    }
 
     robo_leg.move_leg_xyz(msg.x, msg.y, msg.z);
-    RCLCPP_INFO(this->get_logger(), robo_leg.temp_out_buffer_);
+    RCLCPP_INFO(this->get_logger(), std::to_string(robo_leg.temp_out_buffer_));
 
 }
 
