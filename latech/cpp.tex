@@ -57,6 +57,7 @@ Jest to noga o 3 rotacyjnych stopniach swobody, przy czym 1 stopień obraca się
 \end{figure}
 
 \subsubsection{Forward kinematics}
+Obliczanie kinematyki prostej polega na TODOTODO
 
 \begin{equation} \label{FK_ver_1}
 \begin{split}
@@ -68,6 +69,7 @@ Z &= a_2 \sin{\theta_1} - a_3 \sin{\left(\theta_2 - \theta_1\right)}
 \end{equation}
 
 \subsubsection{Forward kinematics - denavit hartenberg \cite{DH_AA_article}}
+Alternatywą dla zwykłych obliczeń geometrycznych jest metoda Denvaita Hartenberga - TODOTODOTODO
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{img/DH_model.jpg}
@@ -141,7 +143,7 @@ c\theta_1 \cdot s\theta_2 + s\theta_1 \cdot c\theta_2 & c\left( \theta_1 + \thet
 
 Następnie, aby otrzymać właściwe równania, należy z równania \ref{DH_final_equation} wziąć część odpowiedzialną za transformację.
 
-\begin{equation}
+\begin{equation} \label{FK_ver_2}
 \begin{split}
 X &= c\theta_0 \cdot \left( a_1 + a_2 \cdot c\theta_1 + a_3  \cdot c\left( \theta_1 + \theta_2 \right) \right)\\
 Y &= s\theta_0 \cdot \left( a_1 + a_2 \cdot c\theta_1 + a_3  \cdot c\left( \theta_1 + \theta_2 \right) \right)\\
@@ -149,36 +151,41 @@ Z &= h_1 + a_2 \cdot s\theta_1 + a_3 \cdot s\left( \theta_1 + \theta_2 \right)\\
 \end{split}
 \end{equation}
 
+TODO - znak się nie zgadza
+
 
 
 \subsubsection{Invert kinematics}
-Odwrotną kinematykę można obliczyć poprzez rozwiązanie równań kinematyki prostej.
+Kinematyka odwrotna to TODOTODOTODO
 
-Najprościej jest wyprowadzić wzór na $\theta_0$, można to zrobić na podstawie wzoru \ref{FK_ver_1}, łącząc wzór na $X$ i $Y$:
-\begin{equation}
-\begin{split}
-\begin{cases}
-Y = a_{temp} \cdot \sin{\theta_0}\\
-X = a_{temp} \cdot \cos{\theta_0}
-\end{cases}
-\end{split}
-\end{equation}
+Zwykle odwrotną kinematykę można obliczyć poprzez rozwiązanie równań kinematyki prostej. Jest to w tym przypadku także teoretycznie możliwe, jako że mamy do czynienia z trzema niewiadomymi ($\theta_{0-2}$) i układem trzech równań nr. \ref{FK_ver_1} lub \ref{FK_ver_1}. (Równanie na $a_{temp}$ jest jedynie pomocnicze, trzeba je traktować jak część równań $Y$ i $X$).
 
-\begin{equation}
-\begin{split}
-\begin{cases}
-Y = a_{temp} \cdot \sin{\theta_0}\\
-a_{temp} = \frac{X}{\cos{\theta_0}}
-\end{cases}
-\end{split}
-\end{equation}
+Jest to jak najbardziej wykonalne w przypadku $\theta_0$, można to zrobić łącząc wzór na $X$ i $Y$, dzieląc go obustronnie, zamieniając $\frac{\sin}{\cos}$ na $\tan$ i wyciągając $\theta_0$ na lewą stronę. Daje to wzór \ref{theta_0_eq_final}
+
+%\begin{equation}
+%\begin{split}
+%\begin{cases}
+%Y = a_{temp} \cdot \sin{\theta_0}\\
+%X = a_{temp} \cdot \cos{\theta_0}
+%\end{cases}
+%\end{split}
+%\end{equation}
+
+%\begin{equation}
+%\begin{split}
+%\begin{cases}
+%Y = a_{temp} \cdot \sin{\theta_0}\\
+%a_{temp} = \frac{X}{\cos{\theta_0}}
+%\end{cases}
+%\end{split}
+%\end{equation}
 
 
-\begin{equation}
-Y = \frac{X}{\cos{\theta_0}} \cdot \sin{\theta_0}\\
-\end{equation}
+%\begin{equation}
+%Y = \frac{X}{\cos{\theta_0}} \cdot \sin{\theta_0}\\
+%\end{equation}
 
-\begin{equation}
+\begin{equation} \label{theta_0_eq_final}
 \theta_0 = \arctan{\frac{Y}{X}}
 \end{equation}
 
@@ -203,7 +210,7 @@ Y = \frac{X}{\cos{\theta_0}} \cdot \sin{\theta_0}\\
 
 %Równanie \ref{theta_2_eq} jest nadal uzależnione od $\theta_1$, które należy wyznaczyć.
 
-N%ajbardziej oczywistym wydaje się pod równanie \ref{FK_ver_1} na $a_{temp}$ podstawić obliczone równanie \ref{theta_2_eq} i daje to równanie  \ref{theta_1_eq1}
+%Najbardziej oczywistym wydaje się pod równanie \ref{FK_ver_1} na $a_{temp}$ podstawić obliczone równanie \ref{theta_2_eq} i daje to równanie  \ref{theta_1_eq1}
 
 %\begin{equation} \label{theta_1_eq1}
 %a_{temp} = a_2 \cos{\theta_1} + a_3 \cos{\left(\arcsin{\left(\frac{h_1 - Z - a_2 \cdot \sin{\theta_1}}{a_3}\right)}\right)} + a_1\\
@@ -217,29 +224,37 @@ N%ajbardziej oczywistym wydaje się pod równanie \ref{FK_ver_1} na $a_{temp}$ p
 
 %Niestety wzór \ref{theta_1_eq2} nie pozwala jednoznacznie wyznaczyć jawnego $\theta_1$ i co za tym idzie nie da się tego wzoru jednoznacznie zaimplementować softwareowo, co jest niezbędne w dalszej części pracy. Można natomiast powrócić do rysunku \ref{math_model} i zastosować na trójkącie utworzonym z $a_2$ i $a_3$ twierdzenie cosinusów połączone z twierdzeniem pitagorasa.
 
-Jeżeli wyznaczanie równań $\theta_1$ i $\theta_2$ sprowadzi się do problemu dwuwymiarowego, obliczenia stają się w zasadzie identyczne jak w przypadku obliczeń kinematyki odwrotnej dla robota typu SCARA, co było już robione wielokrotnie.\\
+Większy problem pojawia się jednak w przypadku obliczania $\theta_1$ i $\theta_2$, ponieważ wartości te da się obliczyć z wyżej wspomnianego równania, ale nie da się wyznaczyć na te wartości równań w postaci jawnej. A bez postaci jawnej nie będzie możliwa poprawna implementacja tych równań.
 
-Aby obliczyć kąt $\theta_2$ można powrócić do rysunku \ref{math_model} i zastosować na trójkącie utworzonym z $a_2$ i $a_3$ twierdzenie cosinusów połączone z twierdzeniem pitagorasa.
+Można natomiast zastosować pewnego rodzaju trik. Jeżeli wyznaczanie równań $\theta_1$ i $\theta_2$ sprowadzi się do problemu dwuwymiarowego, obliczenia stają się w zasadzie identyczne jak w przypadku obliczeń kinematyki odwrotnej dla robota typu SCARA, co było już robione wielokrotnie.\\
 
-\begin{equation}
+Aby obliczyć kąt $\theta_2$ można powrócić do rysunku \ref{math_model} i zastosować na trójkącie utworzonym z $a_2$ i $a_3$ twierdzenie cosinusów połączone z twierdzeniem pitagorasa. Daje to wzór \ref{theta_2_eq_1}.
+
+\begin{equation} \label{theta_2_eq_1}
 (x - a_1)^2 + (z - h_1)^2 = a_2^2 + a_3^2 - 2 \cdot a_2 \cdot a_3 \cdot \cos{(180^o - \theta_2)}\\
 \end{equation}
 
-\begin{equation}
-\theta_2 = 180 - \arccos{\left( \frac{(x - a_1)^2 + (z - h_1)^2 - a_2^2 - a_3^2}{2 a_2 a_3} \right)}\\ \cite{SCARA_model}
+Następnie na podstawie równania \ref{theta_2_eq_1} aby ostatecznie otrzymać $\theta_2$ należy zastosować wzór $\cos{(180^o - \theta)} = -\cos{\theta}$ i za pomocą prostych przekształceń wyciągnąć z równania $\theta_2$. Daje to wzór \ref{theta_2_eq_final}
+
+\begin{equation} \label{theta_2_eq_final}
+\theta_2 = \arccos{\left( \frac{(x - a_1)^2 + (z - h_1)^2 - a_2^2 - a_3^2}{2 a_2 a_3} \right)}\\ \cite{SCARA_model}
 \end{equation}
 Natomiast obliczenia dla $\theta_1$ TODO
 
-\begin{equation}
-\theta_1 = \arctan{\frac{z - h_1}{x - a_1}} - \arcsin{\left( \frac{L_2 \sin{\theta_2} }{ \sqrt{ (x - a_1)^2 + (z - h_1)^2}} \right)}\\ \cite{SCARA_model}
-\end{equation} 
+\begin{equation}\label{theta_1_eq_final}
+\theta_1 = \arctan{\frac{z - h_1}{x - a_1}} - \arcsin{\left( \frac{a_3 \sin{\theta_2} }{ \sqrt{ (x - a_1)^2 + (z - h_1)^2}} \right)}\\ \cite{SCARA_model}
+\end{equation}
+
+Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final}, \ref{theta_2_eq_final} otrzymujemy układ równań który stanowi kinematykę odwrotną opisywanej nogi robotycznej.
+
+TODO - układ równań
 
 TODO - ograniczenia.
 
 \subsection{Cały Robot}
 Zwykle konstruując roboty wzorujemy się na zwierzętach występujących w naturze. W tym przypadku nie mamy jednak tego luksusu, dlatego na początek należy przyjąć jakieś najbardziej intuicyjne założenie. Dlatego też uznałem że najlepszym rozwiązaniem będzie rozmieścić nogi na jednej płaszczyźnie w równych odstępach - co $120\deg$.
 
-W poprzednim podrozdziale przyjąłem osie układu relatywne do ułożenia początkowego nogi robota. Oznacza to że robot trójnożny będzie miał 3 niezależne osie $x$ i 3 niezależne osie $y$, tylko oś $z$ zgadza się między kolejnymi nogami. Idzie za tym konieczność stworzenia pewnej metody "obracania" wszystkich tych osi $x$ i $y$ do jednego zunifikowanego układu współżędnych. Pozwoli to obliczyć konematykę całego robota.
+W poprzednim podrozdziale przyjąłem osie układu relatywne do ułożenia początkowego nogi robota. Oznacza to że robot trójnożny będzie miał 3 niezależne osie $x$ i 3 niezależne osie $y$, tylko oś $z$ zgadza się między kolejnymi nogami. Idzie za tym konieczność stworzenia pewnej metody "obracania" wszystkich tych osi $x$ i $y$ do jednego zunifikowanego układu współrzędnych. Pozwoli to obliczyć kinematykę całego robota.
 
 \subsubsection{Matematyka kroku}
 Aby móc w prosty sposób napisać później algorytmy chodu i móc się skupić na kolejności przestawiania nóg przez robota, długości i wysokości kroku i innych tego typu aspektach, należy teraz dobrze ten krok sparametryzować. Na podstawie moich poprzednich doświadczeń z podobnymi projektami, uważam że najbardziej intuicyjne będzie sparametryzowanie kroku do:

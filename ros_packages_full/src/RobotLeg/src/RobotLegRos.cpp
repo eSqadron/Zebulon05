@@ -130,7 +130,7 @@ std::array<float, 3> RobotLegRos::inverse_kinematics(const std::array<float, 3> 
     int y = xyz_pos[1];
     int z = xyz_pos[2];
     result_rad[0] = atan(y/x);
-    result_rad[2] = PI - acos((pow(x-a_1_, 2) + pow(z + h_1_, 2) - pow(a_2_, 2) - pow(a_3_, 2))/(2*a_2_*a_3_));
+    result_rad[2] = acos((pow(x-a_1_, 2) + pow(z + h_1_, 2) - pow(a_2_, 2) - pow(a_3_, 2))/(2*a_2_*a_3_));
     result_rad[1] = atan((z + h_1_)/(x - a_1_)) - asin(a_3_ * sin(result_rad[2])/(sqrt(pow(x - a_1_, 2) + pow(z + h_1_, 2))));
     return result_rad;
 }
