@@ -45,6 +45,48 @@
 }
 \tableofcontents
 
+\section{Wstęp}
+Pierwsza idea robota kroczącego pojawiła się już pod koniec XV wieku, a narodziła się w głowie nikogo innego jak Leonarda Da Vinci. Od tamtej pory wielu naukowców próbowało tworzyć konstrukcje które używały nóg zamiast kół, lecz pierwsze faktycznie udane konstrukcje datuje się dopiero na początek lat 60 ubiegłego wieku. Pojawiły sie wtedy pierwsze działające konstrukcje, na przykład robot czteronożny zbudowany przez Josepha Shingleya oraz roboty sześcio i ośmonożne zbudowane przez "Space General Corporation".\\
+
+Od tamtej pory powstało wiele różnych konstrukcji, które kategoryzuje się w zależności od ilości nóg posiadanych przez robota:\\
+\begin{itemize}
+	\item jednonożne
+	\item dwunożne (Humanoid, chicken-walkers)
+	\item czteronożne (Quadrupedal)
+	\item sześcionożne (Hexapod)
+	\item ośmionożne
+	\item gąsiennicowe
+\end{itemize}
+
+Przy czym można zaobserwować tendencję spadkową, wraz z upływem czasu widać wzrost udanych konstrukcji o mniejszej ilości nóg.\\
+
+Pojawia się także inna tendencja w ilości nóg robotów. Prawie wszystkie konstrukcje (poza jednonożnymi) opierają się na zwierzątach występujących w naturze.  Jest to raczej logiczna tendencja, jako że do takich robotów mamy już algorytmy chodu opracowane przez miliony lat ewolucji, "konstrukcje" które nie mają sensu nie przetrwałyby do dziś.
+
+Co natomiast z konstrucjami robotów trójnożnych? Można się zastanowić czy konstrukcje takie nie powstają ponieważ faktycznie nie mają sensu, czy może dlatego że temat bardziej "klasycznych", prostrzych w implementacji, konstrukcji nie został po prostu jeszcze wyczerpany przez naukowców. Jeżeli rozejrzymy się dookoła siebie możemy zaobserwować wiele przedmiotów codziennego użytku które posiadają właśnie 3 nogi, od wszelakich taboretów, przez wieszaki na ubrania po stoły. Są to jednak konstrukcje statyczne i dla takich konstrukcji 3 nogi są wymaganym minimum aby dany przedmiot stał stabilnie. Co jednak z konstrukcjami dynamicznymi? Jeżeli robot trójnożny podniesie nogę, straci stabilność, zacznie się przewracać. Czyni to z niego dość ciekawą konstrukcję, gdzie w momencie stania w miejscu zachowuje się bardzej jak roboty o większej ilości nóg, nie przewraca się, a podczas ruchu zachowuje się jak roboty dwunożne, musi odpowiednio szybko odstawić nogę w odpowiednie miejsce aby się nie przewrócić.\\
+
+\subsection{Istniejące konstrukcje trójnożne}
+Konstrukcje trójnożne pojawiały się w dziełach science fiction już od dawna, od "The War of the worlds" z 1898 aż po "Mroczne Widmo" z 2001 i regularnie pojawiają się naukowcy którzy próbują udowodnić że nie trzeba ogarniczać tego typu robotów do dzieł z obszaru science fiction.
+\subsubsection{STriDER}
+Zbudowany w 2007
+
+http://www.romela.org/wp-content/uploads/2015/05/Forward-and-Inverse-Displacement-Analysis-of-a-Novel-Three-Legged-Mobile-Robot-Based-on-the-Kinematics-of-In-Parallel-Manipulators.pdf
+
+3-SRRR
+
+\subsubsection{Triped "Martian"}
+Jest to robot zbudowany przez Yoichi Masudę na uniwersytecie w Osace w 2017
+3-RL
+
+\subsubsection{Inne konstrukcje}
+Na internecie można także znaleźć kilka różnych niezbyt dobrze udokumentowanych konstrukcji zakończonych mniejszym lub większym sukcesem:
+
+https://makerfaire.com/maker/entry/71669/
+
+https://www.youtube.com/watch?v=HGEhCCUgFMg&ab_channel=driftingswiftly
+
+
+
+
 \section{Model Matematyczny}
 Noga ma 3 stopnie swobody. Wszystkie są typu obrotowego, przy czym dwie obracają się dookoła osi poziomej, a jedna dookoła osi pionowej. Są to te same osi obrotu co w przypadku ramienia robotycznego typu antromorficznego.
 \subsection{Noga robota typu RRR}
@@ -274,6 +316,10 @@ Aby móc w prosty sposób napisać później algorytmy chodu i móc się skupić
 \section{Algorytm Chodu}
 
 \begin{thebibliography}{9}
+
+\bibitem{}
+\href{https://www.researchgate.net/publication/258995388_A_Historical_Perspective_of_Legged_Robots}{A Historical Perspective of Legged Robots}
+
 \bibitem{DH_AA_article}
 \href{https://automaticaddison.com/how-to-find-denavit-hartenberg-parameter-tables/}{How to Find Denavit-Hartenberg Parameter Tables, blogpost by Automatic Addison}
 
