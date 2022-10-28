@@ -60,7 +60,7 @@ private:
             message.y = 0;
             message.z = -40;
         } else if (counter == 1){
-            message.x = 55 + 125 + 20;
+            message.x = 55 + 125 + 70;
             message.y = 0;
             message.z = 100;
         }
