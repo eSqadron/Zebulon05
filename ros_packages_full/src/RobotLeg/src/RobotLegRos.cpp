@@ -104,7 +104,7 @@ unsigned int rad2qns(float rad){
     // 2496 * 4: -90, -PI/2
     // 496 * 4: 90, PI/2
     // 1496 * 4: 0, 0
-    float temp = (((rad * 1000)/(PI/2)) + 1496)*4;
+    float temp = (((rad * 1000)/(PI/2)) + 1500)*4;
     return static_cast<unsigned int>(temp);
 }
 
