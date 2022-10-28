@@ -141,7 +141,7 @@ void RobotLegRos::move_leg_xyz(float x, float y, float z){
     temp_out_buffer2_ = rad2qns(temp_out_buffer_);
 
     inv_k[1] = inv_k[1] + (35 * PI/180);
-    inv_k[2] = inv_k[2] - (20 * PI/180);
+    inv_k[2] = inv_k[2] - (90 * PI/180);
 
     publish_servo_position({rad2qns(inv_k[0]), rad2qns(-inv_k[1]), rad2qns(inv_k[2])});
 }
