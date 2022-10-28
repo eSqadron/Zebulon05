@@ -63,7 +63,7 @@ private:
 
         step_1_publisher_->publish(message);
         counter++;
-        if(counter >= 1) counter = 0;
+        if(counter >= 2) counter = 0;
     }
 
     rclcpp::TimerBase::SharedPtr timer_;
