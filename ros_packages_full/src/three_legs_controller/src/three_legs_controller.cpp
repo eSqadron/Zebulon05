@@ -46,18 +46,23 @@ private:
         //robo_leg.set_physical_params(40, 55, 125, 180);
 
 
-        if(counter == 0) {
-            message.x = 55 + 125 + 180;
+//        if(counter == 0) {
+//            message.x = 55 + 125 + 180;
+//            message.y = 0;
+//            message.z = -40;
+//        } else if (counter == 1){
+//            message.x = 55 + 125 + 30;
+//            message.y = 0;
+//            message.z = -40;
+//        } else
+        if (counter == 0){
+            message.x = 55 + 125 + 70;
             message.y = 0;
             message.z = -40;
         } else if (counter == 1){
-            message.x = 55 + 125 + 30;
+            message.x = 55 + 125 + 70;
             message.y = 0;
-            message.z = -40;
-        } else if (counter == 2){
-            message.x = 55 + 125 + 120;
-            message.y = 0;
-            message.z = -10;
+            message.z = 40;
         }
 
 
