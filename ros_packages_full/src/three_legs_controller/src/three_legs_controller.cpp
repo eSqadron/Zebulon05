@@ -51,7 +51,7 @@ private:
             message.y = 0;
             message.z = -40;
         } else if (counter == 1){
-            message.x = 55 + 125 + 130;
+            message.x = 55 + 125 + 100;
             message.y = 0;
             message.z = -40;
         } else if (counter == 2){
@@ -63,7 +63,7 @@ private:
 
         step_1_publisher_->publish(message);
         counter++;
-        if(counter >= 2) counter = 0;
+        if(counter >= 1) counter = 0;
     }
 
     rclcpp::TimerBase::SharedPtr timer_;
