@@ -131,7 +131,7 @@ std::array<float, 3> RobotLegRos::inverse_kinematics(const std::array<float, 3> 
     int z = xyz_pos[2];
     result_rad[0] = atan(y/x);
     result_rad[2] = acos((pow(x-a_1_, 2) + pow(z +  h_1_, 2) - pow(a_2_, 2) - pow(a_3_, 2))/(2*a_2_*a_3_));
-    result_rad[1] = atan((z +  h_1_)/(x - a_1_)) - asin(a_3_ * sin(result_rad[2])/(sqrt(pow(x - a_1_, 2) + pow(z + h_1_, 2))));
+    result_rad[1] = atan((z +  h_1_)/(x - a_1_)) + asin(a_3_ * sin(result_rad[2])/(sqrt(pow(x - a_1_, 2) + pow(z + h_1_, 2)))); // TODO - dlaczego "-" a nie "+" ? XD
     return result_rad;
 }
 
@@ -140,10 +140,10 @@ void RobotLegRos::move_leg_xyz(float x, float y, float z){
     temp_out_buffer_ = inv_k[1];
     temp_out_buffer2_ = rad2qns(temp_out_buffer_);
 
-    inv_k[1] = inv_k[1] + (35 * PI/180);
-    inv_k[2] = inv_k[2] - (75 * PI/180);
+    inv_k[1] = inv_k[1] - (35 * PI/180);
+    inv_k[2] = inv_k[2] - (70 * PI/180);
 
-    publish_servo_position({rad2qns(inv_k[0]), rad2qns(-inv_k[1]), rad2qns(inv_k[2])});
+    publish_servo_position({rad2qns(inv_k[0]), rad2qns(inv_k[1]), rad2qns(inv_k[2])});
 }
 
 void RobotLegRos::publish_servo_position(std::array<unsigned int, 3> new_servo_pos){
