@@ -6,39 +6,25 @@
 
 #include <string>
 
-void RobotLegRosWrapper::timer_callback(){
-//    try{
-//        if(robo_leg.is_step_being_performed()){
-//            RCLCPP_INFO(this->get_logger(), "step is being performed");
-//            robo_leg.perform_step();
-//        }
-//        else{
-//            RCLCPP_INFO(this->get_logger(), "step is being started");
-//            robo_leg.start_performing_step();
-//        }
-//    } catch(const std::invalid_argument& e){
-//        RCLCPP_INFO(this->get_logger(), e.what());
-//    }
-
-}
-
 void RobotLegRosWrapper::cur_pos_callback(const maestro_interfaces::msg::CurrentPositions& msg){
     robo_leg.save_last_known_servo_positions(msg.current_ang);
-    //RCLCPP_INFO(this->get_logger(), "%d", robo_leg.get_last_known_pos()[1]);
+
+    auto feedback_msg = std_msgs::msg::Bool();
+
+    if(robo_leg.get_servo_movement_target() == {msg.current_ang[get_servo_ids[0]], msg.current_ang[get_servo_ids[1]], msg.current_ang[get_servo_ids[2]]}){
+        feedback_msg.data = true;
+    } else{
+        feedback_msg.data = false;
+    }
+
+    step_done_feedback_->publish(feedback_msg);
 }
 
 void RobotLegRosWrapper::step_callback(const geometry_msgs::msg::Point& msg){
-//    if(robo_leg.is_step_being_performed()){
-//        RCLCPP_INFO(this->get_logger(), "previous step not finished! %d", msg.type);
-//    }
-//    else{
-//        robo_leg.start_performing_step();
-//    }
-
     robo_leg.move_leg_xyz(msg.x, msg.y, msg.z);
-    RCLCPP_INFO(this->get_logger(), std::to_string(robo_leg.temp_out_buffer_).c_str());
-    RCLCPP_INFO(this->get_logger(), std::to_string(robo_leg.temp_out_buffer2_).c_str());
-    RCLCPP_INFO(this->get_logger(), " ");
+//    RCLCPP_INFO(this->get_logger(), std::to_string(robo_leg.temp_out_buffer_).c_str());
+//    RCLCPP_INFO(this->get_logger(), std::to_string(robo_leg.temp_out_buffer2_).c_str());
+//    RCLCPP_INFO(this->get_logger(), " ");
 
 }
 

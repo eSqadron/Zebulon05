@@ -22,18 +22,18 @@ enum StepStage{
 class RobotLegRos {
 public:
     RobotLegRos(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr, std::array<short unsigned int, 3> servo_ids) : pub_message_ptr_(pub_message_ptr), last_known_pos{0}, servo_ids_(servo_ids){
+//        step_stage_ = idle;
+//        interpolated_step_stages_ = std::vector<std::array<unsigned int, 3>>();
+//        interpolated_stage_num_ = 0;
+
         last_known_pos = {0, 0, 0};
     };
     RobotLegRos() : RobotLegRos(nullptr, {0, 1, 2}) {};
     void set_publisher(rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr){
         pub_message_ptr_ = pub_message_ptr;
     }
-
     void set_servo_ids(std::array<short unsigned int, 3> new_servo_ids){
         servo_ids_ = new_servo_ids;
-    }
-    std::array<short unsigned int, 3> get_servo_ids(){
-        return servo_ids_;
     }
 
     void set_physical_params(int h1, int a1, int a2, int a3){
@@ -45,28 +45,41 @@ public:
 
     void move_leg_xyz(float x, float y, float z);
 
-    void publish_servo_position(std::array<short unsigned int, 3> new_servo_pos);
+    void publish_servo_position(std::array<unsigned int, 3> new_servo_pos);
 
     std::array<float, 3> forward_kinematics(const std::array<float, 3> angles_deg);
     std::array<float, 3> inverse_kinematics(const std::array<float, 3> xyz_pos);
 
+    float temp_out_buffer_;
+    float temp_out_buffer2_;
+
+    //std::vector<std::array<unsigned int, 3>> interpolate_step(short unsigned int step_type, short int step_ang, int step_length, int step_height);
+
     void save_last_known_servo_positions(std::array<short unsigned int, 24> new_last_known_pos){
         last_known_pos = new_last_known_pos;
-    }
-    std::array<short unsigned int, 3> get_servo_movement_target(){
-        return target_pos_;
     }
 
     std::array<short unsigned int, 24> get_last_known_servo_pos(){
         return last_known_pos;
     }
 
+//    void perform_step();
+//    void start_performing_step(short unsigned int step_type, short int step_ang, int step_length, int step_height);
+    //bool is_step_being_performed();
+
+//    void do_step(int step_length, int step_height);
+//    int target_i = 4*496;
+//    int sweep_dir = 1;
+
+
 private:
     rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr pub_message_ptr_;
     std::array<short unsigned int, 24> last_known_pos;
-
-    std::array<short unsigned int, 3> target_pos_;
     std::array<short unsigned int, 3> servo_ids_;
+
+//    StepStage step_stage_;
+//    std::vector<std::array<unsigned int, 3>> interpolated_step_stages_;
+//    unsigned int interpolated_stage_num_;
 
     int h_1_;
     int a_1_;

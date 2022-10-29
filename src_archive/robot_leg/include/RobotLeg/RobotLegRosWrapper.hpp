@@ -10,15 +10,13 @@
 #include <chrono>
 #include <functional>
 #include <memory>
-//#include <string>
-#include <format>
+#include <string>
 
 #include "rclcpp/rclcpp.hpp"
 #include "maestro_interfaces/msg/maestro_target.hpp"
 #include "maestro_interfaces/msg/current_positions.hpp"
 
 #include "geometry_msgs/msg/point.hpp"
-#include "std_msgs/msg/bool.hpp"
 
 
 //#include "walking_robot_interfaces/msg/step.hpp"
@@ -27,30 +25,31 @@
 
 using namespace std::chrono_literals;
 
+/* This example creates a subclass of Node and uses std::bind() to register a
+* member function as a callback from the timer. */
+
 class RobotLegRosWrapper : public rclcpp::Node{
 public:
     RobotLegRosWrapper() : Node("robot_leg_ros_wrapper"), count_(0){
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
-        step_done_feedback_ = this->create_publisher<std_msgs::msg::Bool>((std::format("step_done_", this->get_parameter("leg_no")), 10); // true when leg is idle
+        timer_ = this->create_wall_timer(100ms, std::bind(&RobotLegRosWrapper::timer_callback, this));
 
-        this->declare_parameter("leg_no", 1);
+        this->declare_parameter("", "world");
 
         robo_leg.set_publisher(publisher_);
         robo_leg.set_physical_params(40, 55, 125, 180);
 
         subscription_ = this->create_subscription<maestro_interfaces::msg::CurrentPositions>("current_positions", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this, std::placeholders::_1));
-        step_subscription_ = this->create_subscription<geometry_msgs::msg::Point>(std::format("xyz_endpoint_{}", this->get_parameter("leg_no")), 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
+        step_subscription_ = this->create_subscription<geometry_msgs::msg::Point>("xyz_endpoint_1", 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
     }
 
 private:
     void cur_pos_callback(const maestro_interfaces::msg::CurrentPositions & msg);
+    void timer_callback();
     void step_callback(const geometry_msgs::msg::Point& msg);
 
-    //rclcpp::TimerBase::SharedPtr timer_;
-
+    rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<maestro_interfaces::msg::MaestroTarget>::SharedPtr publisher_;
-    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr step_done_feedback_;
-
     rclcpp::Subscription<maestro_interfaces::msg::CurrentPositions>::SharedPtr subscription_;
     rclcpp::Subscription<geometry_msgs::msg::Point>::SharedPtr step_subscription_;
 
