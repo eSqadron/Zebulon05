@@ -3,10 +3,12 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{color}
 \usepackage{mathtools}
-\usepackage{float}
 \usepackage[OT4]{fontenc}
 \usepackage{listings}
 \usepackage[margin=1in]{geometry}
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
 
 \frenchspacing
 
@@ -46,9 +48,10 @@
 \tableofcontents
 
 \section{Wstęp}
-Pierwsza idea robota kroczącego pojawiła się już pod koniec XV wieku, a narodziła się w głowie nikogo innego jak Leonarda Da Vinci. Od tamtej pory wielu naukowców próbowało tworzyć konstrukcje które używały nóg zamiast kół, lecz pierwsze faktycznie udane konstrukcje datuje się dopiero na początek lat 60 ubiegłego wieku. Pojawiły sie wtedy pierwsze działające konstrukcje, na przykład robot czteronożny zbudowany przez Josepha Shingleya oraz roboty sześcio i ośmonożne zbudowane przez "Space General Corporation".\\
+\subsection{Historia robotów kroczących}
+Pierwsza idea robota kroczącego pojawiła się już pod koniec XV wieku, a narodziła się w głowie nikogo innego jak Leonarda Da Vinci. Od tamtej pory wielu naukowców próbowało tworzyć konstrukcje, które używały nóg zamiast kół. Jednakże, pierwsze faktycznie udane roboty tego typu datuje się dopiero na początek lat 60 ubiegłego wieku. Pojawiły sie wtedy pierwsze działające konstrukcje, na przykład robot czteronożny zbudowany przez Josepha Shingleya oraz roboty sześcio i ośmonożne zbudowane przez "Space General Corporation". \cite{history}\\
 
-Od tamtej pory powstało wiele różnych konstrukcji, które kategoryzuje się w zależności od ilości nóg posiadanych przez robota:\\
+Od tamtej pory powstało wiele różnych projektów, które kategoryzuje się w zależności od ilości nóg posiadanych przez robota:\\
 \begin{itemize}
 	\item jednonożne
 	\item dwunożne (Humanoid, chicken-walkers)
@@ -58,39 +61,45 @@ Od tamtej pory powstało wiele różnych konstrukcji, które kategoryzuje się w
 	\item gąsiennicowe
 \end{itemize}
 
-Przy czym można zaobserwować tendencję spadkową, wraz z upływem czasu widać wzrost udanych konstrukcji o mniejszej ilości nóg.\\
+Można tu zaobserwować pewną tendencję spadkową, wraz z upływem czasu widać wzrost udanych konstrukcji o mniejszej ilości nóg. Konstrukcje takie wymagają większej wiedzy naukowców, lepiej dobranych algorytmów ale za to można je skonstruować mniejszym nakładem materiałowym. Stąd naturalne jest dążenie do ograniczania ilości nóg w konstrukcjach robotów kroczących\\
 
-Pojawia się także inna tendencja w ilości nóg robotów. Prawie wszystkie konstrukcje (poza jednonożnymi) opierają się na zwierzątach występujących w naturze.  Jest to raczej logiczna tendencja, jako że do takich robotów mamy już algorytmy chodu opracowane przez miliony lat ewolucji, "konstrukcje" które nie mają sensu nie przetrwałyby do dziś.
+Pojawia się także inna tendencja w ilości nóg robotów. Prawie wszystkie konstrukcje (poza jednonożnymi) opierają się na anatomii zwierząt. Jest to raczej logiczna tendencja, jako że do takich robotów mamy już algorytmy chodu opracowane przez miliony lat ewolucji. Biologiczne "konstrukcje", które nie mają sensu nie przetrwałyby do dziś. \cite{history}\\
 
-Co natomiast z konstrucjami robotów trójnożnych? Można się zastanowić czy konstrukcje takie nie powstają ponieważ faktycznie nie mają sensu, czy może dlatego że temat bardziej "klasycznych", prostrzych w implementacji, konstrukcji nie został po prostu jeszcze wyczerpany przez naukowców. Jeżeli rozejrzymy się dookoła siebie możemy zaobserwować wiele przedmiotów codziennego użytku które posiadają właśnie 3 nogi, od wszelakich taboretów, przez wieszaki na ubrania po stoły. Są to jednak konstrukcje statyczne i dla takich konstrukcji 3 nogi są wymaganym minimum aby dany przedmiot stał stabilnie. Co jednak z konstrukcjami dynamicznymi? Jeżeli robot trójnożny podniesie nogę, straci stabilność, zacznie się przewracać. Czyni to z niego dość ciekawą konstrukcję, gdzie w momencie stania w miejscu zachowuje się bardzej jak roboty o większej ilości nóg, nie przewraca się, a podczas ruchu zachowuje się jak roboty dwunożne, musi odpowiednio szybko odstawić nogę w odpowiednie miejsce aby się nie przewrócić.\\
+Co natomiast z konstrucjami robotów trójnożnych? Można się zastanowić czy konstrukcje takie nie powstają ponieważ faktycznie nie mają sensu, czy może dlatego że temat bardziej "klasycznych", prostszych w implementacji, konstrukcji nie został po prostu jeszcze wyczerpany przez naukowców. Jeżeli rozejrzymy się dookoła siebie możemy zaobserwować wiele przedmiotów codziennego użytku które posiadają właśnie trzy nogi, od wszelakich taboretów, przez wieszaki na ubrania po stoły. Są to jednak przedmioty statyczne i dla takich rozwiązań trzy nogi są wymaganym minimum aby dany przedmiot stał stabilnie. Co jednak z konstrukcjami dynamicznymi? Jeżeli robot trójnożny podniesie nogę, straci stabilność, zacznie się przewracać. Czyni to z niego dość ciekawą konstrukcję, gdzie w momencie stania w miejscu zachowuje się bardzej jak roboty o większej ilości nóg, nie przewraca się, a podczas ruchu zachowuje się jak roboty dwunożne, musi odpowiednio szybko odstawić nogę w odpowiednie miejsce aby się nie przewrócić.\\
 
 \subsection{Istniejące konstrukcje trójnożne}
-Konstrukcje trójnożne pojawiały się w dziełach science fiction już od dawna, od "The War of the worlds" z 1898 aż po "Mroczne Widmo" z 2001 i regularnie pojawiają się naukowcy którzy próbują udowodnić że nie trzeba ogarniczać tego typu robotów do dzieł z obszaru science fiction.
-\subsubsection{STriDER}
-Zbudowany w 2007
+Konstrukcje trójnożne pojawiały się w dziełach science fiction już od dawna, od "The War of the Worlds" z 1898 aż po "Mroczne Widmo" z 2001 i regularnie pojawiają się naukowcy, którzy próbują udowodnić że nie trzeba ogarniczać tego typu robotów do dzieł z obszaru science fiction.
+\subsubsection{STriDER} 
+Został zbudowany w 2007 na Uniwersytecie Stanowym w Virginii. Jego celem były eksperymenty z algorytmami chodu i doclewo, prowadzenie obserwacji. Miały to umożliwić długie nogi, które znacznie podwyższały konstrukcję i sprawiały że górna platforma była idealna do instalowania wszelakiego rodzaju urządzęń typu kamery. Kinematykę robota można określić jako $3-SRRR$, a kinematykę jednej nogi jako $RRR$. Przy czym "pierwsze" $R$ oznacza obrót dookoła osi $x$ a dwa kolejne $R$ oznaczają obrót wokół osi $y$ (zgodnie z oznaczeniami na rysunku \ref{strider_math})  \cite{strider}\\
 
-http://www.romela.org/wp-content/uploads/2015/05/Forward-and-Inverse-Displacement-Analysis-of-a-Novel-Three-Legged-Mobile-Robot-Based-on-the-Kinematics-of-In-Parallel-Manipulators.pdf
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{img/strider_math.png}
+\caption{Uproszczony model matematyczny nogi robota STriDER}
+\label{strider_math}
+\end{figure}
 
-3-SRRR
+\subsubsection{Triped "Martian" }
+Jest to robot zbudowany przez Yoichi Masudę na uniwersytecie w Osace w 2017 roku. Kinematyka tego robota opiera się na mechaniźmie SLIP (Spring-Loaded-Inverted Pendulum). SLIP ma w pewien sposób symulować sposób poruszania się stosowany przez ludzi i zwierzęta. Sprężyna wewnątrz nogi robota jest naciągana, co powoduje skracanie się nogi, a zwalnianie sprężyny z powrotem wydłuża człon. Dodatkowo dodane jest serwo, które może obracać nogę dookoła osi $y$. Czyni to z nogi robota mechanizm o kinematyce typu $RL$. Został także dodany czujnik naprężenia, który jest w stanie zmierzyć siłę naciągu nici kompresującej sprężynę. \cite{Triped Martian}\\
 
-\subsubsection{Triped "Martian"}
-Jest to robot zbudowany przez Yoichi Masudę na uniwersytecie w Osace w 2017
-3-RL
+\begin{figure}[H]
+\includegraphics[width=0.5\textwidth]{img/martian_model.png}
+\caption{Model nogi robota Triped Martian źródło: \cite{Triped Martian}}
+\label{strider_math}
+\end{figure}
 
 \subsubsection{Inne konstrukcje}
-Na internecie można także znaleźć kilka różnych niezbyt dobrze udokumentowanych konstrukcji zakończonych mniejszym lub większym sukcesem:
+W internecie można także znaleźć kilka różnych, niezbyt dobrze udokumentowanych konstrukcji zakończonych mniejszym lub większym sukcesem:
+\begin{itemize}
+\item \href{https://makerfaire.com/maker/entry/71669/}{Makerfaire 3-legged walking robot}
+\item \href{https://youtu.be/HGEhCCUgFMg}{missel tripod robot}
+\end{itemize}
 
-https://makerfaire.com/maker/entry/71669/
-
-https://www.youtube.com/watch?v=HGEhCCUgFMg&ab_channel=driftingswiftly
-
-
-
+Niestety konstrukcje te nie posiadają żadnej dokumentacji technicznej i nie da się dokładnie określić zasady ich działania. Nie można nawet mieć pewności że konstrukcje te faktycznie istnieją a nie są oszustwem lub inną formą naginania rzeczywistości, na co mogłaby wskazywać jakość filmików i uboga ilość materiałów.
 
 \section{Model Matematyczny}
-Noga ma 3 stopnie swobody. Wszystkie są typu obrotowego, przy czym dwie obracają się dookoła osi poziomej, a jedna dookoła osi pionowej. Są to te same osi obrotu co w przypadku ramienia robotycznego typu antromorficznego.
+
 \subsection{Noga robota typu RRR}
-Jest to noga o 3 rotacyjnych stopniach swobody, przy czym 1 stopień obraca się dookoła osi z, a 2 stopnie dookoła osi y. Model matematyczny takiej nogi, a co za tym idzie także jej kinematyka, będzie identyczny jak model ramienia robotycznego typu antropomorficznego (zwanego także "angular" bądź "jointed").
+Noga ma 3 stopnie swobody. Wszystkie są typu obrotowego, noga jest typu $RRR$, przy czym dwie obracają się dookoła osi poziomej (podobnie jak w przypadku robota STriDER), a jedna dookoła osi pionowej. Są to też te same osi obrotu co w przypadku ramienia robotycznego typu antromorficznego, zwanego także "angular" bądź "jointed".
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{img/math_model.jpg}
@@ -98,8 +107,12 @@ Jest to noga o 3 rotacyjnych stopniach swobody, przy czym 1 stopień obraca się
 \label{math_model}
 \end{figure}
 
-\subsubsection{Forward kinematics}
-Obliczanie kinematyki prostej polega na TODOTODO
+\subsubsection{Kinematyka Prosta}
+Obliczanie kinematyki prostej polega na uzyskniu równań końcówki ramienia robotycznego we współrzędnych kartezjańskich względem współrzędnych konfiguracyjnych. Inaczej mówiąc, wejściem algorytmu jest zbiór współrzędnych konfiguracyjnych, a na wyjściu otrzymamy współrzędne kartezjańskie.\cite{robot_manipulators}\\
+
+W przypadku tego konkretnego manipulatora, mamy do czynienia z trójwymiarowym układem współrzędnych kartezjańskich i trzema stopniami swobody. Da to liniowo niezależny ukłąd trzech równań, w którym parametrami będą kąty na jakich mają ustawić się serwomechanizmy a wynikiem wektor współrzędnych kartezjańskich.\\
+
+Najprostrzą metodą liczenia kinematyki prostej jest rozrysowanie modelu matematycznego i geometryczne wyprowadzenie potrzebnych równań. Model taki dla tego manipulatora został przedstawiony na rysunku \ref{math_model}. Przyjęty początek układu współrzędnych został oznaczony jako $(0, 0, 0)$, a punkt którego współrzędne kartezjańskie są poszukiwane został oznaczony jako $(X, Y, Z)$. $h_1$ i $a_{1-3}$ to stałe długości poszczególnych członów nogi. Natomiast $\theta_{0-2}$ to właśnie pozycje serwomechanizmów - parametry algorytmu. Na ich podstawie zostaną obliczone współrzędne końcówki manipulatora w systemie kartezjańskim. Same obliczenia geometryczne są już w tym momencie dość trywialne, wystarczy do każdego członu $a_{1-3}$ przenieść jego długość na oś $X$, $Y$ lub $Z$ za pomocą trygonometrii (sinus lub cosinus) i zsumować odpowiednie długości. Da to układ równań \ref{FK_ver_1}.
 
 \begin{equation} \label{FK_ver_1}
 \begin{split}
@@ -111,23 +124,32 @@ Z &= a_2 \sin{\theta_1} - a_3 \sin{\left(\theta_2 - \theta_1\right)}
 \end{equation}
 
 \subsubsection{Forward kinematics - denavit hartenberg \cite{DH_AA_article}}
-Alternatywą dla zwykłych obliczeń geometrycznych jest metoda Denvaita Hartenberga - TODOTODOTODO
+Alternatywą dla zwykłych obliczeń geometrycznych jest metoda Denvaita Hartenberga. Polega ona na przedstawieniu każdego przekształcenia jednorodnego wynikających z każdego kolejnego stopnia swobody za pomocą iloczynu czterech przekształceń prostyh. Następnie za pomocą tej metody można obliczyć całkowite przekształcenie od początku układu aż po końcówkę za pomocą iloczynu wszystkich przekształceń jednorodnych. \cite{DH_wpaszke_wyklad}
+
+TODO - przkeształcenie
+
+Metoda ta jest w szczególności użyteczna dla bardzo skomplikowanych manipulatorów, gdzie stopni swobody jest znacznie więcej niż ilość współrzędnych kartezjańskich.
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{img/DH_model.jpg}
 \caption{Model Denavit Hartenberg}
-\label{math_model}
+\label{math_model_DH}
 \end{figure}
 
-\begin{equation}
-\begin{array}{c|cccc}
-\textrm{Joint } i & \theta_i & \alpha_i & r_i & d_i \\
-\hline
-1  & \theta_0 & \frac{\pi}{2} & a_1 & h_1 \\
-2  & \theta_1 & 0 & a_2 & 0 \\
-3  & \theta_2 & 0 & a_3 & 0 \\
-\end{array}
-\end{equation}
+Obliczenia należy zacząć od stworzenia specjalnego rysunku (Rys. \ref{math_model_DH}) z zaznaczonymi kolejnymi obrotami lokalnych układów współrzędnych, a następnie zebrać odpowiednie transformacje do tabelki (Tab. \ref{table:DH_table})
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{c | c c c c }
+ Joint $i$ & $\theta_i$ & $\alpha_i$ & $r_i$ & $d_i$ \\
+ \hline
+ $1$  & $\theta_0$ & $\frac{\pi}{2}$ & $a_1$ & $h_1$ \\
+ $2$  & $\theta_1$ & $0$ & $a_2$ & $0$ \\
+ $3$  & $\theta_2$ & $0$ & $a_3$ & $0$ \\
+\end{tabular}
+\caption{Tabela z parametrami DH}
+\label{table:DH_table}
+\end{table}
 
 Gdzie: \\
 $\theta_i$ - angle from $x_{n-1}$ to $x_n$ around $z_{n-1}$\\
@@ -176,12 +198,6 @@ c\theta_1 \cdot s\theta_2 + s\theta_1 \cdot c\theta_2 & c\left( \theta_1 + \thet
 \end{multline}
 
 
-%\left[\begin{matrix}
-%\cos{\theta_0} \cdot \cos{\theta_1} \cdot \cos{\theta_2} & -cos{\theta_0} \cdot \sin{\theta_1} \cdot \sin{\theta_2}  & \sin{\theta_0} & \cos{\theta_0} \cdot \left( a_2 \cdot \cos{\theta_1} + a_3 \cdot \cos{\theta_1} \cdot \cos{\theta_2}\right)\\
-%\sin{\theta_0} \cdot \cos{\theta_1} \cdot \cos{\theta_2} & -sin{\theta_0} \cdot \sin{\theta_1} \cdot \sin{\theta_2}  & \cos{\theta_0} & \sin{\theta_0} \cdot \left( a_2 \cdot \cos{\theta_1} + a_3 \cdot \cos{\theta_1} \cdot \cos{\theta_2}\right)\\
-%\sin(\theta_1) \cdot \sin(\theta_2) & \cos(\theta_1) \cdot \cos(\theta_2) & 0 & a_2 \cdot \sin(\theta_1) + a_3 \cdot \sin(\theta_1) \cdot \sin(\theta_2)\\
-%0 & 0 & 0 & 1\\
-%\end{matrix}\right]
 
 Następnie, aby otrzymać właściwe równania, należy z równania \ref{DH_final_equation} wziąć część odpowiedzialną za transformację.
 
@@ -196,11 +212,10 @@ Z &= h_1 + a_2 \cdot s\theta_1 + a_3 \cdot s\left( \theta_1 + \theta_2 \right)\\
 TODO - znak się nie zgadza
 
 
-
 \subsubsection{Invert kinematics}
 Kinematyka odwrotna to TODOTODOTODO
 
-Zwykle odwrotną kinematykę można obliczyć poprzez rozwiązanie równań kinematyki prostej. Jest to w tym przypadku także teoretycznie możliwe, jako że mamy do czynienia z trzema niewiadomymi ($\theta_{0-2}$) i układem trzech równań nr. \ref{FK_ver_1} lub \ref{FK_ver_1}. (Równanie na $a_{temp}$ jest jedynie pomocnicze, trzeba je traktować jak część równań $Y$ i $X$).
+Zwykle odwrotną kinematykę można obliczyć poprzez rozwiązanie równań kinematyki prostej. Jest to w tym przypadku także teoretycznie możliwe, jako że mamy do czynienia z trzema niewiadomymi ($\theta_{0-2}$) i układem trzech równań nr. \ref{FK_ver_1} lub \ref{FK_ver_2}. (Równanie na $a_{temp}$ jest jedynie pomocnicze, trzeba je traktować jak część równań $Y$ i $X$).
 
 Jest to jak najbardziej wykonalne w przypadku $\theta_0$, można to zrobić łącząc wzór na $X$ i $Y$, dzieląc go obustronnie, zamieniając $\frac{\sin}{\cos}$ na $\tan$ i wyciągając $\theta_0$ na lewą stronę. Daje to wzór \ref{theta_0_eq_final}
 
@@ -238,7 +253,7 @@ Jest to jak najbardziej wykonalne w przypadku $\theta_0$, można to zrobić łą
 %\]
 
 %\[
-%Z - h_1 = a_2 \cdot \sin{\theta_1} - a_3 \sin{\left( \theta_2 - \theta_1 \right)}
+%z + h_1 = a_2 \cdot \sin{\theta_1} - a_3 \sin{\left( \theta_2 - \theta_1 \right)}
 %\]
 
 %\[
@@ -266,25 +281,25 @@ Jest to jak najbardziej wykonalne w przypadku $\theta_0$, można to zrobić łą
 
 %Niestety wzór \ref{theta_1_eq2} nie pozwala jednoznacznie wyznaczyć jawnego $\theta_1$ i co za tym idzie nie da się tego wzoru jednoznacznie zaimplementować softwareowo, co jest niezbędne w dalszej części pracy. Można natomiast powrócić do rysunku \ref{math_model} i zastosować na trójkącie utworzonym z $a_2$ i $a_3$ twierdzenie cosinusów połączone z twierdzeniem pitagorasa.
 
-Większy problem pojawia się jednak w przypadku obliczania $\theta_1$ i $\theta_2$, ponieważ wartości te da się obliczyć z wyżej wspomnianego równania, ale nie da się wyznaczyć na te wartości równań w postaci jawnej. A bez postaci jawnej nie będzie możliwa poprawna implementacja tych równań.
+Większy problem pojawia się jednak w przypadku obliczania $\theta_1$ i $\theta_2$, ponieważ wartości te da się obliczyć z wyżej wspomnianego równania, ale nie da się wyznaczyć na te wartości równań w postaci jawnej. A bez postaci jawnej poprawna implementacja tych równań będzie znacznie utrudniona.
 
-Można natomiast zastosować pewnego rodzaju trik. Jeżeli wyznaczanie równań $\theta_1$ i $\theta_2$ sprowadzi się do problemu dwuwymiarowego, obliczenia stają się w zasadzie identyczne jak w przypadku obliczeń kinematyki odwrotnej dla robota typu SCARA, co było już robione wielokrotnie.\\
+Można natomiast zastosować pewnego rodzaju uproszczenie. Jeżeli wyznaczanie równań $\theta_1$ i $\theta_2$ sprowadzi się do problemu dwuwymiarowego, obliczenia stają się w zasadzie identyczne jak w przypadku obliczeń kinematyki odwrotnej dla robota typu SCARA, co było już robione wielokrotnie.\\
 
 Aby obliczyć kąt $\theta_2$ można powrócić do rysunku \ref{math_model} i zastosować na trójkącie utworzonym z $a_2$ i $a_3$ twierdzenie cosinusów połączone z twierdzeniem pitagorasa. Daje to wzór \ref{theta_2_eq_1}.
 
 \begin{equation} \label{theta_2_eq_1}
-(x - a_1)^2 + (z - h_1)^2 = a_2^2 + a_3^2 - 2 \cdot a_2 \cdot a_3 \cdot \cos{(180^o - \theta_2)}\\
+(x - a_1)^2 + (z + h_1)^2 = a_2^2 + a_3^2 - 2 \cdot a_2 \cdot a_3 \cdot \cos{(180^o - \theta_2)}\\
 \end{equation}
 
 Następnie na podstawie równania \ref{theta_2_eq_1} aby ostatecznie otrzymać $\theta_2$ należy zastosować wzór $\cos{(180^o - \theta)} = -\cos{\theta}$ i za pomocą prostych przekształceń wyciągnąć z równania $\theta_2$. Daje to wzór \ref{theta_2_eq_final}
 
 \begin{equation} \label{theta_2_eq_final}
-\theta_2 = \arccos{\left( \frac{(x - a_1)^2 + (z - h_1)^2 - a_2^2 - a_3^2}{2 a_2 a_3} \right)}\\ \cite{SCARA_model}
+\theta_2 = \arccos{\left( \frac{(x - a_1)^2 + (z + h_1)^2 - a_2^2 - a_3^2}{2 a_2 a_3} \right)}\\ \cite{SCARA_model}
 \end{equation}
 Natomiast obliczenia dla $\theta_1$ TODO
 
 \begin{equation}\label{theta_1_eq_final}
-\theta_1 = \arctan{\frac{z - h_1}{x - a_1}} - \arcsin{\left( \frac{a_3 \sin{\theta_2} }{ \sqrt{ (x - a_1)^2 + (z - h_1)^2}} \right)}\\ \cite{SCARA_model}
+\theta_1 = \arctan{\frac{z + h_1}{x - a_1}} + \arcsin{\left( \frac{a_3 \sin{\theta_2} }{ \sqrt{ (x - a_1)^2 + (z + h_1)^2}} \right)}\\ \cite{SCARA_model}
 \end{equation}
 
 Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final}, \ref{theta_2_eq_final} otrzymujemy układ równań który stanowi kinematykę odwrotną opisywanej nogi robotycznej.
@@ -292,6 +307,8 @@ Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final},
 TODO - układ równań
 
 TODO - ograniczenia.
+
+Natomiast trzeba cały czas pamiętać że jest to tylko uproszczenie, które będzie owocować pewnymi drobnymi błędami. Trzeba zauważyć, że zmiana współrzędnej $Y$ nie wpływa na wartości kątów $\theta_1$ i $\theta_2$, tylko na $\theta_0$. Oznacza to, że wraz ze zmianą kąta $\theta_0$, na potrzeby uproszczenia obliczeń, obraca się także o ten kąt oś $X$ układu współrzędnych. W praktyce oznacza to, że odsunięcie nogi od punktu $(0, 0, 0)$ zawsze będzie rzutowane na cylinder o promieniu równym odsunięciu o takim samym $X$ i $Z$, ale $Y = 0$. Problem jest zaprezentowany na rysunku XXX. Jednakże błąd powinien być pomijalnie mały a równania powinny umożliwić skuteczną implementację algorytmu chodu.
 
 \subsection{Cały Robot}
 Zwykle konstruując roboty wzorujemy się na zwierzętach występujących w naturze. W tym przypadku nie mamy jednak tego luksusu, dlatego na początek należy przyjąć jakieś najbardziej intuicyjne założenie. Dlatego też uznałem że najlepszym rozwiązaniem będzie rozmieścić nogi na jednej płaszczyźnie w równych odstępach - co $120\deg$.
@@ -310,15 +327,28 @@ Aby móc w prosty sposób napisać później algorytmy chodu i móc się skupić
 
 \section{Model CAD i druk 3D}
 
-\section{Środowisko ROS}
-\subsection{Schemat implementacji}
+\section{Implementacja w środowisku ROS}
+\subsection{Środowisko ROS}
+\subsubsection{Schemat implementacji}
 
 \section{Algorytm Chodu}
 
 \begin{thebibliography}{9}
 
-\bibitem{}
-\href{https://www.researchgate.net/publication/258995388_A_Historical_Perspective_of_Legged_Robots}{A Historical Perspective of Legged Robots}
+\bibitem{history}
+\href{https://www.researchgate.net/publication/258995388_A_Historical_Perspective_of_Legged_Robots}{Manuel F. Silva, J. A. Tenreiro Machado (2006) A Historical Perspective of Legged Robots}
+
+\bibitem{strider}
+\href{http://www.romela.org/wp-content/uploads/2015/05/Forward-and-Inverse-Displacement-Analysis-of-a-Novel-Three-Legged-Mobile-Robot-Based-on-the-Kinematics-of-In-Parallel-Manipulators.pdf}{Forward and Inverse Displacement Analysis of a Novel Three Legged Mobile Robot Based on the Kinematics of In Parallel Manipulators}
+
+\bibitem{Triped Martian}
+\href{https://www.jstage.jst.go.jp/article/jrobomech/29/3/29_528/_pdf}{Yoichi Masuda, Masato Ishikawa (2017) Simplified Triped Robot for Analysis of Three-Dimensional Gait Generation}
+
+\bibitem{robot_manipulators}
+\href{https://books.google.pl/books?id=UzZ3LAYqvRkC&redir_esc=y}{Richard P. Paul (1981) Robot Manipulators: Mathematics, Programming, and Control : the Computer Control of Robot Manipulators}
+
+\bibitem{DH_wpaszke_wyklad}
+\href{http://staff.uz.zgora.pl/wpaszke/materialy/air/PRwyklad_4.pdf}{Wojciech Paszke Kinematyka prosta: reprezentacja Denavita-Hartenberga}
 
 \bibitem{DH_AA_article}
 \href{https://automaticaddison.com/how-to-find-denavit-hartenberg-parameter-tables/}{How to Find Denavit-Hartenberg Parameter Tables, blogpost by Automatic Addison}
