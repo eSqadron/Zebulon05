@@ -9,7 +9,7 @@
 #define PI 3.14159265359
 
 
-unsigned int rad2qns(float rad){
+short unsigned int rad2qns(float rad){
     // 2496 * 4: -90, -PI/2
     // 496 * 4: 90, PI/2
     // 1496 * 4: 0, 0
