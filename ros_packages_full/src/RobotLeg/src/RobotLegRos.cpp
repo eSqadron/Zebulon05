@@ -40,8 +40,8 @@ std::array<float, 3> RobotLegRos::inverse_kinematics(const std::array<float, 3> 
 
 void RobotLegRos::move_leg_xyz(float x, float y, float z){
     std::array<float, 3> inv_k = inverse_kinematics({x, y, z});
-    temp_out_buffer_ = inv_k[1];
-    temp_out_buffer2_ = rad2qns(temp_out_buffer_);
+//    temp_out_buffer_ = inv_k[1];
+//    temp_out_buffer2_ = rad2qns(temp_out_buffer_);
 
     inv_k[1] = inv_k[1] - (35 * PI/180);
     inv_k[2] = inv_k[2] - (70 * PI/180);
