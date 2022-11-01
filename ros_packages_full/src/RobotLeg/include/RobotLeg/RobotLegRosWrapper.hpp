@@ -11,7 +11,7 @@
 #include <functional>
 #include <memory>
 //#include <string>
-#include <format>
+#include <sstream>
 
 #include "rclcpp/rclcpp.hpp"
 #include "maestro_interfaces/msg/maestro_target.hpp"
@@ -31,7 +31,12 @@ class RobotLegRosWrapper : public rclcpp::Node{
 public:
     RobotLegRosWrapper() : Node("robot_leg_ros_wrapper"), count_(0){
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
-        step_done_feedback_ = this->create_publisher<std_msgs::msg::Bool>((std::format("step_done_", this->get_parameter("leg_no")), 10); // true when leg is idle
+        std::ostringstream temp_stream;
+        temp_stream << "step_done_" << this->get_parameter("leg_no");
+        temp_stream.flush()
+
+
+        step_done_feedback_ = this->create_publisher<std_msgs::msg::Bool>(temp_stream.str(), 10); // true when leg is idle
 
         this->declare_parameter("leg_no", 1);
 
@@ -39,7 +44,10 @@ public:
         robo_leg.set_physical_params(40, 55, 125, 180);
 
         subscription_ = this->create_subscription<maestro_interfaces::msg::CurrentPositions>("current_positions", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this, std::placeholders::_1));
-        step_subscription_ = this->create_subscription<geometry_msgs::msg::Point>(std::format("xyz_endpoint_{}", this->get_parameter("leg_no")), 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
+
+        temp_stream << "xyz_endpoint_" << this->get_parameter("leg_no")
+        step_subscription_ = this->create_subscription<geometry_msgs::msg::Point>(temp_stream.str(), 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
+        temp_stream.flush()
     }
 
 private:
