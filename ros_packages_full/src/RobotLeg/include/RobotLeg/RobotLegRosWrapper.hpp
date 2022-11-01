@@ -33,7 +33,7 @@ public:
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
         std::ostringstream temp_stream;
         temp_stream << "step_done_" << this->get_parameter("leg_no");
-        temp_stream.flush()
+        temp_stream.flush();
 
 
         step_done_feedback_ = this->create_publisher<std_msgs::msg::Bool>(temp_stream.str(), 10); // true when leg is idle
@@ -45,9 +45,9 @@ public:
 
         subscription_ = this->create_subscription<maestro_interfaces::msg::CurrentPositions>("current_positions", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this, std::placeholders::_1));
 
-        temp_stream << "xyz_endpoint_" << this->get_parameter("leg_no")
+        temp_stream << "xyz_endpoint_" << this->get_parameter("leg_no");
         step_subscription_ = this->create_subscription<geometry_msgs::msg::Point>(temp_stream.str(), 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
-        temp_stream.flush()
+        temp_stream.flush();
     }
 
 private:
