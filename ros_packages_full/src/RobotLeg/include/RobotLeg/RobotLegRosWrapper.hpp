@@ -31,13 +31,13 @@ class RobotLegRosWrapper : public rclcpp::Node{
 public:
     RobotLegRosWrapper() : Node("robot_leg_ros_wrapper"), count_(0){
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
+
+        this->declare_parameter("leg_no", 1);
+
         std::ostringstream temp_stream;
         temp_stream << "step_done_" << this->get_parameter("leg_no");
         step_done_feedback_ = this->create_publisher<std_msgs::msg::Bool>("step_done_1", 10); // true when leg is idle
         temp_stream.flush();
-
-
-        this->declare_parameter("leg_no", 1);
 
         robo_leg.set_publisher(publisher_);
         robo_leg.set_physical_params(40, 55, 125, 180);
