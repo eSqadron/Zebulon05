@@ -10,7 +10,7 @@ void RobotLegRosWrapper::cur_pos_callback(const maestro_interfaces::msg::Current
     robo_leg.save_last_known_servo_positions(msg.current_ang);
 
     auto feedback_msg = std_msgs::msg::Bool();
-    std::array<short unsigned int, 3> servo_ids = robo_leg.get_servo_ids()
+    std::array<short unsigned int, 3> servo_ids = robo_leg.get_servo_ids();
 
     if(robo_leg.get_servo_movement_target() == std::array<short unsigned int, 3>{msg.current_ang[servo_ids[0]], msg.current_ang[servo_ids[1]], msg.current_ang[servo_ids[2]]}){
         feedback_msg.data = true;
