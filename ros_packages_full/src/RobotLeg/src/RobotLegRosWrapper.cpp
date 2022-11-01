@@ -11,7 +11,7 @@ void RobotLegRosWrapper::cur_pos_callback(const maestro_interfaces::msg::Current
 
     auto feedback_msg = std_msgs::msg::Bool();
 
-    if(robo_leg.get_servo_movement_target() == {msg.current_ang[get_servo_ids[0]], msg.current_ang[get_servo_ids[1]], msg.current_ang[get_servo_ids[2]]}){
+    if(robo_leg.get_servo_movement_target() == std::array<short unsigned int, 3>{msg.current_ang[get_servo_ids[0]], msg.current_ang[get_servo_ids[1]], msg.current_ang[get_servo_ids[2]]}){
         feedback_msg.data = true;
     } else{
         feedback_msg.data = false;
