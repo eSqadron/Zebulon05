@@ -33,10 +33,9 @@ public:
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
         std::ostringstream temp_stream;
         temp_stream << "step_done_" << this->get_parameter("leg_no");
+        step_done_feedback_ = this->create_publisher<std_msgs::msg::Bool>(temp_stream.str(), 10); // true when leg is idle
         temp_stream.flush();
 
-
-        step_done_feedback_ = this->create_publisher<std_msgs::msg::Bool>(temp_stream.str(), 10); // true when leg is idle
 
         this->declare_parameter("leg_no", 1);
 
