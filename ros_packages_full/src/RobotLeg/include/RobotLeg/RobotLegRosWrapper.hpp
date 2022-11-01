@@ -35,7 +35,7 @@ public:
         this->declare_parameter("leg_no", 1);
 
         std::ostringstream temp_stream;
-        temp_stream << "step_done_" << this->get_parameter("leg_no");
+        temp_stream << "step_done_" << this->get_parameter("leg_no").get_parameter_value();
         RCLCPP_INFO(this->get_logger(), temp_stream.str().c_str());
         step_done_feedback_ = this->create_publisher<std_msgs::msg::Bool>(temp_stream.str(), 10); // true when leg is idle
         temp_stream.flush();
