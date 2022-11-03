@@ -72,7 +72,7 @@ private:
             if (is_step_stage_done_) {
                 message.x = 55 + 125 + 70;
                 message.y = 0;
-                message.z = 100
+                message.z = 100;
                 step_1_publisher_->publish(message);
                 current_step_stage_ = Idle;
             }
