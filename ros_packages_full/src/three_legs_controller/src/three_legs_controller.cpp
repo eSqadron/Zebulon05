@@ -55,7 +55,7 @@ private:
 
         if(current_step_stage_ == Idle){
             if(is_step_stage_done_){
-                message.x = 55 + 125 + 70;
+                message.x = 55 + 125 + 180;
                 message.y = 0;
                 message.z = -40;
 
@@ -64,9 +64,9 @@ private:
         }
         else if(current_step_stage_ == Right_forward) {
             if (is_step_stage_done_) {
-                message.x = 55 + 125 + 70;
+                message.x = 55 + 125 + 180;
                 message.y = 0;
-                message.z = 100;
+                message.z = -40;
 
                 current_step_stage_ = Idle;
             }
