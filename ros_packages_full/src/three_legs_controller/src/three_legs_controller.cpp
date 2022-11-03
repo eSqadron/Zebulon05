@@ -39,7 +39,7 @@ public:
         step_2_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_2", 10);
         step_3_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_3", 10);
 
-        timer_ = this->create_wall_timer(100ms, std::bind(&ThreeLegsController::timer_callback, this));
+        timer_ = this->create_wall_timer(500ms, std::bind(&ThreeLegsController::timer_callback, this));
 
         step_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::step_done_callback, this, std::placeholders::_1));
 
@@ -61,7 +61,7 @@ private:
 
         if(current_step_stage_ == Idle){
             if(is_step_stage_done_){
-                message.x = 55 + 125 + 70;
+                message.x = 55 + 125 + 180;
                 message.y = 0;
                 message.z = -40;
                 step_1_publisher_->publish(message);
@@ -70,9 +70,9 @@ private:
         }
         else if(current_step_stage_ == Right_forward) {
             if (is_step_stage_done_) {
-                message.x = 55 + 125 + 70;
+                message.x = 55 + 125;
                 message.y = 0;
-                message.z = 100;
+                message.z = -40;
                 step_1_publisher_->publish(message);
                 current_step_stage_ = Idle;
             }
