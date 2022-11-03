@@ -9,13 +9,14 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
 
 add_executable(three_legs_controller src/three_legs_controller.cpp include/three_legs_controller/three_legs_controller.hpp)
-ament_target_dependencies(three_legs_controller rclcpp geometry_msgs)
+ament_target_dependencies(three_legs_controller rclcpp geometry_msgs std_msgs)
 
 install(TARGETS
         three_legs_controller

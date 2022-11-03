@@ -64,7 +64,7 @@ private:
                 message.x = 55 + 125 + 180;
                 message.y = 0;
                 message.z = -40;
-
+                step_1_publisher_->publish(message);
                 current_step_stage_ = Right_forward;
             }
         }
@@ -73,12 +73,10 @@ private:
                 message.x = 55 + 125 + 180;
                 message.y = 0;
                 message.z = -40;
-
+                step_1_publisher_->publish(message);
                 current_step_stage_ = Idle;
             }
         }
-
-        step_1_publisher_->publish(message);
     }
 
 
