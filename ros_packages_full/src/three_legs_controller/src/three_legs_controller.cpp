@@ -19,23 +19,31 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/point.hpp"
+#include "std_msgs/msg/bool.hpp"
 
 using namespace std::chrono_literals;
 
-/* This example creates a subclass of Node and uses std::bind() to register a
- * member function as a callback from the timer. */
+enum step_stage{
+    NA,
+    Idle,
+    Right_forward,
+    Middle_back,
+    Change_dir
+};
 
 class ThreeLegsController : public rclcpp::Node
 {
 public:
-    ThreeLegsController()
-    : Node("three_legs_controller"), count_(0)
-    {
+    ThreeLegsController() : Node("three_legs_controller"){
         step_1_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_1", 10);
         step_2_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_2", 10);
         step_3_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_3", 10);
-        timer_ = this->create_wall_timer(5000ms, std::bind(&ThreeLegsController::timer_callback, this));
-        counter = 0;
+
+        timer_ = this->create_wall_timer(100ms, std::bind(&ThreeLegsController::timer_callback, this));
+
+        step_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this, std::placeholders::_1));
+
+        current_step_stage_ = Idle;
 
     }
 
@@ -44,39 +52,43 @@ private:
     {
         auto message = geometry_msgs::msg::Point();
         //robo_leg.set_physical_params(40, 55, 125, 180);
+        
+        if(current_step_stage_ == Idle){
+            if(is_step_stage_done_){
+                message.x = 55 + 125 + 70;
+                message.y = 0;
+                message.z = -40;
 
+                current_step_stage_ = Right_forward;
+            }
+        }
+        else if(current_step_stage_ == Right_forward) {
+            if (is_step_stage_done_) {
+                message.x = 55 + 125 + 70;
+                message.y = 0;
+                message.z = 100;
 
-//        if(counter == 0) {
-//            message.x = 55 + 125 + 180;
-//            message.y = 0;
-//            message.z = -40;
-//        } else if (counter == 1){
-//            message.x = 55 + 125 + 30;
-//            message.y = 0;
-//            message.z = -40;
-//        } else
-        if (counter == 0){
-            message.x = 55 + 125 + 70;
-            message.y = 0;
-            message.z = -40;
-        } else if (counter == 1){
-            message.x = 55 + 125 + 70;
-            message.y = 0;
-            message.z = 100;
+                current_step_stage_ = Idle;
+            }
         }
 
-
         step_1_publisher_->publish(message);
-        counter++;
-        if(counter >= 2) counter = 0;
     }
+
+
+    void step_done_callback(const geometry_msgs::msg::Point& msg){
+        is_step_stage_done_ = msg.data;
+    }
+
+    bool is_step_stage_done_;
+    step_stage current_step_stage_;
 
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_1_publisher_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_2_publisher_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_3_publisher_;
-    size_t count_;
-    int counter;
+
+    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr step_done_feedback_sub_;
 };
 
 int main(int argc, char * argv[])
