@@ -41,7 +41,7 @@ public:
 
         timer_ = this->create_wall_timer(100ms, std::bind(&ThreeLegsController::timer_callback, this));
 
-        step_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&RobotLegRosWrapper::cur_pos_callback, this, std::placeholders::_1));
+        step_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::cur_pos_callback, this, std::placeholders::_1));
 
         current_step_stage_ = Idle;
 
