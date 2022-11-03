@@ -61,7 +61,7 @@ private:
 
         if(current_step_stage_ == Idle){
             if(is_step_stage_done_){
-                message.x = 55 + 125 + 180;
+                message.x = 55 + 125 + 70;
                 message.y = 0;
                 message.z = -40;
                 step_1_publisher_->publish(message);
@@ -70,9 +70,9 @@ private:
         }
         else if(current_step_stage_ == Right_forward) {
             if (is_step_stage_done_) {
-                message.x = 55 + 125 + 180;
+                message.x = 55 + 125 + 70;
                 message.y = 0;
-                message.z = -40;
+                message.z = 100
                 step_1_publisher_->publish(message);
                 current_step_stage_ = Idle;
             }
