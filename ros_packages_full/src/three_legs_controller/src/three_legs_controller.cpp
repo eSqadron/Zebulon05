@@ -52,7 +52,7 @@ private:
     {
         auto message = geometry_msgs::msg::Point();
         //robo_leg.set_physical_params(40, 55, 125, 180);
-        
+
         if(current_step_stage_ == Idle){
             if(is_step_stage_done_){
                 message.x = 55 + 125 + 70;
@@ -76,7 +76,7 @@ private:
     }
 
 
-    void step_done_callback(const geometry_msgs::msg::Point& msg){
+    void step_done_callback(const std_msgs::msg::Bool& msg){
         is_step_stage_done_ = msg.data;
     }
 
