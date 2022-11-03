@@ -78,6 +78,8 @@ private:
 
     void step_done_callback(const std_msgs::msg::Bool& msg){
         is_step_stage_done_ = msg.data;
+        RCLCPP_INFO(this->get_logger(), std::to_string(is_step_stage_done_).c_str());
+
     }
 
     bool is_step_stage_done_;
