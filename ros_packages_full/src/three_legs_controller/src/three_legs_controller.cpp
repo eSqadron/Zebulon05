@@ -45,6 +45,12 @@ public:
 
         current_step_stage_ = Idle;
 
+        auto message = geometry_msgs::msg::Point();
+        message.x = 55 + 125 + 180;
+        message.y = 0;
+        message.z = -40;
+        step_1_publisher_->publish(message);
+        rclcpp::sleep_for(std::chrono::nanoseconds(2000000000));
     }
 
 private:
