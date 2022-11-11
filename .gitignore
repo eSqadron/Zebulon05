@@ -70,3 +70,4 @@ cmake-build-debug/
 ros_packages_full/log
 ros_packages_full/install
 ros_packages_full/build
+ros_packages_full/.vscode/settings.json

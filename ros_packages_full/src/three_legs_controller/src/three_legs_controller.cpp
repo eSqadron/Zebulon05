@@ -52,6 +52,9 @@ public:
         step_1_publisher_->publish(message);
         rclcpp::sleep_for(std::chrono::nanoseconds(6000000000));
         is_step_stage_done_ = true;
+
+        step_2_publisher_->publish(message);
+
     }
 
 private:
@@ -80,6 +83,7 @@ private:
                 current_step_stage_ = Idle;
             }
         }
+
     }
 
 

@@ -33,10 +33,11 @@ public:
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
 
         this->declare_parameter("leg_no", 1);
+        this->declare_parameter("servo_ids", {0, 1, 2});
 
         std::ostringstream temp_stream;
         temp_stream << "step_done_" << this->get_parameter("leg_no").get_parameter_value().get<int>();
-        RCLCPP_INFO(this->get_logger(), temp_stream.str().c_str());
+        //RCLCPP_INFO(this->get_logger(), temp_stream.str().c_str());
         step_done_feedback_ = this->create_publisher<std_msgs::msg::Bool>(temp_stream.str(), 10); // true when leg is idle
         temp_stream.str("");
         temp_stream.clear();
@@ -49,6 +50,9 @@ public:
         temp_stream << "xyz_endpoint_" << this->get_parameter("leg_no").get_parameter_value().get<int>();
         step_subscription_ = this->create_subscription<geometry_msgs::msg::Point>(temp_stream.str(), 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
         temp_stream.flush();
+
+        robo_leg.set_servo_ids(this->get_parameter("servo_ids").get_parameter_value().get<std::array<int, 3>>());
+
     }
 
 private:
