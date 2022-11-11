@@ -34,7 +34,7 @@ public:
 
         this->declare_parameter("leg_no", 1);
        // this->declare_parameter("servo_ids", {0, 1, 2});
-        this->declare_parameter("servo_ids", const std::vector<int64_t>({0, 1, 2}));
+        this->declare_parameter("servo_ids", std::vector<int64_t>({0, 1, 2}));
         //this->set_parameters({rclcpp::Parameter("servo_ids", std::array<short unsigned int, 3>({0, 1, 2}))});
 
         std::ostringstream temp_stream;
