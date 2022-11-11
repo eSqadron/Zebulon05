@@ -50,7 +50,7 @@ public:
         message.y = 0;
         message.z = -40;
         step_1_publisher_->publish(message);
-        rclcpp::sleep_for(std::chrono::nanoseconds(20000000000));
+        rclcpp::sleep_for(std::chrono::nanoseconds(6000000000));
         is_step_stage_done_ = true;
     }
 
