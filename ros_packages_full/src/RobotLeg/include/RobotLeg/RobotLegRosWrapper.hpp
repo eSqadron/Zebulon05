@@ -34,7 +34,7 @@ public:
 
         this->declare_parameter("leg_no", 1);
        // this->declare_parameter("servo_ids", {0, 1, 2});
-        this->declare_parameter("servo_ids", std::array<short unsigned int, 3>({0, 1, 2}));
+        this->declare_parameter("servo_ids", std::array<int, 3>({0, 1, 2}));
         //this->set_parameters({rclcpp::Parameter("servo_ids", std::array<short unsigned int, 3>({0, 1, 2}))});
 
         std::ostringstream temp_stream;
@@ -53,7 +53,7 @@ public:
         step_subscription_ = this->create_subscription<geometry_msgs::msg::Point>(temp_stream.str(), 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
         temp_stream.flush();
 
-        robo_leg.set_servo_ids(this->get_parameter("servo_ids").get_parameter_value().get<std::array<short unsigned int, 3>>());
+        robo_leg.set_servo_ids(this->get_parameter("servo_ids").get_parameter_value().get<std::array<int, 3>>());
 
     }
 
