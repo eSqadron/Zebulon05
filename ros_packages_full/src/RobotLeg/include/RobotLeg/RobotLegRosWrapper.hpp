@@ -54,7 +54,7 @@ public:
         temp_stream.flush();
 
         const std::vector<int64_t> temp_servo_ids = this->get_parameter("servo_ids").get_parameter_value().get<const std::vector<int64_t>>();
-        std::array<short unsigned int, 3> temp_servo_ids_arr = {temp_servo_ids[0], temp_servo_ids[1], temp_servo_ids[2]};
+        std::array<short unsigned int, 3> temp_servo_ids_arr = {static_cast<short unsigned int>(temp_servo_ids[0]), static_cast<short unsigned int>(temp_servo_ids[1]), static_cast<short unsigned int>(temp_servo_ids[2])};
 
         robo_leg.set_servo_ids(temp_servo_ids_arr);
 
