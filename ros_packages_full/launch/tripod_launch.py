@@ -16,6 +16,22 @@ def generate_launch_description():
             ]
         ),
         Node(
+            package='RobotLeg',
+            executable='robot_leg_wrapper',
+            name='leg_2',
+            parameters=[
+                {"leg_no": 2}
+            ]
+        ),
+        Node(
+            package='RobotLeg',
+            executable='robot_leg_wrapper',
+            name='leg_3',
+            parameters=[
+                {"leg_no": 3}
+            ]
+        ),
+        Node(
             package='three_legs_controller',
             executable='three_legs_controller'
         )
