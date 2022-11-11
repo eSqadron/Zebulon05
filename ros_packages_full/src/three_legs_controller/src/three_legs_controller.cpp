@@ -51,6 +51,7 @@ public:
         message.z = -40;
         step_1_publisher_->publish(message);
         rclcpp::sleep_for(std::chrono::nanoseconds(2000000000));
+        is_step_stage_done_ = true;
     }
 
 private:
