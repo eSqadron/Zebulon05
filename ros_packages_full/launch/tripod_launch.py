@@ -10,6 +10,7 @@ def generate_launch_description():
         Node(
             package='RobotLeg',
             executable='robot_leg_wrapper',
+            name='leg_1',
             parameters=[
                 {"leg_no": 1}
             ]
