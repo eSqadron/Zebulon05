@@ -53,7 +53,10 @@ public:
         step_subscription_ = this->create_subscription<geometry_msgs::msg::Point>(temp_stream.str(), 10, std::bind(&RobotLegRosWrapper::step_callback, this, std::placeholders::_1));
         temp_stream.flush();
 
-        robo_leg.set_servo_ids(this->get_parameter("servo_ids").get_parameter_value().get<const std::vector<int64_t>>());
+        const std::vector<int64_t> temp_servo_ids = this->get_parameter("servo_ids").get_parameter_value().get<const std::vector<int64_t>>();
+        std::array<short unsigned int, 3> temp_servo_ids_arr = {temp_servo_ids[0], temp_servo_ids[1], temp_servo_ids[2]};
+
+        robo_leg.set_servo_ids(temp_servo_ids_arr);
 
     }
 
