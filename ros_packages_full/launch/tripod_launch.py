@@ -11,7 +11,7 @@ def generate_launch_description():
         Node(
             package='RobotLeg',
             executable='robot_leg_wrapper',
-            name='RobotLeg'
+            name='RobotLeg_1'
         ),
         Node(
             package='three_legs_controller',
