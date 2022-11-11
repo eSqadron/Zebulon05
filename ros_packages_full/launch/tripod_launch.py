@@ -11,9 +11,7 @@ def generate_launch_description():
             package='RobotLeg',
             executable='robot_leg_wrapper',
             parameters=[
-                {"background_b": 200},
-                {"background_g": 200},
-                {"background_r": 200}
+                {"leg_no": 1}
             ]
         ),
         Node(
