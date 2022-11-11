@@ -31,7 +31,7 @@ def generate_launch_description():
             name='leg_3',
             parameters=[
                 {"leg_no": 3},
-                {"servo_ids": {6, 7, 8}}
+                {"servo_ids": [6, 7, 8]}
             ]
         ),
         Node(
