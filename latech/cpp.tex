@@ -68,7 +68,7 @@ Pojawia się także inna tendencja w ilości nóg robotów. Prawie wszystkie kon
 Co natomiast z konstrucjami robotów trójnożnych? Można się zastanowić czy konstrukcje takie nie powstają ponieważ faktycznie nie mają sensu, czy może dlatego że temat bardziej "klasycznych", prostszych w implementacji, konstrukcji nie został po prostu jeszcze wyczerpany przez naukowców. Jeżeli rozejrzymy się dookoła siebie możemy zaobserwować wiele przedmiotów codziennego użytku które posiadają właśnie trzy nogi, od wszelakich taboretów, przez wieszaki na ubrania po stoły. Są to jednak przedmioty statyczne i dla takich rozwiązań trzy nogi są wymaganym minimum aby dany przedmiot stał stabilnie. Co jednak z konstrukcjami dynamicznymi? Jeżeli robot trójnożny podniesie nogę, straci stabilność, zacznie się przewracać. Czyni to z niego dość ciekawą konstrukcję, gdzie w momencie stania w miejscu zachowuje się bardzej jak roboty o większej ilości nóg, nie przewraca się, a podczas ruchu zachowuje się jak roboty dwunożne, musi odpowiednio szybko odstawić nogę w odpowiednie miejsce aby się nie przewrócić.\\
 
 \subsection{Istniejące konstrukcje trójnożne}
-Konstrukcje trójnożne pojawiały się w dziełach science fiction już od dawna, od "The War of the Worlds" z 1898 aż po "Mroczne Widmo" z 2001 i regularnie pojawiają się naukowcy, którzy próbują udowodnić że nie trzeba ogarniczać tego typu robotów do dzieł z obszaru science fiction.
+Konstrukcje trójnożne pojawiały się w dziełach science fiction już od dawna, od "The War of the Worlds" z 1898 aż po "Mroczne Widmo" z 2001 i regularnie pojawiają się naukowcy, którzy próbują udowodnić że nie trzeba ogarniczać tego typu robotów do dzieł z obszaru science fiction.\\
 \subsubsection{STriDER} 
 Został zbudowany w 2007 na Uniwersytecie Stanowym w Virginii. Jego celem były eksperymenty z algorytmami chodu i doclewo, prowadzenie obserwacji. Miały to umożliwić długie nogi, które znacznie podwyższały konstrukcję i sprawiały że górna platforma była idealna do instalowania wszelakiego rodzaju urządzęń typu kamery. Kinematykę robota można określić jako $3-SRRR$, a kinematykę jednej nogi jako $RRR$. Przy czym "pierwsze" $R$ oznacza obrót dookoła osi $x$ a dwa kolejne $R$ oznaczają obrót wokół osi $y$ (zgodnie z oznaczeniami na rysunku \ref{strider_math})  \cite{strider}\\
 
@@ -84,7 +84,7 @@ Jest to robot zbudowany przez Yoichi Masudę na uniwersytecie w Osace w 2017 rok
 \begin{figure}[H]
 \includegraphics[width=0.5\textwidth]{img/martian_model.png}
 \caption{Model nogi robota Triped Martian źródło: \cite{Triped Martian}}
-\label{strider_math}
+\label{martian_leg}
 \end{figure}
 
 \subsubsection{Inne konstrukcje}
@@ -94,12 +94,13 @@ W internecie można także znaleźć kilka różnych, niezbyt dobrze udokumentow
 \item \href{https://youtu.be/HGEhCCUgFMg}{missel tripod robot}
 \end{itemize}
 
-Niestety konstrukcje te nie posiadają żadnej dokumentacji technicznej i nie da się dokładnie określić zasady ich działania. Nie można nawet mieć pewności że konstrukcje te faktycznie istnieją a nie są oszustwem lub inną formą naginania rzeczywistości, na co mogłaby wskazywać jakość filmików i uboga ilość materiałów.
+Niestety konstrukcje te nie posiadają żadnej dokumentacji technicznej i nie da się dokładnie określić zasady ich działania. Nie można nawet mieć pewności że konstrukcje te faktycznie istnieją a nie są oszustwem lub inną formą naginania rzeczywistości, na co mogłaby wskazywać jakość filmików i uboga ilość materiałów.\\
 
 \section{Model Matematyczny}
 
 \subsection{Noga robota typu RRR}
-Noga ma 3 stopnie swobody. Wszystkie są typu obrotowego, noga jest typu $RRR$, przy czym dwie obracają się dookoła osi poziomej (podobnie jak w przypadku robota STriDER), a jedna dookoła osi pionowej. Są to też te same osi obrotu co w przypadku ramienia robotycznego typu antromorficznego, zwanego także "angular" bądź "jointed".
+
+Noga ma trzy stopnie swobody. Wszystkie są typu obrotowego, co czyni z niej konstrukcję typu $RRR$. Przy czym dwa elementy rotacyjne obracają się dookoła osi poziomej ($X$) (podobnie jak w przypadku robota STriDER), a jedna dookoła osi pionowej ($Z$). Są to też te same osi obrotu co w przypadku ramienia robotycznego typu antromorficznego (zwanego także "angular" bądź "jointed"). Co za tym idzie, cały model matematyczny jest w zasadzie identyczny jak w przypadku manipulatora tego typu.\\
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{img/math_model.jpg}
@@ -110,9 +111,9 @@ Noga ma 3 stopnie swobody. Wszystkie są typu obrotowego, noga jest typu $RRR$, 
 \subsubsection{Kinematyka Prosta}
 Obliczanie kinematyki prostej polega na uzyskniu równań końcówki ramienia robotycznego we współrzędnych kartezjańskich względem współrzędnych konfiguracyjnych. Inaczej mówiąc, wejściem algorytmu jest zbiór współrzędnych konfiguracyjnych, a na wyjściu otrzymamy współrzędne kartezjańskie.\cite{robot_manipulators}\\
 
-W przypadku tego konkretnego manipulatora, mamy do czynienia z trójwymiarowym układem współrzędnych kartezjańskich i trzema stopniami swobody. Da to liniowo niezależny ukłąd trzech równań, w którym parametrami będą kąty na jakich mają ustawić się serwomechanizmy a wynikiem wektor współrzędnych kartezjańskich.\\
+W przypadku tego konkretnego manipulatora, mamy do czynienia z trójwymiarowym układem współrzędnych kartezjańskich i trzema stopniami swobody. Da to liniowo niezależny układ trzech równań, w którym parametrami będą kąty na jakich mają ustawić się serwomechanizmy a wynikiem wektor współrzędnych kartezjańskich.\\
 
-Najprostrzą metodą liczenia kinematyki prostej jest rozrysowanie modelu matematycznego i geometryczne wyprowadzenie potrzebnych równań. Model taki dla tego manipulatora został przedstawiony na rysunku \ref{math_model}. Przyjęty początek układu współrzędnych został oznaczony jako $(0, 0, 0)$, a punkt którego współrzędne kartezjańskie są poszukiwane został oznaczony jako $(X, Y, Z)$. $h_1$ i $a_{1-3}$ to stałe długości poszczególnych członów nogi. Natomiast $\theta_{0-2}$ to właśnie pozycje serwomechanizmów - parametry algorytmu. Na ich podstawie zostaną obliczone współrzędne końcówki manipulatora w systemie kartezjańskim. Same obliczenia geometryczne są już w tym momencie dość trywialne, wystarczy do każdego członu $a_{1-3}$ przenieść jego długość na oś $X$, $Y$ lub $Z$ za pomocą trygonometrii (sinus lub cosinus) i zsumować odpowiednie długości. Da to układ równań \ref{FK_ver_1}.
+Najprostszą metodą liczenia kinematyki prostej jest rozrysowanie modelu matematycznego i geometryczne wyprowadzenie potrzebnych równań. Model taki dla tego manipulatora został przedstawiony na rysunku \ref{math_model}. Przyjęty początek układu współrzędnych został oznaczony jako $(0, 0, 0)$, a punkt którego współrzędne kartezjańskie są poszukiwane został oznaczony jako $(X, Y, Z)$. $h_1$ i $a_{1-3}$ to stałe długości poszczególnych członów nogi. Natomiast $\theta_{0-2}$ to właśnie pozycje serwomechanizmów - parametry algorytmu. Na ich podstawie zostaną obliczone współrzędne końcówki manipulatora w systemie kartezjańskim. Same obliczenia geometryczne są już w tym momencie dość trywialne, wystarczy do każdego członu $a_{1-3}$ przenieść jego długość na oś $X$, $Y$ lub $Z$ za pomocą trygonometrii (sinus lub cosinus) i zsumować odpowiednie długości. Da to układ równań \ref{FK_ver_1}.\\
 
 \begin{equation} \label{FK_ver_1}
 \begin{split}
@@ -123,12 +124,10 @@ Z &= a_2 \sin{\theta_1} - a_3 \sin{\left(\theta_2 - \theta_1\right)}
 \end{split}
 \end{equation}
 
-\subsubsection{Forward kinematics - denavit hartenberg \cite{DH_AA_article}}
-Alternatywą dla zwykłych obliczeń geometrycznych jest metoda Denvaita Hartenberga. Polega ona na przedstawieniu każdego przekształcenia jednorodnego wynikających z każdego kolejnego stopnia swobody za pomocą iloczynu czterech przekształceń prostyh. Następnie za pomocą tej metody można obliczyć całkowite przekształcenie od początku układu aż po końcówkę za pomocą iloczynu wszystkich przekształceń jednorodnych. \cite{DH_wpaszke_wyklad}
+\subsubsection{Kinematyka prosta - metoda Denavita Hartenberga \cite{DH_AA_article}}
+Alternatywą dla zwykłych obliczeń geometrycznych jest metoda Denvaita Hartenberga. Polega ona na przedstawieniu całkowitego przekształcenia jako iloczynu przekształceń jednorodnych kolejnych członów. Pojedyncze przekształcenie jednorodne składa się natomiast z 6 przekształceń prostych (3 dla rotacji i 3 dla przesunięć). Wymnożenie tych przekształceń prostych da przekształcenie jednorodne. \cite{DH_wpaszke_wyklad}\\
 
-TODO - przkeształcenie
-
-Metoda ta jest w szczególności użyteczna dla bardzo skomplikowanych manipulatorów, gdzie stopni swobody jest znacznie więcej niż ilość współrzędnych kartezjańskich.
+Metoda ta jest w szczególności użyteczna dla bardzo skomplikowanych manipulatorów, gdzie stopni swobody jest znacznie więcej niż ilość współrzędnych kartezjańskich.\\
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{img/DH_model.jpg}
@@ -136,7 +135,7 @@ Metoda ta jest w szczególności użyteczna dla bardzo skomplikowanych manipulat
 \label{math_model_DH}
 \end{figure}
 
-Obliczenia należy zacząć od stworzenia specjalnego rysunku (Rys. \ref{math_model_DH}) z zaznaczonymi kolejnymi obrotami lokalnych układów współrzędnych, a następnie zebrać odpowiednie transformacje do tabelki (Tab. \ref{table:DH_table})
+Z praktycznynego punktu widzenia obliczenia należy zacząć od stworzenia specjalnego rysunku (Rys. \ref{math_model_DH}) z zaznaczonymi kolejnymi obrotami lokalnych układów współrzędnych, a następnie zebrać odpowiednie transformacje do tabelki (Tab. \ref{table:DH_table})\\
 
 \begin{table}[h!]
 \centering
@@ -157,9 +156,9 @@ $\alpha_i$ - angle from $z_{n-1}$ to $z_n$ around $x_n$\\
 $r_i$ - distance between the origin of the $n-1$ frame and the origin of the $n$ frame along the $x_n$ direction.\\ 
 $d_i$ - distance from $x_{n-1}$ to $x_n$ along the $z_{n-1}$ direction\\
 
-Następnie macierze przejść pomiędzy ramkami $n-1$ i $n$ oblicza się zgodnie z następującym wzorem:
+Następnie macierze transformacji jednorodnej (pomiędzy ramkami $n-1$ i $n$) oblicza się zgodnie ze wzorem \ref{DH_homogenous}. Wzór ten jest właśnie obliczony poprzez wymnożenie wzorów na wyżej wspomniane 6 przekształceń prostych. Ale w zasadzie wzór ten sprowadza się do 2 zasadniczych elementów. $R$ jest macierzą Rotacji o rozmiarze $3x3$ a $T$ to macierz Transformacji $1x3$. \\
 
-\begin{equation}
+\begin{equation} \label{DH_homogenous}
 H^{n-1}_n = 
 \left[\begin{array}{ccc|c}
 &&&\\
@@ -176,10 +175,8 @@ H^{n-1}_n =
 \end{matrix}\right]\cite{DH_matrix_AA_article}
 \end{equation}
 
-Gdzie $R$ oznacza macierz Rotacji a $T$ macierz Transformacji.\\
 
-A macierz przejścia pomiędzy ramką 0 a ramką 3 zgodnie z następującym wzorem:
-
+Następnie należy podstawić wartości dla każdego z 3 punktów i otrzymane macierze wymnożyć zgodnie ze wzorem \ref{DH_final_equation}.
 
 \begin{multline} \label{DH_final_equation}
 H^{n-1}_n = H^0_1 \cdot H^1_2 \cdot H^2_3 =\\
@@ -197,9 +194,7 @@ c\theta_1 \cdot s\theta_2 + s\theta_1 \cdot c\theta_2 & c\left( \theta_1 + \thet
 \end{matrix}\right]
 \end{multline}
 
-
-
-Następnie, aby otrzymać właściwe równania, należy z równania \ref{DH_final_equation} wziąć część odpowiedzialną za transformację.
+Następnie, aby otrzymać właściwe równania, należy z równania \ref{DH_final_equation} wziąć część odpowiedzialną za transformację. Efektem jest wzór \ref{FK_ver_2}, czyli finalna wersja równań kinametayki prostej obliczonej metodą Denavita Hartenberga\\
 
 \begin{equation} \label{FK_ver_2}
 \begin{split}
@@ -326,8 +321,30 @@ Aby móc w prosty sposób napisać później algorytmy chodu i móc się skupić
 
 
 \section{Model CAD i druk 3D}
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{img/CAD_assembly.png}
+\caption{Model Złożeniowy}
+\label{CAD_assembly}
+\end{figure}
+Jedym z głównych założeń projektu była możliwość wydrukowania całej konstrukcji w 3D. Miało to na celu znaczne obniżenie kosztów produkcji, ale przede wszystkim umożliwić znacznie szybsze przeróbki. Jest to o tyle istotne, że prowadzone będą badania z algorytami chodu - przypdaku większości algorytmów wydłużenie pewnych elementów nogi może zmniejszyć wymagane prędkości ruchu serw. Eksperymenty takie mogą wymusić liczne przedruki poszczególnych członów nóg robota.\\
 
-\section{Implementacja w środowisku ROS}
+Drugim założeniem projektowym stojącym za konstrukcją taką jak na rysunku \ref{CAD_assembly} jest modularność. Bardzo podobną modularność oferuje robot TurtleBot 3, który także był inspiracją stojącą za konstrukcją. Zarówno Turtlebot jak i konstrukcja budowana w ramach tej pracy składają się z wielu identycznych warstw, które zawierają liczne otwory montażowe umożliwiające przykręcenie w zasadzie dowolnego elemnentu.\\
+
+Zostały także dokładnie zwymiarowane otwory montażowe znajdujące się na orczykach do zakupionych serw i przeniesione na poszczególne elementy nóg. Do montażu wspomnianych orczyków zakupione zostały śruby $M1.6$, co stanowi swojego rodzaju drobny eksperyment. Zwykle orczyki montuje się za pomocą kleju lub wkrętów dostarczanych wraz z serwomechanizmem. Są to jednak metody przynajmniej częściowo destrukcyjne - nie umożliwiają szybkiego demontażu i wymiany elementów, co jest bardzo ważnym elementem tego projektu. Zastosowanie śrub z nakrętkami rozwiązuje ten problem - jednak pojawia się pytanie czy nie generuje to innych problemów? (TODO - tutaj opisać problemy i później we wnioskach odpowiedź czy generuje czy nie czy od razu tutaj polecieć że było git?)\\
+
+Oryginalny projekt zawiera także pewną wadę konstrukcyjną - jest to bardzo cienki element łączący nogę z tułowiem (element nogi zero). Istnieje duże ryzyko gięcia a może nawet łamania się wyżej wymienionego elementu. Aby zmniejszyć to ryzyko, wspomniany element został miejscami pogrubiony i zakupione zostały (TODO - trzeba kupić) metalowe orczyki. Najtrwalszym rozwiązaniem oczywiście byłoby stowrzenie dodatkowego elementu który byłby przytwierdzony do dolnej części obudowy i posiadałby oś obrotu z pierwszym elementem nogi -  "podtrzymywałby" ten elemnt od dołu.\\
+
+Całość konstrukcji została zaprojektowana w programie Autodesk Inventor. Program ten został wybrany tylko i wyłącznie ze względu na fakt, że był autorowi projektu dość dobrze znany. [TODO - opisać problem że szkicy się "rozjeżdżały podczas modyfikowania szkiców "poziomy" niżej czy nie?]\\
+
+Modele zostały wydrukowane na drukarce Zortrax M200. Została ona wybrana ze względu na jej dostępnośc na uczelni. Dodatkowo, aby przygotować pliki pod druk, należało model przetworzyć programem Z-Suite. W programie większość ustawień pozostawiana była bez zmian, jedynie 2 istotne ustawienia zostały dostosowane do projektu. Zostało ustawione minimalne niezerowe wypełnienie, około $10\%$ i warstwy, wierzchnia i spodnia, zostały ustawione na najgrubsą możliwą opcję. Ustawienia te znalezione zostały eksperymentalnie - wydają się najlepiej balansować między wytrzymałością a czasem druku i ilością zużytego materiału. Dodatkowo, przed ostatecznym wydrukiem, wewnątrz programu inventor, zwiększone zostały o około $0.3-0.4 mm$ wszystkie otwory montażowe, ponieważ modele "puchną" i dziury te po wydruku były znacznie mniejsze niż na tworzonych szkicach.\\
+
+\section{Sekcja Elektroniczna}
+Projekt elektroniczny na potrzeby tego projektu został ograniczony do minimum. Zasilanie składa się z akumulatora typu LiPo i minimum 2 przetwornic. Jako mózg urządzenia zastosowany został minikomputer Raspberry Pi 4B i to do jego zasilenia potrzebna jest jedna z przetwornic. Zgodnie z dokumentacją Raspberry zasilanie jest ze źródła o napięciu $5V$ i prądzie przynajmniej $3A$.\cite{RPI_power_sup} Dlatego została zainstalowana przetwornica TODO.\\
+
+Druga przetwornica ma za zadanie zasilić serwomechanizmy. Serwomechanizmy wybrane do tego projektu to \href{https://botland.com.pl/serwa-typu-standard/9182-serwo-feetech-ft5715m-standard-5904422312756.html}{Feetech FT5715M} (sztuk 3) i \href{https://botland.com.pl/serwa-typu-standard/3576-serwo-powerhd-lf-20mg-standard-6939670200387.html}{PowerHD LF-20MG} (sztuk 6). W czasie zakupu serwa te wypadały najlepiej spośród wszystkich dostępnych pod kątem prędkości ruchu do ceny. Serwa firmy Feetech są zasilanie napięciem z zakresu $4.8$ do $6V$ a power HD napięciem $4.8$ do $6.6V$. Dlatego jako wspólne napięcie zasilania ustalona została wartość $6V$. Jako że zwykle serwo pobiera do około $1A$ prądu to do ich zasilenia potrzeba przetwornicę o wyjściu $6V$ i minimum $9A$ \cite{Servo_power_sup}. Natomiast należy pamiętać że dobieranie przetwornicy "na styk" przy czymś takim jak zasilanie serwomechanizmów może spowodować później problemy przy większych obciążeniach. Dlatego, aby uwzględnić pewien zapas prądowy, wybrana została przetwornica TODO
+
+
+\section{Implementacja}
 \subsection{Środowisko ROS}
 \subsubsection{Schemat implementacji}
 
@@ -361,6 +378,12 @@ Aby móc w prosty sposób napisać później algorytmy chodu i móc się skupić
 
 \bibitem{SCARA_model}
 \href{https://sj.umg.edu.pl/sites/default/files/ZN20.pdf}{Adam Labuda, Janusz Pomirski, Andrzej Rak (2009) Model manipulatora o dwóch stopniach swobody}
+
+\bibitem{RPI_power_sup}
+\href{https://raspberryexpert.com/raspberry-pi-4-power-requirements/}{Raspberry Pi 4 Power Requirements: Everything You Need to Know}
+
+\bibitem{Servo_power_sup}
+\href{https://www.pololu.com/blog/16/electrical-characteristics-of-servos-and-introduction-to-the-servo-control-interface}{Electrical characteristics of servos and introduction to the servo control interface}
 
 
 \bibitem{}
