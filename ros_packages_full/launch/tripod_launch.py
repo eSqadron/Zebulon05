@@ -5,18 +5,20 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='polulu_maestro',
-            executable='maestro_wrapper',
-            name='polulu_maestro'
+            executable='maestro_wrapper'
         ),
         Node(
             package='RobotLeg',
             executable='robot_leg_wrapper',
-            name='RobotLeg_1'
+            parameters=[
+                {"background_b": 200},
+                {"background_g": 200},
+                {"background_r": 200}
+            ]
         ),
         Node(
             package='three_legs_controller',
-            executable='three_legs_controller',
-            name='three_legs_controller'
+            executable='three_legs_controller'
         )
 
     ])
