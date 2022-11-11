@@ -54,6 +54,8 @@ public:
         step_1_publisher_->publish(message);
         rclcpp::sleep_for(std::chrono::nanoseconds(6000000000));
         is_step1_stage_done_ = true;
+        is_step2_stage_done_ = true;
+        is_step3_stage_done_ = true;
 
         step_2_publisher_->publish(message);
 
@@ -104,6 +106,8 @@ private:
     }
 
     bool is_step1_stage_done_;
+    bool is_step2_stage_done_;
+    bool is_step3_stage_done_;
     step_stage current_step_stage_;
 
     rclcpp::TimerBase::SharedPtr timer_;
