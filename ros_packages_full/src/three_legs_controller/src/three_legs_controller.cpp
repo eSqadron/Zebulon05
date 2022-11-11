@@ -52,13 +52,11 @@ public:
         message.y = 0;
         message.z = -40;
         step_1_publisher_->publish(message);
+        step_2_publisher_->publish(message);
         rclcpp::sleep_for(std::chrono::nanoseconds(6000000000));
         is_step1_stage_done_ = true;
         is_step2_stage_done_ = true;
         is_step3_stage_done_ = true;
-
-        step_2_publisher_->publish(message);
-
     }
 
 private:
