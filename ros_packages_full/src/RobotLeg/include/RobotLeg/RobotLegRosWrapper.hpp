@@ -34,8 +34,8 @@ public:
 
         this->declare_parameter("leg_no", 1);
        // this->declare_parameter("servo_ids", {0, 1, 2});
-        this->declare_parameter("servo_ids");
-    this->set_parameters({rclcpp::Parameter("servo_ids", std::array<short unsigned int, 3>({0, 1, 2}))});
+        this->declare_parameter("servo_ids", std::array<short unsigned int, 3>({0, 1, 2}));
+        //this->set_parameters({rclcpp::Parameter("servo_ids", std::array<short unsigned int, 3>({0, 1, 2}))});
 
         std::ostringstream temp_stream;
         temp_stream << "step_done_" << this->get_parameter("leg_no").get_parameter_value().get<int>();
