@@ -71,6 +71,8 @@ private:
                 message.y = 0;
                 message.z = -40;
                 step_1_publisher_->publish(message);
+                message.x = 55 + 125;
+                step_2_publisher_->publish(message);
                 current_step_stage_ = Right_forward;
             }
         }
@@ -80,6 +82,8 @@ private:
                 message.y = 0;
                 message.z = -40;
                 step_1_publisher_->publish(message);
+                message.x = 55 + 125 + 180;
+                step_2_publisher_->publish(message);
                 current_step_stage_ = Idle;
             }
         }
