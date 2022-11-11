@@ -13,7 +13,7 @@ def generate_launch_description():
             name='leg_1',
             parameters=[
                 {"leg_no": 1},
-                {"servo_ids": {0, 1, 2}}
+                {"servo_ids": [0, 1, 2]}
             ]
         ),
         Node(
@@ -22,7 +22,7 @@ def generate_launch_description():
             name='leg_2',
             parameters=[
                 {"leg_no": 2},
-                {"servo_ids": {3, 4, 5}}
+                {"servo_ids": [3, 4, 5]}
             ]
         ),
         Node(
