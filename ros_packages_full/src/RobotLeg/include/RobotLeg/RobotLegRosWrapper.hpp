@@ -57,7 +57,7 @@ public:
         std::array<short unsigned int, 3> temp_servo_ids_arr = {static_cast<short unsigned int>(temp_servo_ids[0]), static_cast<short unsigned int>(temp_servo_ids[1]), static_cast<short unsigned int>(temp_servo_ids[2])};
 
         robo_leg.set_servo_ids(temp_servo_ids_arr);
-        RCLCPP_INFO(this->get_logger(), std::string(robo_leg.get_servo_ids()[0]).c_str());
+        RCLCPP_INFO(this->get_logger(), std::to_string(robo_leg.get_servo_ids()[0]).c_str());
 
     }
 
