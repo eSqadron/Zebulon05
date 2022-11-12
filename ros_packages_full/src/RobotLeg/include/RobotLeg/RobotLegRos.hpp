@@ -31,6 +31,7 @@ public:
 
     void set_servo_ids(std::array<short unsigned int, 3> new_servo_ids){
         servo_ids_ = new_servo_ids;
+        RCLCPP_INFO(this->get_logger(), std::string(servo_ids_.begin(), servo_ids_.end()).c_str());
     }
     std::array<short unsigned int, 3> get_servo_ids(){
         return servo_ids_;
