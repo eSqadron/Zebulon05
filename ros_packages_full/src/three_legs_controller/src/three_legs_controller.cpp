@@ -66,23 +66,25 @@ private:
         auto message = geometry_msgs::msg::Point();
         //robo_leg.set_physical_params(40, 55, 125, 180);
         
-        //RCLCPP_INFO(this->get_logger(), (static_cast<std::string>("step_status: ") + std::to_string(is_step1_stage_done_)).c_str());
+        
 
         if(current_step_stage_ == Idle){
-            if(is_step1_stage_done_ and is_step2_stage_done_){
+            if(is_step1_stage_done_ && is_step2_stage_done_){
                 message.x = 55 + 125 + 180;
                 message.y = 0;
                 message.z = -40;
                 step_1_publisher_->publish(message);
+                RCLCPP_INFO(this->get_logger(), "message 1 sent");
                 current_step_stage_ = Right_forward;
             }
         }
         else if(current_step_stage_ == Right_forward) {
-            if (is_step1_stage_done_ and is_step2_stage_done_){
+            if (is_step1_stage_done_ && is_step2_stage_done_){
                 message.x = 55 + 125;
                 message.y = 0;
                 message.z = -40;
                 step_2_publisher_->publish(message);
+                RCLCPP_INFO(this->get_logger(), "message 2 sent");
                 current_step_stage_ = Idle;
             }
         }
