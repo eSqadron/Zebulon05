@@ -70,7 +70,7 @@ private:
         RCLCPP_INFO(this->get_logger(), std::to_string(is_step1_stage_done_ && is_step2_stage_done_).c_str());
 
         if(current_step_stage_ == Idle){
-            if(is_step1_stage_done_ && is_step2_stage_done_){
+            if(is_step2_stage_done_){
                 message.x = 55 + 125 + 180;
                 message.y = 0;
                 message.z = -40;
@@ -80,7 +80,7 @@ private:
             }
         }
         else if(current_step_stage_ == Right_forward) {
-            if (is_step1_stage_done_ && is_step2_stage_done_){
+            if (is_step1_stage_done_){
                 message.x = 55 + 125;
                 message.y = 0;
                 message.z = -40;
