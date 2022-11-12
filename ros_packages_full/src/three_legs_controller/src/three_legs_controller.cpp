@@ -73,8 +73,8 @@ private:
                 message.x = 55 + 125 + 180;
                 message.y = 0;
                 message.z = -40;
-                step_1_publisher_->publish(message);
-                RCLCPP_INFO(this->get_logger(), "message 1 sent");
+                step_2_publisher_->publish(message);
+                RCLCPP_INFO(this->get_logger(), "message 2 sent");
                 current_step_stage_ = Right_forward;
             }
         }
@@ -83,8 +83,8 @@ private:
                 message.x = 55 + 125;
                 message.y = 0;
                 message.z = -40;
-                step_2_publisher_->publish(message);
-                RCLCPP_INFO(this->get_logger(), "message 2 sent");
+                step_1_publisher_->publish(message);
+                RCLCPP_INFO(this->get_logger(), "message 1 sent");
                 current_step_stage_ = Idle;
             }
         }
