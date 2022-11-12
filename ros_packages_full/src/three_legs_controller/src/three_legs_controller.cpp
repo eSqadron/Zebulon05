@@ -65,7 +65,7 @@ private:
         auto message = geometry_msgs::msg::Point();
         //robo_leg.set_physical_params(40, 55, 125, 180);
         
-        RCLCPP_INFO(this->get_logger(), (static_cast<std::string>("step_status: ") + std::to_string(is_step1_stage_done_)).c_str());
+        //RCLCPP_INFO(this->get_logger(), (static_cast<std::string>("step_status: ") + std::to_string(is_step1_stage_done_)).c_str());
 
         if(current_step_stage_ == Idle){
             if(is_step1_stage_done_ and is_step2_stage_done_){
