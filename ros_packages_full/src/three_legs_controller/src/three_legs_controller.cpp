@@ -20,6 +20,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/point.hpp"
 #include "std_msgs/msg/bool.hpp"
+#include "Generator3A.hpp"
 
 using namespace std::chrono_literals;
 
@@ -30,6 +31,18 @@ enum step_stage{
     Middle_back,
     Change_dir
 };
+
+int get_pos_from_leg(std::string leg_name){
+    auto parameters_client = std::make_shared<rclcpp::SyncParametersClient>(this, leg_name);
+    while (!parameters_client->wait_for_service(1s)) {
+        if (!rclcpp::ok()) {
+            RCLCPP_ERROR(this->get_logger(), "Interrupted while waiting for the service. Exiting.");
+            rclcpp::shutdown();
+        }
+        RCLCPP_INFO(this->get_logger(), "service not available, waiting again...");
+    }
+    return parameters_client->get_parameter("leg_pos");
+}
 
 class ThreeLegsController : public rclcpp::Node
 {
@@ -46,6 +59,13 @@ public:
         step3_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::step3_done_callback, this, std::placeholders::_1));
 
         current_step_stage_ = Idle;
+
+        int leg_1_pos = get_pos_from_leg("leg_1");
+        int leg_2_pos = get_pos_from_leg("leg_2");
+        int leg_3_pos = get_pos_from_leg("leg_3");
+
+
+        gen_.set
 
         auto message = geometry_msgs::msg::Point();
         message.x = 55 + 125 + 180;
@@ -107,6 +127,8 @@ private:
     bool is_step2_stage_done_;
     bool is_step3_stage_done_;
     step_stage current_step_stage_;
+
+    Generator3A gen_;
 
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_1_publisher_;

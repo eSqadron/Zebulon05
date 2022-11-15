@@ -13,7 +13,8 @@ def generate_launch_description():
             name='leg_1',
             parameters=[
                 {"leg_no": 1},
-                {"servo_ids": [0, 1, 2]}
+                {"servo_ids": [0, 1, 2]},
+                {"leg_pos": 60}
             ]
         ),
         Node(
@@ -22,7 +23,8 @@ def generate_launch_description():
             name='leg_2',
             parameters=[
                 {"leg_no": 2},
-                {"servo_ids": [3, 4, 5]}
+                {"servo_ids": [3, 4, 5]},
+                {"leg_pos": 300}
             ]
         ),
         Node(
@@ -31,7 +33,8 @@ def generate_launch_description():
             name='leg_3',
             parameters=[
                 {"leg_no": 3},
-                {"servo_ids": [6, 7, 8]}
+                {"servo_ids": [6, 7, 8]},
+                {"leg_pos": 180}
             ]
         ),
         Node(
