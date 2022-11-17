@@ -69,10 +69,17 @@ Co natomiast z konstrucjami robotów trójnożnych? Można się zastanowić czy 
 
 \subsection{Istniejące konstrukcje trójnożne}
 Konstrukcje trójnożne pojawiały się w dziełach science fiction już od dawna, od "The War of the Worlds" z 1898 aż po "Mroczne Widmo" z 2001 i regularnie pojawiają się naukowcy, którzy próbują udowodnić że nie trzeba ogarniczać tego typu robotów do dzieł z obszaru science fiction.\\
-\subsubsection{STriDER} 
+\subsubsection{STriDER}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{img/strider_photo.png}
+\caption{Schemat kinematyczny robota Strider źródło: \cite{strider}}
+\label{martian_photo}
+\end{figure}
 Został zbudowany w 2007 na Uniwersytecie Stanowym w Virginii. Jego celem były eksperymenty z algorytmami chodu i doclewo, prowadzenie obserwacji. Miały to umożliwić długie nogi, które znacznie podwyższały konstrukcję i sprawiały że górna platforma była idealna do instalowania wszelakiego rodzaju urządzęń typu kamery. Kinematykę robota można określić jako $3-SRRR$, a kinematykę jednej nogi jako $RRR$. Przy czym "pierwsze" $R$ oznacza obrót dookoła osi $x$ a dwa kolejne $R$ oznaczają obrót wokół osi $y$ (zgodnie z oznaczeniami na rysunku \ref{strider_math})  \cite{strider}\\
 
 \begin{figure}[H]
+\centering
 \includegraphics[width=\textwidth]{img/strider_math.png}
 \caption{Uproszczony model matematyczny nogi robota STriDER}
 \label{strider_math}
@@ -83,11 +90,12 @@ Został zbudowany w 2007 na Uniwersytecie Stanowym w Virginii. Jego celem były 
 \centering
 \includegraphics[width=0.5\textwidth]{img/martian_photo.png}
 \caption{Zdjęcie robota Martian źródło: \cite{Triped Martian}}
-\label{martian_leg}
+\label{martian_photo}
 \end{figure}
 Jest to robot zbudowany przez Yoichi Masudę na uniwersytecie w Osace w 2017 roku. Kinematyka tego robota opiera się na mechaniźmie SLIP (Spring-Loaded-Inverted Pendulum). SLIP ma w pewien sposób symulować sposób poruszania się stosowany przez ludzi i zwierzęta. Sprężyna wewnątrz nogi robota jest naciągana, co powoduje skracanie się nogi, a zwalnianie sprężyny z powrotem wydłuża człon. Dodatkowo dodane jest serwo, które może obracać nogę dookoła osi $y$. Czyni to z nogi robota mechanizm o kinematyce typu $RL$. Został także dodany czujnik naprężenia, który jest w stanie zmierzyć siłę naciągu nici kompresującej sprężynę. \cite{Triped Martian}\\
 
 \begin{figure}[H]
+\centering
 \includegraphics[width=0.5\textwidth]{img/martian_model.png}
 \caption{Model nogi robota Triped Martian źródło: \cite{Triped Martian}}
 \label{martian_leg}
@@ -317,12 +325,29 @@ Zwykle konstruując roboty wzorujemy się na zwierzętach występujących w natu
 W poprzednim podrozdziale przyjąłem osie układu relatywne do ułożenia początkowego nogi robota. Oznacza to że robot trójnożny będzie miał 3 niezależne osie $x$ i 3 niezależne osie $y$, tylko oś $z$ zgadza się między kolejnymi nogami. Idzie za tym konieczność stworzenia pewnej metody "obracania" wszystkich tych osi $x$ i $y$ do jednego zunifikowanego układu współrzędnych. Pozwoli to obliczyć kinematykę całego robota.
 
 \subsubsection{Matematyka kroku}
-Aby móc w prosty sposób napisać później algorytmy chodu i móc się skupić na kolejności przestawiania nóg przez robota, długości i wysokości kroku i innych tego typu aspektach, należy teraz dobrze ten krok sparametryzować. Na podstawie moich poprzednich doświadczeń z podobnymi projektami, uważam że najbardziej intuicyjne będzie sparametryzowanie kroku do:
+W celu uproszczenia zarówno obliczeń jak i późniejszej generacji kolejnych kroków algorytmu chodu, można pominąć liczenie całej kinematyki prostej i odwrotnej całego robota. Zamiast tego wystarczy pojedynczy krok odpowiednio sparametryzować. Jeżeli dla każdego kroku pojedynczej nogi przyjmiemy:
 \begin{itemize}
-\item wartości kąta pomiędzy kierunkiem "do przodu" kroku a osią $x$ danej nogi
-\item długości kroku
-\item wysokości kroku
+\item kąta $\alpha$ na "tarczy" robota, na którym ustawiona jest noga
+\item kąta $\beta$ względem "przodu" robota, w którą ma zostać wykonany krok
+\item długość kroku $l$, równolegle do osi kroku robota
 \end{itemize}
+To możemy łatwo otrzymać algorytm który z tych dwóch zmiennych i jednej stałej da pozycję zmianę pozycji końcówki robota ($\Delta x, \Delta y$) we współrzędnych kartezjańskich względem nogi robota.
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{img/step_math.jpg}
+\caption{Schemat matematyczny wykonywania kroku}
+\label{step_math}
+\end{figure}
+
+Zostało to przedstawione na rysunku \ref{step_math} na przykładzie nogi na pozycji $\alpha = 60^o$. Na wspomnianym rysunku widać przód robota oznaczony jako $0^o$, kierunek kroku odsunięty o kąt $\beta$ od osi "przodu" robota i wynikające z tego kroku przestawienie nogi. Przestawienie to składa się z długości korku $l$ i dwóch pozycji nogi - przed krokiem i po kroku. Wynikające z tego zależności geometryczne zostały wyizolowane na [TODO - dać osobny obrazek na zależności]. Na podstawie tych zależności można napisać równanie \ref{step_math_eq}
+\begin{equation} \label{step_math_eq}
+\begin{split}
+\Delta x = l \cdot \sin(\beta - \alpha)\\
+\Delta y = l \cdot \cos(\beta - \alpha)\\
+\end{split}
+\end{equation}
+
+Równanie \ref{step_math_eq} mówi tyle, że wykonanie nogą na pozycji $\alpha$ kroku o długości $l$ w kierunku $\beta$ wymusza przestawienie końcówki nogi o ($\Delta x$, $\Delta y$)
 
 
 
@@ -364,11 +389,11 @@ Węzły mogą na tematy dane publikować lub je odbierać i implementacja węzł
 
 Rysunek \ref{ros_implementation_schematic} pokazuje schemat komunikacji między poszczególnymi węzłami. Na potrzeby aplikacji zostały stworzone 3 węzły. Jeden odpowiedzialny za obsługę wybranego sterownika do serw, Polulu Maestro, drugi odpowiedzialny za obsługę nogi i trzeci stanowi główny węzeł sterujący. Ma za zadanie generować algorytm chodu i wysyłać polecenia do nóg, aby układały się na docelowe pozycje.
 \subsection{Polulu Maestro 24}
-Jest to 24-kanałowy sterownik do serw. Do uruchomienia tego robota wystarczyłby oczywiście Polulu Maestro 12, lecz wersja 24-kanałowa była zakupiona na potrzebny innego projektu i mogła być tutaj wykorzystana bez dodatkowych wydatków. Natomiast steroniki do serw firmy Polulu są wymienne, można w każdej chwili przepiąć serwomechanizmy na sterownik o innej ilości kanałów i dokładnie ten sam kod będzie w stanie go także obsłużyć, więc w przyszłości nie będzie problemu z podmianą tego sterownika na mniejszy.\\
+Jest to 24-kanałowy sterownik do serw. Do uruchomienia tego robota wystarczyłby oczywiście Polulu Maestro 12, lecz wersja 24-kanałowa była zakupiona na potrzebny innego projektu i mogła być tutaj wykorzystana bez dodatkowych wydatków. Natomiast steroniki do serw firmy Polulu są wymienne, można w każdej chwili przepiąć serwomechanizmy na sterownik o innej ilości kanałów i dokładnie ten sam program będzie w stanie go także obsłużyć, więc w przyszłości nie będzie problemu z podmianą tego sterownika na mniejszy.\\
 
-Komunikacja ze sterownikiem odbywa się za pomocą protokołu UART Serial. Nie było natomiast potrzeby aby tworzyć wiadomości wysyłane tym protokołem od zera, ponieważ istnieje bilbioteka do komunikacji z tym sterownikiem. Napisana przez Stevena Jackobsa biblioteka Maestro \cite{maestro_pylib} jest szeroko stosowana przy wszelakich projekach z wykorzystaniem tego sterownika i w tym projekcie nie było inaczej. Należało jednak otoczyć tą bibliotekę pewnego rodzaju dekoratorem (ang. wrapper) aby połączyć ją z funkcjonalnościami ROSa. Dlatego napisana została klasa "MaestroRosWrapper" która przez kompozycję zawiera w sobie instancje wyżej wymienionej klasy Maestro. Stworzona klasa przede wszystkim implementuje:
+Komunikacja ze sterownikiem odbywa się za pomocą protokołu UART Serial. Nie było natomiast potrzeby aby tworzyć wiadomości wysyłane tym protokołem od zera, ponieważ istnieje bilbioteka do komunikacji z tym sterownikiem. Napisana przez Stevena Jackobsa biblioteka Maestro \cite{maestro_pylib} jest szeroko stosowana przy wszelakich projekach z wykorzystaniem tego sterownika i w tym projekcie nie było inaczej. Należało jednak otoczyć tą bibliotekę pewnego rodzaju dekoratorem (ang. wrapper) aby połączyć ją z funkcjonalnościami ROSa. Dlatego napisana została klasa "MaestroRosWrapper" która przez kompozycję zawiera w sobie instancje klasy Maestro z wyżej wymienionej biblioteki Maestro. Stworzona klasa MaestroRosWrapper przede wszystkim implementuje:
 \begin{enumerate}
-\item Wysyłanie wiadomości co 100ms z obecnym odczytem pozcji wszystkich serw
+\item Wysyłanie wiadomości co 100ms z odczytem obecnej pozcji wszystkich serw
 \item Subskrybowanie wiadomości maestro target, która zawiera informacje o:
 \begin{itemize}
 \item kanale 
@@ -384,9 +409,18 @@ Na potrzeby tej klasy stworzony został dodatkowy pakiet implementujący dwa cus
 \item CurrentPositions
 \end{itemize}
 
-Są to właśnie te dwa wyżej wspomniane interfejsy, za pomocą których węzeł ten komunikuje się ze światem zewnętrznym.
+Są to właśnie te dwa wyżej wspomniane interfejsy, za pomocą których węzeł ten komunikuje się ze światem zewnętrznym.\\
 
+Całość kodu służącego do obsługi tego sterownika została napisana w języku Python 3. Język ten został w tym przypadku wybrany, ponieważ Steven Jackobs zaimplementował swoją bibliotekę w tym właśnie języku. Oczywiście przepisanie jej do innego języka (np. $c++$) nie stanowiłoby dużego problemu, jednakże nie jest to częścią tej pracy. Może to być jednak ciekawe ulepszenie tego projektu, jak węzeł ROS-owy napisany w Pythonie okaże się zbyt pamięciożerny i wolny.
 \subsection{Noga Robotyczna}
+Poziom wyżej - nad sterownikiem do serw - znajduje się pojedyncza noga robota. Cały program ją obsługujący był pisany na potrzeby tego projektu zupełnie od zera, co dało zupełną dowolność języka i ogólnej struktury implementacji. \\
+
+Jako język został wybrany c++, z powodu ogólnej preferencji autora programu i aby lepiej zoptymalizować całość robota. Pisanie w języku Python jest znacznie prostsze, ale uruchomienie zbyt wielu węzłów napisanych w tym języku może powodować znaczne problemy z wydajnością.\\
+
+Struktura natomiast, była częściowo wzorowana na poprzednim węźle - sterowniku do serw. Także przyjęto zasadę bardziej "generycznej" klasy wewnętrznej i stricte ROS-owego wrappera. W tym przypadku utworzono klasę Robot Leg przede wszystkim odpowiedzialną za trzymanie informacji o fizycznych parametrach nogi i na ich podstawie przeliczania kinematyk prostej i odwrotnej. Natomiast klasa Robot Leg ROS Wrapper jest odpowiedzialna za komunikację ze "światem zewnętrznym" - innymi węzłami ROS-owymi.
+
+\subsection{Interfejs noga - sterownik}
+
 \subsection{Generator robota trójnożnego}
 
 \section{Algorytm Chodu}
