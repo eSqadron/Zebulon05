@@ -1,72 +1,17 @@
-\chapter{Przykłady elementów pracy dyplomowej}
-
-\section{Liczba}
-
-Pakiet \texttt{siunitx} zadba o to, by liczba została poprawnie sformatowana: \\
-\begin{center}
-	\num{1234567890.0987654321}
-\end{center}
-
-
-\section{Rysunek}
-
-Pakiet \texttt{subcaption} pozwala na umieszczanie w podpisie rysunku odnośników do ,,podilustracji'': \\
-
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}{0.35\textwidth}
-		\centering
-		\framebox[2.0\width]{A}
-		\subcaption{\label{subfigure_a}}
-	\end{subfigure}
-	\begin{subfigure}{0.35\textwidth}
-		\centering
-		\framebox[2.0\width]{B}
-		\subcaption{\label{subfigure_b}}
-	\end{subfigure}
-	
-	\caption{\label{fig:subcaption_example}Przykład użycia \texttt{\textbackslash subcaption}: \protect\subref{subfigure_a} litera A, \protect\subref{subfigure_b} litera B.}
+\chapter{Model i Druk 3D}
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{img/CAD_assembly.png}
+\caption{Model złożeniowy.}
+\label{CAD_assembly}
 \end{figure}
+Jedym z głównych założeń projektu była możliwość wydrukowania całej konstrukcji w 3D. Miało to na celu znaczne obniżenie kosztów produkcji, ale przede wszystkim umożliwić znacznie szybsze przeróbki. Jest to o tyle istotne, że prowadzone będą badania z algorytami chodu - przypdaku większości algorytmów wydłużenie pewnych elementów nogi może zmniejszyć wymagane prędkości ruchu serw. Eksperymenty takie mogą wymusić liczne przedruki poszczególnych członów nóg robota.\\
 
-\section{Tabela}
+Drugim założeniem projektowym stojącym za konstrukcją taką jak na rysunku \ref{CAD_assembly} jest modularność. Bardzo podobną modularność oferuje robot TurtleBot 3, który także był inspiracją stojącą za konstrukcją. Zarówno Turtlebot jak i konstrukcja budowana w ramach tej pracy składają się z wielu identycznych warstw, które zawierają liczne otwory montażowe umożliwiające przykręcenie w zasadzie dowolnego elemnentu.\\
 
-Pakiet \texttt{threeparttable} umożliwia dodanie do tabeli adnotacji: \\
+Zostały także dokładnie zwymiarowane otwory montażowe znajdujące się na orczykach do zakupionych serw i przeniesione na poszczególne elementy nóg. Do montażu wspomnianych orczyków zakupione zostały śruby $M1.6$, co stanowi swojego rodzaju drobny eksperyment. Zwykle orczyki montuje się za pomocą kleju lub wkrętów dostarczanych wraz z serwomechanizmem. Są to jednak metody przynajmniej częściowo destrukcyjne - nie umożliwiają szybkiego demontażu i wymiany elementów, co jest bardzo ważnym elementem tego projektu. Zastosowanie śrub z nakrętkami rozwiązuje ten problem - jednak pojawia się pytanie czy nie generuje to innych problemów? (TODO - tutaj opisać problemy i później we wnioskach odpowiedź czy generuje czy nie czy od razu tutaj polecieć że było git?)\\
 
-\begin{table}[h]
-	\centering
-	
-	\begin{threeparttable}
-		\caption{Przykład tabeli}
-		\label{tab:table_example}
-		
-		\begin{tabularx}{0.6\textwidth}{C{1}}
-			\toprule
-			\thead{Nagłówek\tnote{a}} \\
-			\midrule
-			Tekst 1 \\
-			Tekst 2 \\
-			\bottomrule
-		\end{tabularx}
-		
-		\begin{tablenotes}
-			\footnotesize
-			\item[a] Jakiś komentarz\textellipsis
-		\end{tablenotes}
-		
-	\end{threeparttable}
-\end{table}
+Oryginalny projekt zawiera także pewną wadę konstrukcyjną - jest to bardzo cienki element łączący nogę z tułowiem (element nogi zero). Istnieje duże ryzyko gięcia a może nawet łamania się wyżej wymienionego elementu. Aby zmniejszyć to ryzyko, wspomniany element został miejscami pogrubiony i zakupione zostały (TODO - trzeba kupić) metalowe orczyki. Najtrwalszym rozwiązaniem oczywiście byłoby stowrzenie dodatkowego elementu który byłby przytwierdzony do dolnej części obudowy i posiadałby oś obrotu z pierwszym elementem nogi -  "podtrzymywałby" ten elemnt od dołu.\\
 
-\section{Wzory matematyczne}
+Całość konstrukcji została zaprojektowana w programie Autodesk Inventor. Program ten został wybrany tylko i wyłącznie ze względu na fakt, że był autorowi projektu dość dobrze znany. [TODO - opisać problem że szkicy się "rozjeżdżały podczas modyfikowania szkiców "poziomy" niżej czy nie?]\\
 
-Czasem zachodzi potrzeba wytłumaczenia znaczenia symboli użytych w równaniu. Można to zrobić z użyciem zdefiniowanego na potrzeby niniejszej klasy środowiska \texttt{eqwhere}.
-
-\begin{equation}
-E = mc^2
-\end{equation}
-gdzie
-\begin{eqwhere}[2cm]
-	\item[$m$] masa
-	\item[$c$] prędkość światła w próżni
-\end{eqwhere}
-
-Odległość półpauzy od lewego marginesu należy dobrać pod kątem najdłuższego symbolu (bądź listy symboli) poprzez odpowiednie ustawienie parametru tego środowiska (domyślnie: 2 cm).
+Modele zostały wydrukowane na drukarce Zortrax M200. Została ona wybrana ze względu na jej dostępnośc na uczelni. Dodatkowo, aby przygotować pliki pod druk, należało model przetworzyć programem Z-Suite. W programie większość ustawień pozostawiana była bez zmian, jedynie 2 istotne ustawienia zostały dostosowane do projektu. Zostało ustawione minimalne niezerowe wypełnienie, około $10\%$ i warstwy, wierzchnia i spodnia, zostały ustawione na najgrubsą możliwą opcję. Ustawienia te znalezione zostały eksperymentalnie - wydają się najlepiej balansować między wytrzymałością a czasem druku i ilością zużytego materiału. Dodatkowo, przed ostatecznym wydrukiem, wewnątrz programu inventor, zwiększone zostały o około $0.3-0.4 mm$ wszystkie otwory montażowe, ponieważ modele "puchną" i dziury te po wydruku były znacznie mniejsze niż na tworzonych szkicach.\\
