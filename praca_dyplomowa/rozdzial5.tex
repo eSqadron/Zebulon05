@@ -4,7 +4,7 @@ Implementacja oparta została o minikomputer Raspberry Pi 4B 2GB RAMu. Urządzen
 Robot Operating System (ROS) to zestaw narzędzi programowych służący do tworzenia aplikacji z myślą o robotach. ROS wprowadza sieć niezależnych, działających równolegle, węzłów (ang. node). Węzły te komunikują się za pomoca tematów (ang. topic), które to stanowią niezmienny interfejs między węzłami. 
 Węzły mogą na tematy dane publikować lub je odbierać i implementacja węzła znajdującego się po drugiej stronie nie ma absolutnie znaczenia. Co więcej, nawet nie ma znaczenia czy ten węzeł tam jest. Węzły mogą publikować dane na temty, z których żaden inny węzeł tych danych nie odbiera. Sieć taka jest szczególnie przydatna w przyapdku robotów o pewnym stopniu modularności, bądź w przypadku dowolnych modyfikacji. Zwykle jeden węzeł odpowiada jednemu fizycznemu elementowi robota. Zmiana tego elementu, nawet na element wymagający zupełnie innego oprogramowania, nie jest wtedy problemem. Wystarczy usunąć z sieci odpowiadający mu węzeł i na to miejsce wstawić inny. Jest to bardzo proste, dopóki interfejs (temat na jaki dany węzeł publikuje) pozostaje bez zmian.
 \subsection{Schemat implementacji}
-\begin{figure}[H]
+\begin{figure}[h!]
 \includegraphics[width=\textwidth]{img/implementation_schematic.png}
 \caption{Schemat implementacji w środowisku ROS}
 \label{ros_implementation_schematic}
