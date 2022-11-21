@@ -13,9 +13,3 @@ H2 = subs(H_n, [O_i, A_i, ai, di], [O1, 0, a2, 0]);
 H3 = subs(H_n, [O_i, A_i, ai, di], [O2, 0, a3, 0]);
 
 H1*(H2*H3)
-
-%H1a = subs(H_n, [O_i, A_i, ai, di], [O1, pi/2, 0, 0]);
-%H2a = subs(H_n, [O_i, A_i, ai, di], [O2, 0, a2, 0]);
-%H3a = subs(H_n, [O_i, A_i, ai, di], [O3, 0, a3, 0]);
-
-%H1a * (H2a * H3a);
