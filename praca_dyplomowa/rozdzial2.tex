@@ -200,9 +200,15 @@ Natomiast obliczenia dla $\theta_1$ \cite{SCARA_model}
 \theta_1 = \arctan{\frac{z + h_1}{x - a_1}} + \arcsin{\left( \frac{a_3 \sin{\theta_2} }{ \sqrt{ (x - a_1)^2 + (z + h_1)^2}} \right)}\\ 
 \end{equation}
 
-Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final}, \ref{theta_2_eq_final} otrzymujemy układ równań który stanowi kinematykę odwrotną opisywanej nogi robotycznej.
+Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final}, \ref{theta_2_eq_final} otrzymujemy układ równań \ref{inverse_final}, który stanowi przybliżoną kinematykę odwrotną opisywanej nogi robotycznej.
 
-TODO - układ równań
+\begin{equation}\label{inverse_final}
+\begin{split}
+\theta_0 &= \arctan{\frac{Y}{X}}
+\theta_1 &= \arctan{\frac{z + h_1}{x - a_1}} + \arcsin{\left( \frac{a_3 \sin{\theta_2} }{ \sqrt{ (x - a_1)^2 + (z + h_1)^2}} \right)}\\ 
+\theta_2 &= \arccos{\left( \frac{(x - a_1)^2 + (z + h_1)^2 - a_2^2 - a_3^2}{2 a_2 a_3} \right)}\\ 
+\end{split}
+\end{equation}
 
 TODO - ograniczenia.
 
