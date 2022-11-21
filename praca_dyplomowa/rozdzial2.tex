@@ -224,29 +224,21 @@ Obliczenia dla $\theta_1$ są natomaist trochę bardziej skomplikowane. Aby dał
 \end{split}
 \end{equation}
 
-<<<<<<< HEAD
-Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final}, \ref{theta_2_eq_final} otrzymujemy układ równań \ref{inverse_final}, który stanowi przybliżoną kinematykę odwrotną opisywanej nogi robotycznej.
-
-\begin{equation}\label{inverse_final}
-\begin{split}
-\theta_0 &= \arctan{\frac{Y}{X}}
-\theta_1 &= \arctan{\frac{z + h_1}{x - a_1}} + \arcsin{\left( \frac{a_3 \sin{\theta_2} }{ \sqrt{ (x - a_1)^2 + (z + h_1)^2}} \right)}\\ 
-\theta_2 &= \arccos{\left( \frac{(x - a_1)^2 + (z + h_1)^2 - a_2^2 - a_3^2}{2 a_2 a_3} \right)}\\ 
-=======
 Do rozwiązania układu \ref{theta_1_eq_1} potrzebne są jeszcze $\Delta z$ i $\Delta x$. Na podstawie rysunku \ref{math_model} można stwierdzić że $\Delta z = Z + h_1$ a $\Delta x = X - a_1$. Podstawiając te dane pod równanie równanie 2 układu \ref{theta_1_eq_1} i podstawiając równanie 1 i 2 pod odpowiednie kąty z równania 3 wspomnianego układu otrzymujemy ostateczne rozwiązanie na $\theta_1$ - równanie \ref{theta_1_eq_final}.
+
+
 
 \begin{equation}\label{theta_1_eq_final}
 \theta_1 = \arctan{\frac{Z + h_1}{X - a_1}} + \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\theta_2}}}\\ 
 \end{equation}
 
-Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final}, \ref{theta_2_eq_final} otrzymujemy układ równań \ref{inverse_eq_final} który stanowi kinematykę odwrotną opisywanej nogi robotycznej.
+Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final}, \ref{theta_2_eq_final} otrzymujemy układ równań \ref{inverse_eq_final} który stanowi uproszczoną kinematykę odwrotną opisywanej nogi robotycznej.
 
 \begin{equation}\label{inverse_eq_final}
 \begin{split}
 \theta_0 &= \arctan{\frac{Y}{X}}\\
 \theta_1 &= \arctan{\frac{Z + h_1}{X - a_1}} + \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\theta_2}}}\\ 
 \theta_2 &= \arccos{\left( \frac{(x - a_1)^2 + (z + h_1)^2 - a_2^2 - a_3^2}{2 a_2 a_3} \right)}\\
->>>>>>> 222d597eaa40244858d2384977c9e496b80ffa3f
 \end{split}
 \end{equation}
 
