@@ -36,7 +36,7 @@ public:
     }
 
     std::tuple<std::array<float, 2>, int> do_step(int ang){
-        if(current_step_stage_ == R_for) {
+        if(current_step_stage_ ==  Idle) {
             current_step_stage_ = R_for;
         }else if(current_step_stage_ == R_for){
             calculate_right_leg(ang);
@@ -48,6 +48,8 @@ public:
             return std::make_tuple(calculate_endpoint_delta(ang, current_left_leg_), current_left_leg_);
             current_step_stage_ = R_for;
         }
+
+        throw std::invalid_argument("unknown stage");
     }
 
     std::array<float, 2> calculate_endpoint_delta(float ang, int leg_no){
