@@ -20,7 +20,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/point.hpp"
 #include "std_msgs/msg/bool.hpp"
-#include "../include/three_legs_controller/Generator3A.hpp"
+//#include "../include/three_legs_controller/Generator3A.hpp"
 
 #define PI 3.14159265359
 
@@ -57,7 +57,7 @@ public:
         int leg_3_pos = get_pos_from_leg("leg_3");
 
 
-        gen_.set_leg_default_positions(PI * 60/180, PI, PI * 300/180);
+        //gen_.set_leg_default_positions(PI * 60/180, PI, PI * 300/180);
 
         auto message = geometry_msgs::msg::Point();
         message.x = 55 + 125 + 180;
@@ -107,9 +107,9 @@ private:
             }
         }
 
-        do_step_result = gen_.do_step(0);
-        endpoint_shift = std::get<0>(do_step_result);
-        moving_leg = std::get<1>(do_step_result);
+//        do_step_result = gen_.do_step(0);
+//        endpoint_shift = std::get<0>(do_step_result);
+//        moving_leg = std::get<1>(do_step_result);
 
 
 
@@ -148,7 +148,7 @@ private:
 
     step_stage_old current_step_stage_;
 
-    Generator3A gen_;
+    //Generator3A gen_;
 
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_1_publisher_;
