@@ -54,10 +54,10 @@ Z praktycznynego punktu widzenia obliczenia należy zacząć od stworzenia specj
 \end{table}
 
 Gdzie: \\
-$\theta_i$ - angle from $x_{n-1}$ to $x_n$ around $z_{n-1}$\\
-$\alpha_i$ - angle from $z_{n-1}$ to $z_n$ around $x_n$\\
-$r_i$ - distance between the origin of the $n-1$ frame and the origin of the $n$ frame along the $x_n$ direction.\\ 
-$d_i$ - distance from $x_{n-1}$ to $x_n$ along the $z_{n-1}$ direction\\
+$\theta_i$ - kąt pomiędzy $x_{n-1}$ i $x_n$, mierzony dookoła $z_{n-1}$\\
+$\alpha_i$ - kąt pomiędzy $z_{n-1}$ to $z_n$, mierzony dookoła $x_n$\\
+$r_i$ - odległość od początku ramki $n-1$ a początkiem ramki $n$ wzdłuż kierunku $x_n$.\\ 
+$d_i$ - odległość od $x_{n-1}$ do $x_n$ wzdłuż kierunku $z_{n-1}$\\
 
 Następnie macierze transformacji jednorodnej (pomiędzy ramkami $n-1$ i $n$) oblicza się zgodnie ze wzorem \ref{DH_homogenous}. Wzór ten jest właśnie obliczony poprzez wymnożenie wzorów na wyżej wspomniane 6 przekształceń prostych. Ale w zasadzie wzór ten sprowadza się do 2 zasadniczych elementów. $R$ jest macierzą Rotacji o rozmiarze $3x3$ a $T$ to macierz Transformacji $1x3$. \cite{DH_matrix_AA_article}\\
 
@@ -128,7 +128,8 @@ Kinematyka odwrotna jest natomiast - jak sama nazwa wskazuje - procesem odwrotny
 
 Zwykle odwrotną kinematykę można obliczyć poprzez rozwiązanie równań kinematyki prostej. Jest to w tym przypadku także teoretycznie możliwe, jako że mamy do czynienia z trzema niewiadomymi ($\theta_{0-2}$) i układem trzech równań nr. \ref{FK_ver_1} (lub \ref{FK_ver_2}). (Równanie na $a_{temp}$ jest jedynie pomocnicze, trzeba je traktować jak część równań $Y$ i $X$).
 
-Jest to jak najbardziej wykonalne w przypadku $\theta_0$, można to zrobić łącząc wzór na $X$ i $Y$, dzieląc go obustronnie, zamieniając $\frac{\sin}{\cos}$ na $\tan$ i wyciągając $\theta_0$ na lewą stronę. Daje to wzór \ref{theta_0_eq_final}
+\subsubsection{Obliczenia $\theta_0$}
+Jest to jak najbardziej wykonalne w przypadku $\theta_0$, można to zrobić łącząc wzór na $X$ i $Y$, dzieląc go obustronnie, zamieniając $\frac{\sin}{\cos}$ na $\tan$ i wyciągając $\theta_0$ na lewą stronę. Daje to wzór \ref{theta_0_eq_final}.
 
 %\begin{equation}
 %\begin{split}
@@ -192,6 +193,7 @@ Jest to jak najbardziej wykonalne w przypadku $\theta_0$, można to zrobić łą
 
 %Niestety wzór \ref{theta_1_eq2} nie pozwala jednoznacznie wyznaczyć jawnego $\theta_1$ i co za tym idzie nie da się tego wzoru jednoznacznie zaimplementować softwareowo, co jest niezbędne w dalszej części pracy. Można natomiast powrócić do rysunku \ref{math_model} i zastosować na trójkącie utworzonym z $a_2$ i $a_3$ twierdzenie cosinusów połączone z twierdzeniem pitagorasa.
 
+\subsubsection{Obliczenia $\theta_2$}
 Większy problem pojawia się jednak w przypadku obliczania $\theta_1$ i $\theta_2$, ponieważ wartości te da się obliczyć z wyżej wspomnianego równania, ale nie da się wyznaczyć na te wartości równań w postaci jawnej. A bez postaci jawnej poprawna implementacja tych równań będzie znacznie utrudniona.
 
 Można natomiast zastosować pewnego rodzaju uproszczenie. Jeżeli wyznaczanie równań $\theta_1$ i $\theta_2$ sprowadzi się do problemu dwuwymiarowego, obliczenia stają się w zasadzie identyczne jak w przypadku obliczeń kinematyki odwrotnej dla robota typu SCARA, co było już robione wielokrotnie. \cite{SCARA_model}\\
@@ -207,6 +209,8 @@ Następnie na podstawie równania \ref{theta_2_eq_1} aby ostatecznie otrzymać $
 \begin{equation} \label{theta_2_eq_final}
 \theta_2 = \arccos{\left( \frac{(x - a_1)^2 + (z + h_1)^2 - a_2^2 - a_3^2}{2 a_2 a_3} \right)}\\ 
 \end{equation} 
+
+\subsubsection{Obliczenia $\theta_1$}
 
 Obliczenia dla $\theta_1$ są natomaist trochę bardziej skomplikowane. Aby dało się je prosto zwizualizować, wykonany został rysunek \ref{theta_1_model}. Na podstawie rysunku, stosując wzory trygonometryczne, można otrzymać zależności \ref{theta_1_eq_1} \cite{SCARA_model_calc}
 
@@ -240,8 +244,30 @@ Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final},
 \end{split}
 \end{equation}
 
-TODO - ograniczenia.
+\subsubsection{Ograniczenia ruchu}
+Z punktu widzenia czysto matematycznego ruch będzie ograniczony przez torus. Równanie \ref{eq:torus} opisuje tą figurę - $R$ oznacza promień okręgu dookoła osi $z$, a $\sqrt{r}$ oznacza promień "wałka".\\
 
+\begin{equation} \label{eq:torus}
+z = \sqrt{r -(R-\sqrt{x^(2)+y^(2)})^(2)}
+\end{equation}
+
+Aby otrzymać właściwe równanie specyficzne dla tego projektu, należy zastosować podstawienia przedstawione na równaniu \ref{eq:torus_subs}. 
+
+\begin{equation} \label{eq:torus_subs}
+\begin{split}
+R &= a_1\\
+r &= \sqrt{a_2 + a_3}\\
+\end{split}
+\end{equation}
+
+Po wykonaniu podstawienia otrzymamy równanie \ref{eq:torus_final}.
+
+\begin{equation} \label{eq:torus_final}
+z = \sqrt{a_1-(\sqrt{a_2 + a_3}-\sqrt{x^2+y^2})^2}
+\end{equation}
+
+
+\subsubsection{Przybliżenia}
 Natomiast trzeba cały czas pamiętać że jest to tylko uproszczenie, które będzie owocować pewnymi drobnymi błędami. Trzeba zauważyć, że zmiana współrzędnej $Y$ nie wpływa na wartości kątów $\theta_1$ i $\theta_2$, tylko na $\theta_0$. Oznacza to, że wraz ze zmianą kąta $\theta_0$, na potrzeby uproszczenia obliczeń, obraca się także o ten kąt oś $X$ układu współrzędnych. W praktyce oznacza to, że odsunięcie nogi od punktu $(0, 0, 0)$ zawsze będzie rzutowane na cylinder o promieniu równym odsunięciu o takim samym $X$ i $Z$, ale $Y = 0$. Problem jest zaprezentowany na rysunku \ref{SCARA_error}. Na obrazku tym widać pozycję początkową robota oznaczoną jako "0". Następnie jeśli robot wykona krok, to stosując ten algorytm, znajdzie się w pozycji "1p", a w idealnym przypadku powinien znaleźć się w "1i". Jednakże błąd powinien być pomijalnie mały a równania powinny umożliwić skuteczną implementację algorytmu chodu.
 
 \begin{figure}[h!]
