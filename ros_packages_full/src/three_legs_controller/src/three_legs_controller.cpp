@@ -124,7 +124,7 @@ private:
             }
             RCLCPP_INFO(this->get_logger(), "service not available, waiting again...");
         }
-        return parameters_client->get_parameters({"leg_pos"});
+        return parameters_client->get_parameters({"leg_pos"})[0].get_parameter_value().get<int>();
     }
 
 
