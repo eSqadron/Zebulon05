@@ -51,8 +51,8 @@ public:
     }
 
     std::array<float, 2> calculate_endpoint_delta(float ang, int leg_no){
-        float delta_x = l * sin(ang - leg_pos_[leg_no]);
-        float delta_y = l * cos(ang - leg_pos_[leg_no]);
+        float delta_x = step_len_ * sin(ang - leg_pos_[leg_no]);
+        float delta_y = step_len_ * cos(ang - leg_pos_[leg_no]);
         return std::array<float, 2>{delta_x, delta_y};
     }
 
