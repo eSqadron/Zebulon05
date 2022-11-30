@@ -26,7 +26,7 @@
 
 using namespace std::chrono_literals;
 
-enum step_stage{
+enum step_stage_old{
     NA,
     Idle,
     Right_forward,
@@ -146,7 +146,7 @@ private:
     bool is_step3_stage_done_;
     std::array<bool, 3> leg_no_step_done_;
 
-    step_stage current_step_stage_;
+    step_stage_old current_step_stage_;
 
     Generator3A gen_;
 
