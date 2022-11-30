@@ -52,9 +52,9 @@ public:
 
         current_step_stage_ = Idle_;
 
-        int leg_1_pos = get_pos_from_leg("leg_1");
-        int leg_2_pos = get_pos_from_leg("leg_2");
-        int leg_3_pos = get_pos_from_leg("leg_3");
+//        int leg_1_pos = get_pos_from_leg("leg_1");
+//        int leg_2_pos = get_pos_from_leg("leg_2");
+//        int leg_3_pos = get_pos_from_leg("leg_3");
 
 
         //gen_.set_leg_default_positions(PI * 60/180, PI, PI * 300/180);
@@ -115,17 +115,17 @@ private:
 
     }
 
-    int get_pos_from_leg(std::string leg_name){
-        auto parameters_client = std::make_shared<rclcpp::SyncParametersClient>(this, leg_name);
-        while (!parameters_client->wait_for_service(1s)) {
-            if (!rclcpp::ok()) {
-                RCLCPP_ERROR(this->get_logger(), "Interrupted while waiting for the service. Exiting.");
-                rclcpp::shutdown();
-            }
-            RCLCPP_INFO(this->get_logger(), "service not available, waiting again...");
-        }
-        return parameters_client->get_parameters({"leg_pos"})[0].get_parameter_value().get<int>();
-    }
+//    int get_pos_from_leg(std::string leg_name){
+//        auto parameters_client = std::make_shared<rclcpp::SyncParametersClient>(this, leg_name);
+//        while (!parameters_client->wait_for_service(1s)) {
+//            if (!rclcpp::ok()) {
+//                RCLCPP_ERROR(this->get_logger(), "Interrupted while waiting for the service. Exiting.");
+//                rclcpp::shutdown();
+//            }
+//            RCLCPP_INFO(this->get_logger(), "service not available, waiting again...");
+//        }
+//        return parameters_client->get_parameters({"leg_pos"})[0].get_parameter_value().get<int>();
+//    }
 
 
     void step1_done_callback(const std_msgs::msg::Bool& msg){
