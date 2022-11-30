@@ -27,11 +27,11 @@
 using namespace std::chrono_literals;
 
 enum step_stage_old{
-    NA,
-    Idle,
+    NA_,
+    Idle_,
     Right_forward,
     Middle_back,
-    Change_dir
+    Change_dir_
 };
 
 
@@ -50,7 +50,7 @@ public:
         step2_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::step2_done_callback, this, std::placeholders::_1));
         step3_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::step3_done_callback, this, std::placeholders::_1));
 
-        current_step_stage_ = Idle;
+        current_step_stage_ = Idle_;
 
         int leg_1_pos = get_pos_from_leg("leg_1");
         int leg_2_pos = get_pos_from_leg("leg_2");
@@ -86,7 +86,7 @@ private:
         
         RCLCPP_INFO(this->get_logger(), std::to_string(is_step1_stage_done_ && is_step2_stage_done_).c_str());
 
-        if(current_step_stage_ == Idle){
+        if(current_step_stage_ == Idle_){
             if(is_step2_stage_done_){
                 message.x = 55 + 125 + 180;
                 message.y = 0;
@@ -103,7 +103,7 @@ private:
                 message.z = -40;
                 step_1_publisher_->publish(message);
                 RCLCPP_INFO(this->get_logger(), "message 1 sent");
-                current_step_stage_ = Idle;
+                current_step_stage_ = Idle_;
             }
         }
 
