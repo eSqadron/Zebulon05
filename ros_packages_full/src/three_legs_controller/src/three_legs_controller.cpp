@@ -103,7 +103,7 @@ private:
 
         if(current_step_stage_ == Idle_){
             if(is_step3_stage_done_){
-                message.x = 55 + 125 + 100;
+                message.x = 55 + 125 + 180;
                 message.y = 0;
                 message.z = -40;
                 step_3_publisher_->publish(message);
