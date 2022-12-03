@@ -20,7 +20,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/point.hpp"
 #include "std_msgs/msg/bool.hpp"
-//#include "../include/three_legs_controller/Generator3A.hpp"
+#include "../include/three_legs_controller/Generator3A.hpp"
 
 #define PI 3.14159265359
 
