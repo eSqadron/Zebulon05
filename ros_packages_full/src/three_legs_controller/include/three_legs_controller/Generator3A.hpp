@@ -48,13 +48,13 @@ public:
         } else if(current_step_stage_ == M_for){
             current_step_stage_ = R_back;
             return std::make_tuple(calculate_endpoint_delta(ang, current_back_leg_), current_back_leg_);
-        } else if(current_step_stage_ == R_back)){
+        } else if(current_step_stage_ == R_back){
             current_step_stage_ = M_back;
             return std::make_tuple(calculate_endpoint_delta(ang, current_right_leg_, true), current_right_leg_);
-        } else if(current_step_stage_ == M_back)){
+        } else if(current_step_stage_ == M_back){
             current_step_stage_ = L_back;
             return std::make_tuple(calculate_endpoint_delta(ang, current_right_leg_, true), current_left_leg_);
-        } else if(current_step_stage_ == L_back)){
+        } else if(current_step_stage_ == L_back){
             current_step_stage_ = Idle;
             return std::make_tuple(calculate_endpoint_delta(ang, current_right_leg_, true), current_back_leg_);
         }
