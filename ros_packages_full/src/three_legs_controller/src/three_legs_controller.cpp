@@ -34,6 +34,12 @@ enum step_stage_old{
     Change_dir_
 };
 
+enum single_step_stages{
+    initialise_step,
+    leg_up,
+    leg_down
+};
+
 
 
 class ThreeLegsController : public rclcpp::Node
@@ -47,17 +53,20 @@ public:
         timer_ = this->create_wall_timer(200ms, std::bind(&ThreeLegsController::timer_callback, this));
 
         step1_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::step1_done_callback, this, std::placeholders::_1));
-        step2_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::step2_done_callback, this, std::placeholders::_1));
-        step3_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::step3_done_callback, this, std::placeholders::_1));
+        step2_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_2", 10, std::bind(&ThreeLegsController::step2_done_callback, this, std::placeholders::_1));
+        step3_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_3", 10, std::bind(&ThreeLegsController::step3_done_callback, this, std::placeholders::_1));
 
         current_step_stage_ = Idle_;
 
 //        int leg_1_pos = get_pos_from_leg("leg_1");
 //        int leg_2_pos = get_pos_from_leg("leg_2");
 //        int leg_3_pos = get_pos_from_leg("leg_3");
+        int leg_1_pos = 30;
+        int leg_2_pos = 300;
+        int leg_3_pos = 180;
 
 
-        //gen_.set_leg_default_positions(PI * 60/180, PI, PI * 300/180);
+        gen_.set_leg_default_positions(PI * 60/180, PI, PI * 300/180);
 
         auto message = geometry_msgs::msg::Point();
         message.x = 55 + 125 + 180;
@@ -66,11 +75,17 @@ public:
         step_1_publisher_->publish(message);
         rclcpp::sleep_for(std::chrono::seconds(1));
         step_2_publisher_->publish(message);
-        rclcpp::sleep_for(std::chrono::seconds(6));
+        rclcpp::sleep_for(std::chrono::seconds(1));
+        step_3_publisher_->publish(message);
+        rclcpp::sleep_for(std::chrono::seconds(1));
         is_step1_stage_done_ = true;
         is_step2_stage_done_ = true;
         is_step3_stage_done_ = true;
         leg_no_step_done_ = {true, true, true};
+
+        xy_leg_positions_ = {{150, 0, -100}, {150, 0, -100}, {150, 0, -100}};
+        single_step_stages = initialise_step;
+        step_height_ = 40;
     }
 
 private:
@@ -84,42 +99,81 @@ private:
         int moving_leg;
         
         
-        RCLCPP_INFO(this->get_logger(), std::to_string(is_step1_stage_done_).c_str());
+        //RCLCPP_INFO(this->get_logger(), std::to_string(is_step1_stage_done_).c_str());
 
         if(current_step_stage_ == Idle_){
-            if(is_step1_stage_done_){
+            if(is_step3_stage_done_){
                 message.x = 55 + 125 + 100;
                 message.y = 0;
                 message.z = -40;
-                step_1_publisher_->publish(message);
-                RCLCPP_INFO(this->get_logger(), "message 1 sent");
+                step_3_publisher_->publish(message);
+                RCLCPP_INFO(this->get_logger(), "message 3 sent");
                 current_step_stage_ = Right_forward;
             }
         }
-        else if(current_step_stage_ == Right_forward) {
-            if (is_step1_stage_done_){
-                message.x = 55 + 125 + 180;
-                message.y = 0;
-                message.z = -40;
-                step_1_publisher_->publish(message);
-                RCLCPP_INFO(this->get_logger(), "message 1 sent");
-                current_step_stage_ = Middle_back;
-            }
-        }
-        else if(current_step_stage_ == Middle_back) {
-            if (is_step1_stage_done_){
-                message.x = 55 + 180;
-                message.y = 0;
-                message.z = -40;
-                step_1_publisher_->publish(message);
-                RCLCPP_INFO(this->get_logger(), "message 1 sent");
-                current_step_stage_ = Right_forward;
-            }
-        }
+//        else if(current_step_stage_ == Right_forward) {
+//            if (is_step1_stage_done_){
+//                message.x = 55 + 125 + 180;
+//                message.y = 0;
+//                message.z = -40;
+//                step_1_publisher_->publish(message);
+//                RCLCPP_INFO(this->get_logger(), "message 1 sent");
+//                current_step_stage_ = Middle_back;
+//            }
+//        }
+//        else if(current_step_stage_ == Middle_back) {
+//            if (is_step1_stage_done_){
+//                message.x = 55 + 180;
+//                message.y = 0;
+//                message.z = -40;
+//                step_1_publisher_->publish(message);
+//                RCLCPP_INFO(this->get_logger(), "message 1 sent");
+//                current_step_stage_ = Right_forward;
+//            }
+//        }
 
-//        do_step_result = gen_.do_step(0);
-//        endpoint_shift = std::get<0>(do_step_result);
-//        moving_leg = std::get<1>(do_step_result);
+
+
+//        if(single_step_stages == initialise_step) {
+//            do_step_result = gen_.do_step(0);
+//            endpoint_shift = std::get<0>(do_step_result);
+//            moving_leg = std::get<1>(do_step_result);
+//            single_step_stages = leg_up;
+//        } else if(single_step_stages == leg_up) {
+//            if(leg_no_step_done_[moving_leg]) {
+//                xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
+//                xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
+//                xy_leg_positions_[moving_leg][2] += step_height_;
+//                message.x = xy_leg_positions_[moving_leg][0];
+//                message.y = xy_leg_positions_[moving_leg][1];
+//                message.z = xy_leg_positions_[moving_leg][2];
+//                if (moving_leg == 0)
+//                    step_1_publisher_->publish(message);
+//                else if (moving_leg == 1)
+//                    step_2_publisher_->publish(message);
+//                else if (moving_leg == 3)
+//                    step_3_publisher_->publish(message);
+//
+//                single_step_stages = leg_down;
+//            }
+//        } else if(single_step_stages == leg_down){
+//            if(leg_no_step_done_[moving_leg]) {
+//                xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
+//                xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
+//                xy_leg_positions_[moving_leg][2] -= step_height_;
+//                message.x = xy_leg_positions_[moving_leg][0];
+//                message.y = xy_leg_positions_[moving_leg][1];
+//                message.z = xy_leg_positions_[moving_leg][2];
+//                if (moving_leg == 0)
+//                    step_1_publisher_->publish(message);
+//                else if (moving_leg == 1)
+//                    step_2_publisher_->publish(message);
+//                else if (moving_leg == 3)
+//                    step_3_publisher_->publish(message);
+//
+//                single_step_stages = initialise_step;
+//            }
+//        }
 
 
 
@@ -151,14 +205,18 @@ private:
         leg_no_step_done_[2] = msg.data;
     }
 
+    std::array<std::array<float, 3>, 3> xy_leg_positions_;
+
     bool is_step1_stage_done_;
     bool is_step2_stage_done_;
     bool is_step3_stage_done_;
     std::array<bool, 3> leg_no_step_done_;
 
     step_stage_old current_step_stage_;
+    current_single_step_stage_ single_step_stages;
+    float step_height_;
 
-    //Generator3A gen_;
+    Generator3A gen_;
 
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_1_publisher_;
