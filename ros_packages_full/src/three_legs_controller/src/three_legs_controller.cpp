@@ -84,7 +84,7 @@ public:
         leg_no_step_done_ = {true, true, true};
 
         xy_leg_positions_ = {{150, 0, -100}, {150, 0, -100}, {150, 0, -100}};
-        single_step_stages = initialise_step;
+        current_single_step_stage_ = initialise_step;
         step_height_ = 40;
     }
 
@@ -134,12 +134,12 @@ private:
 
 
 
-//        if(single_step_stages == initialise_step) {
+//        if(current_single_step_stage_ == initialise_step) {
 //            do_step_result = gen_.do_step(0);
 //            endpoint_shift = std::get<0>(do_step_result);
 //            moving_leg = std::get<1>(do_step_result);
-//            single_step_stages = leg_up;
-//        } else if(single_step_stages == leg_up) {
+//            current_single_step_stage_ = leg_up;
+//        } else if(current_single_step_stage_ == leg_up) {
 //            if(leg_no_step_done_[moving_leg]) {
 //                xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
 //                xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
@@ -154,9 +154,9 @@ private:
 //                else if (moving_leg == 3)
 //                    step_3_publisher_->publish(message);
 //
-//                single_step_stages = leg_down;
+//                current_single_step_stage_ = leg_down;
 //            }
-//        } else if(single_step_stages == leg_down){
+//        } else if(current_single_step_stage_ == leg_down){
 //            if(leg_no_step_done_[moving_leg]) {
 //                xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
 //                xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
@@ -171,7 +171,7 @@ private:
 //                else if (moving_leg == 3)
 //                    step_3_publisher_->publish(message);
 //
-//                single_step_stages = initialise_step;
+//                current_single_step_stage_ = initialise_step;
 //            }
 //        }
 
@@ -213,7 +213,7 @@ private:
     std::array<bool, 3> leg_no_step_done_;
 
     step_stage_old current_step_stage_;
-    current_single_step_stage_ single_step_stages;
+    single_step_stages current_single_step_stage_;
     float step_height_;
 
     Generator3A gen_;
