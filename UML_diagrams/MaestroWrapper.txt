@@ -1,0 +1,35 @@
+@startuml
+
+title Polulu Maestro - Python ROS Wrapper
+
+
+class MaestroRosWrapper{
+  +MaestroRosWrapper()
+  +void ros_publisher_timer_callback()
+  +void target_callback(msg)
+  +Subscriber target_subscription 
+  +Publisher current_pos_publisher
+  +Timer timer
+  +Controller maestro 
+  
+}
+
+class Controller{
+  +Controller(String ttyStr= '/dev/ttyACM0', int device = 0x0c)
+  +void setTarget(int chan, int target)
+  +void setSpeed(int chan, int speed)
+  +void setAccel(int chan, int accel) 
+  +int getPosition(int chan)
+}
+note right
+Jest to klasa napisana w języku Python przez Stevena Jackobsa, 
+służąca do kontrolowania sterownika Polulu Maestro z poziomu kodu.
+.....
+Na diagramie zanaczono tylko funkcjonalności klasy 
+używane przez klasę MaestroRosWrapper
+end note
+
+MaestroRosWrapper "1" *-down- "1" Controller
+MaestroRosWrapper <|-up- rclpy::Node
+
+@enduml
