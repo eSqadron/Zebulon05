@@ -2,6 +2,8 @@
 // Created by OEM on 07.10.2022.
 //
 
+//TODO - name change to RobotLeg, change implementation to more generic
+
 #ifndef ROBOTLEG_ROBOTLEGROS_HPP
 #define ROBOTLEG_ROBOTLEGROS_HPP
 
@@ -11,13 +13,7 @@
 
 #include <vector>
 
-enum StepStage{
-    idle,
-    start_step,
-    performing_step,
-    increment_step,
-    finish_step
-};
+
 
 class RobotLegRos {
 public:
@@ -43,15 +39,15 @@ public:
         a_3_ = a3;
     }
 
-    void move_leg_xyz(float x, float y, float z);
+    void move_leg_xyz(float x, float y, float z); // TODO - remove, move calculations to Polulu Class and publishing to Wrapper class 
 
-    void publish_servo_position(std::array<short unsigned int, 3> new_servo_pos);
+    void publish_servo_position(std::array<short unsigned int, 3> new_servo_pos); // TODO - remove, move publishing to Wrapper class
 
     std::array<float, 3> forward_kinematics(const std::array<float, 3> angles_deg);
     std::array<float, 3> inverse_kinematics(const std::array<float, 3> xyz_pos);
 
     void save_last_known_servo_positions(std::array<short unsigned int, 24> new_last_known_pos){
-        last_known_pos = new_last_known_pos;
+        last_known_pos = new_last_known_pos; //TODO - redo so that only 3 relevant positions are saved
     }
     std::array<short unsigned int, 3> get_servo_movement_target(){
         return target_pos_;
