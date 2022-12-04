@@ -1,0 +1,486 @@
+\documentclass[a4paper,13pt]{article}
+\usepackage[MeX]{polski}
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage[OT4]{fontenc}
+\usepackage{listings}
+\usepackage[margin=1in]{geometry}
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+\frenchspacing
+
+
+
+
+\lstset{
+	language=C++,
+	breaklines=true,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	literate={ą}{{\,a}}1 {ę}{{\,e}}1 {ó}{{\'o}}1 {ż}{{\*z}}1 {ź}{{\'z}}1 {ł}{{\'l}}1 {ś}{{\'s}}1 {ć}{{\'c}}1 {ń}{{\'n}}1
+}
+
+
+\title{Projekt robota trójnożnego}
+\author{Jakub Mazur}
+\date{\today}
+
+
+\begin{document}
+
+%\begin{lstlisting}
+%ą ę ż ł
+%\end{lstlisting}
+% TODO - ogarnąć encoding
+
+
+\maketitle
+
+\hypersetup{
+	linktocpage=true,
+    colorlinks=true,
+    urlcolor=red,
+    linktoc=all,
+    linkcolor=blue,
+}
+\tableofcontents
+
+\section{Wstęp}
+\subsection{Historia robotów kroczących}
+Pierwsza idea robota kroczącego pojawiła się już pod koniec XV wieku, a narodziła się w głowie nikogo innego jak Leonarda Da Vinci. Od tamtej pory wielu naukowców próbowało tworzyć konstrukcje, które używały nóg zamiast kół. Jednakże, pierwsze faktycznie udane roboty tego typu datuje się dopiero na początek lat 60 ubiegłego wieku. Pojawiły sie wtedy pierwsze działające konstrukcje, na przykład robot czteronożny zbudowany przez Josepha Shingleya oraz roboty sześcio i ośmonożne zbudowane przez "Space General Corporation". \cite{history}\\
+
+Od tamtej pory powstało wiele różnych projektów, które kategoryzuje się w zależności od ilości nóg posiadanych przez robota:
+\begin{itemize}
+	\item jednonożne,
+	\item dwunożne (Humanoid, chicken-walkers),
+	\item czteronożne (Quadrupedal),
+	\item sześcionożne (Hexapod),
+	\item ośmionożne,
+	\item gąsiennicowe.
+\end{itemize}
+
+Można tu zaobserwować pewną tendencję spadkową, wraz z upływem czasu widać wzrost udanych konstrukcji o mniejszej liczbie nóg. Konstrukcje takie wymagają większej wiedzy naukowców, lepiej dobranych algorytmów ale za to można je skonstruować mniejszym nakładem materiałowym. Stąd naturalne jest dążenie do ograniczania liczby nóg w konstrukcjach robotów kroczących\\
+
+Pojawia się także inna tendencja w ilości nóg robotów. Prawie wszystkie konstrukcje (poza jednonożnymi) opierają się na anatomii zwierząt. Jest to raczej logiczna tendencja, jako że do takich robotów mamy już algorytmy chodu opracowane przez miliony lat ewolucji. Biologiczne "konstrukcje", które nie mają sensu nie przetrwałyby do dziś. \cite{history}\\
+
+Co natomiast z konstrucjami robotów trójnożnych? Można się zastanowić czy konstrukcje takie nie powstają ponieważ faktycznie nie mają sensu, czy może dlatego że temat bardziej "klasycznych", prostszych w implementacji, konstrukcji nie został po prostu jeszcze wyczerpany przez naukowców. Jeżeli rozejrzymy się dookoła siebie możemy zaobserwować wiele przedmiotów codziennego użytku które posiadają właśnie trzy nogi, od wszelakich taboretów, przez wieszaki na ubrania po stoły. Są to jednak przedmioty statyczne i dla takich rozwiązań trzy nogi są wymaganym minimum aby dany przedmiot stał stabilnie. Co jednak z konstrukcjami dynamicznymi? Jeżeli robot trójnożny podniesie nogę, straci stabilność, zacznie się przewracać. Czyni to z niego dość ciekawą konstrukcję, gdzie w momencie stania w miejscu zachowuje się bardzej jak roboty o większej ilości nóg, nie przewraca się, a podczas ruchu zachowuje się jak roboty dwunożne, musi odpowiednio szybko odstawić nogę w odpowiednie miejsce aby się nie przewrócić.\\
+
+\subsection{Istniejące konstrukcje trójnożne}
+Konstrukcje trójnożne pojawiały się w dziełach science fiction już od dawna, od "The War of the Worlds" z 1898 aż po "Mroczne Widmo" z 2001 i regularnie pojawiają się naukowcy, którzy próbują udowodnić że nie trzeba ogarniczać tego typu robotów do dzieł z obszaru science fiction.\\
+\subsubsection{STriDER}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{img/strider_photo.png}
+\caption{Schemat kinematyczny robota Strider źródło: \cite{strider}}
+\label{martian_photo}
+\end{figure}
+Został zbudowany w 2007 na Uniwersytecie Stanowym w Virginii. Jego celem były eksperymenty z algorytmami chodu i doclewo, prowadzenie obserwacji. Miały to umożliwić długie nogi, które znacznie podwyższały konstrukcję i sprawiały że górna platforma była idealna do instalowania wszelakiego rodzaju urządzęń typu kamery. Kinematykę robota można określić jako $3-SRRR$, a kinematykę jednej nogi jako $RRR$. Przy czym "pierwsze" $R$ oznacza obrót dookoła osi $x$ a dwa kolejne $R$ oznaczają obrót wokół osi $y$ (zgodnie z oznaczeniami na rysunku \ref{strider_math})  \cite{strider}\\
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{img/strider_math.png}
+\caption{Uproszczony model matematyczny nogi robota STriDER}
+\label{strider_math}
+\end{figure}
+
+\subsubsection{Triped "Martian" }
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{img/martian_photo.png}
+\caption{Zdjęcie robota Martian źródło: \cite{Triped Martian}}
+\label{martian_photo}
+\end{figure}
+Jest to robot zbudowany przez Yoichi Masudę na uniwersytecie w Osace w 2017 roku. Kinematyka tego robota opiera się na mechaniźmie SLIP (Spring-Loaded-Inverted Pendulum). SLIP ma w pewien sposób symulować sposób poruszania się stosowany przez ludzi i zwierzęta. Sprężyna wewnątrz nogi robota jest naciągana, co powoduje skracanie się nogi, a zwalnianie sprężyny z powrotem wydłuża człon. Dodatkowo dodane jest serwo, które może obracać nogę dookoła osi $y$. Czyni to z nogi robota mechanizm o kinematyce typu $RL$. Został także dodany czujnik naprężenia, który jest w stanie zmierzyć siłę naciągu nici kompresującej sprężynę. \cite{Triped Martian}\\
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{img/martian_model.png}
+\caption{Model nogi robota Triped Martian źródło: \cite{Triped Martian}}
+\label{martian_leg}
+\end{figure}
+
+\subsubsection{Inne konstrukcje}
+W internecie można także znaleźć kilka różnych, niezbyt dobrze udokumentowanych konstrukcji zakończonych mniejszym lub większym sukcesem:
+\begin{itemize}
+\item \href{https://makerfaire.com/maker/entry/71669/}{Makerfaire 3-legged walking robot}
+\item \href{https://youtu.be/HGEhCCUgFMg}{missel tripod robot}
+\end{itemize}
+
+Niestety konstrukcje te nie posiadają żadnej dokumentacji technicznej i nie da się dokładnie określić zasady ich działania. Nie można nawet mieć pewności że konstrukcje te faktycznie istnieją a nie są oszustwem lub inną formą naginania rzeczywistości, na co mogłaby wskazywać jakość filmików i uboga ilość materiałów.\\
+
+\section{Model Matematyczny}
+
+\subsection{Noga robota typu RRR}
+
+Noga ma trzy stopnie swobody. Wszystkie są typu obrotowego, co czyni z niej konstrukcję typu $RRR$. Przy czym dwa elementy rotacyjne obracają się dookoła osi poziomej ($X$) (podobnie jak w przypadku robota STriDER), a jedna dookoła osi pionowej ($Z$). Są to też te same osi obrotu co w przypadku ramienia robotycznego typu antromorficznego (zwanego także "angular" bądź "jointed"). Co za tym idzie, cały model matematyczny jest w zasadzie identyczny jak w przypadku manipulatora tego typu.\\
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{img/math_model.jpg}
+\caption{Model Matematyczny}
+\label{math_model}
+\end{figure}
+
+\subsubsection{Kinematyka Prosta}
+Obliczanie kinematyki prostej polega na uzyskniu równań końcówki ramienia robotycznego we współrzędnych kartezjańskich względem współrzędnych konfiguracyjnych. Inaczej mówiąc, wejściem algorytmu jest zbiór współrzędnych konfiguracyjnych, a na wyjściu otrzymamy współrzędne kartezjańskie.\cite{robot_manipulators}\\
+
+W przypadku tego konkretnego manipulatora, mamy do czynienia z trójwymiarowym układem współrzędnych kartezjańskich i trzema stopniami swobody. Da to liniowo niezależny układ trzech równań, w którym parametrami będą kąty na jakich mają ustawić się serwomechanizmy a wynikiem wektor współrzędnych kartezjańskich.\\
+
+Najprostszą metodą liczenia kinematyki prostej jest rozrysowanie modelu matematycznego i geometryczne wyprowadzenie potrzebnych równań. Model taki dla tego manipulatora został przedstawiony na rysunku \ref{math_model}. Przyjęty początek układu współrzędnych został oznaczony jako $(0, 0, 0)$, a punkt którego współrzędne kartezjańskie są poszukiwane został oznaczony jako $(X, Y, Z)$. $h_1$ i $a_{1-3}$ to stałe długości poszczególnych członów nogi. Natomiast $\theta_{0-2}$ to właśnie pozycje serwomechanizmów - parametry algorytmu. Na ich podstawie zostaną obliczone współrzędne końcówki manipulatora w systemie kartezjańskim. Same obliczenia geometryczne są już w tym momencie dość trywialne, wystarczy do każdego członu $a_{1-3}$ przenieść jego długość na oś $X$, $Y$ lub $Z$ za pomocą trygonometrii (sinus lub cosinus) i zsumować odpowiednie długości. Da to układ równań \ref{FK_ver_1}.\\
+
+\begin{equation} \label{FK_ver_1}
+\begin{split}
+a_{temp} &= a_2 \cos{\theta_1} + a_3 \cos{\left(\theta_2 - \theta_1\right)} + a_1\\
+Y &= a_{temp} \cdot \sin{\theta_0}\\
+X &= a_{temp} \cdot \cos{\theta_0}\\
+Z &= a_2 \sin{\theta_1} - a_3 \sin{\left(\theta_2 - \theta_1\right)}
+\end{split}
+\end{equation}
+
+\subsubsection{Kinematyka prosta - metoda Denavita Hartenberga \cite{DH_AA_article}}
+Alternatywą dla zwykłych obliczeń geometrycznych jest metoda Denvaita Hartenberga. Polega ona na przedstawieniu całkowitego przekształcenia jako iloczynu przekształceń jednorodnych kolejnych członów. Pojedyncze przekształcenie jednorodne składa się natomiast z 6 przekształceń prostych (3 dla rotacji i 3 dla przesunięć). Wymnożenie tych przekształceń prostych da przekształcenie jednorodne. \cite{DH_wpaszke_wyklad}\\
+
+Metoda ta jest w szczególności użyteczna dla bardzo skomplikowanych manipulatorów, gdzie stopni swobody jest znacznie więcej niż ilość współrzędnych kartezjańskich.\\
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{img/DH_model.jpg}
+\caption{Model Denavit Hartenberg}
+\label{math_model_DH}
+\end{figure}
+
+Z praktycznynego punktu widzenia obliczenia należy zacząć od stworzenia specjalnego rysunku (Rys. \ref{math_model_DH}) z zaznaczonymi kolejnymi obrotami lokalnych układów współrzędnych, a następnie zebrać odpowiednie transformacje do tabelki (Tab. \ref{table:DH_table})\\
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{c | c c c c }
+ Joint $i$ & $\theta_i$ & $\alpha_i$ & $r_i$ & $d_i$ \\
+ \hline
+ $1$  & $\theta_0$ & $\frac{\pi}{2}$ & $a_1$ & $h_1$ \\
+ $2$  & $\theta_1$ & $0$ & $a_2$ & $0$ \\
+ $3$  & $\theta_2$ & $0$ & $a_3$ & $0$ \\
+\end{tabular}
+\caption{Tabela z parametrami DH}
+\label{table:DH_table}
+\end{table}
+
+Gdzie: \\
+$\theta_i$ - angle from $x_{n-1}$ to $x_n$ around $z_{n-1}$\\
+$\alpha_i$ - angle from $z_{n-1}$ to $z_n$ around $x_n$\\
+$r_i$ - distance between the origin of the $n-1$ frame and the origin of the $n$ frame along the $x_n$ direction.\\ 
+$d_i$ - distance from $x_{n-1}$ to $x_n$ along the $z_{n-1}$ direction\\
+
+Następnie macierze transformacji jednorodnej (pomiędzy ramkami $n-1$ i $n$) oblicza się zgodnie ze wzorem \ref{DH_homogenous}. Wzór ten jest właśnie obliczony poprzez wymnożenie wzorów na wyżej wspomniane 6 przekształceń prostych. Ale w zasadzie wzór ten sprowadza się do 2 zasadniczych elementów. $R$ jest macierzą Rotacji o rozmiarze $3x3$ a $T$ to macierz Transformacji $1x3$. \\
+
+\begin{equation} \label{DH_homogenous}
+H^{n-1}_n = 
+\left[\begin{array}{ccc|c}
+&&&\\
+&&&\\
+\multicolumn{3}{c|}{\smash{\raisebox{0.75\normalbaselineskip}{R}}} & \smash{\raisebox{0.75\normalbaselineskip}{T}}\\
+\hline
+0 & 0 & 0 & 1\\
+\end{array}\right] = 
+\left[\begin{matrix}
+\cos{\theta_i} & -\sin{\theta_i} \cdot \cos{\alpha_i} & \sin{\theta_i} \cdot \sin{\alpha_i} & a_i \cdot \cos{\theta_i}\\
+\sin{\theta_i} & \cos{\theta_i} \cdot \cos{\alpha_i} & -\cos{\theta_i} \cdot \sin{\alpha_i} & a_i \cdot \sin{\theta_i}\\
+0 & \sin{\alpha_i} & \cos{\alpha_i} & d_i\\
+0 & 0 & 0 & 1\\
+\end{matrix}\right]\cite{DH_matrix_AA_article}
+\end{equation}
+
+
+Następnie należy podstawić wartości dla każdego z 3 punktów i otrzymane macierze wymnożyć zgodnie ze wzorem \ref{DH_final_equation}.
+
+\begin{multline} \label{DH_final_equation}
+H^{n-1}_n = H^0_1 \cdot H^1_2 \cdot H^2_3 =\\
+\left[\begin{matrix}
+c\theta_0 \cdot \left( c\theta_1 \cdot c\theta_2 - s\theta_1 \cdot s\theta_2 \right) & -c\theta_0 \cdot \left( c\theta_1 \cdot s\theta_2 + s\theta_1 \cdot c\theta_2 \right) & s\theta_0 & c\theta_0 \cdot \left( a_1 + a_2 \cdot c\theta_1 + a_3  \cdot \left( c\theta_1 \cdot c\theta_2 - s\theta_1 \cdot s\theta_2 \right) \right)\\
+s\theta_0 \cdot \left( c\theta_1 \cdot c\theta_2 - s\theta_1 \cdot s\theta_2 \right) & -s\theta_0 \cdot \left( c\theta_1 \cdot s\theta_2 + s\theta_1 \cdot c\theta_2 \right) & -c\theta_0 & s\theta_0 \cdot \left( a_1 + a_2 \cdot c\theta_1 + a_3  \cdot \left( c\theta_1 \cdot c\theta_2 - s\theta_1 \cdot s\theta_2 \right) \right)\\
+c\theta_1 \cdot s\theta_2 + s\theta_1 \cdot c\theta_2 & c\theta_1 \cdot c\theta_2 - s\theta_1 \cdot s\theta_2 & 0 & h_1 + a_2 \cdot s\theta_1 + a_3 \cdot \left( c\theta_1 \cdot s\theta_2 + s\theta_1 \cdot c\theta_2 \right)\\
+0 & 0 & 0 & 1\\
+\end{matrix}\right] = \\
+\left[\begin{matrix}
+c\theta_0 \cdot c\left( \theta_1 + \theta_2 \right) & -c\theta_0 \cdot s\left( \theta_1 + \theta_2 \right) & s\theta_0 & c\theta_0 \cdot \left( a_1 + a_2 \cdot c\theta_1 + a_3  \cdot c\left( \theta_1 + \theta_2 \right) \right)\\
+s\theta_0 \cdot c\left( \theta_1 + \theta_2 \right) & -s\theta_0 \cdot s\left( \theta_1 + \theta_2 \right) & -c\theta_0 & s\theta_0 \cdot \left( a_1 + a_2 \cdot c\theta_1 + a_3  \cdot c\left( \theta_1 + \theta_2 \right) \right)\\
+c\theta_1 \cdot s\theta_2 + s\theta_1 \cdot c\theta_2 & c\left( \theta_1 + \theta_2 \right) & 0 & h_1 + a_2 \cdot s\theta_1 + a_3 \cdot s\left( \theta_1 + \theta_2 \right)\\
+0 & 0 & 0 & 1\\
+\end{matrix}\right]
+\end{multline}
+
+Następnie, aby otrzymać właściwe równania, należy z równania \ref{DH_final_equation} wziąć część odpowiedzialną za transformację. Efektem jest wzór \ref{FK_ver_2}, czyli finalna wersja równań kinametayki prostej obliczonej metodą Denavita Hartenberga\\
+
+\begin{equation} \label{FK_ver_2}
+\begin{split}
+X &= c\theta_0 \cdot \left( a_1 + a_2 \cdot c\theta_1 + a_3  \cdot c\left( \theta_1 + \theta_2 \right) \right)\\
+Y &= s\theta_0 \cdot \left( a_1 + a_2 \cdot c\theta_1 + a_3  \cdot c\left( \theta_1 + \theta_2 \right) \right)\\
+Z &= h_1 + a_2 \cdot s\theta_1 + a_3 \cdot s\left( \theta_1 + \theta_2 \right)\\
+\end{split}
+\end{equation}
+
+TODO - znak się nie zgadza
+
+
+\subsubsection{Invert kinematics}
+Kinematyka odwrotna to TODOTODOTODO
+
+Zwykle odwrotną kinematykę można obliczyć poprzez rozwiązanie równań kinematyki prostej. Jest to w tym przypadku także teoretycznie możliwe, jako że mamy do czynienia z trzema niewiadomymi ($\theta_{0-2}$) i układem trzech równań nr. \ref{FK_ver_1} lub \ref{FK_ver_2}. (Równanie na $a_{temp}$ jest jedynie pomocnicze, trzeba je traktować jak część równań $Y$ i $X$).
+
+Jest to jak najbardziej wykonalne w przypadku $\theta_0$, można to zrobić łącząc wzór na $X$ i $Y$, dzieląc go obustronnie, zamieniając $\frac{\sin}{\cos}$ na $\tan$ i wyciągając $\theta_0$ na lewą stronę. Daje to wzór \ref{theta_0_eq_final}
+
+%\begin{equation}
+%\begin{split}
+%\begin{cases}
+%Y = a_{temp} \cdot \sin{\theta_0}\\
+%X = a_{temp} \cdot \cos{\theta_0}
+%\end{cases}
+%\end{split}
+%\end{equation}
+
+%\begin{equation}
+%\begin{split}
+%\begin{cases}
+%Y = a_{temp} \cdot \sin{\theta_0}\\
+%a_{temp} = \frac{X}{\cos{\theta_0}}
+%\end{cases}
+%\end{split}
+%\end{equation}
+
+
+%\begin{equation}
+%Y = \frac{X}{\cos{\theta_0}} \cdot \sin{\theta_0}\\
+%\end{equation}
+
+\begin{equation} \label{theta_0_eq_final}
+\theta_0 = \arctan{\frac{Y}{X}}
+\end{equation}
+
+%Wzór na $\theta_2$ można wyprowadzić także z równania \ref{FK_ver_1}
+
+%\[
+%Z = (- h_1) + a_2 \cdot \sin{\theta_1} - a_3 \sin{\left( \theta_2 - \theta_1 %\right)}
+%\]
+
+%\[
+%z + h_1 = a_2 \cdot \sin{\theta_1} - a_3 \sin{\left( \theta_2 - \theta_1 \right)}
+%\]
+
+%\[
+%\frac{h_1 - Z - a_2 \cdot \sin{\theta_1}}{a_3} = \sin{\left( \theta_2 - \theta_1 \right)}
+%\]
+
+
+%\begin{equation} \label{theta_2_eq}
+%\theta_2 = \arcsin{\left(\frac{h_1 - Z - a_2 \cdot \sin{\theta_1}}{a_3}\right)} + \theta_1
+%\end{equation}
+
+%Równanie \ref{theta_2_eq} jest nadal uzależnione od $\theta_1$, które należy wyznaczyć.
+
+%Najbardziej oczywistym wydaje się pod równanie \ref{FK_ver_1} na $a_{temp}$ podstawić obliczone równanie \ref{theta_2_eq} i daje to równanie  \ref{theta_1_eq1}
+
+%\begin{equation} \label{theta_1_eq1}
+%a_{temp} = a_2 \cos{\theta_1} + a_3 \cos{\left(\arcsin{\left(\frac{h_1 - Z - a_2 \cdot \sin{\theta_1}}{a_3}\right)}\right)} + a_1\\
+%\end{equation}
+
+%Do fragmentu $a_3 \cos{\left(\arcsin{\left(\frac{h_1 - Z - a_2 \cdot \sin{\theta_1}}{a_3}\right)}\right)}$ można zastosować wzór $\cos{\left(\arcsin{\left(x\right)}\right)} = \sqrt{1 - x^2}$. Daje to wzór \ref{theta_1_eq2}
+
+%\begin{equation} \label{theta_1_eq2}
+%a_{temp} = a_2 \cos{\theta_1} + \sqrt{a_3^2 - (a_2 \sin{\theta_1} - h_1 - Z)^2} + a_1\\
+%\end{equation}
+
+%Niestety wzór \ref{theta_1_eq2} nie pozwala jednoznacznie wyznaczyć jawnego $\theta_1$ i co za tym idzie nie da się tego wzoru jednoznacznie zaimplementować softwareowo, co jest niezbędne w dalszej części pracy. Można natomiast powrócić do rysunku \ref{math_model} i zastosować na trójkącie utworzonym z $a_2$ i $a_3$ twierdzenie cosinusów połączone z twierdzeniem pitagorasa.
+
+Większy problem pojawia się jednak w przypadku obliczania $\theta_1$ i $\theta_2$, ponieważ wartości te da się obliczyć z wyżej wspomnianego równania, ale nie da się wyznaczyć na te wartości równań w postaci jawnej. A bez postaci jawnej poprawna implementacja tych równań będzie znacznie utrudniona.
+
+Można natomiast zastosować pewnego rodzaju uproszczenie. Jeżeli wyznaczanie równań $\theta_1$ i $\theta_2$ sprowadzi się do problemu dwuwymiarowego, obliczenia stają się w zasadzie identyczne jak w przypadku obliczeń kinematyki odwrotnej dla robota typu SCARA, co było już robione wielokrotnie.\\
+
+Aby obliczyć kąt $\theta_2$ można powrócić do rysunku \ref{math_model} i zastosować na trójkącie utworzonym z $a_2$ i $a_3$ twierdzenie cosinusów połączone z twierdzeniem pitagorasa. Daje to wzór \ref{theta_2_eq_1}.
+
+\begin{equation} \label{theta_2_eq_1}
+(x - a_1)^2 + (z + h_1)^2 = a_2^2 + a_3^2 - 2 \cdot a_2 \cdot a_3 \cdot \cos{(180^o - \theta_2)}\\
+\end{equation}
+
+Następnie na podstawie równania \ref{theta_2_eq_1} aby ostatecznie otrzymać $\theta_2$ należy zastosować wzór $\cos{(180^o - \theta)} = -\cos{\theta}$ i za pomocą prostych przekształceń wyciągnąć z równania $\theta_2$. Daje to wzór \ref{theta_2_eq_final}
+
+\begin{equation} \label{theta_2_eq_final}
+\theta_2 = \arccos{\left( \frac{(x - a_1)^2 + (z + h_1)^2 - a_2^2 - a_3^2}{2 a_2 a_3} \right)}\\ \cite{SCARA_model}
+\end{equation}
+Natomiast obliczenia dla $\theta_1$ TODO
+
+\begin{equation}\label{theta_1_eq_final}
+\theta_1 = \arctan{\frac{z + h_1}{x - a_1}} + \arcsin{\left( \frac{a_3 \sin{\theta_2} }{ \sqrt{ (x - a_1)^2 + (z + h_1)^2}} \right)}\\ \cite{SCARA_model}
+\end{equation}
+
+Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final}, \ref{theta_2_eq_final} otrzymujemy układ równań który stanowi kinematykę odwrotną opisywanej nogi robotycznej.
+
+TODO - układ równań
+
+TODO - ograniczenia.
+
+Natomiast trzeba cały czas pamiętać że jest to tylko uproszczenie, które będzie owocować pewnymi drobnymi błędami. Trzeba zauważyć, że zmiana współrzędnej $Y$ nie wpływa na wartości kątów $\theta_1$ i $\theta_2$, tylko na $\theta_0$. Oznacza to, że wraz ze zmianą kąta $\theta_0$, na potrzeby uproszczenia obliczeń, obraca się także o ten kąt oś $X$ układu współrzędnych. W praktyce oznacza to, że odsunięcie nogi od punktu $(0, 0, 0)$ zawsze będzie rzutowane na cylinder o promieniu równym odsunięciu o takim samym $X$ i $Z$, ale $Y = 0$. Problem jest zaprezentowany na rysunku XXX. Jednakże błąd powinien być pomijalnie mały a równania powinny umożliwić skuteczną implementację algorytmu chodu.
+
+\subsection{Cały Robot}
+Zwykle konstruując roboty wzorujemy się na zwierzętach występujących w naturze. W tym przypadku nie mamy jednak tego luksusu, dlatego na początek należy przyjąć jakieś najbardziej intuicyjne założenie. Dlatego też uznałem że najlepszym rozwiązaniem będzie rozmieścić nogi na jednej płaszczyźnie w równych odstępach - co $120\deg$.
+
+W poprzednim podrozdziale przyjąłem osie układu relatywne do ułożenia początkowego nogi robota. Oznacza to że robot trójnożny będzie miał 3 niezależne osie $x$ i 3 niezależne osie $y$, tylko oś $z$ zgadza się między kolejnymi nogami. Idzie za tym konieczność stworzenia pewnej metody "obracania" wszystkich tych osi $x$ i $y$ do jednego zunifikowanego układu współrzędnych. Pozwoli to obliczyć kinematykę całego robota.
+
+\subsubsection{Matematyka kroku}
+W celu uproszczenia zarówno obliczeń jak i późniejszej generacji kolejnych kroków algorytmu chodu, można pominąć liczenie całej kinematyki prostej i odwrotnej całego robota. Zamiast tego wystarczy pojedynczy krok odpowiednio sparametryzować. Jeżeli dla każdego kroku pojedynczej nogi przyjmiemy:
+\begin{itemize}
+\item kąta $\alpha$ na "tarczy" robota, na którym ustawiona jest noga
+\item kąta $\beta$ względem "przodu" robota, w którą ma zostać wykonany krok
+\item długość kroku $l$, równolegle do osi kroku robota
+\end{itemize}
+To możemy łatwo otrzymać algorytm który z tych dwóch zmiennych i jednej stałej da pozycję zmianę pozycji końcówki robota ($\Delta x, \Delta y$) we współrzędnych kartezjańskich względem nogi robota.
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{img/step_math.jpg}
+\caption{Schemat matematyczny wykonywania kroku}
+\label{step_math}
+\end{figure}
+
+Zostało to przedstawione na rysunku \ref{step_math} na przykładzie nogi na pozycji $\alpha = 60^o$. Na wspomnianym rysunku widać przód robota oznaczony jako $0^o$, kierunek kroku odsunięty o kąt $\beta$ od osi "przodu" robota i wynikające z tego kroku przestawienie nogi. Przestawienie to składa się z długości korku $l$ i dwóch pozycji nogi - przed krokiem i po kroku. Wynikające z tego zależności geometryczne zostały wyizolowane na [TODO - dać osobny obrazek na zależności]. Na podstawie tych zależności można napisać równanie \ref{step_math_eq}
+\begin{equation} \label{step_math_eq}
+\begin{split}
+\Delta x = l \cdot \sin(\beta - \alpha)\\
+\Delta y = l \cdot \cos(\beta - \alpha)\\
+\end{split}
+\end{equation}
+
+Równanie \ref{step_math_eq} mówi tyle, że wykonanie nogą na pozycji $\alpha$ kroku o długości $l$ w kierunku $\beta$ wymusza przestawienie końcówki nogi o ($\Delta x$, $\Delta y$)
+
+
+
+\section{Model CAD i druk 3D}
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{img/CAD_assembly.png}
+\caption{Model złożeniowy.}
+\label{CAD_assembly}
+\end{figure}
+Jedym z głównych założeń projektu była możliwość wydrukowania całej konstrukcji w 3D. Miało to na celu znaczne obniżenie kosztów produkcji, ale przede wszystkim umożliwić znacznie szybsze przeróbki. Jest to o tyle istotne, że prowadzone będą badania z algorytami chodu - przypdaku większości algorytmów wydłużenie pewnych elementów nogi może zmniejszyć wymagane prędkości ruchu serw. Eksperymenty takie mogą wymusić liczne przedruki poszczególnych członów nóg robota.\\
+
+Drugim założeniem projektowym stojącym za konstrukcją taką jak na rysunku \ref{CAD_assembly} jest modularność. Bardzo podobną modularność oferuje robot TurtleBot 3, który także był inspiracją stojącą za konstrukcją. Zarówno Turtlebot jak i konstrukcja budowana w ramach tej pracy składają się z wielu identycznych warstw, które zawierają liczne otwory montażowe umożliwiające przykręcenie w zasadzie dowolnego elemnentu.\\
+
+Zostały także dokładnie zwymiarowane otwory montażowe znajdujące się na orczykach do zakupionych serw i przeniesione na poszczególne elementy nóg. Do montażu wspomnianych orczyków zakupione zostały śruby $M1.6$, co stanowi swojego rodzaju drobny eksperyment. Zwykle orczyki montuje się za pomocą kleju lub wkrętów dostarczanych wraz z serwomechanizmem. Są to jednak metody przynajmniej częściowo destrukcyjne - nie umożliwiają szybkiego demontażu i wymiany elementów, co jest bardzo ważnym elementem tego projektu. Zastosowanie śrub z nakrętkami rozwiązuje ten problem - jednak pojawia się pytanie czy nie generuje to innych problemów? (TODO - tutaj opisać problemy i później we wnioskach odpowiedź czy generuje czy nie czy od razu tutaj polecieć że było git?)\\
+
+Oryginalny projekt zawiera także pewną wadę konstrukcyjną - jest to bardzo cienki element łączący nogę z tułowiem (element nogi zero). Istnieje duże ryzyko gięcia a może nawet łamania się wyżej wymienionego elementu. Aby zmniejszyć to ryzyko, wspomniany element został miejscami pogrubiony i zakupione zostały (TODO - trzeba kupić) metalowe orczyki. Najtrwalszym rozwiązaniem oczywiście byłoby stowrzenie dodatkowego elementu który byłby przytwierdzony do dolnej części obudowy i posiadałby oś obrotu z pierwszym elementem nogi -  "podtrzymywałby" ten elemnt od dołu.\\
+
+Całość konstrukcji została zaprojektowana w programie Autodesk Inventor. Program ten został wybrany tylko i wyłącznie ze względu na fakt, że był autorowi projektu dość dobrze znany. [TODO - opisać problem że szkicy się "rozjeżdżały podczas modyfikowania szkiców "poziomy" niżej czy nie?]\\
+
+Modele zostały wydrukowane na drukarce Zortrax M200. Została ona wybrana ze względu na jej dostępnośc na uczelni. Dodatkowo, aby przygotować pliki pod druk, należało model przetworzyć programem Z-Suite. W programie większość ustawień pozostawiana była bez zmian, jedynie 2 istotne ustawienia zostały dostosowane do projektu. Zostało ustawione minimalne niezerowe wypełnienie, około $10\%$ i warstwy, wierzchnia i spodnia, zostały ustawione na najgrubsą możliwą opcję. Ustawienia te znalezione zostały eksperymentalnie - wydają się najlepiej balansować między wytrzymałością a czasem druku i ilością zużytego materiału. Dodatkowo, przed ostatecznym wydrukiem, wewnątrz programu inventor, zwiększone zostały o około $0.3-0.4 mm$ wszystkie otwory montażowe, ponieważ modele "puchną" i dziury te po wydruku były znacznie mniejsze niż na tworzonych szkicach.\\
+
+\section{Sekcja Elektroniczna}
+Projekt elektroniczny na potrzeby tego projektu został ograniczony do minimum. Zasilanie składa się z akumulatora typu LiPo i minimum 2 przetwornic. Jako mózg urządzenia zastosowany został minikomputer Raspberry Pi 4B i to do jego zasilenia potrzebna jest jedna z przetwornic. Zgodnie z dokumentacją Raspberry zasilanie jest ze źródła o napięciu $5V$ i prądzie przynajmniej $3A$.\cite{RPI_power_sup} Dlatego została zainstalowana przetwornica TODO.\\
+
+Druga przetwornica ma za zadanie zasilić serwomechanizmy. Serwomechanizmy wybrane do tego projektu to \href{https://botland.com.pl/serwa-typu-standard/9182-serwo-feetech-ft5715m-standard-5904422312756.html}{Feetech FT5715M} (sztuk 3) i \href{https://botland.com.pl/serwa-typu-standard/3576-serwo-powerhd-lf-20mg-standard-6939670200387.html}{PowerHD LF-20MG} (sztuk 6). W czasie zakupu serwa te wypadały najlepiej spośród wszystkich dostępnych pod kątem prędkości ruchu do ceny. Serwa firmy Feetech są zasilanie napięciem z zakresu $4.8$ do $6V$ a power HD napięciem $4.8$ do $6.6V$. Dlatego jako wspólne napięcie zasilania ustalona została wartość $6V$. Jako że zwykle serwo pobiera do około $1A$ prądu to do ich zasilenia potrzeba przetwornicę o wyjściu $6V$ i minimum $9A$ \cite{Servo_power_sup}. Natomiast należy pamiętać że dobieranie przetwornicy "na styk" przy czymś takim jak zasilanie serwomechanizmów może spowodować później problemy przy większych obciążeniach. Dlatego, aby uwzględnić pewien zapas prądowy, wybrana została przetwornica TODO
+
+
+\section{Implementacja}
+Implementacja oparta została o minikomputer Raspberry Pi 4B 2GB RAMu. Urządzenie to zostało wybrane arbiralnie - była to platforma która akurat była dostępna "pod ręką". Na minikomputerze zainstalowany został system operacyjny Linux Ubuntu, w wersji $22.04$. System ten był wybrany, jako system wspierany zarówno przez RPi jak i przez środowisko ROS 2. Wersja 22.04 była natomiast najnowszą wersją w czasie rozpoczynania tej części projektu. Bardziej popularny system operacyjny dla tej platformy, czyli Raspbian OS został odrzucony, ponieważ zainstalowanie na nim ROS-a wymaga użycia dockera. Na Ubuntu natomiast wystarczy wykonywać komendy podane wprost w dokumentacji środowiska ROS, co znacznie uprościło podstawową konfigurację środowiska pracy. W celu zdalnego łączenia się z minikomputerem użyty został protokół SSH - po stronie RPi otwarty został serwer SSH, a klient (komputer PC) łączył się z nim przy pomocy aplikacji PuTTY. Dodatkowo do sterowania serwami zastosowany został sterownik Polulu Maestro. Urządzenie to zostało wykorzystane ze względu na dostępność i znajomość obsługi.
+\subsection{Środowisko ROS \cite{ROS_docs}}
+Robot Operating System (ROS) to zestaw narzędzi programowych służący do tworzenia aplikacji z myślą o robotach. ROS wprowadza sieć niezależnych, działających równolegle, węzłów (ang. node). Węzły te komunikują się za pomoca tematów (ang. topic), które to stanowią niezmienny interfejs między węzłami. 
+Węzły mogą na tematy dane publikować lub je odbierać i implementacja węzła znajdującego się po drugiej stronie nie ma absolutnie znaczenia. Co więcej, nawet nie ma znaczenia czy ten węzeł tam jest. Węzły mogą publikować dane na temty, z których żaden inny węzeł tych danych nie odbiera. Sieć taka jest szczególnie przydatna w przyapdku robotów o pewnym stopniu modularności, bądź w przypadku dowolnych modyfikacji. Zwykle jeden węzeł odpowiada jednemu fizycznemu elementowi robota. Zmiana tego elementu, nawet na element wymagający zupełnie innego oprogramowania, nie jest wtedy problemem. Wystarczy usunąć z sieci odpowiadający mu węzeł i na to miejsce wstawić inny. Jest to bardzo proste, dopóki interfejs (temat na jaki dany węzeł publikuje) pozostaje bez zmian.
+\subsubsection{Schemat implementacji}
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{img/implementation_schematic.png}
+\caption{Schemat implementacji w środowisku ROS}
+\label{ros_implementation_schematic}
+\end{figure}
+
+Rysunek \ref{ros_implementation_schematic} pokazuje schemat komunikacji między poszczególnymi węzłami. Na potrzeby aplikacji zostały stworzone 3 węzły. Jeden odpowiedzialny za obsługę wybranego sterownika do serw, Polulu Maestro, drugi odpowiedzialny za obsługę nogi i trzeci stanowi główny węzeł sterujący. Ma za zadanie generować algorytm chodu i wysyłać polecenia do nóg, aby układały się na docelowe pozycje.
+\subsection{Polulu Maestro 24}
+Jest to 24-kanałowy sterownik do serw. Do uruchomienia tego robota wystarczyłby oczywiście Polulu Maestro 12, lecz wersja 24-kanałowa była zakupiona na potrzebny innego projektu i mogła być tutaj wykorzystana bez dodatkowych wydatków. Natomiast steroniki do serw firmy Polulu są wymienne, można w każdej chwili przepiąć serwomechanizmy na sterownik o innej ilości kanałów i dokładnie ten sam program będzie w stanie go także obsłużyć, więc w przyszłości nie będzie problemu z podmianą tego sterownika na mniejszy.\\
+
+Komunikacja ze sterownikiem odbywa się za pomocą protokołu UART Serial. Nie było natomiast potrzeby aby tworzyć wiadomości wysyłane tym protokołem od zera, ponieważ istnieje bilbioteka do komunikacji z tym sterownikiem. Napisana przez Stevena Jackobsa biblioteka Maestro \cite{maestro_pylib} jest szeroko stosowana przy wszelakich projekach z wykorzystaniem tego sterownika i w tym projekcie nie było inaczej. Należało jednak otoczyć tą bibliotekę pewnego rodzaju dekoratorem (ang. wrapper) aby połączyć ją z funkcjonalnościami ROSa. Dlatego napisana została klasa "MaestroRosWrapper" która przez kompozycję zawiera w sobie instancje klasy Maestro z wyżej wymienionej biblioteki Maestro. Stworzona klasa MaestroRosWrapper przede wszystkim implementuje:
+\begin{enumerate}
+\item Wysyłanie wiadomości co 100ms z odczytem obecnej pozcji wszystkich serw
+\item Subskrybowanie wiadomości maestro target, która zawiera informacje o:
+\begin{itemize}
+\item kanale 
+\item pozycji docelowej
+\item prędkości
+\item przyspieszeniu
+\end{itemize}
+\end{enumerate}
+
+Na potrzeby tej klasy stworzony został dodatkowy pakiet implementujący dwa customowe interfejsy:
+\begin{itemize}
+\item MaestroTarget
+\item CurrentPositions
+\end{itemize}
+
+Są to właśnie te dwa wyżej wspomniane interfejsy, za pomocą których węzeł ten komunikuje się ze światem zewnętrznym.\\
+
+Całość kodu służącego do obsługi tego sterownika została napisana w języku Python 3. Język ten został w tym przypadku wybrany, ponieważ Steven Jackobs zaimplementował swoją bibliotekę w tym właśnie języku. Oczywiście przepisanie jej do innego języka (np. $c++$) nie stanowiłoby dużego problemu, jednakże nie jest to częścią tej pracy. Może to być jednak ciekawe ulepszenie tego projektu, jak węzeł ROS-owy napisany w Pythonie okaże się zbyt pamięciożerny i wolny.
+\subsection{Noga Robotyczna}
+Poziom wyżej - nad sterownikiem do serw - znajduje się pojedyncza noga robota. Cały program ją obsługujący był pisany na potrzeby tego projektu zupełnie od zera, co dało zupełną dowolność języka i ogólnej struktury implementacji. \\
+
+Jako język został wybrany c++, z powodu ogólnej preferencji autora programu i aby lepiej zoptymalizować całość robota. Pisanie w języku Python jest znacznie prostsze, ale uruchomienie zbyt wielu węzłów napisanych w tym języku może powodować znaczne problemy z wydajnością.\\
+
+Struktura natomiast, była częściowo wzorowana na poprzednim węźle - sterowniku do serw. Także przyjęto zasadę bardziej "generycznej" klasy wewnętrznej i stricte ROS-owego wrappera. W tym przypadku utworzono klasę Robot Leg przede wszystkim odpowiedzialną za trzymanie informacji o fizycznych parametrach nogi i na ich podstawie przeliczania kinematyk prostej i odwrotnej. Natomiast klasa Robot Leg ROS Wrapper jest odpowiedzialna za komunikację ze "światem zewnętrznym", czyli innymi węzłami ROS-owymi.\\
+
+Najważniejszymi dwoma interfejsami realizowanymi przez ten węzeł jest przyjmowanie nowej pozycji końcówki robota we współżędnych kartezjańskich. Jak tylko takowa się pojawi, przeliczana jest kinematyka odwrotna i publikowana jest pozycja w kątach. Dodatkowo, węzeł ten oczekuje sprzężenia zwrotnego od węzła podrzędnego - operującego sterownikiem. Sprzężenie to jest realizowane przez temat zawierający pozycje wszystkich serw. \\
+
+Węzeł ten powinien także zapewnić sprzężenie zwrotne dla węzła nadrzędnego - tego który publikuje nowe pozycje końcówki nogi. Nie jest to jednak pełne sprzężenie zwrotne, takowe nie byłoby możliwe ze względu na fakt, że kinemtyka odwrotna nie jest idealna - zawiera pewnien błąd (co zostało dokładnie opisane w rozdziale Model Matematyczny/Noga Robotyczna), natomiast kinematyka prosta nie jest tym błędem obciążona. Prawdziwe sprzężenie zwrotne spowodowałoby, że technicznie rzecz ujmując, noga nigdy by nie osiągnęła punktu docelowego. Dlatego zostało ono uproszczone do wymaganego minimum - jak tylko pojawi się informacja o obecnych pozycjach serw (informacja zwrotna od sterownika) i będą one zgodne z pozycjami docelowymi policzonymi za pomocą kinematyki odwrotnej, to węzeł zmienia wartość w temacie step done typu bool na prawdę. (W czasie wykonywania kroku publikowana jest cyklicznie cały czas wartość fałsz.) Taka informacja zwrotna dla węzła nadrzędnego jest jak najbardziej wystarczająca dla poprawnego ruchu robota.\\
+
+\subsubsection{Poprawki w interfejsach nogi robotycznej}
+
+Aby uczynić węzeł ten bardziej uniwersalnym i ułatwić jego zastosowanie w innych projektach, możnaby dodać dwa dodatkowe tematy na które publikuje ten węzeł - "oszukaną" kinematykę prostą, taką co uwzględnia błąd kinematyki odwrotnej. Dałoby to możliwość zrobienia prawdziwego sprzężenia zwrotnego i liczenia czy krok się faktycznie zakończył wewnątrz węzła nadrzędnego. Byłoby to rozwiązanie bliższe poprawnej "sztuki" implementowania układów sterowania. Dodatkowo warto by było także dodać publikację prawdziwego sprzężenia zwrotnego. Może ono być bardzo przydatne w wielu sytuacjach gdzie potrzebna jest znajomość realnej pozycji końcówki nogi.\\
+
+Innym problemem z interfejsami który wymaga poprawek aby węzeł stał się bardziej uniwersalny są tematy za pomocą których noga komunikuje się ze sterownikiem do serw. Tematy te przenoszą wartości w ćwierć-mikrosekundach, które są jednostką stosowaną przez linię sterowników Polulu Maestro. Powoduje to że konwersja radiany na ćwierć-mikrosekundy jest realizowana już na poziomie nogi robotycznej, a potencjalna wymiana na sterowniki innych producentów może nie być możliwa bez modyfikowania samego kodu nogi. Jest to sprzeczne z ideą ROSa, gdzie wymiana sterownika powinna wiązać się jedynie z wymianą węzła obsługującego ten sterownik. Zamiana tych interfejsów na kąty w stopniach lub radianach i dodanie przeliczania po stronie węzła sterownika poprawiłoby znacznie uniwersalność tej implementacji.\\
+
+Drobnych poprawek wymaga także podział funkcjonalności pomiędzy właściwą klasę RobotLeg a dekorator RobotLegROSWrapper. Jak już wspomniano wcześniej, wrapper ma być odpowiedzialny za komunikację a klasa wewnętrzna za obliczenia. Jednakże na wczesnych etapach implementacji podział ten nie był jeszcze tak jasny i ze względów historycznych, publikacja na temat Maestro Targets jest realizowana przez klasę wewnętrzną. Jest to o tyle problematyczne, że wrapper musi przekazać do kalsy wewnątrz wspólny wskaźnik (Shared Pointer), który wskazuje na publishera na którego temat jest publikowany. Właśnie daltegi i dla spójności implementacji, funckjonalność ta powinna być realizowana przez wrapper nie przez klasę wewnętrzną.\\
+
+
+
+\subsection{Generator robota trójnożnego}
+
+\section{Algorytm Chodu}
+
+\begin{thebibliography}{9}
+
+\bibitem{history}
+\href{https://www.researchgate.net/publication/258995388_A_Historical_Perspective_of_Legged_Robots}{Manuel F. Silva, J. A. Tenreiro Machado (2006) A Historical Perspective of Legged Robots}
+
+\bibitem{strider}
+\href{http://www.romela.org/wp-content/uploads/2015/05/Forward-and-Inverse-Displacement-Analysis-of-a-Novel-Three-Legged-Mobile-Robot-Based-on-the-Kinematics-of-In-Parallel-Manipulators.pdf}{Forward and Inverse Displacement Analysis of a Novel Three Legged Mobile Robot Based on the Kinematics of In Parallel Manipulators}
+
+\bibitem{Triped_Martian}
+\href{https://www.jstage.jst.go.jp/article/jrobomech/29/3/29_528/_pdf}{Yoichi Masuda, Masato Ishikawa (2017) Simplified Triped Robot for Analysis of Three-Dimensional Gait Generation}
+
+\bibitem{robot_manipulators}
+\href{https://books.google.pl/books?id=UzZ3LAYqvRkC&redir_esc=y}{Richard P. Paul (1981) Robot Manipulators: Mathematics, Programming, and Control : the Computer Control of Robot Manipulators}
+
+\bibitem{DH_wpaszke_wyklad}
+\href{http://staff.uz.zgora.pl/wpaszke/materialy/air/PRwyklad_4.pdf}{Wojciech Paszke Kinematyka prosta: reprezentacja Denavita-Hartenberga}
+
+\bibitem{DH_AA_article}
+\href{https://automaticaddison.com/how-to-find-denavit-hartenberg-parameter-tables/}{How to Find Denavit-Hartenberg Parameter Tables, blogpost by Automatic Addison}
+
+\bibitem{DH_matrix_AA_article}
+\href{https://automaticaddison.com/homogeneous-transformation-matrices-using-denavit-hartenberg/}{Homogeneous Transformation Matrices Using Denavit-Hartenberg, blogpost by Automatic Addison}
+
+\bibitem{DH_Matlab_calc}
+\href{./DH_calculations.m}{Matlab Denavit Hartenberg calculations}
+
+\bibitem{SCARA_model}
+\href{https://sj.umg.edu.pl/sites/default/files/ZN20.pdf}{Adam Labuda, Janusz Pomirski, Andrzej Rak (2009) Model manipulatora o dwóch stopniach swobody}
+
+\bibitem{RPI_power_sup}
+\href{https://raspberryexpert.com/raspberry-pi-4-power-requirements/}{Raspberry Pi 4 Power Requirements: Everything You Need to Know}
+
+\bibitem{Servo_power_sup}
+\href{https://www.pololu.com/blog/16/electrical-characteristics-of-servos-and-introduction-to-the-servo-control-interface}{Electrical characteristics of servos and introduction to the servo control interface}
+
+\bibitem{ROS_docs}
+\href{https://docs.ros.org/en/humble/index.html}{Dokumentacja środowiska ROS2 Humble}
+
+\bibitem{maestro_pylib}
+\href{https://github.com/FRC4564/Maestro/blob/master/maestro.py}{Biblioteka Maestro}
+
+
+\bibitem{}
+\href{https://www.diva-portal.org/smash/get/diva2:1462059/FULLTEXT01.pdf}{Alexander Wallen Kiessling, Niclas Maatta (2020) Anthropomorphic Robot Arm}
+
+\end{thebibliography}
+\end{document}
