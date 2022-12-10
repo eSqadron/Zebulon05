@@ -65,7 +65,7 @@ public:
         int leg_2_pos = 300;
         int leg_3_pos = 180;
 
-        gen_ = Generator3A();
+        //gen_ = Generator3A();
 
 
         gen_.set_leg_default_positions(PI * 60/180, PI, PI * 300/180);
@@ -222,7 +222,7 @@ private:
     single_step_stages current_single_step_stage_;
     float step_height_;
 
-    Generator3A gen_;
+    Generator3A gen_();
 
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_1_publisher_;
