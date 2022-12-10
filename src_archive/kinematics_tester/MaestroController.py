@@ -4,12 +4,13 @@ from time import sleep
 import serial
 from sys import version_info
 
-PY2 = version_info[0] == 2   #Running Python 2.x?
+PY2 = version_info[0] == 2  # Running Python 2.x?
+
 
 #
-#---------------------------
+# ---------------------------
 # Maestro Servo Controller
-#---------------------------
+# ---------------------------
 #
 # Support for the Pololu Maestro line of servo controllers
 #
@@ -31,7 +32,7 @@ class Controller:
     # assumes.  If two or more controllers are connected to different serial
     # ports, or you are using a Windows OS, you can provide the tty port.  For
     # example, '/dev/ttyACM2' or for Windows, something like 'COM3'.
-    def __init__(self,ttyStr='/dev/ttyACM0',device=0x0c):
+    def __init__(self, ttyStr='/dev/ttyACM0', device=0x0c):
         # Open the command port
         self.usb = serial.Serial(ttyStr)
         # Command lead-in and device number are sent for each Pololu serial command.
@@ -43,7 +44,7 @@ class Controller:
         # Servo minimum and maximum targets can be restricted to protect components.
         self.Mins = [0] * 24
         self.Maxs = [0] * 24
-        
+
     # Cleanup by closing USB serial port
     def close(self):
         self.usb.close()
@@ -54,7 +55,7 @@ class Controller:
         if PY2:
             self.usb.write(cmdStr)
         else:
-            self.usb.write(bytes(cmdStr,'latin-1'))
+            self.usb.write(bytes(cmdStr, 'latin-1'))
 
     # Set channels min and max value range.  Use this as a safety to protect
     # from accidentally moving outside known safe parameters. A setting of 0
@@ -74,7 +75,7 @@ class Controller:
     # Return Maximum channel range value
     def getMax(self, chan):
         return self.Maxs[chan]
-        
+
     # Set channel to a specified target value.  Servo will begin moving based
     # on Speed and Acceleration parameters previously set.
     # Target values will be constrained within Min and Max range, if set.
@@ -90,21 +91,21 @@ class Controller:
         if self.Maxs[chan] > 0 and target > self.Maxs[chan]:
             target = self.Maxs[chan]
         #    
-        lsb = target & 0x7f #7 bits for least significant byte
-        msb = (target >> 7) & 0x7f #shift 7 and take next 7 bits for msb
+        lsb = target & 0x7f  # 7 bits for least significant byte
+        msb = (target >> 7) & 0x7f  # shift 7 and take next 7 bits for msb
         cmd = chr(0x04) + chr(chan) + chr(lsb) + chr(msb)
         self.sendCmd(cmd)
         # Record Target value
         self.Targets[chan] = target
-        
+
     # Set speed of channel
     # Speed is measured as 0.25microseconds/10milliseconds
     # For the standard 1ms pulse width change to move a servo between extremes, a speed
     # of 1 will take 1 minute, and a speed of 60 would take 1 second.
     # Speed of 0 is unrestricted.
     def setSpeed(self, chan, speed):
-        lsb = speed & 0x7f #7 bits for least significant byte
-        msb = (speed >> 7) & 0x7f #shift 7 and take next 7 bits for msb
+        lsb = speed & 0x7f  # 7 bits for least significant byte
+        msb = (speed >> 7) & 0x7f  # shift 7 and take next 7 bits for msb
         cmd = chr(0x07) + chr(chan) + chr(lsb) + chr(msb)
         self.sendCmd(cmd)
 
@@ -113,11 +114,11 @@ class Controller:
     # Valid values are from 0 to 255. 0=unrestricted, 1 is slowest start.
     # A value of 1 will take the servo about 3s to move between 1ms to 2ms range.
     def setAccel(self, chan, accel):
-        lsb = accel & 0x7f #7 bits for least significant byte
-        msb = (accel >> 7) & 0x7f #shift 7 and take next 7 bits for msb
+        lsb = accel & 0x7f  # 7 bits for least significant byte
+        msb = (accel >> 7) & 0x7f  # shift 7 and take next 7 bits for msb
         cmd = chr(0x09) + chr(chan) + chr(lsb) + chr(msb)
         self.sendCmd(cmd)
-    
+
     # Get the current position of the device on the specified channel
     # The result is returned in a measure of quarter-microseconds, which mirrors
     # the Target parameter of setTarget.
@@ -144,7 +145,7 @@ class Controller:
             if self.getPosition(chan) != self.Targets[chan]:
                 return True
         return False
-    
+
     # Have all servo outputs reached their targets? This is useful only if Speed and/or
     # Acceleration have been set on one or more of the channels. Returns True or False.
     # Not available with Micro Maestro.
@@ -169,6 +170,8 @@ class Controller:
     def stopScript(self):
         cmd = chr(0x24)
         self.sendCmd(cmd)
+
+
 h_1_ = 40
 a_1_ = 55
 a_2_ = 125
@@ -176,8 +179,9 @@ a_3_ = 180
 
 
 def rad2qns1(rad):
-    temp = (((rad * 980.75)/(pi/2)) + 1554.25)*4
+    temp = (((rad * 980.75) / (pi / 2)) + 1554.25) * 4
     return temp
+
 
 def rad2qns2(rad):
     temp = (((rad * 1000)/(pi/2)) + 1500)*4
@@ -196,13 +200,14 @@ def rad2qns2(rad):
 # }
 
 def inverse_kinematics(xyz_pos):
-    result_rad = [0,0,0]
+    result_rad = [0, 0, 0]
     x = xyz_pos[0]
     y = xyz_pos[1]
     z = xyz_pos[2]
-    result_rad[0] = atan(y/x)
-    result_rad[2] = acos((pow(x-a_1_, 2) + pow(z + h_1_, 2) - pow(a_2_, 2) - pow(a_3_, 2))/(2*a_2_*a_3_))
-    result_rad[1] = atan((z + h_1_)/(x - a_1_)) + asin(a_3_ * sin(result_rad[2])/(sqrt(pow(x - a_1_, 2) + pow(z + h_1_, 2))))
+    result_rad[0] = atan(y / x)
+    result_rad[2] = acos((pow(x - a_1_, 2) + pow(z + h_1_, 2) - pow(a_2_, 2) - pow(a_3_, 2)) / (2 * a_2_ * a_3_))
+    result_rad[1] = atan((z + h_1_) / (x - a_1_)) + asin(
+        a_3_ * sin(result_rad[2]) / (sqrt(pow(x - a_1_, 2) + pow(z + h_1_, 2))))
     return result_rad
 
 
@@ -211,23 +216,23 @@ def move_leg_xyz(x, y, z):
     # temp_out_buffer_ = inv_k[1]
     # temp_out_buffer2_ = rad2qns(temp_out_buffer_)
 
-    inv_k[1] = inv_k[1] - (35 * pi/180)
-    inv_k[2] = inv_k[2] - (70 * pi/180)
-    print(inv_k)
+    inv_k[1] = inv_k[1] - (35 * pi / 180)
+    inv_k[2] = inv_k[2] - (70 * pi / 180)
+    #print(inv_k)
 
-    return [rad2qns1(inv_k[0]), rad2qns2(inv_k[1]), rad2qns2(inv_k[2])]
+    return [rad2qns2(inv_k[0]), rad2qns2(inv_k[1]), rad2qns2(inv_k[2])]
 
 
 if __name__ == '__main__':
     maestro_controller = Controller('COM4')
-    for i in range(3):
-        t = int(move_leg_xyz(a_1_+a_2_+50, 0, -40)[i].real)
-        #t = int(move_leg_xyz(a_1_ + a_2_, 0, -40)[i].real)
+    for i in range(9):
+        t = int(move_leg_xyz(150, 0, -50)[i%3].real)
+        # t = int(move_leg_xyz(a_1_ + a_2_, 0, -40)[i].real)
         print(i, t)
         maestro_controller.setTarget(i, t)
 
-    #sleep(2)
+    # sleep(2)
 
-    #maestro_controller.setTarget(0, int(rad2qns1(0)))
+    # maestro_controller.setTarget(0, int(rad2qns1(0)))
     # maestro_controller.setTarget(1, int(rad2qns(pi/2)))
     # maestro_controller.setTarget(2, int(rad2qns(pi/2)))
