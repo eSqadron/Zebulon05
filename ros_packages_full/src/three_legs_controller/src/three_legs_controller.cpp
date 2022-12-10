@@ -72,11 +72,15 @@ public:
         message.x = 55 + 125 + 180;
         message.y = 0;
         message.z = -40;
+        rclcpp::sleep_for(std::chrono::seconds(2));
         step_1_publisher_->publish(message);
+        RCLCPP_INFO(this->get_logger(), "leg_1_straightened");
         rclcpp::sleep_for(std::chrono::seconds(1));
         step_2_publisher_->publish(message);
+        RCLCPP_INFO(this->get_logger(), "leg_2_straightened");
         rclcpp::sleep_for(std::chrono::seconds(1));
         step_3_publisher_->publish(message);
+        RCLCPP_INFO(this->get_logger(), "leg_3_straightened");
         rclcpp::sleep_for(std::chrono::seconds(1));
         is_step1_stage_done_ = true;
         is_step2_stage_done_ = true;
@@ -101,16 +105,16 @@ private:
         
         //RCLCPP_INFO(this->get_logger(), std::to_string(is_step1_stage_done_).c_str());
 
-        if(current_step_stage_ == Idle_){
-            if(is_step3_stage_done_){
-                message.x = 55 + 125 + 180;
-                message.y = 0;
-                message.z = -40;
-                step_3_publisher_->publish(message);
-                RCLCPP_INFO(this->get_logger(), "message 3 sent");
-                current_step_stage_ = Right_forward;
-            }
-        }
+//        if(current_step_stage_ == Idle_){
+//            if(is_step3_stage_done_){
+//                message.x = 55 + 125 + 180;
+//                message.y = 0;
+//                message.z = -40;
+//                step_3_publisher_->publish(message);
+//                RCLCPP_INFO(this->get_logger(), "message 3 sent");
+//                current_step_stage_ = Right_forward;
+//            }
+//        }
 //        else if(current_step_stage_ == Right_forward) {
 //            if (is_step1_stage_done_){
 //                message.x = 55 + 125 + 180;
