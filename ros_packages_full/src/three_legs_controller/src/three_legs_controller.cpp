@@ -26,13 +26,13 @@
 
 using namespace std::chrono_literals;
 
-enum step_stage_old{
-    NA_,
-    Idle_,
-    Right_forward,
-    Middle_back,
-    Change_dir_
-};
+//enum step_stage_old{
+//    NA_,
+//    Idle_,
+//    Right_forward,
+//    Middle_back,
+//    Change_dir_
+//};
 
 enum single_step_stages{
     initialise_step,
@@ -64,6 +64,8 @@ public:
         int leg_1_pos = 30;
         int leg_2_pos = 300;
         int leg_3_pos = 180;
+
+        gen_ = Generator3A();
 
 
         gen_.set_leg_default_positions(PI * 60/180, PI, PI * 300/180);
