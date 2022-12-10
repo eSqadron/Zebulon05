@@ -157,7 +157,6 @@ private:
         } else if(current_single_step_stage_ == leg_up) {
             RCLCPP_INFO(this->get_logger(), "leg up");
             RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
-            RCLCPP_INFO(this->get_logger(), std::to_string(leg_no_step_done_[moving_leg]).c_str());
             if(leg_no_step_done_[moving_leg]) {
                 xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
                 xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
@@ -212,7 +211,7 @@ private:
 
     void step1_done_callback(const std_msgs::msg::Bool& msg){
 //        is_step1_stage_done_ = msg.data;
-        RCLCPP_INFO(this->get_logger(), std::to_string(msg.data).c_str());
+//        RCLCPP_INFO(this->get_logger(), std::to_string(msg.data).c_str());
         leg_no_step_done_[0] = msg.data;
     }
     void step2_done_callback(const std_msgs::msg::Bool& msg){
