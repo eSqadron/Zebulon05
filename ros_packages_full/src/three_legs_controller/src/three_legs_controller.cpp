@@ -155,7 +155,9 @@ private:
                 current_single_step_stage_ = leg_up;
             }
         } else if(current_single_step_stage_ == leg_up) {
-            //RCLCPP_INFO(this->get_logger(), "leg up");
+            RCLCPP_INFO(this->get_logger(), "leg up");
+            RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
+            RCLCPP_INFO(this->get_logger(), std::to_string(leg_no_step_done_[moving_leg]).c_str());
             if(leg_no_step_done_[moving_leg]) {
                 xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
                 xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
