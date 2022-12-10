@@ -107,7 +107,7 @@ private:
 
         if(current_step_stage_ == Idle_){
             if(is_step3_stage_done_){
-                message.x = 50 + 100;
+                message.x = 160;
                 message.y = 0;
                 message.z = -150;
                 step_3_publisher_->publish(message);
@@ -117,7 +117,7 @@ private:
         }
         else if(current_step_stage_ == Right_forward) {
             if (is_step1_stage_done_){
-                message.x = 50 + 100;
+                message.x = 160;
                 message.y = 0;
                 message.z = -150;
                 step_1_publisher_->publish(message);
@@ -127,7 +127,7 @@ private:
         }
         else if(current_step_stage_ == Middle_back) {
             if (is_step2_stage_done_){
-                message.x = 50 + 100;
+                message.x = 160;
                 message.y = 0;
                 message.z = -150;
                 step_2_publisher_->publish(message);
