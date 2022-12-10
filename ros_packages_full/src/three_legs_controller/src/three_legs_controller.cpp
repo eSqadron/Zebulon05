@@ -107,9 +107,9 @@ private:
 
         if(current_step_stage_ == Idle_){
             if(is_step3_stage_done_){
-                message.x = 55 + 180;
+                message.x = 55 + 150;
                 message.y = 0;
-                message.z = -40;
+                message.z = -70;
                 step_3_publisher_->publish(message);
                 RCLCPP_INFO(this->get_logger(), "message 3 sent");
                 current_step_stage_ = Right_forward;
@@ -117,9 +117,9 @@ private:
         }
         else if(current_step_stage_ == Right_forward) {
             if (is_step1_stage_done_){
-                message.x = 55 + 180;
+                message.x = 55 + 150;
                 message.y = 0;
-                message.z = -40;
+                message.z = -70;
                 step_1_publisher_->publish(message);
                 RCLCPP_INFO(this->get_logger(), "message 1 sent");
                 current_step_stage_ = Middle_back;
@@ -127,9 +127,9 @@ private:
         }
         else if(current_step_stage_ == Middle_back) {
             if (is_step2_stage_done_){
-                message.x = 55 + 180;
+                message.x = 55 + 150;
                 message.y = 0;
-                message.z = -40;
+                message.z = -70;
                 step_2_publisher_->publish(message);
                 RCLCPP_INFO(this->get_logger(), "message 2 sent");
                 current_step_stage_ = Right_forward;
