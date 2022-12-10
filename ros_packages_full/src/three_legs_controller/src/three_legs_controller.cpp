@@ -141,10 +141,18 @@ private:
 
 
         if(current_single_step_stage_ == initialise_step) {
-            do_step_result = gen_.do_step(0);
-            endpoint_shift = std::get<0>(do_step_result);
-            moving_leg = std::get<1>(do_step_result);
-            current_single_step_stage_ = leg_up;
+            bool exception_caught = true;
+            try{
+                do_step_result = gen_.do_step(0);
+                exception_caught = false;
+            } catch(std::invalid_argument e){
+                RCLCPP_INFO(this->get_logger(), e.what());
+            }
+            if(!exception_caught) {
+                endpoint_shift = std::get<0>(do_step_result);
+                moving_leg = std::get<1>(do_step_result);
+                current_single_step_stage_ = leg_up;
+            }
         } else if(current_single_step_stage_ == leg_up) {
             if(leg_no_step_done_[moving_leg]) {
                 xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
@@ -222,7 +230,7 @@ private:
     single_step_stages current_single_step_stage_;
     float step_height_;
 
-    Generator3A gen_();
+    Generator3A gen_;
 
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_1_publisher_;
