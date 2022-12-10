@@ -100,9 +100,9 @@ private:
         auto message = geometry_msgs::msg::Point();
         //robo_leg.set_physical_params(40, 55, 125, 180);
 
-        std::tuple<std::array<float, 2>, int> do_step_result;
+        std::tuple<std::array<float, 2>, unsigned short int> do_step_result;
         std::array<float, 2> endpoint_shift;
-        int moving_leg;
+        unsigned short int moving_leg;
         
         
         //RCLCPP_INFO(this->get_logger(), std::to_string(is_step1_stage_done_).c_str());
