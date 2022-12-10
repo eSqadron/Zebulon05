@@ -109,7 +109,7 @@ private:
             if(is_step3_stage_done_){
                 message.x = 50 + 100;
                 message.y = 0;
-                message.z = -100;
+                message.z = -130;
                 step_3_publisher_->publish(message);
                 RCLCPP_INFO(this->get_logger(), "message 3 sent");
                 current_step_stage_ = Right_forward;
@@ -119,7 +119,7 @@ private:
             if (is_step1_stage_done_){
                 message.x = 50 + 100;
                 message.y = 0;
-                message.z = -100;
+                message.z = -130;
                 step_1_publisher_->publish(message);
                 RCLCPP_INFO(this->get_logger(), "message 1 sent");
                 current_step_stage_ = Middle_back;
@@ -129,7 +129,7 @@ private:
             if (is_step2_stage_done_){
                 message.x = 50 + 100;
                 message.y = 0;
-                message.z = -100;
+                message.z = -130;
                 step_2_publisher_->publish(message);
                 RCLCPP_INFO(this->get_logger(), "message 2 sent");
                 current_step_stage_ = Right_forward;
