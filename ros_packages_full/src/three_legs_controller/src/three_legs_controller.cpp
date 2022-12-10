@@ -56,7 +56,7 @@ public:
         step2_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_2", 10, std::bind(&ThreeLegsController::step2_done_callback, this, std::placeholders::_1));
         step3_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_3", 10, std::bind(&ThreeLegsController::step3_done_callback, this, std::placeholders::_1));
 
-        current_step_stage_ = Idle_;
+        //current_step_stage_ = Idle_;
 
 //        int leg_1_pos = get_pos_from_leg("leg_1");
 //        int leg_2_pos = get_pos_from_leg("leg_2");
@@ -218,7 +218,7 @@ private:
 //    bool is_step3_stage_done_;
     std::array<bool, 3> leg_no_step_done_;
 
-    step_stage_old current_step_stage_;
+    //step_stage_old current_step_stage_;
     single_step_stages current_single_step_stage_;
     float step_height_;
 
