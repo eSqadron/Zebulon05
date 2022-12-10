@@ -33,9 +33,11 @@ public:
     void restart_generator(){
         current_step_stage_ = Idle;
         current_right_leg_ = 0;
+        current_left_leg_ = 0;
+        current_back_leg_ = 0;
     }
 
-    std::tuple<std::array<float, 2>, int> do_step(int ang){
+    std::tuple<std::array<float, 2>, unsigned short int> do_step(float ang){
         calculate_right_leg(ang);
         if(current_step_stage_ ==  Idle) {
             current_step_stage_ = R_for;
@@ -53,16 +55,16 @@ public:
             return std::make_tuple(calculate_endpoint_delta(ang, current_right_leg_, true), current_right_leg_);
         } else if(current_step_stage_ == M_back){
             current_step_stage_ = L_back;
-            return std::make_tuple(calculate_endpoint_delta(ang, current_right_leg_, true), current_left_leg_);
+            return std::make_tuple(calculate_endpoint_delta(ang, current_left_leg_, true), current_left_leg_);
         } else if(current_step_stage_ == L_back){
             current_step_stage_ = Idle;
-            return std::make_tuple(calculate_endpoint_delta(ang, current_right_leg_, true), current_back_leg_);
+            return std::make_tuple(calculate_endpoint_delta(ang, current_back_leg_, true), current_back_leg_);
         }
 
         throw std::invalid_argument("unknown stage");
     }
 
-    std::array<float, 2> calculate_endpoint_delta(float ang, int leg_no, bool inverse = false){
+    std::array<float, 2> calculate_endpoint_delta(float ang, unsigned short int leg_no, bool inverse = false){
         float delta_x = step_len_ * sin(ang - leg_pos_[leg_no]);
         float delta_y = step_len_ * cos(ang - leg_pos_[leg_no]);
         if(inverse){
@@ -72,9 +74,9 @@ public:
         return std::array<float, 2>{delta_x, delta_y};
     }
 
-    void calculate_right_leg(int ang){
-        int leg_no = 0;
-        for (int i = 1; i < 3; ++i) {
+    void calculate_right_leg(float ang){
+        unsigned short int leg_no = 0;
+        for (unsigned short int i = 1; i < 3; ++i) {
             if(leg_pos_[i] - ang < leg_pos_[leg_no] - ang){
                 leg_no = i;
             }
@@ -88,9 +90,9 @@ public:
 
 private:
     step_stage current_step_stage_;
-    int current_right_leg_;
-    int current_left_leg_;
-    int current_back_leg_;
+    unsigned short int current_right_leg_;
+    unsigned short int current_left_leg_;
+    unsigned short int current_back_leg_;
 
     std::array<float, 3> leg_pos_;
     int step_len_;
