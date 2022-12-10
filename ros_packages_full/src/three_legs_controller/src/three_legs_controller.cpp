@@ -149,6 +149,7 @@ private:
                 RCLCPP_INFO(this->get_logger(), e.what());
             }
             if(!exception_caught) {
+                RCLCPP_INFO(this->get_logger(), "init step!");
                 endpoint_shift = std::get<0>(do_step_result);
                 moving_leg = std::get<1>(do_step_result);
                 current_single_step_stage_ = leg_up;
