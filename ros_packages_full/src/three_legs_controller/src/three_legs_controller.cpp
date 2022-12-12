@@ -50,7 +50,7 @@ public:
         step_publishers_[1] = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_2", 10);
         step_publishers_[2] = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_3", 10);
 
-        timer_ = this->create_wall_timer(200ms, std::bind(&ThreeLegsController::timer_callback, this));
+        timer_ = this->create_wall_timer(500ms, std::bind(&ThreeLegsController::timer_callback, this));
 
         step1_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::step1_done_callback, this, std::placeholders::_1));
         step2_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_2", 10, std::bind(&ThreeLegsController::step2_done_callback, this, std::placeholders::_1));
@@ -91,7 +91,7 @@ public:
 
         xy_leg_positions_ = std::array<std::array<float, 3>, 3>{std::array<float, 3>{150, 0, -90}, std::array<float, 3>{150, 0, -90}, std::array<float, 3>{150, 0, -90}};
         current_single_step_stage_ = initialise_step;
-        step_height_ = 40;
+        step_height_ = 60;
 
         for(int i =0; i<3; ++i){
             message.x = xy_leg_positions_[i][0];
@@ -171,12 +171,7 @@ private:
                 message.x = xy_leg_positions_[moving_leg][0];
                 message.y = xy_leg_positions_[moving_leg][1];
                 message.z = xy_leg_positions_[moving_leg][2];
-                if (moving_leg == 0)
-                    step_publishers_[0]->publish(message);
-                else if (moving_leg == 1)
-                    step_publishers_[1]->publish(message);
-                else if (moving_leg == 3)
-                    step_publishers_[2]->publish(message);
+                step_publishers_[moving_leg]->publish(message);
 
                 current_single_step_stage_ = leg_down;
             }
@@ -191,12 +186,7 @@ private:
                 message.x = xy_leg_positions_[moving_leg][0];
                 message.y = xy_leg_positions_[moving_leg][1];
                 message.z = xy_leg_positions_[moving_leg][2];
-                if (moving_leg == 0)
-                    step_publishers_[0]->publish(message);
-                else if (moving_leg == 1)
-                    step_publishers_[1]->publish(message);
-                else if (moving_leg == 3)
-                    step_publishers_[2]->publish(message);
+                step_publishers_[moving_leg]->publish(message);
 
                 current_single_step_stage_ = initialise_step;
             }

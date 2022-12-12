@@ -23,7 +23,7 @@ class Generator3A {
 public:
     Generator3A(){
         restart_generator();
-        step_len_ = 10;
+        step_len_ = 50;
     }
 
     void set_leg_default_positions(float pos1, float pos2, float pos3){
