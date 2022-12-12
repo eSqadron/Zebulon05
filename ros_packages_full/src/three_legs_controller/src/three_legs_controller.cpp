@@ -74,7 +74,7 @@ public:
         message.x = 55 + 125 + 180;
         message.y = 0;
         message.z = -40;
-        rclcpp::sleep_for(std::chrono::seconds(2));
+        rclcpp::sleep_for(std::chrono::seconds(1));
         step_1_publisher_->publish(message);
         RCLCPP_INFO(this->get_logger(), "leg_1_straightened");
         rclcpp::sleep_for(std::chrono::seconds(1));
@@ -83,7 +83,7 @@ public:
         rclcpp::sleep_for(std::chrono::seconds(1));
         step_3_publisher_->publish(message);
         RCLCPP_INFO(this->get_logger(), "leg_3_straightened");
-        rclcpp::sleep_for(std::chrono::seconds(1));
+        rclcpp::sleep_for(std::chrono::seconds(2));
 //        is_step1_stage_done_ = true;
 //        is_step2_stage_done_ = true;
 //        is_step3_stage_done_ = true;
@@ -93,7 +93,7 @@ public:
         current_single_step_stage_ = initialise_step;
         step_height_ = 40;
 
-        for(auto i: xy_leg_positions_){
+        for(auto& i: xy_leg_positions_){
             message.x = i[0];
             message.y = i[1];
             message.z = i[2];
@@ -101,6 +101,7 @@ public:
             rclcpp::sleep_for(std::chrono::seconds(1));
             RCLCPP_INFO(this->get_logger(), "standing");
         }
+        rclcpp::sleep_for(std::chrono::seconds(2));
 
     }
 
