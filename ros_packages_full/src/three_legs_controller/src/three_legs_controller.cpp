@@ -46,9 +46,9 @@ class ThreeLegsController : public rclcpp::Node
 {
 public:
     ThreeLegsController() : Node("three_legs_controller"){
-        step_1_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_1", 10);
-        step_2_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_2", 10);
-        step_3_publisher_ = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_3", 10);
+        step_publishers_[0] = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_1", 10);
+        step_publishers_[1] = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_2", 10);
+        step_publishers_[2] = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_3", 10);
 
         timer_ = this->create_wall_timer(200ms, std::bind(&ThreeLegsController::timer_callback, this));
 
@@ -75,13 +75,13 @@ public:
         message.y = 0;
         message.z = -40;
         rclcpp::sleep_for(std::chrono::seconds(2));
-        step_1_publisher_->publish(message);
+        step_publishers_[0]->publish(message);
         RCLCPP_INFO(this->get_logger(), "leg_1_straightened");
         rclcpp::sleep_for(std::chrono::seconds(2));
-        step_2_publisher_->publish(message);
+        step_publishers_[1]->publish(message);
         RCLCPP_INFO(this->get_logger(), "leg_2_straightened");
         rclcpp::sleep_for(std::chrono::seconds(2));
-        step_3_publisher_->publish(message);
+        step_publishers_[2]->publish(message);
         RCLCPP_INFO(this->get_logger(), "leg_3_straightened");
         rclcpp::sleep_for(std::chrono::seconds(2));
 //        is_step1_stage_done_ = true;
@@ -93,12 +93,12 @@ public:
         current_single_step_stage_ = initialise_step;
         step_height_ = 40;
 
-        for(auto& i: xy_leg_positions_){
-            message.x = i[0];
-            message.y = i[1];
-            message.z = i[2];
-            step_1_publisher_->publish(message);
-            rclcpp::sleep_for(std::chrono::seconds(1));
+        for(int i =0; i<3; ++i){
+            message.x = xy_leg_positions_[i][0];
+            message.y = xy_leg_positions_[i][1];
+            message.z = xy_leg_positions_[i][2];
+            step_publishers_[i]->publish(message);
+            rclcpp::sleep_for(std::chrono::seconds(2));
             RCLCPP_INFO(this->get_logger(), "standing");
         }
         rclcpp::sleep_for(std::chrono::seconds(2));
@@ -122,7 +122,7 @@ private:
 //                message.x = 120;
 //                message.y = 0;
 //                message.z = -90;
-//                step_3_publisher_->publish(message);
+//                step_publishers_[2]->publish(message);
 //                RCLCPP_INFO(this->get_logger(), "message 3 sent");
 //                current_step_stage_ = Right_forward;
 //            }
@@ -132,7 +132,7 @@ private:
 //                message.x = 120;
 //                message.y = 0;
 //                message.z = -90;
-//                step_1_publisher_->publish(message);
+//                step_publishers_[0]->publish(message);
 //                RCLCPP_INFO(this->get_logger(), "message 1 sent");
 //                current_step_stage_ = Middle_back;
 //            }
@@ -142,7 +142,7 @@ private:
 //                message.x = 120;
 //                message.y = 0;
 //                message.z = -90;
-//                step_2_publisher_->publish(message);
+//                step_publishers_[1]->publish(message);
 //                RCLCPP_INFO(this->get_logger(), "message 2 sent");
 //                current_step_stage_ = Right_forward;
 //            }
@@ -172,11 +172,11 @@ private:
                 message.y = xy_leg_positions_[moving_leg][1];
                 message.z = xy_leg_positions_[moving_leg][2];
                 if (moving_leg == 0)
-                    step_1_publisher_->publish(message);
+                    step_publishers_[0]->publish(message);
                 else if (moving_leg == 1)
-                    step_2_publisher_->publish(message);
+                    step_publishers_[1]->publish(message);
                 else if (moving_leg == 3)
-                    step_3_publisher_->publish(message);
+                    step_publishers_[2]->publish(message);
 
                 current_single_step_stage_ = leg_down;
             }
@@ -192,11 +192,11 @@ private:
                 message.y = xy_leg_positions_[moving_leg][1];
                 message.z = xy_leg_positions_[moving_leg][2];
                 if (moving_leg == 0)
-                    step_1_publisher_->publish(message);
+                    step_publishers_[0]->publish(message);
                 else if (moving_leg == 1)
-                    step_2_publisher_->publish(message);
+                    step_publishers_[1]->publish(message);
                 else if (moving_leg == 3)
-                    step_3_publisher_->publish(message);
+                    step_publishers_[2]->publish(message);
 
                 current_single_step_stage_ = initialise_step;
             }
@@ -247,9 +247,11 @@ private:
     Generator3A gen_;
 
     rclcpp::TimerBase::SharedPtr timer_;
-    rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_1_publisher_;
-    rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_2_publisher_;
-    rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_3_publisher_;
+    // rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_publishers_[0];
+    // rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_publishers_[1];
+    // rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr step_publishers_[2];
+
+    std::array<rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr, 3> step_publishers_;
 
     //std::array<rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr, 3>
 
