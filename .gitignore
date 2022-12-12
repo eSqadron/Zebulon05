@@ -73,3 +73,4 @@ ros_packages_full/log
 ros_packages_full/install
 ros_packages_full/build
 ros_packages_full/.vscode/settings.json
+ros_packages_full/src/three_legs_controller/.vscode/settings.json

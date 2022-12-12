@@ -92,6 +92,16 @@ public:
         xy_leg_positions_ = std::array<std::array<float, 3>, 3>{std::array<float, 3>{150, 0, -90}, std::array<float, 3>{150, 0, -90}, std::array<float, 3>{150, 0, -90}};
         current_single_step_stage_ = initialise_step;
         step_height_ = 40;
+
+        for(auto i: xy_leg_positions_){
+            message.x = i[0];
+            message.y = i[1];
+            message.z = i[2];
+            step_1_publisher_->publish(message);
+            rclcpp::sleep_for(std::chrono::seconds(1));
+            RCLCPP_INFO(this->get_logger(), "standing");
+        }
+
     }
 
 private:
@@ -101,8 +111,7 @@ private:
         //robo_leg.set_physical_params(40, 55, 125, 180);
 
         std::tuple<std::array<float, 2>, unsigned short int> do_step_result;
-        std::array<float, 2> endpoint_shift;
-        unsigned short int moving_leg;
+
         
         
         //RCLCPP_INFO(this->get_logger(), std::to_string(is_step1_stage_done_).c_str());
@@ -141,23 +150,20 @@ private:
 
 
         if(current_single_step_stage_ == initialise_step) {
-            bool exception_caught = true;
             try{
                 do_step_result = gen_.do_step(0);
-                exception_caught = false;
-            } catch(std::invalid_argument e){
-                RCLCPP_INFO(this->get_logger(), e.what());
-            }
-            if(!exception_caught) {
                 RCLCPP_INFO(this->get_logger(), "init step!");
                 endpoint_shift = std::get<0>(do_step_result);
                 moving_leg = std::get<1>(do_step_result);
                 current_single_step_stage_ = leg_up;
+            } catch(std::invalid_argument e){
+                RCLCPP_INFO(this->get_logger(), e.what());
             }
         } else if(current_single_step_stage_ == leg_up) {
             RCLCPP_INFO(this->get_logger(), "leg up");
             RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
             if(leg_no_step_done_[moving_leg]) {
+                RCLCPP_INFO(this->get_logger(), "step done, moving!");
                 xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
                 xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
                 xy_leg_positions_[moving_leg][2] += step_height_;
@@ -174,7 +180,10 @@ private:
                 current_single_step_stage_ = leg_down;
             }
         } else if(current_single_step_stage_ == leg_down){
+            RCLCPP_INFO(this->get_logger(), "leg down");
+            RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
             if(leg_no_step_done_[moving_leg]) {
+                RCLCPP_INFO(this->get_logger(), "step done, moving!");
                 xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
                 xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
                 xy_leg_positions_[moving_leg][2] -= step_height_;
@@ -246,6 +255,9 @@ private:
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr step1_done_feedback_sub_;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr step2_done_feedback_sub_;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr step3_done_feedback_sub_;
+
+    std::array<float, 2> endpoint_shift;
+    unsigned short int moving_leg;
 };
 
 int main(int argc, char * argv[])
