@@ -74,13 +74,13 @@ public:
         message.x = 55 + 125 + 180;
         message.y = 0;
         message.z = -40;
-        rclcpp::sleep_for(std::chrono::seconds(1));
+        rclcpp::sleep_for(std::chrono::seconds(2));
         step_1_publisher_->publish(message);
         RCLCPP_INFO(this->get_logger(), "leg_1_straightened");
-        rclcpp::sleep_for(std::chrono::seconds(1));
+        rclcpp::sleep_for(std::chrono::seconds(2));
         step_2_publisher_->publish(message);
         RCLCPP_INFO(this->get_logger(), "leg_2_straightened");
-        rclcpp::sleep_for(std::chrono::seconds(1));
+        rclcpp::sleep_for(std::chrono::seconds(2));
         step_3_publisher_->publish(message);
         RCLCPP_INFO(this->get_logger(), "leg_3_straightened");
         rclcpp::sleep_for(std::chrono::seconds(2));
