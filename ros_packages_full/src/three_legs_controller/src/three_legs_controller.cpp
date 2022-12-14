@@ -89,7 +89,7 @@ public:
 //        is_step3_stage_done_ = true;
         leg_no_step_done_ = std::array<bool, 3>{true, true, true};
 
-        xy_leg_positions_ = std::array<std::array<float, 3>, 3>{std::array<float, 3>{150, 0, -90}, std::array<float, 3>{150, 0, -90}, std::array<float, 3>{150, 0, -90}};
+        xy_leg_positions_ = std::array<std::array<float, 3>, 3>{std::array<float, 3>{250, 0, -90}, std::array<float, 3>{250, 0, -90}, std::array<float, 3>{250, 0, -90}};
         current_single_step_stage_ = initialise_step;
         step_height_ = 60;
 
@@ -150,47 +150,47 @@ private:
 
 
 
-        if(current_single_step_stage_ == initialise_step) {
-            try{
-                do_step_result = gen_.do_step(0);
-                RCLCPP_INFO(this->get_logger(), "init step!");
-                endpoint_shift = std::get<0>(do_step_result);
-                moving_leg = std::get<1>(do_step_result);
-                current_single_step_stage_ = leg_up;
-            } catch(std::invalid_argument e){
-                RCLCPP_INFO(this->get_logger(), e.what());
-            }
-        } else if(current_single_step_stage_ == leg_up) {
-            RCLCPP_INFO(this->get_logger(), "leg up");
-            RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
-            if(leg_no_step_done_[moving_leg]) {
-                RCLCPP_INFO(this->get_logger(), "step done, moving!");
-                xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
-                xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
-                xy_leg_positions_[moving_leg][2] += step_height_;
-                message.x = xy_leg_positions_[moving_leg][0];
-                message.y = xy_leg_positions_[moving_leg][1];
-                message.z = xy_leg_positions_[moving_leg][2];
-                step_publishers_[moving_leg]->publish(message);
+        // if(current_single_step_stage_ == initialise_step) {
+        //     try{
+        //         do_step_result = gen_.do_step(0);
+        //         RCLCPP_INFO(this->get_logger(), "init step!");
+        //         endpoint_shift = std::get<0>(do_step_result);
+        //         moving_leg = std::get<1>(do_step_result);
+        //         current_single_step_stage_ = leg_up;
+        //     } catch(std::invalid_argument e){
+        //         RCLCPP_INFO(this->get_logger(), e.what());
+        //     }
+        // } else if(current_single_step_stage_ == leg_up) {
+        //     RCLCPP_INFO(this->get_logger(), "leg up");
+        //     RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
+        //     if(leg_no_step_done_[moving_leg]) {
+        //         RCLCPP_INFO(this->get_logger(), "step done, moving!");
+        //         xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
+        //         xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
+        //         xy_leg_positions_[moving_leg][2] += step_height_;
+        //         message.x = xy_leg_positions_[moving_leg][0];
+        //         message.y = xy_leg_positions_[moving_leg][1];
+        //         message.z = xy_leg_positions_[moving_leg][2];
+        //         step_publishers_[moving_leg]->publish(message);
 
-                current_single_step_stage_ = leg_down;
-            }
-        } else if(current_single_step_stage_ == leg_down){
-            RCLCPP_INFO(this->get_logger(), "leg down");
-            RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
-            if(leg_no_step_done_[moving_leg]) {
-                RCLCPP_INFO(this->get_logger(), "step done, moving!");
-                xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
-                xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
-                xy_leg_positions_[moving_leg][2] -= step_height_;
-                message.x = xy_leg_positions_[moving_leg][0];
-                message.y = xy_leg_positions_[moving_leg][1];
-                message.z = xy_leg_positions_[moving_leg][2];
-                step_publishers_[moving_leg]->publish(message);
+        //         current_single_step_stage_ = leg_down;
+        //     }
+        // } else if(current_single_step_stage_ == leg_down){
+        //     RCLCPP_INFO(this->get_logger(), "leg down");
+        //     RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
+        //     if(leg_no_step_done_[moving_leg]) {
+        //         RCLCPP_INFO(this->get_logger(), "step done, moving!");
+        //         xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
+        //         xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
+        //         xy_leg_positions_[moving_leg][2] -= step_height_;
+        //         message.x = xy_leg_positions_[moving_leg][0];
+        //         message.y = xy_leg_positions_[moving_leg][1];
+        //         message.z = xy_leg_positions_[moving_leg][2];
+        //         step_publishers_[moving_leg]->publish(message);
 
-                current_single_step_stage_ = initialise_step;
-            }
-        }
+        //         current_single_step_stage_ = initialise_step;
+        //     }
+        // }
 
 
 
