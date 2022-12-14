@@ -212,7 +212,7 @@ def inverse_kinematics(xyz_pos):
     print("p1: ", p1, "p2: ", p2)
     print(a_2_, a_3_ * cos(result_rad[2]))
 
-    theta_2_g = acos(-a_2_/a_3_).real
+    theta_2_g = pi/2
     p_2_g = atan(a_3_ * sin(theta_2_g) / (a_2_ + a_3_ * cos(theta_2_g))).real
     print("0_2_g: ", theta_2_g, "p_2_g: ", p_2_g)
 
