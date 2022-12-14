@@ -184,7 +184,7 @@ def rad2qns1(rad):
 
 
 def rad2qns2(rad):
-    temp = (((rad * 1000)/(pi/2)) + 1500)*4
+    temp = (((rad * 1000) / (pi / 2)) + 1500) * 4
     return temp
 
 
@@ -204,10 +204,24 @@ def inverse_kinematics(xyz_pos):
     x = xyz_pos[0]
     y = xyz_pos[1]
     z = xyz_pos[2]
-    result_rad[0] = atan(y / x)
-    result_rad[2] = acos((pow(x - a_1_, 2) + pow(z + h_1_, 2) - pow(a_2_, 2) - pow(a_3_, 2)) / (2 * a_2_ * a_3_))
-    result_rad[1] = atan((z + h_1_) / (x - a_1_)) + asin(
-        a_3_ * sin(result_rad[2]) / (sqrt(pow(x - a_1_, 2) + pow(z + h_1_, 2))))
+    result_rad[0] = atan(y / x).real
+    result_rad[2] = acos((pow(x - a_1_, 2) + pow(h_1_ + z, 2) - pow(a_2_, 2) - pow(a_3_, 2)) / (2 * a_2_ * a_3_)).real
+    p1 = atan((h_1_ + z) / (x - a_1_)).real
+    p2 = atan(a_3_ * sin(result_rad[2]) / (a_2_ + a_3_ * cos(result_rad[2]))).real
+
+    print("p1: ", p1, "p2: ", p2)
+    print(a_2_, a_3_ * cos(result_rad[2]))
+
+    theta_2_g = acos(-a_2_/a_3_).real
+    p_2_g = atan(a_3_ * sin(theta_2_g) / (a_2_ + a_3_ * cos(theta_2_g))).real
+    print("0_2_g: ", theta_2_g, "p_2_g: ", p_2_g)
+
+    result_rad[1] = (p1 + 2 * p_2_g + p2 if(result_rad[2] > theta_2_g) else p1 + p2)
+
+    print(result_rad[1])
+
+    print([i.real * 180 / pi for i in result_rad])
+
     return result_rad
 
 
@@ -216,20 +230,58 @@ def move_leg_xyz(x, y, z):
     # temp_out_buffer_ = inv_k[1]
     # temp_out_buffer2_ = rad2qns(temp_out_buffer_)
 
+    angs_r = [k.real for k in inv_k]
+    alfa = angs_r[1]
+    beta = angs_r[2] - angs_r[1]
+    print(x, z)
+    print(int((cos(alfa) * a_2_ + cos(beta) * a_3_ + a_1_).real),
+          -h_1_ + int((sin(alfa) * a_2_ - sin(beta) * a_3_).real))
+
     inv_k[1] = inv_k[1] - (35 * pi / 180)
     inv_k[2] = inv_k[2] - (70 * pi / 180)
-    #print(inv_k)
+    # print(inv_k)
 
     return [rad2qns2(inv_k[0]), rad2qns2(inv_k[1]), rad2qns2(inv_k[2])]
 
 
+def actually_move_leg(x, y, z, s=0):
+    qns = move_leg_xyz(x, y, z)
+    for i in range(s * 3, s * 3 + 3):
+        t = int(qns[i % 3].real)
+        # t = int(move_leg_xyz(a_1_ + a_2_, 0, -40)[i].real)
+        maestro_controller.setTarget(i, t)
+        print()
+
+
 if __name__ == '__main__':
     maestro_controller = Controller('COM4')
-    for i in range(9):
-        t = int(move_leg_xyz(150, 0, -50)[i%3].real)
-        # t = int(move_leg_xyz(a_1_ + a_2_, 0, -40)[i].real)
-        print(i, t)
-        maestro_controller.setTarget(i, t)
+    # for i in range(3):
+    # actually_move_leg(150, 0, -50)
+    # actually_move_leg(a_1_ + a_2_ + a_3_, 0, -50)
+    # for i in range(50):
+    #     actually_move_leg(135+a_1_-i, 0, -40)
+    #     sleep(1)
+    for i in range(3):
+        actually_move_leg(150, 0, -100, i)
+
+    leg_pos_ = [pi * 60 / 180, pi, pi * 300 / 180]
+    step_len_ = 100
+    step_height = 60
+    leg_no = 0
+    delta_y = (step_len_ * sin(0 - leg_pos_[leg_no])).real
+    delta_x = (step_len_ * cos(0 - leg_pos_[leg_no])).real
+
+    actually_move_leg(150, 0, -100)
+    sleep(2)
+
+    actually_move_leg(150 + delta_x/2, 0 + delta_y/2, -100 + step_height)
+    sleep(2)
+    actually_move_leg(150 + delta_x, 0 + delta_y, -100)
+    sleep(5)
+    actually_move_leg(150, 0, -100)
+
+    # for i in range(3):
+    #     actually_move_leg(a_1_+a_2_+a_3_, 0, -50, i)
 
     # sleep(2)
 

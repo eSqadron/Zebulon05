@@ -65,8 +65,8 @@ public:
     }
 
     std::array<float, 2> calculate_endpoint_delta(float ang, unsigned short int leg_no, bool inverse = false){
-        float delta_x = step_len_ * sin(ang - leg_pos_[leg_no]);
-        float delta_y = step_len_ * cos(ang - leg_pos_[leg_no]);
+        float delta_x = step_len_ * cos(ang - leg_pos_[leg_no]);
+        float delta_y = step_len_ * sin(ang - leg_pos_[leg_no]);
         if(inverse){
             delta_x = -delta_x;
             delta_y = -delta_y;

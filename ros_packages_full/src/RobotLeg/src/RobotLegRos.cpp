@@ -34,7 +34,24 @@ std::array<float, 3> RobotLegRos::inverse_kinematics(const std::array<float, 3> 
     float z = xyz_pos[2];
     result_rad[0] = atan(y/x);
     result_rad[2] = acos((pow(x-a_1_, 2) + pow(z +  h_1_, 2) - pow(a_2_, 2) - pow(a_3_, 2))/(2*a_2_*a_3_));
-    result_rad[1] = atan((z +  h_1_)/(x - a_1_)) + asin(a_3_ * sin(result_rad[2])/(sqrt(pow(x - a_1_, 2) + pow(z + h_1_, 2)))); // TODO - dlaczego "-" a nie "+" ? XD
+
+    float r_1_p1 = atan((h_1_ + z) / (x - a_1_));
+    float r_1_p2 = atan(a_3_ * sin(result_rad[2]) / (a_2_ + a_3_ * cos(result_rad[2])));
+
+    float r_2_gr = acos(-a_2_/a_3_);
+    float r_1_p2_gr = atan(a_3_ * sin(r_2_gr) / (a_2_ + a_3_ * cos(r_2_gr)));
+
+    if(result_rad[2] < r_2_gr){
+        // r_1_p2 - stays unchanged
+    }
+    else if(result_rad[2] == r_2_gr){
+        r_1_p2 = PI/2;
+    }
+    else if(result_rad[2] > r_2_gr){
+        r_1_p2 = 2*r_1_p2_gr - abs(r_1_p2);
+    }
+
+    result_rad[1] = r_1_p1 + r_1_p2;
     return result_rad;
 }
 
