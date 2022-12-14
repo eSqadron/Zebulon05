@@ -91,7 +91,7 @@ public:
 
         xy_leg_positions_ = std::array<std::array<float, 3>, 3>{std::array<float, 3>{150, 0, -100}, std::array<float, 3>{150, 0, -100}, std::array<float, 3>{150, 0, -100}};
         current_single_step_stage_ = initialise_step;
-        step_height_ = 60;
+        step_height_ = 50;
 
         for(int i =0; i<3; ++i){
             message.x = xy_leg_positions_[i][0];
