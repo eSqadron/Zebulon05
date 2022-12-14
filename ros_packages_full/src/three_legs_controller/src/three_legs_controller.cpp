@@ -89,7 +89,7 @@ public:
 //        is_step3_stage_done_ = true;
         leg_no_step_done_ = std::array<bool, 3>{true, true, true};
 
-        xy_leg_positions_ = std::array<std::array<float, 3>, 3>{std::array<float, 3>{250, 0, -90}, std::array<float, 3>{250, 0, -90}, std::array<float, 3>{250, 0, -90}};
+        xy_leg_positions_ = std::array<std::array<float, 3>, 3>{std::array<float, 3>{150, 0, -100}, std::array<float, 3>{250, 0, -90}, std::array<float, 3>{250, 0, -90}};
         current_single_step_stage_ = initialise_step;
         step_height_ = 60;
 
