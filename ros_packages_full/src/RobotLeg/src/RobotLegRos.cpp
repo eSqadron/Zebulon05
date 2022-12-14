@@ -38,7 +38,7 @@ std::array<float, 3> RobotLegRos::inverse_kinematics(const std::array<float, 3> 
     float r_1_p1 = atan((h_1_ + z) / (x - a_1_));
     float r_1_p2 = atan(a_3_ * sin(result_rad[2]) / (a_2_ + a_3_ * cos(result_rad[2])));
 
-    float r_2_gr = acos(-a_2_/a_3_);
+    float r_2_gr = acos(-static_cast<float>(a_2_)/static_cast<float>(a_3_));
 
     if(result_rad[2] < r_2_gr){
         // r_1_p2 - stays unchanged

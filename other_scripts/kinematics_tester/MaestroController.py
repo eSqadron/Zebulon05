@@ -200,33 +200,35 @@ def rad2qns2(rad):
 # }
 
 def inverse_kinematics(xyz_pos):
-    result_rad = [0, 0, 0]
     x = xyz_pos[0]
     y = xyz_pos[1]
     z = xyz_pos[2]
+    result_rad = [0, 0, 0]
     result_rad[0] = atan(y / x).real
-    result_rad[2] = acos((pow(x - a_1_, 2) + pow(h_1_ + z, 2) - pow(a_2_, 2) - pow(a_3_, 2)) / (2 * a_2_ * a_3_)).real
-    p1 = atan((h_1_ + z) / (x - a_1_)).real
-    p2 = atan(a_3_ * sin(result_rad[2]) / (a_2_ + a_3_ * cos(result_rad[2]))).real
+    result_rad[2] = acos((pow(x - a_1_, 2) + pow(z + h_1_, 2) - pow(a_2_, 2) - pow(a_3_, 2)) / (2 * a_2_ * a_3_)).real
 
-    print("p1: ", p1, "p2: ", p2)
-    print(a_2_, a_3_ * cos(result_rad[2]))
+    r_1_p1 = atan((h_1_ + z) / (x - a_1_)).real
+    r_1_p2 = atan(a_3_ * sin(result_rad[2]) / (a_2_ + a_3_ * cos(result_rad[2]))).real
 
-    theta_2_g = pi/2
-    p_2_g = atan(a_3_ * sin(theta_2_g) / (a_2_ + a_3_ * cos(theta_2_g))).real
-    print("0_2_g: ", theta_2_g, "p_2_g: ", p_2_g)
+    r_2_gr = acos(-a_2_ / a_3_).real
 
-    result_rad[1] = (p1 + 2 * p_2_g + p2 if(result_rad[2] > theta_2_g) else p1 + p2)
+    print("r_gr:", acos(-a_2_ / a_3_))
 
-    print(result_rad[1])
+    if result_rad[2] < r_2_gr:
+        pass
+    elif result_rad[2] == r_2_gr:
+        r_1_p2 = pi / 2
 
-    print([i.real * 180 / pi for i in result_rad])
+    elif result_rad[2] > r_2_gr:
+        r_1_p2 = pi + r_1_p2
 
+    result_rad[1] = r_1_p1 + r_1_p2
     return result_rad
 
 
 def move_leg_xyz(x, y, z):
     inv_k = inverse_kinematics([x, y, z])
+    print(inv_k)
     # temp_out_buffer_ = inv_k[1]
     # temp_out_buffer2_ = rad2qns(temp_out_buffer_)
 
@@ -262,7 +264,7 @@ if __name__ == '__main__':
     #     actually_move_leg(135+a_1_-i, 0, -40)
     #     sleep(1)
     for i in range(3):
-        actually_move_leg(150, 0, -100, i)
+        actually_move_leg(250, 0, -90, i)
 
     leg_pos_ = [pi * 60 / 180, pi, pi * 300 / 180]
     step_len_ = 100
@@ -274,7 +276,7 @@ if __name__ == '__main__':
     actually_move_leg(150, 0, -100)
     sleep(2)
 
-    actually_move_leg(150 + delta_x/2, 0 + delta_y/2, -100 + step_height)
+    actually_move_leg(150 + delta_x / 2, 0 + delta_y / 2, -100 + step_height)
     sleep(2)
     actually_move_leg(150 + delta_x, 0 + delta_y, -100)
     sleep(5)
