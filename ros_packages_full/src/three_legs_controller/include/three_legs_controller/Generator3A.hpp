@@ -5,6 +5,9 @@
 #ifndef THREE_LEGS_CONTROLLER_GENERATOR3A_HPP
 #define THREE_LEGS_CONTROLLER_GENERATOR3A_HPP
 
+#include <array>
+#include <tuple>
+
 
 enum step_stage{
     NA,
@@ -43,20 +46,26 @@ public:
             current_step_stage_ = R_for;
         }else if(current_step_stage_ == R_for){
             current_step_stage_ = L_for;
-            return std::make_tuple(calculate_endpoint_delta(ang, current_right_leg_), current_right_leg_);
+            std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_right_leg_);
+            endpoint[1] = -endpoint[1];
+            return std::make_tuple(endpoint, current_right_leg_);
         } else if(current_step_stage_ == L_for){
             current_step_stage_ = M_for;
             return std::make_tuple(calculate_endpoint_delta(ang, current_left_leg_), current_left_leg_);
         } else if(current_step_stage_ == M_for){
             current_step_stage_ = R_back;
-            return std::make_tuple(calculate_endpoint_delta(ang, current_back_leg_), current_back_leg_);
+            std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_back_leg_);
+            endpoint[1] = endpoint[1] *2/3;
+            return std::make_tuple(, current_back_leg_);
         } else if(current_step_stage_ == R_back){
-            current_step_stage_ = M_back;
-            return std::make_tuple(calculate_endpoint_delta(ang, current_right_leg_, true), current_right_leg_);
-        } else if(current_step_stage_ == M_back){
             current_step_stage_ = L_back;
-            return std::make_tuple(calculate_endpoint_delta(ang, current_left_leg_, true), current_left_leg_);
+            std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_right_leg_);
+            endpoint[1] = -endpoint[1];
+            return std::make_tuple(endpoint, current_right_leg_);
         } else if(current_step_stage_ == L_back){
+            current_step_stage_ = M_back;
+            return std::make_tuple(calculate_endpoint_delta(ang, current_left_leg_, true), current_left_leg_);
+        } else if(current_step_stage_ == M_back){
             current_step_stage_ = Idle;
             return std::make_tuple(calculate_endpoint_delta(ang, current_back_leg_, true), current_back_leg_);
         }
