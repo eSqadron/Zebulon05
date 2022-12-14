@@ -56,7 +56,7 @@ public:
             current_step_stage_ = R_back;
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_back_leg_);
             endpoint[1] = endpoint[1] *2/3;
-            return std::make_tuple(, current_back_leg_);
+            return std::make_tuple(endpoint, current_back_leg_);
         } else if(current_step_stage_ == R_back){
             current_step_stage_ = L_back;
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_right_leg_);
