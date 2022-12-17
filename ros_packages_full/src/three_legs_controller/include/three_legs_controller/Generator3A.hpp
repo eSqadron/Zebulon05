@@ -37,7 +37,7 @@ public:
         restart_generator();
     }
 
-    virtual std::tuple<std::array<float, 2>, unsigned short int> do_step(float ang);
+    virtual step_result do_step(float ang);
 
     void set_leg_default_positions(float pos1, float pos2, float pos3){
         leg_pos_ = {pos1, pos2, pos3};
@@ -80,6 +80,10 @@ protected:
 
     }
 
+    void set_step_height_point(float new_height_point){
+        step_height_point_ = new_height_point;
+    }
+
 
     step_stage current_step_stage_;
     unsigned short int current_right_leg_;
@@ -88,47 +92,64 @@ protected:
 
     std::array<float, 3> leg_pos_;
     int step_len_;
+    float step_height_point_;
 };
 
 
 class Generator3A: public StepGenerator{
 public:
-    std::tuple<std::array<float, 2>, unsigned short int> do_step(float ang) override {
+    step_result do_step(float ang) override {
         calculate_right_leg(ang);
+        step_result res;
+        res.delta_z = 0;
+        res.peak_z_height = step_height_point_;
+
         if(current_step_stage_ ==  Idle) {
+            res.delta_x = 0;
+            res.delta_y = 0;
+            res.leg_making_move = 0;
             current_step_stage_ = R_for;
         }else if(current_step_stage_ == R_for){
+            std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_right_leg_);
+            res.delta_x = endpoint[0];
+            res.delta_y = endpoint[1];
+            res.leg_making_move = current_right_leg_;
             current_step_stage_ = L_for;
-            std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_right_leg_);
-            endpoint[1] = -endpoint[1];
-            return std::make_tuple(endpoint, current_right_leg_);
         } else if(current_step_stage_ == L_for){
+            std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_left_leg_);
+            res.delta_x = endpoint[0];
+            res.delta_y = endpoint[1];
+            res.leg_making_move = current_left_leg_;
             current_step_stage_ = M_for;
-            return std::make_tuple(calculate_endpoint_delta(ang, current_left_leg_), current_left_leg_);
         } else if(current_step_stage_ == M_for){
-            current_step_stage_ = R_back;
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_back_leg_);
-            endpoint[1] = endpoint[1] *2/3;
-            return std::make_tuple(endpoint, current_back_leg_);
+            res.delta_x = 2.0/3.0 * endpoint[0];
+            res.delta_y = 2.0/3.0 * endpoint[1];
+            current_step_stage_ = R_back;
         } else if(current_step_stage_ == R_back){
-            current_step_stage_ = L_back;
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_right_leg_);
-            endpoint[1] = -endpoint[1];
-            return std::make_tuple(endpoint, current_right_leg_);
+            res.delta_x = -endpoint[0];
+            res.delta_y = -endpoint[1];
+            res.peak_z_height = 0;
+            current_step_stage_ = L_back;
         } else if(current_step_stage_ == L_back){
+            std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_left_leg_);
+            res.delta_x = -endpoint[0];
+            res.delta_y = -endpoint[1];
+            res.peak_z_height = 0;
             current_step_stage_ = M_back;
-            return std::make_tuple(calculate_endpoint_delta(ang, current_left_leg_, true), current_left_leg_);
         } else if(current_step_stage_ == M_back){
+            std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_back_leg_);
+            res.delta_x = -2.0/3.0 * endpoint[0];
+            res.delta_y = -2.0/3.0 * endpoint[1];
+            res.peak_z_height = 0;
             current_step_stage_ = Idle;
-            return std::make_tuple(calculate_endpoint_delta(ang, current_back_leg_, true), current_back_leg_);
+        } else{
+            throw std::invalid_argument("unknown stage");
         }
 
-        throw std::invalid_argument("unknown stage");
+        return res;
     }
-
-
-
-
 };
 
 
