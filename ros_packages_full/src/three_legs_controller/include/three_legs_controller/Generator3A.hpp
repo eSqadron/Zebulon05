@@ -22,15 +22,29 @@ enum step_stage{
 };
 
 
-class Generator3A {
+struct step_result{
+    float delta_x;
+    float delta_y;
+    float delta_z = 0;
+    short unsigned int leg_making_move;
+    float peak_z_height;
+};
+
+
+class StepGenerator{
 public:
-    Generator3A(){
+    StepGenerator(){
         restart_generator();
-        step_len_ = 70;
     }
+
+    virtual std::tuple<std::array<float, 2>, unsigned short int> do_step(float ang);
 
     void set_leg_default_positions(float pos1, float pos2, float pos3){
         leg_pos_ = {pos1, pos2, pos3};
+    }
+
+    void set_step_len(int new_len){
+        step_len_ = new_len;
     }
 
     void restart_generator(){
@@ -40,7 +54,46 @@ public:
         current_back_leg_ = 0;
     }
 
-    std::tuple<std::array<float, 2>, unsigned short int> do_step(float ang){
+protected:
+
+    std::array<float, 2> calculate_endpoint_delta(float ang, unsigned short int leg_no, bool inverse = false){
+        float delta_x = step_len_ * cos(ang - leg_pos_[leg_no]);
+        float delta_y = step_len_ * sin(ang - leg_pos_[leg_no]);
+        if(inverse){
+            delta_x = -delta_x;
+            delta_y = -delta_y;
+        }
+        return std::array<float, 2>{delta_x, delta_y};
+    }
+
+    void calculate_right_leg(float ang){
+        unsigned short int leg_no = 0;
+        for (unsigned short int i = 1; i < 3; ++i) {
+            if(leg_pos_[i] - ang < leg_pos_[leg_no] - ang){
+                leg_no = i;
+            }
+        }
+        current_right_leg_ = leg_no;
+        current_back_leg_ = (leg_no+1)%3;
+        current_left_leg_ = (leg_no+2)%3;
+
+
+    }
+
+
+    step_stage current_step_stage_;
+    unsigned short int current_right_leg_;
+    unsigned short int current_left_leg_;
+    unsigned short int current_back_leg_;
+
+    std::array<float, 3> leg_pos_;
+    int step_len_;
+};
+
+
+class Generator3A: public StepGenerator{
+public:
+    std::tuple<std::array<float, 2>, unsigned short int> do_step(float ang) override {
         calculate_right_leg(ang);
         if(current_step_stage_ ==  Idle) {
             current_step_stage_ = R_for;
@@ -73,38 +126,9 @@ public:
         throw std::invalid_argument("unknown stage");
     }
 
-    std::array<float, 2> calculate_endpoint_delta(float ang, unsigned short int leg_no, bool inverse = false){
-        float delta_x = step_len_ * cos(ang - leg_pos_[leg_no]);
-        float delta_y = step_len_ * sin(ang - leg_pos_[leg_no]);
-        if(inverse){
-            delta_x = -delta_x;
-            delta_y = -delta_y;
-        }
-        return std::array<float, 2>{delta_x, delta_y};
-    }
-
-    void calculate_right_leg(float ang){
-        unsigned short int leg_no = 0;
-        for (unsigned short int i = 1; i < 3; ++i) {
-            if(leg_pos_[i] - ang < leg_pos_[leg_no] - ang){
-                leg_no = i;
-            }
-        }
-        current_right_leg_ = leg_no;
-        current_back_leg_ = (leg_no+1)%3;
-        current_left_leg_ = (leg_no+2)%3;
 
 
-    }
 
-private:
-    step_stage current_step_stage_;
-    unsigned short int current_right_leg_;
-    unsigned short int current_left_leg_;
-    unsigned short int current_back_leg_;
-
-    std::array<float, 3> leg_pos_;
-    int step_len_;
 };
 
 

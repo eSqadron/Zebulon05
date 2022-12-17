@@ -185,6 +185,10 @@ def rad2qns1(rad):
 
 def rad2qns2(rad):
     temp = (((rad * 1000) / (pi / 2)) + 1500) * 4
+    if temp > 2496 * 4:
+        temp = 2496 * 4
+    if temp < 496 * 4:
+        temp = 496 * 4
     return temp
 
 
@@ -212,7 +216,7 @@ def inverse_kinematics(xyz_pos):
 
     r_2_gr = acos(-a_2_ / a_3_).real
 
-    print("r_gr:", acos(-a_2_ / a_3_))
+    # print("r_gr:", acos(-a_2_ / a_3_))
 
     if result_rad[2] < r_2_gr:
         pass
@@ -228,14 +232,14 @@ def inverse_kinematics(xyz_pos):
 
 def move_leg_xyz(x, y, z):
     inv_k = inverse_kinematics([x, y, z])
-    print(inv_k)
+    # print(inv_k)
     # temp_out_buffer_ = inv_k[1]
     # temp_out_buffer2_ = rad2qns(temp_out_buffer_)
 
     angs_r = [k.real for k in inv_k]
     alfa = angs_r[1]
     beta = angs_r[2] - angs_r[1]
-    print(x, z)
+    print(x, y, z)
     print(int((cos(alfa) * a_2_ + cos(beta) * a_3_ + a_1_).real),
           -h_1_ + int((sin(alfa) * a_2_ - sin(beta) * a_3_).real))
 
@@ -263,24 +267,30 @@ if __name__ == '__main__':
     # for i in range(50):
     #     actually_move_leg(135+a_1_-i, 0, -40)
     #     sleep(1)
-    for i in range(3):
-        actually_move_leg(250, 0, -90, i)
+
+
+    # for i in range(3):
+    #     actually_move_leg(150, 0, -100, i)
 
     leg_pos_ = [pi * 60 / 180, pi, pi * 300 / 180]
     step_len_ = 100
     step_height = 60
+
+    #for i in range(3):
     leg_no = 0
-    delta_y = (step_len_ * sin(0 - leg_pos_[leg_no])).real
+    delta_y = -(step_len_ * sin(0 - leg_pos_[leg_no])).real
     delta_x = (step_len_ * cos(0 - leg_pos_[leg_no])).real
+    delta_x = 2/3 * delta_x
 
-    actually_move_leg(150, 0, -100)
-    sleep(2)
+    # if(i == 2):
+    #     delta_y = -delta_y
 
-    actually_move_leg(150 + delta_x / 2, 0 + delta_y / 2, -100 + step_height)
+    print(f"step {leg_no}")
+    actually_move_leg(150, 0, -100, leg_no)
     sleep(2)
-    actually_move_leg(150 + delta_x, 0 + delta_y, -100)
-    sleep(5)
-    actually_move_leg(150, 0, -100)
+    actually_move_leg(150 + delta_x / 2, 0 + delta_y / 2, -100 + step_height, leg_no)
+    sleep(2)
+    actually_move_leg(150 + delta_x, 0 + delta_y, -100, leg_no)
 
     # for i in range(3):
     #     actually_move_leg(a_1_+a_2_+a_3_, 0, -50, i)
