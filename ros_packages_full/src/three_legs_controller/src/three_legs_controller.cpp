@@ -40,19 +40,19 @@ ThreeLegsController::ThreeLegsController() : Node("three_legs_controller"){
     gen_.set_step_height_point(50);
 
     auto message = geometry_msgs::msg::Point();
-    message.x = 55 + 125 + 180;
-    message.y = 0;
-    message.z = -40;
+    // message.x = 55 + 125 + 180;
+    // message.y = 0;
+    // message.z = -40;
     rclcpp::sleep_for(std::chrono::seconds(2));
-    step_publishers_[0]->publish(message);
-    RCLCPP_INFO(this->get_logger(), "leg_1_straightened");
-    rclcpp::sleep_for(std::chrono::seconds(2));
-    step_publishers_[1]->publish(message);
-    RCLCPP_INFO(this->get_logger(), "leg_2_straightened");
-    rclcpp::sleep_for(std::chrono::seconds(2));
-    step_publishers_[2]->publish(message);
-    RCLCPP_INFO(this->get_logger(), "leg_3_straightened");
-    rclcpp::sleep_for(std::chrono::seconds(2));
+    // step_publishers_[0]->publish(message);
+    // RCLCPP_INFO(this->get_logger(), "leg_1_straightened");
+    // rclcpp::sleep_for(std::chrono::seconds(2));
+    // step_publishers_[1]->publish(message);
+    // RCLCPP_INFO(this->get_logger(), "leg_2_straightened");
+    // rclcpp::sleep_for(std::chrono::seconds(2));
+    // step_publishers_[2]->publish(message);
+    // RCLCPP_INFO(this->get_logger(), "leg_3_straightened");
+    // rclcpp::sleep_for(std::chrono::seconds(2));
 
     leg_no_step_done_ = std::array<bool, 3>{true, true, true};
 
