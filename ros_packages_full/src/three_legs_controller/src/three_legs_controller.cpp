@@ -14,7 +14,7 @@
 
 
 
-#include "..\include\three_legs_controller\three_legs_controller.hpp"
+#include "../include/three_legs_controller/three_legs_controller.hpp"
 
 
 
@@ -75,17 +75,16 @@ ThreeLegsController::ThreeLegsController() : Node("three_legs_controller"){
 void ThreeLegsController::timer_callback()
 {
     auto message = geometry_msgs::msg::Point();
-    //robo_leg.set_physical_params(40, 55, 125, 180);
-
-    std::tuple<std::array<float, 2>, unsigned short int> do_step_result;
-
 
     if(current_single_step_stage_ == initialise_step) {
         try{
-            do_step_result = gen_.do_step(0);
+            step_result do_step_result = gen_.do_step(0);
             RCLCPP_INFO(this->get_logger(), "init step!");
-            endpoint_shift = std::get<0>(do_step_result);
-            moving_leg = std::get<1>(do_step_result);
+            static endpoint_x_shift = do_step_result.delta_x;
+            static endpoint_y_shift = do_step_result.delta_y;
+            static moving_leg = do_step_result.leg_making_move;
+            static local_step_height = do_step_result.peak_z_height;
+
             current_single_step_stage_ = leg_up;
         } catch(std::invalid_argument e){
             RCLCPP_INFO(this->get_logger(), e.what());
@@ -95,9 +94,9 @@ void ThreeLegsController::timer_callback()
         RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
         if(leg_no_step_done_[moving_leg]) {
             RCLCPP_INFO(this->get_logger(), "step done, moving!");
-            xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
-            xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
-            xy_leg_positions_[moving_leg][2] += step_height_;
+            xy_leg_positions_[moving_leg][0] += endpoint_x_shift / 2;
+            xy_leg_positions_[moving_leg][1] += endpoint_y_shift / 2;
+            xy_leg_positions_[moving_leg][2] += local_step_height;
             message.x = xy_leg_positions_[moving_leg][0];
             message.y = xy_leg_positions_[moving_leg][1];
             message.z = xy_leg_positions_[moving_leg][2];
@@ -110,9 +109,9 @@ void ThreeLegsController::timer_callback()
         RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
         if(leg_no_step_done_[moving_leg]) {
             RCLCPP_INFO(this->get_logger(), "step done, moving!");
-            xy_leg_positions_[moving_leg][0] += endpoint_shift[0] / 2;
-            xy_leg_positions_[moving_leg][1] += endpoint_shift[1] / 2;
-            xy_leg_positions_[moving_leg][2] -= step_height_;
+            xy_leg_positions_[moving_leg][0] += endpoint_x_shift / 2;
+            xy_leg_positions_[moving_leg][1] += endpoint_y_shift / 2;
+            xy_leg_positions_[moving_leg][2] -= local_step_height;
             message.x = xy_leg_positions_[moving_leg][0];
             message.y = xy_leg_positions_[moving_leg][1];
             message.z = xy_leg_positions_[moving_leg][2];
