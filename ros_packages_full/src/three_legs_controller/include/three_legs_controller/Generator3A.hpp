@@ -39,7 +39,7 @@ public:
         restart_generator();
     }
 
-    virtual step_result do_step(float ang);
+    virtual step_result do_step(float ang) {};
 
     void set_leg_default_positions(float pos1, float pos2, float pos3){
         leg_pos_ = {pos1, pos2, pos3};
