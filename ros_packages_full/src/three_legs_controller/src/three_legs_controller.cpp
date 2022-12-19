@@ -76,14 +76,19 @@ void ThreeLegsController::timer_callback()
 {
     auto message = geometry_msgs::msg::Point();
 
+    static float endpoint_x_shift = 0;
+    static float endpoint_y_shift = 0;
+    static short unsigned int moving_leg = 0;
+    static float local_step_height = 0;
+
     if(current_single_step_stage_ == initialise_step) {
         try{
             step_result do_step_result = gen_.do_step(0);
             RCLCPP_INFO(this->get_logger(), "init step!");
-            static float endpoint_x_shift = do_step_result.delta_x;
-            static float endpoint_y_shift = do_step_result.delta_y;
-            static short unsigned int moving_leg = do_step_result.leg_making_move;
-            static float local_step_height = do_step_result.peak_z_height;
+            endpoint_x_shift = do_step_result.delta_x;
+            endpoint_y_shift = do_step_result.delta_y;
+            moving_leg = do_step_result.leg_making_move;
+            local_step_height = do_step_result.peak_z_height;
 
             current_single_step_stage_ = leg_up;
         } catch(std::invalid_argument e){
