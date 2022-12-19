@@ -80,10 +80,10 @@ void ThreeLegsController::timer_callback()
         try{
             step_result do_step_result = gen_.do_step(0);
             RCLCPP_INFO(this->get_logger(), "init step!");
-            static endpoint_x_shift = do_step_result.delta_x;
-            static endpoint_y_shift = do_step_result.delta_y;
-            static moving_leg = do_step_result.leg_making_move;
-            static local_step_height = do_step_result.peak_z_height;
+            static float endpoint_x_shift = do_step_result.delta_x;
+            static float endpoint_y_shift = do_step_result.delta_y;
+            static short unsigned int moving_leg = do_step_result.leg_making_move;
+            static float local_step_height = do_step_result.peak_z_height;
 
             current_single_step_stage_ = leg_up;
         } catch(std::invalid_argument e){
