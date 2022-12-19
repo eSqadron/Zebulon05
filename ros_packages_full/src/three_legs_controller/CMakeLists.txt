@@ -15,7 +15,9 @@ find_package(std_msgs REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 
-add_executable(three_legs_controller src/three_legs_controller.cpp include/three_legs_controller/three_legs_controller.hpp)
+add_executable(three_legs_controller 
+                src/three_legs_controller.cpp include/three_legs_controller/three_legs_controller.hpp
+                src/Generator3A.cpp include/three_legs_controller/Generator3A.hpp)
 ament_target_dependencies(three_legs_controller rclcpp geometry_msgs std_msgs)
 
 install(TARGETS
