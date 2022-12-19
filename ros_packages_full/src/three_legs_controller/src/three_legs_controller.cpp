@@ -80,7 +80,12 @@ void ThreeLegsController::timer_callback()
     static float endpoint_y_shift = 0;
     static short unsigned int moving_leg = 0;
     static float local_step_height = 0;
-    static bool action_condition = false;
+    static bool local_wait_for_all = false;
+
+    bool all_steps_done = (leg_no_step_done_[0] and leg_no_step_done_[1] and leg_no_step_done_[2]);
+    bool this_step_done =  leg_no_step_done_[moving_leg];
+
+    bool action_condition = (local_wait_for_all) ? all_steps_done : this_step_done;
 
     if(current_single_step_stage_ == initialise_step) {
         try{
@@ -90,7 +95,8 @@ void ThreeLegsController::timer_callback()
             endpoint_y_shift = do_step_result.delta_y;
             moving_leg = do_step_result.leg_making_move;
             local_step_height = do_step_result.peak_z_height;
-            action_condition = (do_step_result.wait_for_all) ? (leg_no_step_done_[0] and leg_no_step_done_[1] and leg_no_step_done_[2]) : leg_no_step_done_[moving_leg];
+            local_wait_for_all = do_step_result.wait_for_all
+            action_condition = (local_wait_for_all) ? all_steps_done : this_step_done;
             
 
             current_single_step_stage_ = leg_up;
