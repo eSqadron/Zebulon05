@@ -23,7 +23,7 @@ ThreeLegsController::ThreeLegsController() : Node("three_legs_controller"){
     step_publishers_[1] = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_2", 10);
     step_publishers_[2] = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_3", 10);
 
-    timer_ = this->create_wall_timer(10ms, std::bind(&ThreeLegsController::timer_callback, this));
+    timer_ = this->create_wall_timer(50ms, std::bind(&ThreeLegsController::timer_callback, this));
 
     step1_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::step1_done_callback, this, std::placeholders::_1));
     step2_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_2", 10, std::bind(&ThreeLegsController::step2_done_callback, this, std::placeholders::_1));
@@ -80,6 +80,7 @@ void ThreeLegsController::timer_callback()
     static float endpoint_y_shift = 0;
     static short unsigned int moving_leg = 0;
     static float local_step_height = 0;
+    static bool action_condition = false;
 
     if(current_single_step_stage_ == initialise_step) {
         try{
@@ -89,6 +90,8 @@ void ThreeLegsController::timer_callback()
             endpoint_y_shift = do_step_result.delta_y;
             moving_leg = do_step_result.leg_making_move;
             local_step_height = do_step_result.peak_z_height;
+            action_condition = (do_step_result.wait_for_all) ? (leg_no_step_done_[0] and leg_no_step_done_[1] and leg_no_step_done_[2]) : leg_no_step_done_[moving_leg];
+            
 
             current_single_step_stage_ = leg_up;
         } catch(std::invalid_argument e){
@@ -99,7 +102,7 @@ void ThreeLegsController::timer_callback()
         RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
         RCLCPP_INFO(this->get_logger(), std::to_string(endpoint_x_shift).c_str());
         RCLCPP_INFO(this->get_logger(), std::to_string(endpoint_y_shift).c_str());
-        if(leg_no_step_done_[moving_leg]) {
+        if(action_condition) {
             RCLCPP_INFO(this->get_logger(), "step done, moving!");
             xy_leg_positions_[moving_leg][0] += endpoint_x_shift / 2;
             xy_leg_positions_[moving_leg][1] += endpoint_y_shift / 2;
@@ -114,7 +117,7 @@ void ThreeLegsController::timer_callback()
     } else if(current_single_step_stage_ == leg_down){
         RCLCPP_INFO(this->get_logger(), "leg down");
         RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
-        if(leg_no_step_done_[moving_leg]) {
+        if(action_condition) {
             RCLCPP_INFO(this->get_logger(), "step done, moving!");
             xy_leg_positions_[moving_leg][0] += endpoint_x_shift / 2;
             xy_leg_positions_[moving_leg][1] += endpoint_y_shift / 2;

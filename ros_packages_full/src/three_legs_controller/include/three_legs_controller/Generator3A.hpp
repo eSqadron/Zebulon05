@@ -30,6 +30,7 @@ struct step_result{
     float delta_z = 0;
     short unsigned int leg_making_move;
     float peak_z_height;
+    bool wait_for_all = false;
 };
 
 
@@ -117,18 +118,21 @@ public:
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_right_leg_);
             res.delta_x = endpoint[0];
             res.delta_y = -endpoint[1];
+            res.wait_for_all = true;
             res.leg_making_move = current_right_leg_;
             current_step_stage_ = L_for;
         } else if(current_step_stage_ == L_for){
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_left_leg_);
             res.delta_x = endpoint[0];
             res.delta_y = -endpoint[1];
+            res.wait_for_all = true;
             res.leg_making_move = current_left_leg_;
             current_step_stage_ = M_for;
         } else if(current_step_stage_ == M_for){
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_back_leg_);
             res.delta_x = 2.0/3.0 * endpoint[0];
             res.delta_y = -2.0/3.0 * endpoint[1];
+            res.wait_for_all = true;
             res.leg_making_move = current_back_leg_;
             current_step_stage_ = R_back;
         } else if(current_step_stage_ == R_back){
