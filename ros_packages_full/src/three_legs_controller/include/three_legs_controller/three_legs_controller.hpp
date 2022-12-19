@@ -31,7 +31,7 @@ enum single_step_stages{
 class ThreeLegsController : public rclcpp::Node
 {
 public:
-    ThreeLegsController() : Node("three_legs_controller");
+    ThreeLegsController() : Node("three_legs_controller") {};
 
 private:
     void timer_callback();
@@ -64,10 +64,6 @@ private:
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr step1_done_feedback_sub_;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr step2_done_feedback_sub_;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr step3_done_feedback_sub_;
-
-    float endpoint_x_shift;
-    float endpoint_y_shift;
-    unsigned short int moving_leg;
 };
 
 #endif //THREE_LEGS_CONTROLLER_THREE_LEGS_CONTROLLER_HPP
