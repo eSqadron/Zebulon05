@@ -111,7 +111,9 @@ public:
             res.delta_y = 0;
             res.leg_making_move = 0;
             current_step_stage_ = R_for;
-        }else if(current_step_stage_ == R_for){
+        }
+        
+        if(current_step_stage_ == R_for){
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_right_leg_);
             res.delta_x = endpoint[0];
             res.delta_y = -endpoint[1];
