@@ -31,7 +31,7 @@ enum single_step_stages{
 class ThreeLegsController : public rclcpp::Node
 {
 public:
-    ThreeLegsController() : Node("three_legs_controller") {};
+    ThreeLegsController();
 
 private:
     void timer_callback();
