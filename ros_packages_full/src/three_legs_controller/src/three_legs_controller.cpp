@@ -95,7 +95,7 @@ void ThreeLegsController::timer_callback()
             endpoint_y_shift = do_step_result.delta_y;
             moving_leg = do_step_result.leg_making_move;
             local_step_height = do_step_result.peak_z_height;
-            local_wait_for_all = do_step_result.wait_for_all
+            local_wait_for_all = do_step_result.wait_for_all;
             action_condition = (local_wait_for_all) ? all_steps_done : this_step_done;
             
 
