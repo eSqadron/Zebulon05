@@ -9,6 +9,7 @@
 #include <functional>
 #include <memory>
 #include <string>
+#include <stdexcept>
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/point.hpp"

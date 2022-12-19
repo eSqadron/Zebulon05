@@ -8,6 +8,7 @@
 #include <array>
 #include <tuple>
 #include <cmath>
+#include <stdexcept>
 
 
 enum step_stage{
@@ -146,7 +147,7 @@ public:
             res.peak_z_height = 0;
             current_step_stage_ = Idle;
         } else{
-            throw invalid_argument("unknown stage");
+            throw std::invalid_argument("unknown stage");
         }
 
         return res;
