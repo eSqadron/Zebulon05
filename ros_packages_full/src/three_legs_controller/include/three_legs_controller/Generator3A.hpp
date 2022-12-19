@@ -56,6 +56,10 @@ public:
         current_back_leg_ = 0;
     }
 
+        void set_step_height_point(float new_height_point){
+        step_height_point_ = new_height_point;
+    }
+
 protected:
 
     std::array<float, 2> calculate_endpoint_delta(float ang, unsigned short int leg_no, bool inverse = false){
@@ -80,10 +84,6 @@ protected:
         current_left_leg_ = (leg_no+2)%3;
 
 
-    }
-
-    void set_step_height_point(float new_height_point){
-        step_height_point_ = new_height_point;
     }
 
 
@@ -113,39 +113,39 @@ public:
             current_step_stage_ = R_for;
         }else if(current_step_stage_ == R_for){
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_right_leg_);
-            res.delta_x = -endpoint[0];
+            res.delta_x = endpoint[0];
             res.delta_y = -endpoint[1];
             res.leg_making_move = current_right_leg_;
             current_step_stage_ = L_for;
         } else if(current_step_stage_ == L_for){
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_left_leg_);
-            res.delta_x = -endpoint[0];
+            res.delta_x = endpoint[0];
             res.delta_y = -endpoint[1];
             res.leg_making_move = current_left_leg_;
             current_step_stage_ = M_for;
         } else if(current_step_stage_ == M_for){
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_back_leg_);
-            res.delta_x = -2.0/3.0 * endpoint[0];
+            res.delta_x = 2.0/3.0 * endpoint[0];
             res.delta_y = -2.0/3.0 * endpoint[1];
             res.leg_making_move = current_back_leg_;
             current_step_stage_ = R_back;
         } else if(current_step_stage_ == R_back){
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_right_leg_);
-            res.delta_x = endpoint[0];
+            res.delta_x = -endpoint[0];
             res.delta_y = endpoint[1];
             res.leg_making_move = current_right_leg_;
             res.peak_z_height = 0;
             current_step_stage_ = L_back;
         } else if(current_step_stage_ == L_back){
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_left_leg_);
-            res.delta_x = endpoint[0];
+            res.delta_x = -endpoint[0];
             res.delta_y = endpoint[1];
             res.leg_making_move = current_left_leg_;
             res.peak_z_height = 0;
             current_step_stage_ = M_back;
         } else if(current_step_stage_ == M_back){
             std::array<float, 2> endpoint = calculate_endpoint_delta(ang, current_back_leg_);
-            res.delta_x = 2.0/3.0 * endpoint[0];
+            res.delta_x = -2.0/3.0 * endpoint[0];
             res.delta_y = 2.0/3.0 * endpoint[1];
             res.leg_making_move = current_back_leg_;
             res.peak_z_height = 0;

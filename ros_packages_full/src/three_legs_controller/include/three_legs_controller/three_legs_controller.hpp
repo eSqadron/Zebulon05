@@ -53,7 +53,6 @@ private:
     std::array<bool, 3> leg_no_step_done_;
 
     single_step_stages current_single_step_stage_;
-    float step_height_;
 
     Generator3A gen_;
 
