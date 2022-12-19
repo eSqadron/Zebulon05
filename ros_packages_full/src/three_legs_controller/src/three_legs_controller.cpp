@@ -101,7 +101,7 @@ void ThreeLegsController::timer_callback()
         RCLCPP_INFO(this->get_logger(), "leg up");
         RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
         RCLCPP_INFO(this->get_logger(), std::to_string(action_condition).c_str());
-        RCLCPP_INFO(this->get_logger(), std::to_string(leg_no_step_done_).c_str());
+        RCLCPP_INFO(this->get_logger(), (std::to_string(leg_no_step_done_[0]) + std::to_string(leg_no_step_done_[1]) + std::to_string(leg_no_step_done_[2])).c_str());
         if(action_condition) {
             RCLCPP_INFO(this->get_logger(), "step done, moving!");
             xy_leg_positions_[moving_leg][0] += endpoint_x_shift / 2;
