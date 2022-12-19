@@ -37,6 +37,7 @@ ThreeLegsController::ThreeLegsController() : Node("three_legs_controller"){
 
     gen_.set_leg_default_positions(PI * 60/180, PI, PI * 300/180);
     gen_.set_step_len(70);
+    gen_.set_step_height_point(50);
 
     auto message = geometry_msgs::msg::Point();
     message.x = 55 + 125 + 180;
@@ -57,7 +58,6 @@ ThreeLegsController::ThreeLegsController() : Node("three_legs_controller"){
 
     xy_leg_positions_ = std::array<std::array<float, 3>, 3>{std::array<float, 3>{150, 0, -100}, std::array<float, 3>{150, 0, -100}, std::array<float, 3>{150, 0, -100}};
     current_single_step_stage_ = initialise_step;
-    step_height_ = 50;
 
     for(int i =0; i<3; ++i){
         message.x = xy_leg_positions_[i][0];
