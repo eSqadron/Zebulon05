@@ -90,17 +90,17 @@ void RobotLegRos::publish_servo_position(std::array<short unsigned int, 3> new_s
         message1.channel = servo_ids_[0];
         message1.target_ang = new_servo_pos[0];
         pub_message_ptr_->publish(message1);
-        rclcpp::sleep_for(std::chrono::milliseconds(10));
+        rclcpp::sleep_for(std::chrono::milliseconds(5));
 
         message2.channel = servo_ids_[1];
         message2.target_ang = new_servo_pos[1];
         pub_message_ptr_->publish(message2);
-        rclcpp::sleep_for(std::chrono::milliseconds(10));
+        rclcpp::sleep_for(std::chrono::milliseconds(5));
 
         message3.channel = servo_ids_[2];
         message3.target_ang = new_servo_pos[2];
         pub_message_ptr_->publish(message3);
-        rclcpp::sleep_for(std::chrono::milliseconds(10));
+        rclcpp::sleep_for(std::chrono::milliseconds(5));
 
     }
 }
