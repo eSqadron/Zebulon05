@@ -25,6 +25,8 @@
 
 #include "RobotLegRos.hpp"
 
+#define DEBUG_MODE false
+
 using namespace std::chrono_literals;
 
 class RobotLegRosWrapper : public rclcpp::Node{

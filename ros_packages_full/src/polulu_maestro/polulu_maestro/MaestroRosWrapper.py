@@ -7,6 +7,8 @@ from maestro_interfaces.msg import MaestroTarget, CurrentPositions
 
 from polulu_maestro.MaestroController import Controller
 
+DEBUG_MODE = False
+
 
 class MaestroRosWrapper(Node):
     def __init__(self):
@@ -38,7 +40,9 @@ class MaestroRosWrapper(Node):
         self.current_pos_publisher.publish(msg)
 
     def target_callback(self, msg):
-        self.get_logger().info(f'{msg.channel}: {msg.target_ang}')
+        if DEBUG_MODE:
+            self.get_logger().info(f'{msg.channel}: {msg.target_ang}')
+            
         self.maestro.setTarget(msg.channel, msg.target_ang)
         self.maestro.setSpeed(msg.channel, msg.speed)
         self.maestro.setAccel(msg.channel, msg.acceleration)

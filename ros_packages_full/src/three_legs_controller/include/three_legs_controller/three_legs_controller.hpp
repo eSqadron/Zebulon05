@@ -18,6 +18,8 @@
 
 #define PI 3.14159265359
 
+#define DEBUG_MODE false
+
 using namespace std::chrono_literals;
 
 

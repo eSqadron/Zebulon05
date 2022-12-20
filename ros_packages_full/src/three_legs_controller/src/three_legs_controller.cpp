@@ -90,7 +90,8 @@ void ThreeLegsController::timer_callback()
     if(current_single_step_stage_ == initialise_step) {
         try{
             step_result do_step_result = gen_.do_step(0);
-            RCLCPP_INFO(this->get_logger(), "init step!");
+            if(DEBUG_MODE)
+                RCLCPP_INFO(this->get_logger(), "init step!");
             endpoint_x_shift = do_step_result.delta_x;
             endpoint_y_shift = do_step_result.delta_y;
             moving_leg = do_step_result.leg_making_move;
@@ -104,12 +105,16 @@ void ThreeLegsController::timer_callback()
             RCLCPP_INFO(this->get_logger(), e.what());
         }
     } else if(current_single_step_stage_ == leg_up) {
-        RCLCPP_INFO(this->get_logger(), "leg up");
-        RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
-        RCLCPP_INFO(this->get_logger(), std::to_string(action_condition).c_str());
-        RCLCPP_INFO(this->get_logger(), (std::to_string(leg_no_step_done_[0]) + std::to_string(leg_no_step_done_[1]) + std::to_string(leg_no_step_done_[2])).c_str());
+        if(DEBUG_MODE){
+            RCLCPP_INFO(this->get_logger(), "leg up");
+            RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
+            RCLCPP_INFO(this->get_logger(), std::to_string(action_condition).c_str());
+            RCLCPP_INFO(this->get_logger(), (std::to_string(leg_no_step_done_[0]) + std::to_string(leg_no_step_done_[1]) + std::to_string(leg_no_step_done_[2])).c_str());
+        }
         if(action_condition) {
-            RCLCPP_INFO(this->get_logger(), "step done, moving!");
+            if(DEBUG_MODE){
+                RCLCPP_INFO(this->get_logger(), "step done, moving!");
+            }
             xy_leg_positions_[moving_leg][0] += endpoint_x_shift / 2;
             xy_leg_positions_[moving_leg][1] += endpoint_y_shift / 2;
             xy_leg_positions_[moving_leg][2] += local_step_height;
@@ -121,8 +126,10 @@ void ThreeLegsController::timer_callback()
             current_single_step_stage_ = leg_down;
         }
     } else if(current_single_step_stage_ == leg_down){
-        RCLCPP_INFO(this->get_logger(), "leg down");
-        RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
+        if(DEBUG_MODE){
+            RCLCPP_INFO(this->get_logger(), "leg down");
+            RCLCPP_INFO(this->get_logger(), std::to_string(moving_leg).c_str());
+        }
         if(action_condition) {
             RCLCPP_INFO(this->get_logger(), "step done, moving!");
             xy_leg_positions_[moving_leg][0] += endpoint_x_shift / 2;
