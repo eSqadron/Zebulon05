@@ -23,7 +23,7 @@ ThreeLegsController::ThreeLegsController() : Node("three_legs_controller"){
     step_publishers_[1] = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_2", 10);
     step_publishers_[2] = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_3", 10);
 
-    timer_ = this->create_wall_timer(35ms, std::bind(&ThreeLegsController::timer_callback, this));
+    timer_ = this->create_wall_timer(30ms, std::bind(&ThreeLegsController::timer_callback, this));
 
     step1_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::step1_done_callback, this, std::placeholders::_1));
     step2_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_2", 10, std::bind(&ThreeLegsController::step2_done_callback, this, std::placeholders::_1));
