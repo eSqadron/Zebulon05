@@ -24,7 +24,7 @@ class MaestroRosWrapper(Node):
             'current_positions',
             3)
 
-        timer_period = 0.005  # seconds
+        timer_period = 0.001  # seconds
         self.timer = self.create_timer(
             timer_period,
             self.pos_publisher_timer_callback)
