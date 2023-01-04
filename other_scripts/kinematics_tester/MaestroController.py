@@ -192,16 +192,16 @@ def rad2qns2(rad):
     return temp
 
 
-# def forward_kinematics(const std::array<float, 3> angles_deg){
-#     //std::array<float, 3> angles_deg = {quarter_nano_seconds_to_rad(angles[0]), quarter_nano_seconds_to_rad(angles[1]), quarter_nano_seconds_to_rad(angles[2])};
-#     std::array<float, 3> result;
-#     float a_temp = a_2_ * cos(angles_deg[1]) + a_3_ * cos(angles_deg[2] - angles_deg[1]) + a_1_;
-#     result[0] = a_temp * cos(angles_deg[0]);
-#     result[1] = a_temp * sin(angles_deg[0]);
-#     result[2] = a_2_ * sin(angles_deg[1]) - a_3_ * sin(angles_deg[2] - angles_deg[1]);
-#
-#     return result;
-# }
+def forward_kinematics(angles_rad):
+    # std::array<float, 3> angles_deg = {quarter_nano_seconds_to_rad(angles[0]), quarter_nano_seconds_to_rad(angles[1]), quarter_nano_seconds_to_rad(angles[2])};
+    result = [0, 0, 0]
+    a_temp = a_2_ * cos(angles_rad[1]) + a_3_ * cos(angles_rad[2] - angles_rad[1]) + a_1_
+    result[0] = a_temp * cos(angles_rad[0])
+    result[1] = a_temp * sin(angles_rad[0])
+    result[2] = a_2_ * sin(angles_rad[1]) - a_3_ * sin(angles_rad[2] - angles_rad[1]) - h_1_
+
+    return result
+
 
 def inverse_kinematics(xyz_pos):
     x = xyz_pos[0]
@@ -236,12 +236,14 @@ def move_leg_xyz(x, y, z):
     # temp_out_buffer_ = inv_k[1]
     # temp_out_buffer2_ = rad2qns(temp_out_buffer_)
 
+    [x_r, y_r, z_r] = [i.real for i in forward_kinematics(inv_k)]
+    print("real positions", x_r, y_r, z_r)
+
     angs_r = [k.real for k in inv_k]
     alfa = angs_r[1]
     beta = angs_r[2] - angs_r[1]
-    print(x, y, z)
-    print(int((cos(alfa) * a_2_ + cos(beta) * a_3_ + a_1_).real),
-          -h_1_ + int((sin(alfa) * a_2_ - sin(beta) * a_3_).real))
+    print("theoretical positions", x, y, z)
+    print(sqrt(pow(abs(x - x_r), 2) + pow(abs(y - y_r), 2) + pow(abs(z - z_r), 2)).real)
 
     inv_k[1] = inv_k[1] - (35 * pi / 180)
     inv_k[2] = inv_k[2] - (70 * pi / 180)
@@ -268,7 +270,6 @@ if __name__ == '__main__':
     #     actually_move_leg(135+a_1_-i, 0, -40)
     #     sleep(1)
 
-
     # for i in range(3):
     #     actually_move_leg(150, 0, -100, i)
 
@@ -276,11 +277,11 @@ if __name__ == '__main__':
     step_len_ = 100
     step_height = 60
 
-    #for i in range(3):
+    # for i in range(3):
     leg_no = 0
     delta_y = -(step_len_ * sin(0 - leg_pos_[leg_no])).real
     delta_x = (step_len_ * cos(0 - leg_pos_[leg_no])).real
-    delta_x = 2/3 * delta_x
+    delta_x = 2 / 3 * delta_x
 
     # if(i == 2):
     #     delta_y = -delta_y
