@@ -28,7 +28,7 @@ Z &= a_2 \sin{\theta_1} - a_3 \sin{\left(\theta_2 - \theta_1\right)}
 \end{equation}
 
 \subsection{Kinematyka prosta - metoda Denavita Hartenberga \cite{DH_AA_article}}
-Alternatywą dla zwykłych obliczeń geometrycznych jest metoda Denvaita Hartenberga. Polega ona na przedstawieniu całkowitego przekształcenia jako iloczynu przekształceń jednorodnych kolejnych członów. Pojedyncze przekształcenie jednorodne składa się natomiast z 6 przekształceń prostych (3 dla rotacji i 3 dla przesunięć). Wymnożenie tych przekształceń prostych da przekształcenie jednorodne. \cite{DH_wpaszke_wyklad}\\
+Alternatywą dla zwykłych obliczeń geometrycznych jest metoda Denvaita Hartenberga. Polega ona na przedstawieniu całkowitego przekształcenia jako iloczynu przekształceń jednorodnych kolejnych członów. Pojedyncze przekształcenie jednorodne składa się natomiast z sześciu przekształceń prostych (3 dla rotacji i 3 dla przesunięć). Wymnożenie tych przekształceń prostych da przekształcenie jednorodne. \cite{DH_wpaszke_wyklad}\\
 
 Metoda ta jest w szczególności użyteczna dla bardzo skomplikowanych manipulatorów, gdzie stopni swobody jest znacznie więcej niż ilość współrzędnych kartezjańskich.\\
 
@@ -53,13 +53,13 @@ Z praktycznynego punktu widzenia obliczenia należy zacząć od stworzenia specj
 \label{table:DH_table}
 \end{table}
 
-Gdzie: \\
+Legenda tabelki \ref{table:DH_table}: \\
 $\theta_i$ - kąt pomiędzy $x_{n-1}$ i $x_n$, mierzony dookoła $z_{n-1}$\\
 $\alpha_i$ - kąt pomiędzy $z_{n-1}$ to $z_n$, mierzony dookoła $x_n$\\
-$r_i$ - odległość od początku ramki $n-1$ a początkiem ramki $n$ wzdłuż kierunku $x_n$.\\ 
+$r_i$ - odległość od początku ramki $n-1$ a początkiem ramki $n$ wzdłuż kierunku $x_n$\\ 
 $d_i$ - odległość od $x_{n-1}$ do $x_n$ wzdłuż kierunku $z_{n-1}$\\
 
-Następnie macierze transformacji jednorodnej (pomiędzy ramkami $n-1$ i $n$) oblicza się zgodnie ze wzorem \ref{DH_homogenous}. Wzór ten jest właśnie obliczony poprzez wymnożenie wzorów na wyżej wspomniane 6 przekształceń prostych. Ale w zasadzie wzór ten sprowadza się do 2 zasadniczych elementów. $R$ jest macierzą Rotacji o rozmiarze $3x3$ a $T$ to macierz Transformacji $1x3$. \cite{DH_matrix_AA_article}\\
+Następnie macierze transformacji jednorodnej (pomiędzy ramkami $n-1$ i $n$) oblicza się zgodnie ze wzorem \ref{DH_homogenous}. Wzór ten jest właśnie obliczony poprzez wymnożenie wzorów na wyżej wspomniane sześć przekształceń prostych. Ale w zasadzie wzór ten sprowadza się do dwóch zasadniczych elementów. $R$ jest macierzą Rotacji o rozmiarze $3x3$ a $T$ to macierz Transformacji $1x3$. \cite{DH_matrix_AA_article}\\
 
 \begin{equation} \label{DH_homogenous}
 H^{n-1}_n = 
@@ -79,7 +79,7 @@ H^{n-1}_n =
 \end{equation}
 
 
-Następnie należy podstawić wartości dla każdego z 3 punktów i otrzymane macierze wymnożyć zgodnie ze wzorem \ref{DH_final_equation}. Mnożenie to zostało wykonane przy pomocy skryptu napisanego w programie Matlab. %TODO - podlinkować skrypt
+Następnie należy podstawić wartości dla każdego z trzech punktów i otrzymane macierze wymnożyć zgodnie ze wzorem \ref{DH_final_equation}. Mnożenie to zostało wykonane przy pomocy skryptu napisanego w programie Matlab. %TODO - podlinkować skrypt
 
 \begin{multline} \label{DH_final_equation}
 H^{n-1}_n = H^0_1 \cdot H^1_2 \cdot H^2_3 =\\
@@ -222,24 +222,66 @@ Obliczenia dla $\theta_1$ są natomaist trochę bardziej skomplikowane. Aby dał
 
 \begin{equation}\label{theta_1_eq_1}
 \begin{split}
-\beta &= \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\theta_2}}}\\
+\beta &= \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\cos{\theta_2}}}}\\
 \gamma &= \arctan{\frac{-\Delta z}{\Delta x}} = - \arctan{\frac{\Delta z}{\Delta x}}\\
-\theta_1 &= \gamma - \beta\\
+\theta_1 &= \beta - \gamma\\
 \end{split}
 \end{equation}
 
-Do rozwiązania układu \ref{theta_1_eq_1} potrzebne są jeszcze $\Delta z$ i $\Delta x$. Na podstawie rysunku \ref{math_model} można stwierdzić że $\Delta z = Z + h_1$ a $\Delta x = X - a_1$. Podstawiając te dane pod równanie równanie 2 układu \ref{theta_1_eq_1} i podstawiając równanie 1 i 2 pod odpowiednie kąty z równania 3 wspomnianego układu otrzymujemy ostateczne rozwiązanie na $\theta_1$ - równanie \ref{theta_1_eq_final}.
+Do rozwiązania układu \ref{theta_1_eq_1} potrzebne są jeszcze $\Delta z$ i $\Delta x$. Na podstawie rysunku \ref{math_model} można stwierdzić że $\Delta z = Z + h_1$ a $\Delta x = X - a_1$. Podstawiając te dane pod równanie drugie układu \ref{theta_1_eq_1} i podstawiając równania pierwsze i drugie pod odpowiednie kąty z równania trzeciego wspomnianego układu otrzymujemy ostateczne rozwiązanie na $\theta_1$ - równanie \ref{theta_1_eq_partially_final}.
 
-\begin{equation}\label{theta_1_eq_final}
-\theta_1 = \arctan{\frac{Z + h_1}{X - a_1}} + \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\theta_2}}}\\ 
+\begin{equation}\label{theta_1_eq_partially_final}
+\theta_1 = \arctan{\frac{z + h_1}{x - a_1}} + \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\cos{\theta_2}}}}\\ 
 \end{equation}
+
+Jednakże należy zaadresować także pewien problem który pojawia się w równaniu \ref{theta_1_eq_partially_final}. Należy zauważyć że dla $\theta_2 > 90^O$ człon $a_3 \cdot{\cos{\theta_2}}$ zacznie przyjmować wartości ujemne. Dalej zwiększając ten kąt, możemy osiągnąć sytuację, gdzie $- a_3 \cdot{\cos{\theta_2}} > a_2$. Wtedy cały mianownik równania $\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\cos{\theta_2}}}$ zmieni znak z dodatniego na ujemny. Pewien kąt graniczny, dla którego ta zmiana znaku nastąpi, można policzyć bardzo prosto - należy przyrównać mianownik do $0$. Otrzymamy wtedy równanie \ref{theta_1_g}.\\
+
+\begin{equation} \label{theta_1_g}
+\theta_{2g} = \arccos{\left(-\frac{a_2}{a_3}\right)}\\
+\end{equation}
+
+Aby obliczany kąt $\theta_1$ pomimo "przekręcenia" się znaku dalej poprawnie zwiększał się, należy zastosować pewnego rodzaju oszustwo. dla wartości kąta $\theta_2 > \theta_{2g}$, równanie $theta_1 = \beta - \gamma$ przyjmie postać \ref{theta_1_modified}.\\
+
+\begin{equation} \label{theta_1_modified}
+\theta_1 = - \gamma +  2 \cdot \beta_{\theta_2 -> \theta_{2g}} + \beta \\
+\end{equation}
+
+Przy czym zachodzi także równanie \ref{theta_1_modified2}.
+
+\begin{equation} \label{theta_1_modified2}
+\begin{split}
+\beta_{\theta_2 -> \theta_{2g}} &=\\
+\lim_{\theta_2 \to \theta_{2g}} \left( \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\cos{\theta_2}}}} \right) &=\\
+\arctan{\frac{a_3 \cdot \sin{\theta_2}}{0}} &=\\
+\arctan{\infty} &= \frac{\pi}{2}\\
+\end{split}
+\end{equation}
+
+
+Zbierając wszystkie możliwe przypadki i wykonując odpowiednie podstawienia, otrzymamy ostateczne równanie na $\theta_1$ - równanie \ref{theta_1_eq_final}.
+
+\begin{equation} \label{theta_1_eq_final}
+\theta_1 = \begin{cases}
+    \arctan{\frac{z + h_1}{x - a_1}} + \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\cos{\theta_2}}}},& \text{jeżeli } \theta_2 < \theta_{2g}\\
+    \arctan{\frac{z + h_1}{x - a_1}} + \frac{\pi}{2}  ,& \text{jeżeli } \theta_2 = \theta_{2g}\\
+    \arctan{\frac{z + h_1}{x - a_1}} + \pi + 
+    \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\cos{\theta_2}}}}  ,& \text{jeżeli } \theta_2 > \theta_{2g}\\
+\end{cases}
+\end{equation}
+
+\subsubsection{Gotowy układ równań}
 
 Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final}, \ref{theta_2_eq_final} otrzymujemy układ równań \ref{inverse_eq_final} który stanowi uproszczoną kinematykę odwrotną opisywanej nogi robotycznej.
 
 \begin{equation}\label{inverse_eq_final}
 \begin{split}
 \theta_0 &= \arctan{\frac{Y}{X}}\\
-\theta_1 &= \arctan{\frac{Z + h_1}{X - a_1}} + \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\theta_2}}}\\ 
+\theta_1 &= \begin{cases}
+    \arctan{\frac{z + h_1}{x - a_1}} + \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\cos{\theta_2}}}},& \text{jeżeli } \theta_2 < \theta_{2g}\\
+    \arctan{\frac{z + h_1}{x - a_1}} + \frac{\pi}{2}  ,& \text{jeżeli } \theta_2 = \theta_{2g}\\
+    \arctan{\frac{z + h_1}{x - a_1}} + \pi + 
+    \arctan{\frac{a_3 \cdot \sin{\theta_2}}{a_2 + a_3 \cdot{\cos{\theta_2}}}}  ,& \text{jeżeli } \theta_2 > \theta_{2g}\\
+\end{cases}\\
 \theta_2 &= \arccos{\left( \frac{(x - a_1)^2 + (z + h_1)^2 - a_2^2 - a_3^2}{2 a_2 a_3} \right)}\\
 \end{split}
 \end{equation}
@@ -248,7 +290,7 @@ Ostatecznie zbierając równania \ref{theta_0_eq_final}, \ref{theta_1_eq_final},
 Z punktu widzenia czysto matematycznego ruch będzie ograniczony przez torus. Równanie \ref{eq:torus} opisuje tą figurę - $R$ oznacza promień okręgu dookoła osi $z$, a $\sqrt{r}$ oznacza promień "wałka".\\
 
 \begin{equation} \label{eq:torus}
-z = \sqrt{r -(R-\sqrt{x^(2)+y^(2)})^(2)}
+z = \sqrt{r -(R-\sqrt{x^2+y^2})^2}
 \end{equation}
 
 Aby otrzymać właściwe równanie specyficzne dla tego projektu, należy zastosować podstawienia przedstawione na równaniu \ref{eq:torus_subs}. 
@@ -268,28 +310,29 @@ z = \sqrt{a_1-(\sqrt{a_2 + a_3}-\sqrt{x^2+y^2})^2}
 
 
 \subsubsection{Przybliżenia}
-Natomiast trzeba cały czas pamiętać że jest to tylko uproszczenie, które będzie owocować pewnymi drobnymi błędami. Trzeba zauważyć, że zmiana współrzędnej $Y$ nie wpływa na wartości kątów $\theta_1$ i $\theta_2$, tylko na $\theta_0$. Oznacza to, że wraz ze zmianą kąta $\theta_0$, na potrzeby uproszczenia obliczeń, obraca się także o ten kąt oś $X$ układu współrzędnych. W praktyce oznacza to, że odsunięcie nogi od punktu $(0, 0, 0)$ zawsze będzie rzutowane na cylinder o promieniu równym odsunięciu o takim samym $X$ i $Z$, ale $Y = 0$. Problem jest zaprezentowany na rysunku \ref{SCARA_error}. Na obrazku tym widać pozycję początkową robota oznaczoną jako "0". Następnie jeśli robot wykona krok, to stosując ten algorytm, znajdzie się w pozycji "1p", a w idealnym przypadku powinien znaleźć się w "1i". Jednakże błąd powinien być pomijalnie mały a równania powinny umożliwić skuteczną implementację algorytmu chodu.
-
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{img/SCARA_error.jpg}
 \caption{Przedstawienie błędu spowodowanego zastosowaniem modelu robota SCARA przy kinematyce odwrotnej}
 \label{SCARA_error}
 \end{figure}
+Natomiast trzeba cały czas pamiętać, że całe obliczenia kinematyki odwrotnej są tylko uproszczeniem, które będzie owocować pewnymi drobnymi błędami. Należy zauważyć, że zmiana współrzędnej $Y$ nie wpływa na wartości kątów $\theta_1$ i $\theta_2$, tylko na $\theta_0$. Oznacza to, że wraz ze zmianą kąta $\theta_0$, na potrzeby uproszczenia obliczeń, obraca się także o ten kąt oś $X$ układu współrzędnych. W praktyce oznacza to, że odsunięcie nogi od punktu $(0, 0, 0)$ zawsze będzie rzutowane na cylinder o promieniu równym odsunięciu o takim samym $X$ i $Z$, ale $Y = 0$. Problem jest zaprezentowany na rysunku \ref{SCARA_error}. Widać tam pozycję początkową robota oznaczoną jako "0". Następnie jeśli robot wykona krok, to stosując ten algorytm, znajdzie się w pozycji "1p", a w idealnym przypadku powinien znaleźć się w "1i". Jednakże błąd powinien być pomijalnie mały a równania powinny umożliwić skuteczną implementację algorytmu chodu.
+
+
 
 
 \section{Cały Robot}
 Zwykle konstruując roboty wzorujemy się na zwierzętach występujących w naturze. W tym przypadku nie mamy jednak tego luksusu, dlatego na początek należy przyjąć jakieś najbardziej intuicyjne założenie. Dlatego też uznałem że najlepszym rozwiązaniem będzie rozmieścić nogi na jednej płaszczyźnie w równych odstępach - co $120\deg$.
 
-W poprzednim podrozdziale przyjąłem osie układu relatywne do ułożenia początkowego nogi robota. Oznacza to że robot trójnożny będzie miał 3 niezależne osie $x$ i 3 niezależne osie $y$, tylko oś $z$ zgadza się między kolejnymi nogami. Idzie za tym konieczność stworzenia pewnej metody "obracania" wszystkich tych osi $x$ i $y$ do jednego zunifikowanego układu współrzędnych. Pozwoli to obliczyć kinematykę całego robota.
+W poprzednim podrozdziale przyjąłem osie układu relatywne do ułożenia początkowego nogi robota. Oznacza to że robot trójnożny będzie miał trzy niezależne osie $x$ i trzy niezależne osie $y$, tylko oś $z$ zgadza się między kolejnymi nogami. Idzie za tym konieczność stworzenia pewnej metody "obracania" wszystkich tych osi $x$ i $y$ do jednego zunifikowanego układu współrzędnych. Pozwoli to obliczyć kinematykę całego robota.
 
 \subsection{Matematyka kroku}
 W celu uproszczenia zarówno obliczeń jak i późniejszej generacji kolejnych kroków algorytmu chodu, można pominąć liczenie całej kinematyki prostej i odwrotnej całego robota. Zamiast tego wystarczy pojedynczy krok odpowiednio sparametryzować. Jeżeli dla każdego kroku pojedynczej nogi przyjmiemy:
 \begin{itemize}[noitemsep]
-\item kąta $\alpha$ na "tarczy" robota, na którym ustawiona jest noga
-\item kąta $\beta$ względem "przodu" robota, w którą ma zostać wykonany krok
-\item długość kroku $l$, równolegle do osi kroku robota
+\item kąt $\alpha$ na "tarczy" robota, na którym ustawiona jest noga,
+\item kąt $\beta$ względem "przodu" robota, w którą ma zostać wykonany krok,
+\item długość kroku $l$, równolegle do osi kroku robota,
 \end{itemize}
-To możemy łatwo otrzymać algorytm który z tych dwóch zmiennych i jednej stałej da pozycję zmianę pozycji końcówki robota ($\Delta x, \Delta y$) we współrzędnych kartezjańskich względem nogi robota.
+to możemy łatwo otrzymać algorytm który z tych dwóch zmiennych i jednej stałej da zmianę pozycji końcówki robota ($\Delta x, \Delta y$) we współrzędnych kartezjańskich względem układu zmiennych nogi robota.
 
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{img/step_math.jpg}
@@ -297,7 +340,7 @@ To możemy łatwo otrzymać algorytm który z tych dwóch zmiennych i jednej sta
 \label{step_math}
 \end{figure}
 
-Zostało to przedstawione na rysunku \ref{step_math} na przykładzie nogi na pozycji $\alpha = 60^o$. Na wspomnianym rysunku widać przód robota oznaczony jako $0^o$, kierunek kroku odsunięty o kąt $\beta$ od osi "przodu" robota i wynikające z tego kroku przestawienie nogi. Przestawienie to składa się z długości korku $l$ i dwóch pozycji nogi - przed krokiem i po kroku. Wynikające z tego zależności geometryczne zostały wyizolowane na rysunku \ref{step_math_isolated}. Na podstawie tych zależności można napisać równanie \ref{step_math_eq}
+Zostało to przedstawione na rysunku \ref{step_math} na przykładzie nogi na pozycji $\alpha = 60^o$. Na wspomnianym rysunku widać przód robota oznaczony jako $0^o$, kierunek kroku odsunięty o kąt $\beta$ od osi "przodu" robota i wynikające z tego kroku przestawienie nogi. Przestawienie to składa się z długości kroku $l$ i dwóch pozycji nogi - przed krokiem i po kroku. Wynikające z tego zależności geometryczne zostały wyizolowane na rysunku \ref{step_math_isolated}. Na podstawie tych zależności można napisać równanie \ref{step_math_eq}
 
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{img/step_math_isolated.jpg}
@@ -309,8 +352,8 @@ Zostało to przedstawione na rysunku \ref{step_math} na przykładzie nogi na poz
 
 \begin{equation} \label{step_math_eq}
 \begin{split}
-\Delta x = l \cdot \sin(\beta - \alpha)\\
-\Delta y = l \cdot \cos(\beta - \alpha)\\
+\Delta x = l \cdot \cos(\beta - \alpha)\\
+\Delta y = l \cdot \sin(\beta - \alpha)\\
 \end{split}
 \end{equation}
 

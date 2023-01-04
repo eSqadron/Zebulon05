@@ -1,4 +1,4 @@
-\chapter{Wprowadzenie}
+\chapter{Wstęp}
 \label{cha:wprowadzenie}
 \section{Historia robotów kroczących}
 Pierwsza idea robota kroczącego pojawiła się już pod koniec XV wieku, a narodziła się w głowie nikogo innego jak Leonarda Da Vinci. Od tamtej pory wielu naukowców próbowało tworzyć konstrukcje, które używały nóg zamiast kół. Jednakże, pierwsze faktycznie udane roboty tego typu datuje się dopiero na początek lat 60 ubiegłego wieku. Pojawiły sie wtedy pierwsze działające konstrukcje, na przykład robot czteronożny zbudowany przez Josepha Shingleya oraz roboty sześcio i ośmonożne zbudowane przez "Space General Corporation". \cite{history}\\
@@ -22,19 +22,34 @@ Co natomiast z konstrucjami robotów trójnożnych? Można się zastanowić czy 
 \section{Istniejące konstrukcje trójnożne}
 Konstrukcje trójnożne pojawiały się w dziełach science fiction już od dawna, od "The War of the Worlds" z 1898 aż po "Mroczne Widmo" z 2001 i regularnie pojawiają się naukowcy, którzy próbują udowodnić że nie trzeba ogarniczać tego typu robotów do dzieł z obszaru science fiction.\\
 \subsection{STriDER}
+\label{cha:strider}
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.5\textwidth]{img/strider_photo.png}
 \caption{Schemat kinematyczny robota Strider źródło: \cite{strider}}
-\label{martian_photo}
+\label{img:strider_photo}
 \end{figure}
-Został zbudowany w 2007 na Uniwersytecie Stanowym w Virginii. Jego celem były eksperymenty z algorytmami chodu i doclewo, prowadzenie obserwacji. Miały to umożliwić długie nogi, które znacznie podwyższały konstrukcję i sprawiały że górna platforma była idealna do instalowania wszelakiego rodzaju urządzęń typu kamery. Kinematykę robota można określić jako $3-SRRR$, a kinematykę jednej nogi jako $RRR$. Przy czym "pierwsze" $R$ oznacza obrót dookoła osi $x$ a dwa kolejne $R$ oznaczają obrót wokół osi $y$ (zgodnie z oznaczeniami na rysunku \ref{strider_math})  \cite{strider}\\
+Robot STriDER (Rys. \ref{img:strider_photo}) został zbudowany w 2007 na Uniwersytecie Stanowym w Virginii. Jego celem były eksperymenty z algorytmami chodu i doclewo, prowadzenie obserwacji. Miały to umożliwić długie nogi, które znacznie podwyższały konstrukcję i sprawiały że górna platforma była idealna do instalowania wszelakiego rodzaju urządzęń typu kamery.\\
+
+Konstrukcja sama w sobie posiada cztery przeguby obrotowe, jednakże na potrzeby pierwszego prototypu wykorzystano jedynie trzy z nich. Pominięty został obrót nogi dookoła osi $z$ na "biodrze" robota. Jako że, autorzy robota dodatkowo określają styczność nogi z podłożem jako sferyczny stopień swobody, kinematykę robota można określić jako $3-SRRR$, a kinematykę jednej nogi jako $RRR$. Przy czym "pierwsze" $R$ oznacza obrót dookoła osi $x$ a dwa kolejne $R$ oznaczają obrót wokół osi $y$. \cite{strider}\\
+
+%(zgodnie z oznaczeniami na rysunku \ref{strider_math})  \cite{strider}\\
+
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=0.5\textwidth]{img/strider_math.png}
+% \caption{Uproszczony model matematyczny nogi robota STriDER}
+% \label{strider_math}
+% \end{figure}
+
+Ciekawym elementem tego robota jest sposób przemieszczania się. Robot pochyla się w kierunku, w którym ma być zrobiony krok. Po pochyleniu się, noga znajdująca się najbadziej "z tyłu" podnosi się, robot zaczyna wywracać się w stronę kroku. Następnie robot podniesioną nogę przekłada pod sobą, aby odłożyć ją z przodu. Algorytm ten został przedstawiony na rysunku \ref{img:strider_walk}.  \cite{strider}\\
+
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{img/strider_math.png}
-\caption{Uproszczony model matematyczny nogi robota STriDER}
-\label{strider_math}
+\includegraphics[width=0.5\textwidth]{img/strider_walking_algorithm.png}
+\caption{Algorytm chodu robota STriDER \cite{strider}}
+\label{img:strider_walk}
 \end{figure}
 
 \subsection{Triped Martian}
@@ -61,3 +76,6 @@ W internecie można także znaleźć kilka różnych, niezbyt dobrze udokumentow
 \end{itemize}
 
 Niestety konstrukcje te nie posiadają żadnej dokumentacji technicznej i nie da się dokładnie określić zasady ich działania. Nie można nawet mieć pewności że konstrukcje te faktycznie istnieją a nie są oszustwem lub inną formą naginania rzeczywistości, na co mogłaby wskazywać jakość filmików i uboga ilość materiałów.\\
+
+\section{Cel Pracy}
+Celem pracy było zaprojektowanie konstrukcji robota o trzech nogach i opracowanie algorytmu pozwalającego na jego poruszanie się. Konstrukcja była częściowo wzorowana na robocie typu Hexapod "Zebulon", który od lat jest rozwijany pod kołem naukowym "Integra". Projekt ten, podobnie jak oryginalny "Zebulon" zakłada centralną platformę i równoodległe nogi o konstrukcji $RRR$. \cite{zebulon_par} Podstawową rónicą, poza ilością nóg, miała być modularność. Robot powstały w ramach tej pracy został wykonany w technice druku 3D, aby w ramach eksperymentów z różnymi algorytmami chodu można było łatwo modyfikować i przedrukowywać kolejne człony nóg. Wspominana modularność rozciąga się także na oprogramowanie - które to zostało napisane w środowisku \texttt{ROS 2}. Na potrzeby implementacji policzona także została kinematyka prosta i odwrotna nogi robotycznej, jak i został zamodelowany matematycznie krok robota. Dodatkowo w ramach tej pracy opracowany został uproszczony algorytm chodu.

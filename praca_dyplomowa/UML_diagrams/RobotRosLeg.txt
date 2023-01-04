@@ -32,7 +32,13 @@ class RobotLegRos{
   +std::array<short unsigned int, 3> get_servo_movement_target()
   +std::array<short unsigned int, 24> get_last_known_servo_pos()
   -Publisher<>::SharedPtr pub_message_ptr_
-  
+  -std::array<short unsigned int, 24> last_known_pos
+  -std::array<short unsigned int, 3> target_pos_
+  -std::array<short unsigned int, 3> servo_ids_
+  -int h_1_
+  -int a_1_
+  -int a_2_
+  -int a_3_
 }
 
 
