@@ -23,7 +23,7 @@ ThreeLegsController::ThreeLegsController() : Node("three_legs_controller"){
     step_publishers_[1] = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_2", 10);
     step_publishers_[2] = this->create_publisher<geometry_msgs::msg::Point>("xyz_endpoint_3", 10);
 
-    timer_ = this->create_wall_timer(30ms, std::bind(&ThreeLegsController::timer_callback, this));
+    timer_ = this->create_wall_timer(33ms, std::bind(&ThreeLegsController::timer_callback, this));
 
     step1_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_1", 10, std::bind(&ThreeLegsController::step1_done_callback, this, std::placeholders::_1));
     step2_done_feedback_sub_ = this->create_subscription<std_msgs::msg::Bool>("step_done_2", 10, std::bind(&ThreeLegsController::step2_done_callback, this, std::placeholders::_1));
@@ -43,7 +43,7 @@ ThreeLegsController::ThreeLegsController() : Node("three_legs_controller"){
     // message.x = 55 + 125 + 180;
     // message.y = 0;
     // message.z = -40;
-    rclcpp::sleep_for(std::chrono::seconds(2));
+    rclcpp::sleep_for(std::chrono::seconds(1));
     // step_publishers_[0]->publish(message);
     // RCLCPP_INFO(this->get_logger(), "leg_1_straightened");
     // rclcpp::sleep_for(std::chrono::seconds(2));
@@ -64,10 +64,10 @@ ThreeLegsController::ThreeLegsController() : Node("three_legs_controller"){
         message.y = xy_leg_positions_[i][1];
         message.z = xy_leg_positions_[i][2];
         step_publishers_[i]->publish(message);
-        rclcpp::sleep_for(std::chrono::seconds(2));
+        rclcpp::sleep_for(std::chrono::seconds(1));
         RCLCPP_INFO(this->get_logger(), "standing");
     }
-    rclcpp::sleep_for(std::chrono::seconds(2));
+    rclcpp::sleep_for(std::chrono::seconds(1));
 
 }
 

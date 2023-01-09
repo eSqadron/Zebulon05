@@ -31,7 +31,7 @@ using namespace std::chrono_literals;
 
 class RobotLegRosWrapper : public rclcpp::Node{
 public:
-    RobotLegRosWrapper() : Node("robot_leg_ros_wrapper"), count_(0){
+    RobotLegRosWrapper() : Node("robot_leg_ros_wrapper"){
         publisher_ = this->create_publisher<maestro_interfaces::msg::MaestroTarget>("maestro_target", 10);
 
         this->declare_parameter("leg_no", 1);

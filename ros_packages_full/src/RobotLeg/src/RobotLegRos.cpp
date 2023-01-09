@@ -87,7 +87,7 @@ void RobotLegRos::publish_servo_position(std::array<short unsigned int, 3> new_s
         message3.speed = max_spd;
         message3.acceleration = 0;
 
-        const unsigned int delay = 100;
+        const unsigned int delay = 120;
 
         message1.channel = servo_ids_[0];
         message1.target_ang = new_servo_pos[0];
