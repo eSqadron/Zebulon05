@@ -203,6 +203,16 @@ def forward_kinematics(angles_rad):
     return result
 
 
+def forward_kinematics_DH(angles_rad):
+    result = [0, 0, 0]
+    a_temp = a_2_ * cos(angles_rad[1]) + a_3_ * cos(angles_rad[2] + angles_rad[1]) + a_1_
+    result[0] = a_temp * cos(angles_rad[0])
+    result[1] = a_temp * sin(angles_rad[0])
+    result[2] = a_2_ * sin(angles_rad[1]) + a_3_ * sin(angles_rad[2] + angles_rad[1]) - h_1_
+
+    return result
+
+
 def inverse_kinematics(xyz_pos):
     x = xyz_pos[0]
     y = xyz_pos[1]
@@ -238,12 +248,14 @@ def move_leg_xyz(x, y, z):
 
     [x_r, y_r, z_r] = [i.real for i in forward_kinematics(inv_k)]
     print("real positions", x_r, y_r, z_r)
+    print("DH: ", [i.real for i in forward_kinematics_DH(inv_k)])
 
     angs_r = [k.real for k in inv_k]
     alfa = angs_r[1]
     beta = angs_r[2] - angs_r[1]
     print("theoretical positions", x, y, z)
-    print(sqrt(pow(abs(x - x_r), 2) + pow(abs(y - y_r), 2) + pow(abs(z - z_r), 2)).real)
+    print("kinematics diff:  ", sqrt(pow(abs(x - x_r), 2) + pow(abs(y - y_r), 2) + pow(abs(z - z_r), 2)).real)
+    print("theoretical diff: ", (sqrt(x * x + y * y) - x).real)
 
     inv_k[1] = inv_k[1] - (35 * pi / 180)
     inv_k[2] = inv_k[2] - (70 * pi / 180)
@@ -265,7 +277,9 @@ if __name__ == '__main__':
     maestro_controller = Controller('COM4')
     # for i in range(3):
     # actually_move_leg(150, 0, -50)
-    # actually_move_leg(a_1_ + a_2_ + a_3_, 0, -50)
+
+    actually_move_leg(360, 0, -50)
+
     # for i in range(50):
     #     actually_move_leg(135+a_1_-i, 0, -40)
     #     sleep(1)
@@ -273,25 +287,25 @@ if __name__ == '__main__':
     # for i in range(3):
     #     actually_move_leg(150, 0, -100, i)
 
-    leg_pos_ = [pi * 60 / 180, pi, pi * 300 / 180]
-    step_len_ = 100
-    step_height = 60
+    # leg_pos_ = [pi * 60 / 180, pi, pi * 300 / 180]
+    # step_len_ = 100
+    # step_height = 60
 
     # for i in range(3):
-    leg_no = 0
-    delta_y = -(step_len_ * sin(0 - leg_pos_[leg_no])).real
-    delta_x = (step_len_ * cos(0 - leg_pos_[leg_no])).real
-    delta_x = 2 / 3 * delta_x
+    # leg_no = 0
+    # delta_y = -(step_len_ * sin(0 - leg_pos_[leg_no])).real
+    # delta_x = (step_len_ * cos(0 - leg_pos_[leg_no])).real
+    # delta_x = 2 / 3 * delta_x
 
     # if(i == 2):
     #     delta_y = -delta_y
 
-    print(f"step {leg_no}")
-    actually_move_leg(150, 0, -100, leg_no)
-    sleep(2)
-    actually_move_leg(150 + delta_x / 2, 0 + delta_y / 2, -100 + step_height, leg_no)
-    sleep(2)
-    actually_move_leg(150 + delta_x, 0 + delta_y, -100, leg_no)
+    # print(f"step {leg_no}")
+    # actually_move_leg(150, 0, -100, leg_no)
+    # sleep(2)
+    # actually_move_leg(150 + delta_x / 2, 0 + delta_y / 2, -100 + step_height, leg_no)
+    # sleep(2)
+    # actually_move_leg(150 + delta_x, 0 + delta_y, -100, leg_no)
 
     # for i in range(3):
     #     actually_move_leg(a_1_+a_2_+a_3_, 0, -50, i)

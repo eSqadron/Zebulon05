@@ -8,8 +8,8 @@ H_n = [cos(O_i), -sin(O_i) * cos(A_i),  sin(O_i) * sin(A_i),  ai * cos(O_i);
        ]
    
    
-H1 = subs(H_n, [O_i, A_i, ai, di], [O0, pi/2, a1, h1]);
+H1 = subs(H_n, [O_i, A_i, ai, di], [O0, pi/2, a1, -h1]);
 H2 = subs(H_n, [O_i, A_i, ai, di], [O1, 0, a2, 0]);
-H3 = subs(H_n, [O_i, A_i, ai, di], [O2, 0, a3, 0]);
+H3 = subs(H_n, [O_i, A_i, ai, di], [-O2, 0, a3, 0]);
 
 H1*(H2*H3)
