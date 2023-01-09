@@ -83,8 +83,6 @@ protected:
         current_right_leg_ = leg_no;
         current_back_leg_ = (leg_no+1)%3;
         current_left_leg_ = (leg_no+2)%3;
-
-
     }
 
 

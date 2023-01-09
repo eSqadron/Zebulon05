@@ -36,7 +36,7 @@ ThreeLegsController::ThreeLegsController() : Node("three_legs_controller"){
 
 
     gen_.set_leg_default_positions(PI * 60/180, PI, PI * 300/180);
-    gen_.set_step_len(50);
+    gen_.set_step_len(60);
     gen_.set_step_height_point(45);
 
     auto message = geometry_msgs::msg::Point();
